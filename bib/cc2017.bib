@@ -1,0 +1,241 @@
+@Article{Schaefer:2017:boilerplate-detection,
+  author       = "Schäfer, Roland",
+  title        = "Accurate and Efficient General-purpose Boilerplate Detection for Crawled Web Corpora",
+  journal      = "Lang. Resour. Eval.",
+  issue_date   = "September 2017",
+  volume       = "51",
+  number       = "3",
+  month        = sep,
+  year         = "2017",
+  ISSN         = "1574-020X",
+  pages        = "873--889",
+  numpages     = "17",
+  URL          = "https://doi.org/10.1007/s10579-016-9359-2",
+  doi          = "10.1007/s10579-016-9359-2",
+  acmid        = "3135309",
+  publisher    = "Springer-Verlag New York, Inc.",
+  address      = "Secaucus, NJ, USA",
+  abstract     = {Removal of boilerplate is one of the essential tasks in web corpus construction and web indexing. Boilerplate (redundant and automatically inserted material like menus, copyright notices, navigational elements, etc.) is usually considered to be linguistically unattractive for inclusion in a web corpus. Also, search engines should not index such material because it can lead to spurious results for search terms if these terms appear in boilerplate regions of the web page. The size of large web corpora necessitates the use of efficient algorithms while a high accuracy directly improves the quality of the final corpus. In this paper, I present and evaluate a supervised machine learning approach to general-purpose boilerplate detection for languages based on Latin alphabets which is both very efficient and very accurate. Using a Multilayer Perceptron and a high number of carefully engineered features, I achieve between 95% and 99% correct classifications (depending on the input language) with precision and recall over 0.95. Since the perceptrons are trained on language-specific data, I also evaluate how well perceptrons trained on one language perform on other languages. The single features are also evaluated for the merit they contribute to the classification. I show that the accuracy of the Multilayer Perceptron is on a par with that of other classifiers such as Support Vector Machines.
+I conclude that the quality of general-purpose boilerplate detectors depends mainly on the availability of many well-engineered features and which are highly language-independent.
+The method has been implemented in the open-source texrex web page cleaning software, and large corpora constructed using it are available from the COW initiative, including the CommonCOW corpora created from CommonCrawl data sets.},
+  keywords     = "Boilerplate, Corpus construction, Non-destructive corpus normalization, Web corpora",
+  cc-author-affiliation = "Freie Universität Berlin, Germany",
+  cc-class     = "nlp/boilerplate-removal, web-corpora, corpus-construction",
+}
+
+@InProceedings{ZemanEtAl:2017:universal-dependencies,
+  author       = "Zeman, Daniel and Popel, Martin and Straka, Milan and Hajic, Jan and Nivre, Joakim and Ginter, Filip
+                 and Luotolahti, Juhani and Pyysalo, Sampo and Petrov, Slav and Potthast, Martin and Tyers, Francis and
+                 Badmaeva, Elena and Gokirmak, Memduh and Nedoluzhko, Anna and Cinkova, Silvie and Hajic jr., Jan and
+                 Hlavacova, Jaroslava and Kettnerová, Václava and Uresova, Zdenka and Kanerva, Jenna and Ojala, Stina
+                 and Missilä, Anna and Manning, Christopher D. and Schuster, Sebastian and Reddy, Siva and Taji, Dima
+                 and Habash, Nizar and Leung, Herman and de Marneffe, Marie-Catherine and Sanguinetti, Manuela and Simi,
+                 Maria and Kanayama, Hiroshi and dePaiva, Valeria and Droganova, Kira and Martínez Alonso, Héctor and
+                 Çöltekin, Çağrı and Sulubacak, Umut and Uszkoreit, Hans and Macketanz, Vivien and Burchardt,
+                 Aljoscha and Harris, Kim and Marheinecke, Katrin and Rehm, Georg and Kayadelen, Tolga and Attia,
+                 Mohammed and Elkahky, Ali and Yu, Zhuoran and Pitler, Emily and Lertpradit, Saran and Mandl, Michael
+                 and Kirchner, Jesse and Alcalde, Hector Fernandez and Strnadová, Jana and Banerjee, Esha and Manurung,
+                 Ruli and Stella, Antonio and Shimada, Atsuko and Kwak, Sookyoung and Mendonca, Gustavo and Lando,
+                 Tatiana and Nitisaroj, Rattima and Li, Josie",
+  title        = "Co{NLL} 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies",
+  booktitle    = "Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal
+                 Dependencies",
+  month        = aug,
+  year         = "2017",
+  address      = "Vancouver, Canada",
+  publisher    = "Association for Computational Linguistics",
+  pages        = "1--19",
+  abstract     = "The Conference on Computational Natural Language Learning (CoNLL) features a shared task, in which
+                 participants train and test their learning systems on the same data sets. In 2017, the task was devoted
+                 to learning dependency parsers for a large number of languages, in a real-world setting without any
+                 gold-standard annotation on input. All test sets followed a unified annotation scheme, namely that of
+                 Universal Dependencies. In this paper, we define the task and evaluation methodology, describe how the
+                 data sets were prepared, report and analyze the main results, and provide a brief categorization of the
+                 different approaches of the participating systems.",
+  URL          = "http://www.aclweb.org/anthology/K/K17/K17-3001.pdf",
+  pdf          = "http://universaldependencies.org/conll17/proceedings/pdf/K17-3001.pdf",
+  cc-snippet   = "The supporting raw data was gathered from CommonCrawl, which is a publicly available web crawl created
+                 and maintained by the non-profit CommonCrawl foundation.² The data is publicly available in the Amazon
+                 cloud both as raw HTML and as plain text. It is collected from a number of independent crawls from 2008
+                 to 2017, and totals petabytes in size. We used cld2³ as the language detection engine because of its
+                 speed, available Python bindings and large coverage of languages. Language detection was carried out on
+                 the first 1024 bytes of each plaintext document. Deduplication was carried out using hashed document
+                 URLs, a simple strategy found in our tests to be effective for coarse duplicate removal. The data for
+                 each language was capped at 100,000 tokens per a single input file.",
+  cc-derived-dataset-about = "conll-2017-shared-task",
+  cc-author-affiliation = "Charles University, Czech Republic; Uppsala University, Sweden; University of Turku, Finland;
+                 University of Cambridge; Google; Bauhaus-Universität Weimar, Germany; UiT The Arctic University of
+                 Norway; University of the Basque Country, Spain; Istanbul Technical University, Turkey; Stanford
+                 University; New York University Abu Dhabi; City University of Hong Kong; Ohio State University, USA;
+                 University of Turin, Italy; University of Pisa, Italy; IBM Research; Nuance Communications; INRIA –
+                 Paris 7, France; University of Tübingen, Germany; DFKI, Germany; text & form, Germany",
+  cc-class     = "nlp/dependency-parsing, nlp/dependency-treebank, corpus-construction",
+}
+
+,
+  cc-author-affiliation = {DELL EMC},
+  cc-class = {market research, nlp, information retrieval},
+  year = 2018,
+  cc-snippet = {We found that The Register articles for specific vendors extracted from the common crawl data
+set are highly correlated with our reading of General Purpose Magic Quadrant position
+movements in time. [...] The  Figure  11 : Common Crawl Data Processing Flow  Diagram shows  a broad overview of the  steps involved in the analysis of common crawl data. Going from the  bottom up it shows how  the data is extracted, processed and visualized. The amount of data in each phase becomes  more streamlined and , hence , the reduction in size of the data being worked on. We start with  the crawl data, extract the pages of interest int o a private storage bucket,  and  then process it to  remove unwanted words/tags. At the end , visualization tools are used to graphically display the  results. These can be used to publish standard reports or customized by users to support their  own analysis.}
+}
+
+@InProceedings{cc:BarcEissaElBeltagy:2017:AraVec-word-embeddings-arabic,
+  author       = "Bakr Soliman, Abu and Eissa, Kareem and El-Beltagy, Samhaa",
+  year         = "2017",
+  title        = "AraVec: {A} set of Arabic Word Embedding Models for use in Arabic {NLP}",
+  booktitle    = "Conference: 3rd International Conference on Arabic Computational Linguistics (ACLing 2017)",
+  address      = "At Dubai, UAE",
+  URL          = "https://www.researchgate.net/publication/319880027_AraVec_A_set_of_Arabic_Word_Embedding_Models_for_use_in_Arabic_NLP",
+  pdf          = "https://www.researchgate.net/profile/Samhaa_El-Beltagy2/publication/319880027_AraVec_A_set_of_Arabic_Word_Embedding_Models_for_use_in_Arabic_NLP/links/59bfef730f7e9b48a29ba3a8/AraVec-A-set-of-Arabic-Word-Embedding-Models-for-use-in-Arabic-NLP.pdf",
+  cc-snippet   = "we have used a subset of the January 2017 crawl dump. The dump contains more than 3.14 billion web
+                 pages and about 250 Terabytes of uncompressed content. [...] We used WET files as we were only
+                 interested in plain text for building the distributed word representation models. Due to the size of
+                 the dump, which requires massive processing power and time for handling, we only used 30\% of the data
+                 contained in it. As this subset comprises about one billion web pages (written in multiple language),
+                 we believed that it was large enough to provide sufficient Arabic Web pages from which we can build a
+                 representative word embeddings model. Here it is important to note that the Common Crawl project does
+                 not provide any technique for identifying or selecting the language of web pages to download. So, we
+                 had to download data first, and then discard pages that were not written in Arabic. The Arabic
+                 detection phase was performed using some regex commands and some NLP techniques to distinguish Arabic
+                 from other languages. After the completion of this phase we succeeded in obtaining 4,379,697 Arabic web
+                 pages which were then segmented into more than 180,000,000 paragraphs/documents for building our
+                 models.",
+  cc-author-affiliation = "Nile University, Egypt",
+  cc-class     = "nlp/word-embeddings",
+}
+
+@Article{cc:DeanPashaClarkeButenhoff:2017:common-crawl-mining,
+  title        = "Common Crawl Mining",
+  author       = "Dean, Tommy and Pasha, Ali and Clarke, Brian and Butenhoff, Casey J.",
+  year         = "2017",
+  publisher    = "Virginia Tech",
+  URL          = "http://hdl.handle.net/10919/77629",
+  cc-author-affiliation = "Virginia Polytechnic Institute and State University, USA; Eastman Chemical Company; USA",
+  cc-class     = "information retrieval, market research, business intelligence",
+  cc-snippet   = "The main goal behind the Common Crawl Mining system is to improve Eastman Chemical Company’s ability
+                 to use timely knowledge of public concerns to inform key business decisions. It provides information to
+                 Eastman Chemical Company that is valuable for consumer chemical product marketing and strategy
+                 development. Eastman desired a system that provides insight into the current chemical landscape.
+                 Information about trends and sentiment towards chemicals over time is beneficial to their marketing and
+                 strategy departments. They wanted to be able to drill down to a particular time period and look at what
+                 people were writing about certain keywords. [...] The final Common Crawl Mining system is a search
+                 engine implemented using Elasticsearch. Relevant records are identified by first analyzing Common Crawl
+                 for Web Archive (WARC) files that have a high frequency of records from interesting domains.",
+}
+
+@InProceedings{cc:DuHerzogLuckowNerellaEtAl:2017:latent-dirichlet-representativeness,
+  title        = "Representativeness of latent dirichlet allocation topics estimated from data samples with application
+                 to common crawl",
+  author       = "Du, Yuheng and Herzog, Alexander and Luckow, Andre and Nerella, Ramu and Gropp, Christopher and Apon,
+                 Amy",
+  booktitle    = "Big Data (Big Data), 2017 IEEE International Conference on",
+  pages        = "1418--1427",
+  year         = "2017",
+  organization = "IEEE",
+  URL          = "http://alexherzog.net/files/IEEE_BigData_2017_Representativeness_of_LDA.pdf",
+  cc-author-affiliation = "Clemson University, USA",
+  cc-class     = "nlp/topic-modeling, corpus-representativeness",
+  cc-snippet   = "Common Crawl is a massive multi-petabyte dataset hosted by Amazon. It contains archived HTML web page
+                 data from 2008 to date. Common Crawl has been widely used for text mining purposes. Using data
+                 extracted from Common Crawl has several advantages over a direct crawl of web data, among which is
+                 removing the likelihood of a user’s home IP address becoming blacklisted for accessing a given web
+                 site too frequently. However, Common Crawl is a data sample, and so questions arise about the quality
+                 of Common Crawl as a representative sample of the original data. We perform systematic tests on the
+                 similarity of topics estimated from Common Crawl compared to topics estimated from the full data of
+                 online forums. Our target is online discussions from a user forum for automotive enthusiasts, but our
+                 research strategy can be applied to other domains and samples to evaluate the representativeness of
+                 topic models. We show that topic proportions estimated from Common Crawl are not significantly
+                 different than those estimated on the full data. We also show that topics are similar in terms of their
+                 word compositions, and not worse than topic similarity estimated under true random sampling, which we
+                 simulate through a series of experiments. Our research will be of interest to analysts who wish to use
+                 Common Crawl to study topics of interest in user forum data, and analysts applying topic models to
+                 other data samples.",
+}
+
+@Article{cc:GhoshPorrasYegneswaranNitzEtAl:2017:ATOL-darkweb-analysis,
+  title        = "{ATOL}: {A} Framework for Automated Analysis and Categorization of the Darkweb Ecosystem",
+  author       = "Ghosh, Shalini and Porras, Phillip and Yegneswaran, Vinod and Nitz, Ken and Das, Ariyam",
+  year         = "2017",
+  URL          = "https://www.aaai.org/ocs/index.php/WS/AAAIW17/paper/download/15205/14661",
+  cc-author-affiliation = "CSL, SRI International, Menlo Park",
+  pdf          = "http://www.csl.sri.com/users/vinod/papers/atol.pdf",
+  cc-class     = "web-science, information retrieval, nlp/text-classificiation",
+  cc-snippet   = ".onion references from [...] and an open repository of (non-onion) Web crawling data, called Common
+                 Crawl (Common Crawl Foundation 2016).",
+}
+
+@Misc{cc:GinterHajicLuotolahtiStrakaZeman:2017:conll-2017-shared-task-annotated,
+  title        = "{CoNLL} 2017 Shared Task - Automatically Annotated Raw Texts and Word Embeddings",
+  author       = "Ginter, Filip and Hajič, Jan and Luotolahti, Juhani and Straka, Milan and Zeman, Daniel",
+  URL          = "http://hdl.handle.net/11234/1-1989",
+  note         = "{LINDAT}/{CLARIN} digital library at the Institute of Formal and Applied Linguistics, Charles
+                 University",
+  copyright    = "Creative Commons - Attribution-{NonCommercial}-{ShareAlike} 4.0 International ({CC} {BY}-{NC}-{SA}
+                 4.0)",
+  year         = "2017",
+  cc-derived-dataset-about = "conll-2017-shared-task",
+  cc-author-affiliation = "Charles University, Czech Republic; University of Turku, Finland",
+  cc-class     = "corpus-construction, nlp/word-embeddings, nlp/syntactic-annotations, nlp/dependency-parsing",
+  cc-snippet   = "Automatic segmentation, tokenization and morphological and syntactic annotations of raw texts in 45
+                 languages, generated by UDPipe (http://ufal.mff.cuni.cz/udpipe), together with word embeddings of
+                 dimension 100 computed from lowercased texts by word2vec (https://code.google.com/archive/p/word2vec/).
+                 [...] Note that the CC BY-SA-NC 4.0 license applies to the automatically generated annotations and word
+                 embeddings, not to the underlying data, which may have different license and impose additional
+                 restrictions.",
+}
+
+@Article{cc:KudelaHolubovaBojar:2017:parallelparagraphs,
+  title        = "Extracting Parallel Paragraphs from Common Crawl",
+  journal      = "Prague Bulletin of Mathematical Linguistics",
+  year         = "2017",
+  volume       = "107",
+  number       = "1",
+  pages        = "39--56",
+  ISSN         = "1804-0462",
+  doi          = "doi:10.1515/pralin-2017-0003",
+  author       = "Kúdela, Jakub and Holubová, Irena and Bojar, Ondřej",
+  abstract     = "Most of the current methods for mining parallel texts from the web assume that web pages of web sites
+                 share same structure across languages. We believe that there still exists a non-negligible amount of
+                 parallel data spread across sources not satisfying this assumption. We propose an approach based on a
+                 combination of bivec (a bilingual extension of word2vec) and locality-sensitive hashing which allows us
+                 to efficiently identify pairs of parallel segments located anywhere on pages of a given web domain,
+                 regardless their structure. We validate our method on realigning segments from a large parallel corpus.
+                 Another experiment with real-world data provided by Common Crawl Foundation confirms that our solution
+                 scales to hundreds of terabytes large set of web-crawled data.",
+  pdf          = "https://ufal.mff.cuni.cz/pbml/107/art-kudela-holubova-bojar.pdf",
+  cc-author-affiliation = "Charles University, Czech Republic",
+  cc-class     = "nlp/machine-translation; corpus-construction",
+}
+
+@InProceedings{cc:MehmoodShafiqWaheed:2017:regional-context-www,
+  author       = "Mehmood, Amir and Shafiq, Hafiz Muhammad and Waheed, Abdul",
+  year         = "2017",
+  booktitle    = "2017 IEEE 13th Malaysia International Conference on Communications (MICC)",
+  title        = "Understanding Regional Context of World Wide Web using Common Crawl Corpus",
+  URL          = "https://www.researchgate.net/publication/321489200_Understanding_Regional_Context_of_World_Wide_Web_using_Common_Crawl_Corpus",
+  pdf          = "https://www.researchgate.net/profile/Amir_Mehmood/publication/321489200_Understanding_Regional_Context_of_World_Wide_Web_using_Common_Crawl_Corpus/links/5a251abaaca2727dd87e780a/Understanding-Regional-Context-of-World-Wide-Web-using-Common-Crawl-Corpus.pdf",
+  cc-dataset-used = "CC-MAIN-2016-50",
+  cc-statistics = "languages, multi-lingual content, MIME types, TLDs, web server",
+  cc-processing-tools = "EMR (AWS grant), CLD2",
+  cc-author-affiliation = "UET, Lahore, Pakistan",
+  cc-class     = "web-science, webometrics",
+}
+
+
+@Article{cc:PanchenkoEtAl:2017:web-scale-dependency-corpus,
+  author       = "Alexander Panchenko and Eugen Ruppert and Stefano Faralli and Simone Paolo Ponzetto and Chris
+                 Biemann",
+  title        = "Building a Web-Scale Dependency-Parsed Corpus from CommonCrawl",
+  journal      = "CoRR",
+  volume       = "abs/1710.01779",
+  year         = "2017",
+  URL          = "http://arxiv.org/abs/1710.01779",
+  pdf          = "https://arxiv.org/pdf/1710.01779.pdf",
+  cc-dataset-used = CC-MAIN-2016-07,
+  cc-about-derived-dataset = "depcc",
+  cc-author-affiliation = "University of Hamburg, Germany; University of Mannheim, Germany",
+  cc-class     = "nlp/dependency-parsing, corpus-construction",
+}
+

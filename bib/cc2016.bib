@@ -1,0 +1,63 @@
+@InProceedings{cc:HabernalZayedGurevych:2016:C4Corpus,
+  author       = "Ivan Habernal and Omnia Zayed and Iryna Gurevych",
+  title        = "{C4Corpus}: Multilingual Web-Size Corpus with Free License",
+  booktitle    = "Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)",
+  pages        = "914--922",
+  month        = may,
+  year         = "2016",
+  address      = "Portorož, Slovenia",
+  publisher    = "European Language Resources Association (ELRA)",
+  editor       = "Nicoletta Calzolari and Khalid Choukri and Thierry Declerck and Marko Grobelnik and Bente Maegaard and
+                 Joseph Mariani and Asuncion Moreno and Jan Odijk and Stelios Piperidis",
+  ISBN         = "978-2-9517408-9-1",
+  URL          = "http://www.lrec-conf.org/proceedings/lrec2016/pdf/388_Paper.pdf",
+  abstract     = "Large Web corpora containing full documents with permissive licenses are crucial for many NLP tasks.
+                 In this article we present the construction of 12 million-pages Web corpus (over 10 billion tokens)
+                 licensed under CreativeCommons license family in 50+ languages that has been extracted from
+                 CommonCrawl, the largest publicly available general Web crawl to date with about 2 billion crawled
+                 URLs. Our highly-scalable Hadoop-based framework is able to process the full CommonCrawl corpus on
+                 2000+ CPU cluster on the Amazon Elastic Map/Reduce infrastructure. The processing pipeline includes
+                 license identification, state-of-the-art boilerplate removal, exact duplicate and near-duplicate
+                 document removal, and language detection. The construction of the corpus is highly configurable and
+                 fully reproducible, and we provide both the framework (DKPro C4CorpusTools) and the resulting data
+                 (C4Corpus) to the research community.",
+  cc-about-derived-dataset = "{DKPro-C4}",
+  cc-dataset-used = CC-MAIN-2016-07,
+  cc-keywords  = "NLP, natural language corpus, free license, creative commons license, language detection, boilerplate
+                 removal, (near) duplicate removel",
+  cc-statistics = "Creative Commons license variants, top-domains creative commons licensed, top-n word corpus
+                 correlation (Brown, wikipedia)",
+  cc-processing-tools = "shuyo/language-detection, JusText boilerplate removal reimplementation,",
+  cc-author-affiliation = "University of Darmstadt, Germany",
+  cc-class     = "nlp/corpus-construction, legal/copy-right, license/creative-commons, nlp/boilerplate-removal,
+                 ir/duplicate-detection",
+}
+
+@InProceedings{cc:Schaefer2016CommonCOW,
+  author       = "Roland Schäfer",
+  title        = "{CommonCOW}: Massively Huge Web Corpora from CommonCrawl Data and a Method to Distribute them Freely
+                 under Restrictive {EU} Copyright Laws",
+  booktitle    = "Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)",
+  year         = "2016",
+  address      = "Portorož, Slovenia",
+  editor       = "Nicoletta Calzolari (Conference Chair) and Khalid Choukri and Thierry Declerck and Marko Grobelnik and
+                 Bente Maegaard and Joseph Mariani and Asuncion Moreno and Jan Odijk and Stelios Piperidis",
+  pages        = "4500--4504",
+  publisher    = "European Language Resources Association (ELRA)",
+  abstract     = "In this paper, I describe a method of creating massively huge web corpora from the CommonCrawl data
+                 sets and redistributing the resulting annotations in a stand-off format. Current EU (and especially
+                 German) copyright legislation categorically forbids the redistribution of downloaded material without
+                 express prior permission by the authors. Therefore, stand-off annotations or other derivates are the
+                 only format in which European researchers (like myself) are allowed to re-distribute the respective
+                 corpora. In order to make the full corpora available to the public despite such restrictions, the
+                 stand-off format presented here allows anybody to locally reconstruct the full corpora with the least
+                 possible computational effort.",
+  date         = "23-28",
+  ISBN         = "978-2-9517408-9-1",
+  language     = "english",
+  URL          = "http://rolandschaefer.net/?p=994",
+  pdf          = "http://rolandschaefer.net/wp-content/uploads/2015/10/Scha%CC%88fer_2016_CommonCOW_LREC.pdf",
+  cc-about-derived-dataset = "{CommonCOW}",
+  cc-author-affiliation = "",
+  cc-class     = "",
+}
