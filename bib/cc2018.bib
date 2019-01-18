@@ -87,7 +87,12 @@
   cc-author-affiliation = "Northeastern University, Boston, MA, USA; University of Trento, Trento, Italy",
   cc-snippet   = "We extract pages using relative-path stylesheets from the Common Crawl dataset [9], automatically test
                  if style directives can be injected using RPO, and determine whether they are interpreted by the
-                 browser.",
+                 browser. [...] For finding the initial seed set of candidate pages with relative-path stylesheets, we
+                 leverage the Common Crawl from August 2016, which contains more than 1.6 billion pages. By using an
+                 existing dataset, we can quickly identify candidate pages without creating any web crawl traffic. We
+                 use a Java HTML parser to filter any pages containing only inline CSS or stylesheets referenced by
+                 absolute URLs, leaving us with over 203 million pages on nearly 6 million sites.",
+  cc-dataset-used = "CC-MAIN-2016-36",
   cc-class     = "web-science, computer-security/web-application-security",
 }
 
@@ -149,7 +154,7 @@
   series       = "CESifo Working Papers",
   volume       = "6852",
   cc-snippet   = "We obtain archived versions of the HTML source code of all URLs for each domain in our gross sample
-                 from Common Crawl , a project that has crawled billions of webpages periodically since summer 2013.",
+                 from Common Crawl, a project that has crawled billions of webpages periodically since summer 2013.",
   cc-class     = "web-science",
   cc-author-affiliation = "LMU Munich, Germany; UCP – Católica Lisbon School of Business and Economics, Lisboa,
                  Portugal",
@@ -193,7 +198,7 @@
   URL          = "https://arxiv.org/abs/1807.08712",
   cc-author-affiliation = "University of Oxford, United Kingdom; Banca d’Italia, Italy; TU Wien, Austria",
   cc-snippet   = "Enterprises increasingly depend on intelligent information systems that operationalise cor- porate
-                 knowledge as a unified source across system boundaries. [...] To maintain their com- petitive edge,
+                 knowledge as a unified source across system boundaries. [...] To maintain their competitive edge,
                  companies need to incorporate multiple heterogeneous sources of information, including [...] external
                  streams of unstructured data (e.g., news and social media feeds, and Common Crawl¹), [...]",
   cc-class     = "ai/semantic-reasoning, ai/machine-learning",
@@ -294,6 +299,18 @@
   cc-class     = "nlp/grammatical-error-correction, nlp/word-embeddings, nlp/language-model",
 }
 
+@Article{cc:ConneauLampleRinottWilliamsEtAl:2018:cross-lingual-sentence-representations,
+  title        = "{XNLI}: Evaluating Cross-lingual Sentence Representations",
+  author       = "Conneau, Alexis and Lample, Guillaume and Rinott, Ruty and Williams, Adina and Bowman, Samuel R and
+                 Schwenk, Holger and Stoyanov, Veselin",
+  journal      = "arXiv preprint arXiv:1809.05053",
+  year         = "2018",
+  URL          = "https://arxiv.org/abs/1809.05053",
+  cc-author-affiliation = "Facebook AI Research, USA; New York University, USA",
+  cc-derived-dataset-used = "fasttext-word-embeddings",
+  cc-class     = "nlp/word-embeddings, nlp/sentence-embeddings",
+}
+
 @InProceedings{cc:ConoverHayesBlackburnSkomorochEtAl:2018:Pangloss-fast-entity-linking,
   title        = "Pangloss: Fast Entity Linking in Noisy Text Environments",
   author       = "Conover, Michael and Hayes, Matthew and Blackburn, Scott and Skomoroch, Pete and Shah, Sam",
@@ -380,12 +397,52 @@
   booktitle    = "Industrial Conference on Data Mining",
   pages        = "288--295",
   year         = "2018",
-  publisher     = "Springer",
+  publisher    = "Springer",
   URL          = "https://link.springer.com/chapter/10.1007/978-3-319-95786-9_22",
   cc-snippet   = "Common Crawl is a public corpus, mostly stored on Amazon Web Services³. A subset of the CommonCrawl
                  dataset has schema information in the microdata format",
   cc-author-affiliation = "HERE Technologies, Amsterdam, The Netherlands",
   cc-class     = "semantic-web/microformats",
+}
+
+@Article{cc:El-ZantJaffres-RunserFrahmShepelyansky:2018:Interactions-and-influence-of,
+  title        = "Interactions and influence of world painters from the reduced Google matrix of Wikipedia networks",
+  author       = "El Zant, Samer and Jaffr{\`e}s-Runser, Katia and Frahm, Klaus M and Shepelyansky, Dima L",
+  journal      = "IEEE Access",
+  year         = "2018",
+  publisher    = "IEEE",
+  URL          = "https://ieeexplore.ieee.org/abstract/document/8449078",
+  cc-author-affiliation = "Université de Toulouse, France",
+  cc-class     = "web-science/hyperlinkgraph, graph-processing, cc-cited-not-used",
+  abstract     = "This paper concentrates on extracting painting art history knowledge from the network structure of
+                 Wikipedia. Therefore, we construct theoretical networks of webpages representing the hyper-linked
+                 structure of articles of seven Wikipedia language editions. These seven networks are analyzed to
+                 extract the most influential painters in each edition using Google matrix theory. Importance of
+                 webpages of over 3000 painters is measured using the PageRank algorithm. The most influential painters
+                 are enlisted and their ties are studied with the reduced Google matrix analysis. The reduced Google
+                 matrix is a powerful method that captures both direct and hidden interactions between a subset of
+                 selected nodes taking into account the indirect links between these nodes via the remaining part of
+                 large global network. This method originates from the scattering theory of nuclear and mesoscopic
+                 physics and field of quantum chaos. In this paper, we show that it is possible to extract from the
+                 components of the reduced Google matrix meaningful information on the ties between these painters. For
+                 instance, our analysis groups together painters that belong to the same painting movement and shows
+                 meaningful ties between painters of different movements. We also determine the influence of painters on
+                 world countries using link sensitivity between Wikipedia articles of painters and countries. The
+                 reduced Google matrix approach allows to obtain a balanced view of various cultural opinions of
+                 Wikipedia language editions. The world countries with the largest number of top painters of selected
+                 seven Wikipedia editions are found to be Italy, France, and Russia. We argue that this approach gives
+                 meaningful information about art and that it could be a part of extensive network analysis on human
+                 knowledge and cultures.",
+}
+
+@Article{cc:Espana-BonetStillerHenning:2018:corpora-for-machine-translation,
+  title        = "{M1}. 2--Corpora for the Machine Translation Engines",
+  author       = "Espana-Bonet, Cristina and Stiller, Juliane and Henning, Sophie",
+  year         = "2018",
+  URL          = "https://www.clubs-project.eu/assets/publications/project/M1.2_MTcorpora_v4.0.pdf",
+  cc-author-affiliation = "Universität des Saarlandes, Germany; Humboldt-Universität zu Berlin, Germany",
+  cc-class     = "nlp/machine-translation, nlp/corpora",
+  cc-derived-dataset-cited = "WMT-13-translation-task-common-crawl-corpus",
 }
 
 @Article{cc:EstevesReddyChawlaLehmann:2018:obfuscate-fake-news,
@@ -415,7 +472,7 @@
 
 @InProceedings{cc:FayzrakhmanovSallingerSpencerFurcheEtAl:2018:browserless-web-data-extraction,
   title        = "Browserless web data extraction: challenges and opportunities",
-  author       = "Fayzrakhmanov, Ruslan R and Sallinger, Emanuel and Spencer, Ben and Furche, Tim and Gottlob, Georg",
+  author       = "Fayzrakhmanov, Ruslan R. and Sallinger, Emanuel and Spencer, Ben and Furche, Tim and Gottlob, Georg",
   booktitle    = "Proceedings of the 2018 World Wide Web Conference on World Wide Web",
   pages        = "1095--1104",
   year         = "2018",
@@ -520,6 +577,18 @@
   cc-derived-dataset-used = "GloVe-word-embeddings",
 }
 
+@InProceedings{cc:GolemKaranSnajder:2018:aggressive-text-detection,
+  title        = "Combining Shallow and Deep Learning for Aggressive Text Detection",
+  author       = "Golem, Viktor and Karan, Mladen and Šnajder, Jan",
+  booktitle    = "Proceedings of the First Workshop on Trolling, Aggression and Cyberbullying (TRAC-2018)",
+  pages        = "188--198",
+  year         = "2018",
+  pdf          = "www.aclweb.org/anthology/W18-4422",
+  cc-author-affiliation = "University of Zagreb, Croatia",
+  cc-derived-dataset-used = "GloVe-word-embeddings",
+  cc-class     = "nlp/text-classification, nlp/word-embeddings",
+}
+
 @Article{cc:GoodingTerrasBerube:2018:legal-deposit-web-archives,
   title        = "Legal Deposit Web Archives and the Digital Humanities: {A} Universe of Lost Opportunity?",
   author       = "Gooding, Paul and Terras, Melissa and Berube, Linda",
@@ -570,7 +639,7 @@
                  performance compared to previous models.",
   cc-dataset-used = "CC-MAIN-2017-22",
   cc-snippet   = "The common crawl is a non profit organization which crawls the web and makes the resulting data
-                 publicly avail- able. This large scale corpus was previously used to es- timate n-gram language models
+                 publicly avail- able. This large scale corpus was previously used to estimate n-gram language models
                  (Buck et al., 2014) or to learn English word vectors (Pennington et al., 2014). To the best of our
                  knowledge, it was not used yet to learn word vectors for a large set of languages. The data is
                  distributed either as raw HTML pages, or as WET files which contain the extracted text data, converted
@@ -587,8 +656,8 @@
   journal      = "arXiv preprint arXiv:1804.05945",
   year         = "2018",
   URL          = "https://arxiv.org/abs/1804.05945",
-  cc-author-affiliation = "University of Edinburgh; Microsoft",
-  cc-class     = "machine translation",
+  cc-author-affiliation = "University of Edinburgh, United Kingdom; Microsoft",
+  cc-class     = "nlp/machine-translation, nlp/grammatical-error-correction",
   cc-derived-dataset-used = "Ngrams-LMs-2013",
 }
 
@@ -651,6 +720,30 @@
   cc-class     = "web-science",
 }
 
+@Article{cc:IyyerWietingGimpelZettlemoyer:2018:adversarial-example-generation,
+  title        = "Adversarial example generation with syntactically controlled paraphrase networks",
+  author       = "Iyyer, Mohit and Wieting, John and Gimpel, Kevin and Zettlemoyer, Luke",
+  journal      = "arXiv preprint arXiv:1804.06059",
+  year         = "2018",
+  URL          = "https://arxiv.org/abs/1804.06059",
+  cc-author-affiliation = "",
+  cc-author-affiliation = "Allen Institute of Artificial Intelligence, Seattle, United States; UMass Amherst, United
+                 States; Carnegie Mellon University, Pittsburgh, PA, USA; Toyota Technological Institute at Chicago, IL,
+                 USA; University of Washington, Seattle, WA, USA",
+  cc-derived-dataset-about = "WMT-16-translation-task-common-crawl-corpus, patent",
+  cc-class     = "nlp/machine-translation, nlp/sentence-paraphrase, nlp/sentence-embeddings",
+}
+
+@Article{cc:JunczysDowmuntGrundkiewiczGuhaHeafield:2018:neural-grammatical-error,
+  title        = "Approaching Neural Grammatical Error Correction as a Low-Resource Machine Translation Task",
+  author       = "Junczys-Dowmunt, Marcin and Grundkiewicz, Roman and Guha, Shubha and Heafield, Kenneth",
+  journal      = "arXiv preprint arXiv:1804.05940",
+  year         = "2018",
+  URL          = "https://arxiv.org/abs/1804.05940",
+  cc-author-affiliation = "University of Edinburgh, United Kingdom; Microsoft",
+  cc-class     = "nlp/machine-translation, nlp/grammatical-error-correction",
+}
+
 @Article{cc:KaftanBalazinskaCheungGehrke:2018:Cuttlefish,
   title        = "Cuttlefish: {A} Lightweight Primitive for Adaptive Query Processing",
   author       = "Kaftan, Tomer and Balazinska, Magdalena and Cheung, Alvin and Gehrke, Johannes",
@@ -699,6 +792,59 @@
   cc-author-affiliation = "University of Groningen, The Netherlands; Institute of Formal and Applied Linguistics Charles
                  University in Prague, Czech Republic",
   cc-class     = "nlp/semantics, nlp/word-embeddings",
+}
+
+@Article{cc:LehmberHassanzadeh:2018:ontology-augmentation-with-web-tables,
+  title        = "Ontology Augmentation Through Matching with Web Tables",
+  author       = "Lehmberg, Oliver and Hassanzadeh, Oktie",
+  URL          = "http://disi.unitn.it/~pavel/om2018/papers/om2018_LTpaper4.pdf",
+  year         = "2018",
+  cc-author-affiliation = "University of Mannheim, Germany; IBM Research, Yorktown Heights, New York, USA",
+  cc-class     = "semantic web, ontology extraction, web tables",
+  cc-derived-dataset-used = "WDCWebTables",
+  cc-snippet   = "We perform an empirical study of the performance of this approach in using Web Tables extracted from
+                 the Common Crawl to augment the properties in DBpedia ontology.",
+}
+
+@Article{cc:LiangLiuZadehMorency:2018:multimodal-language-analysis,
+  title        = "Multimodal Language Analysis with Recurrent Multistage Fusion: Supplementary Material",
+  author       = "Liang, Paul Pu and Liu, Ziyin and Zadeh, Amir and Morency, Louis-Philippe",
+  URL          = "http://www.cs.cmu.edu/~pliang/papers/emnlp2018-recurrent-fusion-supp.pdf",
+  cc-snippet   = "We used 300 dimensional Glove word embeddings trained on 840 billion tokens from the common crawl
+                 dataset (Pennington et al., 2014).",
+  cc-derived-dataset-used = "GloVe-word-embeddings",
+  year         = "2018",
+  cc-author-affiliation = "Carnegie Mellon University",
+  cc-class     = "nlp, multi-modal nlp, artificial intelligence",
+}
+
+@Article{cc:LockardDongEinolghozatiShiralkar:2018:supervised-relation-extraction,
+  title        = "{CERES}: Distantly Supervised Relation Extraction from the Semi-Structured Web",
+  author       = "Lockard, Colin and Dong, Xin Luna and Einolghozati, Arash and Shiralkar, Prashant",
+  journal      = "PVLDB",
+  year         = "2018",
+  volume       = "11",
+  pages        = "1084--1096",
+  doi          = "http://doi.org/10.14778/3231751.3231758",
+  URL          = "https://arxiv.org/abs/1804.04635",
+  cc-author-affiliation = "amazon.com",
+  cc-dataset-used = "CC-MAIN-201[3-7]-*",
+  cc-class     = "ir/information-extraction, ir/relation-extraction",
+  cc-snippet   = "The CommonCrawl corpus consists of monthly snapshots of pages from millions of websites [1] on the
+                 Web. We started with a few well-known sites, including rottentomatoes.com, boxofficemojo.com, and
+                 themoviedb.org. Based on a Wikipedia list of the largest global film industries by admissions, box
+                 office, and number of productions⁸, we then issued Google searches for terms corresponding to these
+                 countries, such as “Nigerian film database” and recorded re- sulting sites that had detail pages
+                 related to movies. We also issued a few additional searches related to specific genres we thought may
+                 not be well-represented in mainstream sites, including “animated film database” and “documentary
+                 film database”. After compiling our list of sites, we then checked CommonCrawl⁹ and kept all sites
+                 with more than one hundred pages available. Our final list contains a broad mix of movie sites,
+                 including sites based around national film industries, genres, film music, and screen size. Most are in
+                 English, but the set also includes sites in Czech, Danish, Icelandic, Italian, Indonesian, and Slovak.
+                 ⁸https://en.wikipedia.org/wiki/Film_industry ⁹For each site, we scanned the CommonCrawl indices for
+                 all monthly scrapes prior to January 2018 and downloaded all pages for the site from the scrape with
+                 the largest number of unique webpages. Note that these scrapes do not necessarily obtain all pages
+                 present on a site, so the retrieved pages represent only a subset of the full site.",
 }
 
 @Article{cc:MeijersPeris:2018:toponym-co-occurrences,
@@ -759,7 +905,7 @@
   cc-snippet   = "A widely used resource, described in (Junczys-Dowmunt and Grundkiewicz, 2016), was included in the
                  training set of the winning (and almost all) submissions to the last two English–German rounds of the
                  APE task at WMT (IT domain). It consists of 4.3 million instances created by first filtering a subset
-                 of IT-related sentences from the German Common Crawl corpus 6 , and then by using two English–German
+                 of IT-related sentences from the German Common Crawl corpus⁶, and then by using two English–German
                  and German–English PBMT systems trained on in-domain IT corpora for a round-trip translation of the
                  selected sentences (De → En → De).",
   cc-author-affiliation = "Fondazione Bruno Kessler, Trento, Italy; University of Trento, Italy",
@@ -835,8 +981,8 @@
   year         = "2018",
   cc-derived-dataset-used = "fasttext-word-embeddings, GloVe-word-embeddings",
   URL          = "https://arxiv.org/abs/1806.06259",
-  cc-author-affiliation = "  Universitat Politècnica de Catalunya, Barcelona, Spain",
-  cc-class     = "nlp/word-embeddings",
+  cc-author-affiliation = "Universitat Politècnica de Catalunya, Barcelona, Spain",
+  cc-class     = "nlp/word-embeddings, nlp/sentence-embeddings",
 }
 
 @Article{cc:PetriMoffat:2018:inverted-index,
@@ -877,6 +1023,34 @@
   cc-class     = "linguistics, nlp/semantics, nlp/word-embeddings, lexicography",
 }
 
+@Misc{cc:RaananiLevyBeakstoneFacher:2018:automatically-identify-product-feature-requests,
+  title        = "Analyzing conversations to automatically identify product feature requests",
+  author       = "Raanani, Roy and Levy, Russell and Beakstone, Micha Yochanan and Facher, Dominik",
+  year         = "2018",
+  publisher    = "Google Patents",
+  note         = "US Patent App. 15/902,751",
+  URL          = "https://patents.google.com/patent/US20180183930A1/en",
+  cc-author-affiliation = "Affectlayer Inc",
+  cc-class     = "nlp/text-corpora, cc-cited-not-used, patent",
+  cc-snippet   = "At the same time, natural language processing (NLP) approaches to both topic modeling and
+                 world-knowledge modeling, have become much more efficient due to the availability of large, freely
+                 accessible natural language corpora (e.g., CommonCrawl), ...",
+}
+
+@Misc{cc:RaananiLevyBreakstone:2018:coordinating-voice-calls,
+  title        = "Coordinating voice calls between representatives and customers to influence an outcome of the call",
+  author       = "Raanani, Roy and Levy, Russell and Breakstone, Micha Yochanan",
+  year         = "2018",
+  publisher    = "Google Patents",
+  note         = "US Patent 9,900,436",
+  URL          = "https://patents.google.com/patent/US9900436B2/en",
+  cc-author-affiliation = "Affectlayer Inc",
+  cc-class     = "nlp/text-corpora, cc-cited-not-used",
+  cc-snippet   = "At the same time, natural language processing (NLP) approaches to both topic modeling and
+                 world-knowledge modeling, have become much more efficient due to the availability of large, freely
+                 accessible natural language corpora (e.g., CommonCrawl), ...",
+}
+
 @Misc{cc:RaananiLevyBreakstoneFacher:2018:automatically-identify-action-items,
   title        = "Analyzing conversations to automatically identify action items",
   author       = "Raanani, Roy and Levy, Russell and Breakstone, Micha Yochanan and Facher, Dominik",
@@ -899,7 +1073,7 @@
   note         = "US Patent App. 15/902,808",
   URL          = "https://patents.google.com/patent/US20180181561A1/en",
   cc-author-affiliation = "Affectlayer Inc",
-  cc-class     = "nlp/text-corpora, cc-cited-not-used",
+  cc-class     = "nlp/text-corpora, cc-cited-not-used, patent",
   cc-snippet   = "At the same time, natural language processing (NLP) approaches to both topic modeling and
                  world-knowledge modeling, have become much more efficient due to the availability of large, freely
                  accessible natural language corpora (e.g., CommonCrawl), ...",
@@ -913,7 +1087,21 @@
   note         = "US Patent App. 15/937,494",
   URL          = "https://patents.google.com/patent/US20180183930A1/en",
   cc-author-affiliation = "Affectlayer Inc",
-  cc-class     = "nlp/text-corpora, cc-cited-not-used",
+  cc-class     = "nlp/text-corpora, cc-cited-not-used, patent",
+  cc-snippet   = "At the same time, natural language processing (NLP) approaches to both topic modeling and
+                 world-knowledge modeling, have become much more efficient due to the availability of large, freely
+                 accessible natural language corpora (e.g., CommonCrawl), ...",
+}
+
+@Misc{cc:RaananiLevyFacherBreakstone:2018:automatically-identify-deals-at-risk,
+  title        = "Analyzing conversations to automatically identify deals at risk",
+  author       = "Raanani, Roy and Levy, Russell and Facher, Dominik and Breakstone, Micha Yochanan",
+  year         = "2018",
+  publisher    = "Google Patents",
+  note         = "US Patent App. 15/835,807",
+  URL          = "https://patents.google.com/patent/US10133999B2/en",
+  cc-author-affiliation = "Affectlayer Inc",
+  cc-class     = "nlp/text-corpora, cc-cited-not-used, patent",
   cc-snippet   = "At the same time, natural language processing (NLP) approaches to both topic modeling and
                  world-knowledge modeling, have become much more efficient due to the availability of large, freely
                  accessible natural language corpora (e.g., CommonCrawl), ...",
@@ -954,6 +1142,23 @@
                  contexts is provided.",
   cc-author-affiliation = "Sophos Group PLC, VA, USA",
   cc-class     = "web-science, computer-security/email-security",
+}
+
+@InProceedings{cc:RybinskiMillerDelSerBilbaoEtAl:2018:language-toxicity-classification,
+  title        = "On the Design and Tuning of Machine Learning Models for Language Toxicity Classification in Online
+                 Platforms",
+  author       = "Rybinski, Maciej and Miller, William and Del Ser, Javier and Bilbao, Miren Nekane and Aldana-Montes,
+                 José F.",
+  booktitle    = "International Symposium on Intelligent and Distributed Computing",
+  pages        = "329--343",
+  year         = "2018",
+  organization = "Springer",
+  URL          = "https://link.springer.com/chapter/10.1007/978-3-319-99626-4_29",
+  cc-author-affiliation = "University of Málaga, Spain; Anami Precision, San Sebastián, Spain; TECNALIA, Bizkaia,
+                 Spain; Basque Center for Applied Mathematics (BCAM), Bizkaia, Spain; University of the Basque Country
+                 (UPV/EHU), Bilbao, Spain",
+  cc-class     = "nlp/text-classification, nlp/sentiment-analysis, nlp/word-embeddings, ai/deep-learning",
+  cc-derived-dataset-used = "GloVe-word-embeddings",
 }
 
 @InProceedings{cc:SalehPecina:2018:CUNI-team-CLEF-eHealth,
@@ -1025,6 +1230,18 @@
   cc-class     = "nlp/sentiment-analysis",
 }
 
+@Article{cc:SchamoniHitschlerRiezler:2018:dataset-multimodal-mt-image-captions,
+  title        = "A Dataset and Reranking Method for Multimodal {MT} of User-Generated Image Captions",
+  author       = "Schamoni, Shigehiko and Hitschler, Julian and Riezler, Stefan",
+  journal      = "Vol. 1: MT Researchers’ Track",
+  pages        = "140",
+  year         = "2018",
+  URL          = "https://amtaweb.org/wp-content/uploads/2018/03/AMTA_2018_Proceedings_Research_Track.pdf#page=146",
+  cc-author-affiliation = "Heidelberg University, Germany",
+  cc-derived-dataset-used = "WMT-13-translation-task-common-crawl-corpus",
+  cc-class     = "nlp/machine-translation",
+}
+
 @Article{cc:SchelterKunegis:2018:ubiquity-web-tracking,
   author       = "Sebastian Schelter and Jérôme Kunegis",
   title        = "On the Ubiquity of Web Tracking: Insights from a Billion-Page Web Crawl",
@@ -1091,8 +1308,16 @@
   year         = "2018",
   URL          = "https://education.emc.com/content/dam/dell-emc/documents/en-us/2017KS_Ravinder-Using_Open_Data_to_Predict_Market_Movements.pdf",
   cc-author-affiliation = "DELL EMC",
-  cc-class = "market research, nlp, information retrieval",
-  cc-snippet = "We found that The Register articles for specific vendors extracted from the common crawl data set are highly correlated with our reading of General Purpose Magic Quadrant position movements in time. [...] The  Figure  11 : Common Crawl Data Processing Flow  Diagram shows  a broad overview of the  steps involved in the analysis of common crawl data. Going from the  bottom up it shows how  the data is extracted, processed and visualized. The amount of data in each phase becomes  more streamlined and , hence , the reduction in size of the data being worked on. We start with  the crawl data, extract the pages of interest int o a private storage bucket,  and  then process it to  remove unwanted words/tags. At the end , visualization tools are used to graphically display the  results. These can be used to publish standard reports or customized by users to support their  own analysis."
+  cc-class     = "market research, nlp, information retrieval",
+  cc-snippet   = "We found that The Register articles for specific vendors extracted from the common crawl data set are
+                 highly correlated with our reading of General Purpose Magic Quadrant position movements in time. [...]
+                 The Figure 11 : Common Crawl Data Processing Flow Diagram shows a broad overview of the steps involved
+                 in the analysis of common crawl data. Going from the bottom up it shows how the data is extracted,
+                 processed and visualized. The amount of data in each phase becomes more streamlined and, hence, the
+                 reduction in size of the data being worked on. We start with the crawl data, extract the pages of
+                 interest int o a private storage bucket, and then process it to remove unwanted words/tags. At the end,
+                 visualization tools are used to graphically display the results. These can be used to publish standard
+                 reports or customized by users to support their own analysis.",
 }
 
 @InProceedings{cc:StabDaxenbergerStahlhutMillerEtAl:2018:ArgumenText-searching-for-arguments,
@@ -1110,31 +1335,6 @@
                  Darmstadt, Germany",
   cc-class     = "nlp/argument-mining",
 }
-
-@Article{cc:LehmberHassanzadeh:2018:ontology-augmentation-with-web-tables,
-  title        = "Ontology Augmentation Through Matching with Web Tables",
-  author       = "Lehmberg, Oliver and Hassanzadeh, Oktie",
-  URL          = "http://disi.unitn.it/~pavel/om2018/papers/om2018_LTpaper4.pdf",
-  year         = "2018",
-  cc-author-affiliation = "University of Mannheim, Germany; IBM Research, Yorktown Heights, New York, USA",
-  cc-class     = "semantic web, ontology extraction, web tables",
-  cc-derived-dataset-used = "WDCWebTables",
-  cc-snippet   = "We perform an empirical study of the performance of this approach in using Web Tables extracted from
-                 the Common Crawl to augment the properties in DBpedia ontology.",
-}
-
-@Article{LiangLiuZadehMorency:2018:multimodal-language-analysis,
-  title        = "Multimodal Language Analysis with Recurrent Multistage Fusion: Supplementary Material",
-  author       = "Liang, Paul Pu and Liu, Ziyin and Zadeh, Amir and Morency, Louis-Philippe",
-  URL          = "http://www.cs.cmu.edu/~pliang/papers/emnlp2018-recurrent-fusion-supp.pdf",
-  cc-snippet   = "We used 300 dimensional Glove word embeddings trained on 840 billion tokens from the common crawl
-                 dataset (Pennington et al., 2014).",
-  cc-derived-dataset-used = "GloVe-word-embeddings",
-  year         = "2018",
-  cc-author-affiliation = "Carnegie Mellon University",
-  cc-class     = "nlp, multi-modal nlp, artificial intelligence",
-}
-
 
 @Article{cc:Stahlhut:2018:ArgumentText-German,
   title        = "Searching Arguments in German with ArgumenText",
@@ -1188,6 +1388,18 @@
                  the most word coverage among these genres.",
 }
 
+@Article{cc:TempelmeierDemidovaDietze:2018:inferring-missing-categorical-information,
+  title        = "Inferring missing categorical information in noisy and sparse web markup",
+  author       = "Tempelmeier, Nicolas and Demidova, Elena and Dietze, Stefan",
+  journal      = "Proceedings of The Web Conference 2018, 27th edition of the former WWW conference",
+  year         = "2018",
+  doi          = "http://doi.org/10.1145/3178876.3186028",
+  URL          = "https://arxiv.org/abs/1803.00446",
+  cc-author-affiliation = "Leibniz Universität Hannover, Germany",
+  cc-derived-dataset-used = "WCD-triples",
+  cc-class     = "semantic web, linked data",
+}
+
 @Article{cc:ThompsonTong:2018:track-persistent-identifier,
   title        = "Can Common Crawl reliably track persistent identifier ({PID}) use over time?",
   author       = "Thompson, Henry S. and Tong, Jian",
@@ -1196,6 +1408,19 @@
   URL          = "https://arxiv.org/abs/1802.01424",
   cc-author-affiliation = "University of Edinburgh, United Kingdom",
   cc-class     = "web-science",
+}
+
+@InProceedings{cc:TkachenkoChiaLauw:2018:exploring-corpus-subjectivity,
+  title        = "Searching for the {X}-Factor: Exploring Corpus Subjectivity for Word Embeddings",
+  author       = "Tkachenko, Maksim and Chia, Chong Cher and Lauw, Hady",
+  booktitle    = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1:
+                 Long Papers)",
+  volume       = "1",
+  pages        = "1212--1221",
+  year         = "2018",
+  URL          = "http://www.aclweb.org/anthology/P18-1112",
+  cc-author-affiliation = "Singapore Management University, Singapore",
+  cc-class     = "nlp/sentiment-analysis, nlp/word-embeddings, cc-cited-not-used",
 }
 
 @Article{cc:TosikMalliaGangopadhyay:2018:debunking-fake-news,
@@ -1265,7 +1490,7 @@
   URL          = "http://www.aclweb.org/anthology/W18-3221",
   cc-derived-dataset-used = "fastText-word-embeddings",
   cc-author-affiliation = "Facebook AI Research; New York University",
-  cc-class     = "nlp/ner, nlp/word-embeddings",
+  cc-class     = "nlp/named-entity-recognition, nlp/word-embeddings",
 }
 
 @Article{cc:WangIwaihara:2018:mergeable-Wikipedia-articles,
@@ -1291,7 +1516,19 @@
   cc-author-affiliation = "Carnegie Mellon University, Pittsburgh, PA, USA; Toyota Technological Institute at Chicago,
                  IL, USA",
   cc-derived-dataset-about = "WMT-16-translation-task-common-crawl-corpus",
-  cc-class     = "nlp/machine-translation, nlp/sentence-paraphrase",
+  cc-class     = "nlp/machine-translation, nlp/sentence-paraphrase, nlp/sentence-embeddings",
+}
+
+@Article{cc:WinataWuMadottoFung:2018:bilingual-character-representation-for-named-entity-recognition,
+  title        = "Bilingual Character Representation for Efficiently Addressing Out-of-Vocabulary Words in
+                 Code-Switching Named Entity Recognition",
+  author       = "Winata, Genta Indra and Wu, Chien-Sheng and Madotto, Andrea and Fung, Pascale",
+  journal      = "arXiv preprint arXiv:1805.12061",
+  year         = "2018",
+  URL          = "https://arxiv.org/abs/1805.12061",
+  cc-author-affiliation = "Hong Kong University of Science and Technology, Hong Kong",
+  cc-derived-dataset-used = "fastText-word-embeddings",
+  cc-class     = "nlp/named-entity-recognition, nlp/word-embeddings",
 }
 
 @Article{cc:YannakisFafaliosTzitzikas:2018:query-reordering-SparQL,
@@ -1335,3 +1572,20 @@
   cc-class     = "web-science/hyperlinkgraph, web-science/social-networks",
 }
 
+@InProceedings{cc:ZhangTaoTanLinEtAl:2018:link-stability-detection,
+  title        = "On Link Stability Detection for Online Social Networks",
+  author       = "Zhang, Ji and Tao, Xiaohui and Tan, Leonard and Lin, Jerry Chun-Wei and Li, Hongzhou and Chang,
+                 Liang",
+  booktitle    = "International Conference on Database and Expert Systems Applications",
+  pages        = "320--335",
+  year         = "2018",
+  organization = "Springer",
+  URL          = "https://link.springer.com/chapter/10.1007/978-3-319-98809-2_20",
+  cc-author-affiliation = "University of Southern Queensland, Toowoomba, Australia; Harbin Institute of Technology
+                 Shenzhen Graduate School, Shenzhen, China; Guilin University of Electronic Technology, Guilin, China;
+                 Guilin University of Electronic Technology, Guilin, China",
+  cc-class     = "graph-processing, social networks",
+  keywords     = "link stability, graph theory, online social networks",
+  cc-snippet   = "Since the social network we obtain from the repositories of common crawl contains missing links and
+                 partial information, stochastic estimations are …",
+}

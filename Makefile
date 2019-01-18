@@ -32,4 +32,5 @@ cc-classes:
 	perl -lne 'next unless s/^\s*cc-class\s*=\s*//; s/^["{]//; s/["}],?$$//; $$h{$$_}++ for split /,\s*/; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 cc-derived-dataset-used:
 	perl -lne 'next unless s/^\s*cc-derived-dataset-used\s*=\s*//; s/^["{]//; s/["}],?$$//; $$h{$$_}++ for split /,\s*/; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
-
+count:
+	grep -c '^@' bib/*.bib | perl -aF':' -lne 'print join("\t", $$F[1], $$F[0], @F[2..$$#F])' | sort -k2,2
