@@ -1,0 +1,94 @@
+@InProceedings{cc:MackenzieBenhamPetriTrippasEtAl:2020:cc-news-en,
+  author       = "Mackenzie, Joel and Benham, Rodger and Petri, Matthias and Trippas, Johanne R. and Culpepper, J. Shane
+                 and Moffat, Alistair",
+  title        = "{CC}-News-En: {A} Large English News Corpus",
+  year         = "2020",
+  ISBN         = "978-1-4503-6859-9",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  URL          = "https://doi.org/10.1145/3340531.3412762",
+  doi          = "10.1145/3340531.3412762",
+  abstract     = "We describe a static, open-access news corpus using data from the Common Crawl Foundation, who provide
+                 free, publicly available web archives, including a continuous crawl of international news articles
+                 published in multiple languages. Our derived corpus, CC-News-En, contains 44 million English documents
+                 collected between September 2016 and March 2018. The collection is comparable in size with the number
+                 of documents typically found in a single shard of a large-scale, distributed search engine, and is four
+                 times larger than the news collections previously used in offline information retrieval experiments. To
+                 complement the corpus, 173 topics were curated using titles from Reddit threads, forming a temporally
+                 representative sampling of relevant news topics over the 583 day collection window. Information needs
+                 were then generated using automatic summarization tools to produce textual and audio representations,
+                 and used to elicit query variations from crowdworkers, with a total of 10,437 queries collected against
+                 the 173 topics. Of these, 10,089 include key-stroke level instrumentation that captures the timings of
+                 character insertions and deletions made by the workers while typing their queries. These new resources
+                 support a wide variety of experiments, including large-scale efficiency exercises and query
+                 auto-completion synthesis, with scope for future addition of relevance judgments to support offline
+                 effectiveness experiments and hence batch evaluation campaigns.",
+  booktitle    = "Proceedings of the 29th ACM International Conference on Information & Knowledge Management",
+  pages        = "3077–3084",
+  numpages     = "8",
+  keywords     = "corpus, user query variations, collection, news search, crowdsourcing",
+  location     = "Virtual Event, Ireland",
+  series       = "CIKM '20",
+  cc-snippet   = "Our derived corpus, CC-News-En, contains 44 million English documents collected between September 2016
+                 and March 2018. [...] One such example is the CommonCrawl Foundation,1who generate large-scale crawls
+                 of the web at regular intervals. A key philosophy behind the Common Crawlis to democratize data,
+                 allowing open access with no fees. In late 2016, the Common Crawl Foundation announced a news-specific
+                 crawl (CC-News), [² ] with documents being added on a daily basis, and covering sources from a wide
+                 range of countries and languages. Here we derive a static, English segment of the CC-Newscrawl that we
+                 refer to asCC-News-En. Due to the storage and computation costs involved in filtering out non-English
+                 documents, we make the complete corpus available as a free resource, along with asuite of tools which
+                 can be used to replicate corpus extraction from the original source CC-News data. We also provide a set
+                 of 10,437 user query variations over 173 query topics, including keystroke-level data collected from a
+                 novel crowdworking experiment. Our goal is to encourage reproducible and replicable experimentation,
+                 with greatly reduced barriers to entry. [...] A total of 2,291CC-NewsWARC files were processed to build
+                 CC-News-En, covering the period 26 August 2016 to 31 March 2018, inclusive. The first and last WARC
+                 files inthis collection are as follows:•CC-NEWS-20160826124520-00000.warc.gz
+                 •CC-NEWS-20180331191315-00143.warc.gz The resulting subset of compressed WARC files occupies2.14TiBof
+                 disk space, and contains a total of102.5milliondocuments inover100languages. [...] Missing Documents
+                 and Temporal Gaps. During the creation of the collection, the CC-NEWS-20170812163812-00038.warc.gz file
+                 was not processed correctly by our pipeline, and was subsequently dropped from the CC-News-En corpus.
+                 In addition, there are six days within the 583 day period where no WARC files were added to the
+                 original CC-Newscrawl: 22/09/2016 – 25/09/2016 inclusive, 18/12/2017, and 22/12/2017. These gaps
+                 typically correspond to hardware and software upgrades on the crawl servers.[¹⁸ Private
+                 correspondence with Common Crawl Engineers.] It is also important to note that both CC-News and
+                 CC-News-En are not intended to be complete crawls of their sources, but rather, to provide a
+                 reproducible sample of these sites.",
+  cc-author-affiliation = "The University of Melbourne, Melbourne, Australia; RMIT University, Melbourne, Australia;
+                 Amazon Alexa, Manhattan Beach, CA, USA",
+  cc-class     = "nlp/text-corpora, corpus-construction, ir/information-extraction",
+}
+
+@InProceedings{cc:ElKishkyChaudharyGuzmanKoehn:2020:ccaligned,
+  title        = "{CCA}ligned: {A} Massive Collection of Cross-Lingual Web-Document Pairs",
+  author       = "El-Kishky, Ahmed and Chaudhary, Vishrav and Guzmán, Francisco and Koehn, Philipp",
+  booktitle    = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+  month        = nov,
+  year         = "2020",
+  address      = "Online",
+  publisher    = "Association for Computational Linguistics",
+  URL          = "https://www.aclweb.org/anthology/2020.emnlp-main.480",
+  pages        = "5960--5969",
+  abstract     = "Cross-lingual document alignment aims to identify pairs of documents in two distinct languages that
+                 are of comparable content or translations of each other. In this paper, we exploit the signals embedded
+                 in URLs to label web documents at scale with an average precision of 94.5{\%} across different language
+                 pairs. We mine sixty-eight snapshots of the Common Crawl corpus and identify web document pairs that
+                 are translations of each other. We release a new web dataset consisting of over 392 million URL pairs
+                 from Common Crawl covering documents in 8144 language pairs of which 137 pairs include English. In
+                 addition to curating this massive dataset, we introduce baseline methods that leverage cross-lingual
+                 representations to identify aligned documents based on their textual content. Finally, we demonstrate
+                 the value of this parallel documents dataset through a downstream task of mining parallel sentences and
+                 measuring the quality of machine translations from models trained on this mined data. Our objective in
+                 releasing this dataset is to foster new research in cross-lingual NLP across a variety of low, medium,
+                 and high-resource languages.",
+  cc-snippet   = "[...] we exploit the signals embedded in URLs to label web documents at scale with an average
+                 precision of 94.5{\%} across different language pairs. We mine sixty-eight snapshots of the Common
+                 Crawl corpus and identify web document pairs that are translations of each other. We release a new web
+                 dataset consisting of over 392 million URL pairs from Common Crawl covering documents in 8144 language
+                 pairs of which 137 pairs include English. [...] Starting from 68 Com-mon Crawl snapshots with a raw
+                 document count of 169.4 billion documents, upon deduplication, the resultant corpus is approximately
+                 29.6 billion web documents from 107.8 million distinct web domains – a 83{\%} reduction from the raw
+                 corpus.",
+  cc-class     = "nlp/machine-translation, nlp/text-corpora, nlp/parallel-corpus, nlp/cross-lingual-document-alignment",
+  cc-derived-dataset-about = "CCAligned-2020",
+  cc-author-affiliation = "Facebook AI; Johns Hopkins University",
+}
