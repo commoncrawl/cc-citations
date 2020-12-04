@@ -1,7 +1,7 @@
 @InProceedings{cc:MackenzieBenhamPetriTrippasEtAl:2020:cc-news-en,
   author       = "Mackenzie, Joel and Benham, Rodger and Petri, Matthias and Trippas, Johanne R. and Culpepper, J. Shane
                  and Moffat, Alistair",
-  title        = "{CC}-News-En: {A} Large English News Corpus",
+  title        = "{CC}-News-En: {A} large English news corpus",
   year         = "2020",
   ISBN         = "978-1-4503-6859-9",
   publisher    = "Association for Computing Machinery",
@@ -24,42 +24,43 @@
                  auto-completion synthesis, with scope for future addition of relevance judgments to support offline
                  effectiveness experiments and hence batch evaluation campaigns.",
   booktitle    = "Proceedings of the 29th ACM International Conference on Information & Knowledge Management",
-  pages        = "3077–3084",
+  pages        = "3077--3084",
   numpages     = "8",
   keywords     = "corpus, user query variations, collection, news search, crowdsourcing",
   location     = "Virtual Event, Ireland",
   series       = "CIKM '20",
   cc-snippet   = "Our derived corpus, CC-News-En, contains 44 million English documents collected between September 2016
-                 and March 2018. [...] One such example is the CommonCrawl Foundation,1who generate large-scale crawls
-                 of the web at regular intervals. A key philosophy behind the Common Crawlis to democratize data,
+                 and March 2018. [...] One such example is the CommonCrawl Foundation,[¹ ] who generate large-scale
+                 crawls of the web at regular intervals. A key philosophy behind the Common Crawlis to democratize data,
                  allowing open access with no fees. In late 2016, the Common Crawl Foundation announced a news-specific
                  crawl (CC-News), [² ] with documents being added on a daily basis, and covering sources from a wide
                  range of countries and languages. Here we derive a static, English segment of the CC-Newscrawl that we
-                 refer to asCC-News-En. Due to the storage and computation costs involved in filtering out non-English
+                 refer to as CC-News-En. Due to the storage and computation costs involved in filtering out non-English
                  documents, we make the complete corpus available as a free resource, along with asuite of tools which
                  can be used to replicate corpus extraction from the original source CC-News data. We also provide a set
                  of 10,437 user query variations over 173 query topics, including keystroke-level data collected from a
                  novel crowdworking experiment. Our goal is to encourage reproducible and replicable experimentation,
-                 with greatly reduced barriers to entry. [...] A total of 2,291CC-NewsWARC files were processed to build
-                 CC-News-En, covering the period 26 August 2016 to 31 March 2018, inclusive. The first and last WARC
-                 files inthis collection are as follows:•CC-NEWS-20160826124520-00000.warc.gz
-                 •CC-NEWS-20180331191315-00143.warc.gz The resulting subset of compressed WARC files occupies2.14TiBof
-                 disk space, and contains a total of102.5milliondocuments inover100languages. [...] Missing Documents
-                 and Temporal Gaps. During the creation of the collection, the CC-NEWS-20170812163812-00038.warc.gz file
-                 was not processed correctly by our pipeline, and was subsequently dropped from the CC-News-En corpus.
-                 In addition, there are six days within the 583 day period where no WARC files were added to the
-                 original CC-Newscrawl: 22/09/2016 – 25/09/2016 inclusive, 18/12/2017, and 22/12/2017. These gaps
-                 typically correspond to hardware and software upgrades on the crawl servers.[¹⁸ Private
-                 correspondence with Common Crawl Engineers.] It is also important to note that both CC-News and
-                 CC-News-En are not intended to be complete crawls of their sources, but rather, to provide a
-                 reproducible sample of these sites.",
+                 with greatly reduced barriers to entry. [...] A total of 2,291 CC-News WARC files were processed to
+                 build CC-News-En, covering the period 26 August 2016 to 31 March 2018, inclusive. The first and last
+                 WARC files inthis collection are as follows: •CC-NEWS-20160826124520-00000.warc.gz
+                 •CC-NEWS-20180331191315-00143.warc.gz The resulting subset of compressed WARC files occupies 2.14 TiB
+                 of disk space, and contains a total of 102.5 million documents in over 100 languages. [...] Missing
+                 Documents and Temporal Gaps. During the creation of the collection, the
+                 CC-NEWS-20170812163812-00038.warc.gz file was not processed correctly by our pipeline, and was
+                 subsequently dropped from the CC-News-En corpus. In addition, there are six days within the 583 day
+                 period where no WARC files were added to the original CC-News crawl: 22/09/2016 – 25/09/2016
+                 inclusive, 18/12/2017, and 22/12/2017. These gaps typically correspond to hardware and software
+                 upgrades on the crawl servers.[¹⁸ Private correspondence with Common Crawl Engineers.] It is also
+                 important to note that both CC-News and CC-News-En are not intended to be complete crawls of their
+                 sources, but rather, to provide a reproducible sample of these sites.",
   cc-author-affiliation = "The University of Melbourne, Melbourne, Australia; RMIT University, Melbourne, Australia;
                  Amazon Alexa, Manhattan Beach, CA, USA",
   cc-class     = "nlp/text-corpora, corpus-construction, ir/information-extraction",
+  cc-dataset-used = "CC-NEWS",
 }
 
 @InProceedings{cc:ElKishkyChaudharyGuzmanKoehn:2020:ccaligned,
-  title        = "{CCA}ligned: {A} Massive Collection of Cross-Lingual Web-Document Pairs",
+  title        = "{CCA}ligned: {A} Massive collection of cross-lingual web-document pairs",
   author       = "El-Kishky, Ahmed and Chaudhary, Vishrav and Guzmán, Francisco and Koehn, Philipp",
   booktitle    = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
   month        = nov,
@@ -93,43 +94,63 @@
   cc-author-affiliation = "Facebook AI; Johns Hopkins University",
 }
 
+@Misc{cc:BrownMannRyderSubbiahEtAl:2020:language-models,
+  title        = "Language models are few-shot learners",
+  author       = "Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla
+                 Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini
+                 Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh
+                 and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric
+                 Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and
+                 Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei",
+  year         = "2020",
+  eprint       = "2005.14165",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2005.14165",
+  cc-author-affiliation = "Johns Hopkins University; OpenAI",
+  cc-class     = "nlp/language-model, ai/deep-learning, nlp/autoregressive-transformer-language-model,
+                 nlp/question-answering, nlp/machine-translation, nlp/text-generation",
+  cc-snippet   = "Datasets for language models have rapidly expanded, culminating in the Common Crawl dataset [...]
+                 constituting nearly a trillion words. [...] However, we have found that unfiltered or lightly filtered
+                 versions of Common Crawl tend to have lower quality than more curated datasets. Therefore, we took 3
+                 steps to improve the average quality of our datasets: (1) we downloaded and filtered a version of
+                 CommonCrawl based on similarity to a range of high-quality reference corpora, (2) we performed fuzzy
+                 deduplication at the document level, within and across datasets, to prevent redundancy and preserve the
+                 integrity of our held-out validation set as an accurate measure of overfitting, and (3) we also added
+                 known high-quality reference corpora to the training mix to augment CommonCrawl and increase its
+                 diversity. Details of the first two points (processing of Common Crawl) are described in Appendix A.",
+}
 
-@Misc{		  cc:BrownMannRyderSubbiahEtAl:2020:language-models,
-  title		= {Language Models are Few-Shot Learners},
-  author	= {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie
-		  Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind
-		  Neelakantan and Pranav Shyam and Girish Sastry and Amanda
-		  Askell and Sandhini Agarwal and Ariel Herbert-Voss and
-		  Gretchen Krueger and Tom Henighan and Rewon Child and
-		  Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and
-		  Clemens Winter and Christopher Hesse and Mark Chen and Eric
-		  Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess
-		  and Jack Clark and Christopher Berner and Sam McCandlish
-		  and Alec Radford and Ilya Sutskever and Dario Amodei},
-  year		= {2020},
-  eprint	= {2005.14165},
-  archiveprefix	= {arXiv},
-  primaryclass	= {cs.CL},
-  url		= {https://arxiv.org/abs/2005.14165},
-  cc-author-affiliation={Johns Hopkins University; OpenAI},
-  cc-class	= {nlp/language-model, ai/deep-learning, nlp/autoregressive-transformer-language-model, nlp/question-answering, nlp/machine-translation, nlp/text-generation},
-  cc-snippet = {Datasets for language models have rapidly expanded,
-                  culminating in the Common Crawl dataset [...]
-                  constituting nearly a trillion words. [...] However,
-                  we have found that unfiltered or lightly filtered
-                  versions of Common Crawl tend to have lower quality
-                  than more curated datasets. Therefore, we took 3
-                  steps to improve the average quality of our
-                  datasets: (1) we downloaded and filtered a version
-                  of CommonCrawl based on similarity to a range of
-                  high-quality reference corpora, (2) we performed
-                  fuzzy deduplication at the document level, within
-                  and across datasets, to prevent redundancy and
-                  preserve the integrity of our held-out validation
-                  set as an accurate measure of overfitting, and (3)
-                  we also added known high-quality reference corpora
-                  to the training mix to augment CommonCrawl and
-                  increase its diversity.  Details of the first two
-                  points (processing of Common Crawl) are described in
-                  Appendix A.  }
+@Misc{cc:JazbecPásztorFaltingsAntulov-FantulinEtAl:2020:news-and-information-transfer,
+  title        = "On the impact of publicly available news and information transfer to financial markets",
+  author       = "Metod Jazbec and Barna Pásztor and Felix Faltings and Nino Antulov-Fantulin and Petter N. Kolm",
+  year         = "2020",
+  URL          = "https://arxiv.org/abs/2010.12002",
+  cc-author-affiliation = "ETH Zurich, Switzerland; New York University, New York, USA",
+  abstract     = "We quantify the propagation and absorption of large-scale publicly available news articles from the
+                 World Wide Web to financial markets. To extract publicly available information, we use the news
+                 archives from the Common Crawl, a nonprofit organization that crawls a large part of the web. We
+                 develop a processing pipeline to identify news articles associated with the constituent companies in
+                 the S&P 500 index, an equity market index that measures the stock performance of U.S. companies. Using
+                 machine learning techniques, we extract sentiment scores from the Common Crawl News data and employ
+                 tools from information theory to quantify the information transfer from public news articles to the
+                 U.S. stock market. Furthermore, we analyze and quantify the economic significance of the news-based
+                 information with a simple sentiment-based portfolio trading strategy. Our findings provides support for
+                 that information in publicly available news on the World Wide Web has a statistically and economically
+                 significant impact on events in financial markets.",
+  cc-class     = "statistical-finance; ai/machine-learning; nlp/sentiment-analysis",
+  cc-snippet   = "In this article, we use news articles from the Common Crawl News, a subset of the Common Crawl’s
+                 petabytes of publicly available World Wide Web archives, to measure the impact of the arrival of new
+                 information about the constituent stocks in the S&P 500 index at the time of publishing. To the best of
+                 our knowledge, our study is the first one to use the Common Crawl in this way. We develop a cloud-based
+                 processing pipeline that identifies news articles in the Common Crawl News data that are related to the
+                 companies in the S&P 500. As the Common Crawl public data archives are getting bigger, they are opening
+                 doors for many real-world “data-hungry” applications such as transformers models GPT49 and BERT50,
+                 a recent class of deep learning language models. We believe that public sources of news data is
+                 important not only for natural language processing (NLP) and finance communities but also for more
+                 general studies in complex systems and computational social sciences that are aiming to characterize
+                 (mis)information propagation and dynamics in techno-socio-economic systems. The abundance of
+                 high-frequency data around the financial systems enables complex systems researchers to have
+                 microscopic observables that allow verification of different models, theories, and hypotheses.",
+  cc-dataset-used = "CC-NEWS",
 }

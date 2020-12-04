@@ -5,5 +5,98 @@
   URL          = "https://us.sagepub.com/en-us/nam/the-sage-handbook-of-web-history/book252251",
   publisher    = "SAGE Publications Limited",
   cc-author-affiliation = "Aarhus University, Denmark; University of Waterloo, Canada",
-  cc-classes   = "web-science, web history"
+  cc-classes   = "web-science, web history",
+}
+
+@Article{cc:WenzekLachauxConneauChaudharyEtAl:2019:CCNet,
+  author       = "Guillaume Wenzek and Marie-Anne Lachaux and Alexis Conneau and Vishrav Chaudhary and Francisco Guzmán
+                 and Armand Joulin and Edouard Grave",
+  title        = "{CCN}et: Extracting high quality monolingual datasets from web crawl data",
+  journal      = "CoRR",
+  year         = "2019",
+  URL          = "https://arxiv.org/abs/1911.00359",
+  eprint       = "1911.00359",
+  timestamp    = "Mon, 11 Nov 2019 18:38:09 +0100",
+  cc-author-affiliation = "Facebook AI",
+  abstract     = "Pre-training text representations have led to significant improvements in many areas of natural
+                 language processing. The quality of thesemodels benefits greatly from the size of the pretraining
+                 corpora as long as its quality is preserved. In this paper, we describe an automaticpipeline to extract
+                 massive high-quality monolingual datasets from Common Crawl for a variety of languages. Our pipeline
+                 followsthe data processing introduced in fastText (Mikolov et al., 2017; Grave et al., 2018), that
+                 deduplicates documents and identifies theirlanguage. We augment this pipeline with a filtering step to
+                 select documents that are close to high quality corpora like Wikipedia.",
+  cc-snippet   = "[about https://github.com/facebookresearch/cc_net] In this paper, we present a data collection
+                 pipeline that allows to gather massive monolingual corpora of high qual- ity in a variety of languages,
+                 including many low-resource ones. The principles of our pipeline are general and we show the results of
+                 its application to data collected by the Common Crawl project.1 Common Crawl is a massive non-curated
+                 dataset of webpages in many languages, mixed together in temporal snapshots of the web.",
+  cc-class     = "nlp/corpus-construction, web-as-a-corpus",
+}
+
+@InProceedings{cc:RadfordWuChildLuanEtAl:2019:language-models,
+  title        = "Language models are unsupervised multitask learners",
+  author       = "A. Radford and Jeffrey Wu and R. Child and David Luan and Dario Amodei and Ilya Sutskever",
+  year         = "2019",
+  URL          = "https://www.semanticscholar.org/paper/Language-Models-are-Unsupervised-Multitask-Learners-Radford-Wu/9405cc0d6169988371b2755e573cc28650d14dfe",
+  cc-snippet   = "A promising source of diverse and nearly unlimited text isweb scrapes such as Common Crawl. While
+                 these archivesare many orders of magnitude larger than current languagemodeling datasets, they have
+                 significant data quality issues.Trinh & Le (2018) used Common Crawl in their work oncommonsense
+                 reasoning but noted a large amount of doc-uments “whose content are mostly unintelligible”. We
+                 ob-served similar data issues in our initial experiments with Common Crawl. Trinh & Le (2018)’s best
+                 results wereachieved using a small subsample of Common Crawl whichincluded only documents most similar
+                 to their target dataset,the Winograd Schema Challenge. While this is a pragmaticapproach to improve
+                 performance on a specific task, wewant to avoid making assumptions about the tasks to beperformed ahead
+                 of time.Instead, we created a new web scrape which emphasizesdocument quality. To do this we only
+                 scraped web pageswhich have been curated/filtered by humans. Manuallyfiltering a full web scrape would
+                 be exceptionally expensiveso as a starting point, we scraped all outbound links fromReddit, a social
+                 media platform, which received at least 3karma. This can be thought of as a heuristic indicator
+                 forwhether other users found the link interesting, educational,or just funny. The resulting dataset,
+                 WebText, contains the text subsetof these 45 million links.",
+  cc-class     = "cc-cited-not-used",
+  cc-author-affiliation = "OpenAI, San Francisco, California, United States",
+}
+
+@InProceedings{cc:Ortiz-SuarezSagotRomary:2019:processing-huge-corpora,
+  title        = "{Asynchronous pipeline for processing huge corpora on medium to low resource infrastructures}",
+  author       = "Ortiz Suárez, Pedro Javier and Sagot, Benoît and Romary, Laurent",
+  URL          = "https://hal.inria.fr/hal-02148693",
+  booktitle    = "7th Workshop on the Challenges in the Management of Large Corpora (CMLC-7)",
+  address      = "Cardiff, United Kingdom",
+  editor       = "Piotr Bański and Adrien Barbaresi and Hanno Biber and Evelyn Breiteneder and Simon Clematide and Marc
+                 Kupietz and Harald Lüngen and Caroline Iliadi",
+  publisher    = "{Leibniz-Institut für Deutsche Sprache}",
+  year         = "2019",
+  month        = jul,
+  doi          = "10.14618/IDS-PUB-9021",
+  pdf          = "https://hal.inria.fr/hal-02148693/file/Asynchronous_Pipeline_for_Processing_Huge_Corpora_on_Medium_to_Low_Resource_Infrastructures.pdf",
+  cc-author-affiliation = "Inria, Paris, France; Sorbonne University, Paris, France",
+  cc-class     = "nlp/corpus-construction",
+  cc-derived-dataset-about = "OSCAR",
+}
+
+@MastersThesis{cc:Kristoffersen:2017:common-crawled-web-corpora,
+  title        = "Common crawled web corpora: constructing corpora from large amounts of web data",
+  author       = "Kristoffersen, Kjetil Bugge",
+  year         = "2017",
+  URL          = "http://urn.nb.no/URN:NBN:no-60569",
+  pdf          = "https://www.duo.uio.no/bitstream/handle/10852/57836/Kristoffersen_MSc2.pdf",
+  abstract     = "Efforts to use web data as corpora seek to provide solutions to problems traditional corpora suffer
+                 from, by taking advantage of the web's huge size and diverse type of content. This thesis will discuss
+                 the several sub-tasks that make up the web corpus construction process, like HTML markup removal,
+                 language identification, boilerplate removal, duplication detection, etc. Additionally, by using data
+                 provided by the Common Crawl Foundation, I develop a new very large English corpus with more than 135
+                 billion tokens. Finally, I evaluate the corpus by training word embeddings and show that the trained
+                 model largely outperforms models trained on other corpora in a word analogy and word similarity task.",
+  cc-author-affiliation = "University of Oslo, Norway",
+  cc-class     = "nlp/corpus-construction, web-as-corpus",
+}
+
+@MastersThesis{Mottl:2019:branchenklassifikation,
+  author       = "Dominik Mottl",
+  title        = "Multi-Label Branchenklassifikation von Web-Texten",
+  pdf          = "https://fbmn.h-da.de/uploads/Themen/WS18_thesis_mottl.pdf",
+  cc-snippet   = "NER of company names and linking to DBpedia performed on English texts in 712 WET files of November
+                 2018 crawl (CC-MAIN-2018-47) using cc-pyspark.",
+  cc-author-affiliation = "Hochschule Darmstadt, Germany",
+  cc-class     = "nlp/NER, entity-linking",
 }
