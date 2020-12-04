@@ -25,6 +25,10 @@ tmp/commoncrawl_site_wp.csv: tmp/commoncrawl.bib
 %.formatted.bib: %.bib
 	$(BIBCLEAN) $< >$@
 
+# prepare: add CC annotations and ID
+%.prepared.bib: %.bib
+	perl -000 -lne 's@\}\n\}$$@},\n  url = {},\n  cc-author-affiliation = {},\n  cc-class = {},\n}@; print' $< | bibtool -f 'cc:%4p(author):%4d(year):%4T(title)' | perl -lpe 'do { s@\.ea:20@EtAl:20@; s@\.@@g } if /^@/' >$@
+
 # some statistics about the citations
 cc-annotations:
 	perl -lne '$$h{$$1}++ if /^\s*(cc(?:-[a-z_0-9]+)+)\s*=/; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
