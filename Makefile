@@ -27,14 +27,17 @@ tmp/commoncrawl_site_wp.csv: tmp/commoncrawl.bib
 
 # prepare: add CC annotations and ID
 %.prepared.bib: %.bib
-	perl -000 -lne 's@\}\n\}$$@},\n  url = {},\n  cc-author-affiliation = {},\n  cc-class = {},\n}@; print' $< | bibtool -f 'cc:%4p(author):%4d(year):%4T(title)' | perl -lpe 'do { s@\.ea:20@EtAl:20@; s@\.@@g } if /^@/' >$@
+	perl -000 -lne 's@([}"]),?\n\}$$@$$1,\n  url = {},\n  cc-author-affiliation = {},\n  cc-class = {},\n}@; print' $< | bibtool -f 'cc:%4p(author):%4d(year):%4T(title)' | perl -lpe 'do { s@\.ea:20@EtAl:20@; s@\.@@g } if /^@/' >$@
 
 # some statistics about the citations
 cc-annotations:
 	perl -lne '$$h{$$1}++ if /^\s*(cc(?:-[a-z_0-9]+)+)\s*=/; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 cc-classes:
-	perl -lne 'if (s/^\s*cc-class\s*=\s*["{]// .. s/["}],?$$//) { $$classes .= $$_ } elsif (defined $$classes) { $$h{$$_}++ for split /,\s*/, $$classes; $$classes = undef; }; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
+	perl -lne 'if (s/^\s*cc-class\s*=\s*["{]// .. s/["}],?$$//) { $$classes .= $$_ } elsif (defined $$classes) { do { s@\s+@ @g; $$h{$$_}++ } for split /,\s*/, $$classes; $$classes = undef; }; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 cc-derived-datasets:
 	perl -lne 'if (s/^\s*cc-derived-dataset-(?:used|cited|about)\s*=\s*["{]// .. s/["}],?$$//) { $$datasets .= $$_ } elsif (defined $$datasets) {  $$h{$$_}++ for split /,\s*/, $$datasets; $$datasets = undef; } END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 count:
 	grep -c '^@' bib/*.bib | perl -aF':' -lne 'print join("\t", $$F[1], $$F[0], @F[2..$$#F])' | sort -k2,2
+
+clean:
+	rm bib/*.formatted.bib

@@ -55,7 +55,7 @@
                  sources, but rather, to provide a reproducible sample of these sites.",
   cc-author-affiliation = "The University of Melbourne, Melbourne, Australia; RMIT University, Melbourne, Australia;
                  Amazon Alexa, Manhattan Beach, CA, USA",
-  cc-class     = "nlp/text-corpora, corpus-construction, ir/information-extraction",
+  cc-class     = "nlp/text-corpora, nlp/corpus-construction, ir/information-extraction",
   cc-dataset-used = "CC-NEWS",
 }
 
@@ -63,7 +63,6 @@
   title        = "{CCA}ligned: {A} Massive collection of cross-lingual web-document pairs",
   author       = "El-Kishky, Ahmed and Chaudhary, Vishrav and Guzmán, Francisco and Koehn, Philipp",
   booktitle    = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
-  month        = nov,
   year         = "2020",
   address      = "Online",
   publisher    = "Association for Computational Linguistics",
@@ -153,4 +152,78 @@
                  high-frequency data around the financial systems enables complex systems researchers to have
                  microscopic observables that allow verification of different models, theories, and hypotheses.",
   cc-dataset-used = "CC-NEWS",
+}
+
+@Misc{cc:SquarcinaTempestaVeroneseCalzavaraEtAl:2020:related-domain-attacks,
+  title        = "Can {I} take your subdomain? Exploring related-domain attacks in the modern web",
+  author       = "Marco Squarcina and Mauro Tempesta and Lorenzo Veronese and Stefano Calzavara and Matteo Maffei",
+  year         = "2020",
+  URL          = "https://arxiv.org/abs/2012.01946",
+  pdf          = "https://arxiv.org/pdf/2012.01946.pdf",
+  cc-author-affiliation = "TU Wien, Austria; Università Ca’ Foscari Venezia, Italy",
+  cc-class     = "computer-security/internet-security, related-domain attacks",
+  cc-snippet   = "Our web security analysis aims at quantifying the number of domains hosting web applications that can
+                 be exploited by taking over the vulnerable domains discovered by RDScan. In particular, for every apex
+                 domain with at least one vulnerable subdomain, we selected from the CommonCrawl dataset [¹⁹ Common
+                 Crawl. Host- and domain-level webgraphs feb/mar/may 2020.
+                 https://commoncrawl.org/2020/06/host-and-domain-level-web-graphs-febmarmay-2020/, 2020.] the list of
+                 200 most popular related-domains according to the Pagerank score [11]. From the homepage of these
+                 domains,we extracted the same-origin links that appear in the HTML code.",
+  cc-dataset-used = "hyperlinkgraph/cc-main-2020-feb-mar-may/hostgraph",
+}
+
+@Article{cc:RaffelShazeerRobertsLeeEtAl:2020:Exploring-limits-of-transfer,
+  title        = "Exploring the limits of transfer learning with a unified text-to-text transformer",
+  author       = "Raffel, Colin and Shazeer, Noam and Roberts, Adam and Lee, Katherine and Narang, Sharan and Matena,
+                 Michael and Zhou, Yanqi and Li, Wei and Liu, Peter J.",
+  journal      = "Journal of Machine Learning Research",
+  volume       = "21",
+  number       = "140",
+  pages        = "1--67",
+  year         = "2020",
+  URL          = "http://jmlr.org/papers/v21/20-074.html",
+  pdf          = "https://www.jmlr.org/papers/volume21/20-074/20-074.pdf",
+  abstract     = "Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a
+                 downstream task, has emerged as a powerful technique in natural language processing (NLP). The
+                 effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and
+                 practice. In this paper, we explore the landscape of transfer learning techniques for NLP by
+                 introducing a unified framework that converts all text-based language problems into a text-to-text
+                 format. Our systematic study compares pre-training objectives, architectures, unlabeled data sets,
+                 transfer approaches, and other factors on dozens of language understanding tasks. By combining the
+                 insights from our exploration with scale and our new “Colossal Clean Crawled Corpus”, we achieve
+                 state-of-the-art results on many benchmarks covering summarization, question answering, text
+                 classification, and more. To facilitate future work on transfer learning for NLP, we release our data
+                 set, pre-trained models, and code.",
+  cc-author-affiliation = "Google, Mountain View, CA, USA",
+  cc-derived-dataset-about = "tensorflow-c4",
+  cc-dataset-used = "CC-MAIN-2019-18 (WET)",
+  cc-snippet   = "We also introduce our approach for treating every problem as a text-to-text task and describe our
+                 “Colossal Clean Crawled Corpus” (C4), the Common Crawl-based data set we created as a source of
+                 unlabeled text data. [...] Common Crawl is a publicly-available web archive that provides “web
+                 extracted text”by removing markup and other non-text content from the scraped HTML files. This
+                 process produces around 20TB of scraped text data each month. Unfortunately, the majority of the
+                 resulting text is not natural language. Instead, it largely comprises gibberish or boiler-plate text
+                 like menus, error messages, or duplicate text. Furthermore, a good deal of the scraped text contains
+                 content that is unlikely to be helpful for any of the tasks we consider (offensive language,
+                 placeholder text, source code, etc.). To address these issues, we used the following heuristics for
+                 cleaning up Common Crawl’s web extracted text: [...] To assemble our base data set, we downloaded the
+                 web extracted text from April 2019and applied the aforementioned filtering. This produces a collection
+                 of text that is not only orders of magnitude larger than most data sets used for pre-training (about
+                 750 GB) but also comprises reasonably clean and natural English text. We dub this data set the
+                 “Colossal Clean Crawled Corpus” (or C4 for short) and release it as part of TensorFlow Datasets.⁸
+                 [⁸https://www.tensorflow.org/datasets/catalog/c4]",
+  cc-class     = "nlp/corpus-construction, nlp/language-model",
+}
+
+@Book{cc:Patel:2020:structured-data-from-internet,
+  title        = "Getting structured data from the internet",
+  author       = "Jay M. Patel",
+  year         = "2020",
+  doi          = "https://doi.org/10.1007/978-1-4842-6576-5",
+  publisher    = "Apress",
+  URL          = "https://www.apress.com/gp/book/9781484265758",
+  cc-author-affiliation = "Specrom Analytics, Ahmedabad, India",
+  cc-snippet   = "[Chapter 6: Introduction to Common Crawl Datasets + Chapter 7: Web Crawl Processing on Big Data
+                 Scale]",
+  cc-class     = "web-mining",
 }
