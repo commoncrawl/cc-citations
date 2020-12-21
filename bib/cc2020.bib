@@ -84,7 +84,7 @@
                  precision of 94.5{\%} across different language pairs. We mine sixty-eight snapshots of the Common
                  Crawl corpus and identify web document pairs that are translations of each other. We release a new web
                  dataset consisting of over 392 million URL pairs from Common Crawl covering documents in 8144 language
-                 pairs of which 137 pairs include English. [...] Starting from 68 Com-mon Crawl snapshots with a raw
+                 pairs of which 137 pairs include English. [...] Starting from 68 Common Crawl snapshots with a raw
                  document count of 169.4 billion documents, upon deduplication, the resultant corpus is approximately
                  29.6 billion web documents from 107.8 million distinct web domains – a 83{\%} reduction from the raw
                  corpus.",
@@ -172,7 +172,7 @@
   cc-dataset-used = "hyperlinkgraph/cc-main-2020-feb-mar-may/hostgraph",
 }
 
-@Article{cc:RaffelShazeerRobertsLeeEtAl:2020:Exploring-limits-of-transfer,
+@Article{cc:RaffelShazeerRobertsLeeEtAl:2020:limits-of-transfer-learning,
   title        = "Exploring the limits of transfer learning with a unified text-to-text transformer",
   author       = "Raffel, Colin and Shazeer, Noam and Roberts, Adam and Lee, Katherine and Narang, Sharan and Matena,
                  Michael and Zhou, Yanqi and Li, Wei and Liu, Peter J.",
@@ -226,4 +226,194 @@
   cc-snippet   = "[Chapter 6: Introduction to Common Crawl Datasets + Chapter 7: Web Crawl Processing on Big Data
                  Scale]",
   cc-class     = "web-mining",
+}
+
+@Article{cc:Dunn:2020:corpus-of-global-language-use,
+  title        = "Mapping languages: The Corpus of Global Language Use",
+  author       = "Dunn, Jonathan",
+  journal      = "Language Resources and Evaluation",
+  pages        = "999--1018",
+  year         = "2020",
+  volume       = "54",
+  publisher    = "Springer",
+  URL          = "https://doi.org/10.1007/s10579-020-09489-2",
+  doi          = "10.1007/s10579-020-09489-2",
+  abstract     = "This paper describes a web-based corpus of global language use with a focus on how this corpus can be
+                 used for data-driven language mapping. First, the corpus provides a representation of where national
+                 varieties of major languages are used (e.g., English, Arabic, Russian) together with consistently
+                 collected data for each variety. Second, the paper evaluates a language identification model that
+                 supports more local languages with smaller sample sizes than alternative off-the-shelf models. Improved
+                 language identification is essential for moving beyond majority languages. Given the focus on language
+                 mapping, the paper analyzes how well this digital language data represents actual populations by (i)
+                 systematically comparing the corpus with demographic ground-truth data and (ii) triangulating the
+                 corpus with an alternate Twitter-based dataset. In total, the corpus contains 423 billion words
+                 representing 148 languages (with over 1 million words from each language) and 158 countries (again with
+                 over 1 million words from each country), all distilled from Common Crawl web data. The main
+                 contribution of this paper, in addition to describing this publicly-available corpus, is to provide a
+                 comprehensive analysis of the relationship between two sources of digital data (the web and Twitter) as
+                 well as their connection to underlying populations.",
+  cc-author-affiliation = "University of Canterbury, Christchurch, New Zealand",
+  cc-derived-dataset-about = "earthlings.io/CGLU",
+  cc-dataset-used = "64 monthly crawls: March 2014 (CC-MAIN-2014-10) -- June 2019 (CC-MAIN-2019-29)",
+  cc-class     = "nlp/corpus-construction, nlp/language-identification",
+  cc-snippet   = "The raw portions of the Common Crawl dataset used to build the corpus are shown in Table 2. The corpus
+                 uses every portion of the crawl from March 2014 to June 2019, totaling 147 billion web pages in total.
+                 No temporal divisions are included in the corpus because these dates represent the time of collection
+                 rather than the time of production: web data does not expire and there is a long-tail in which the same
+                 samples are observed multiple times across different periods.",
+}
+
+@Article{cc:XuZhangDong:2020:CLUECorpus2020,
+  title        = "{CLUEC}orpus2020: {A} large-scale Chinese corpus for pre-training language model",
+  author       = "Liang Xu and Xuanwei Zhang and Qianqian Dong",
+  journal      = "ArXiv",
+  year         = "2020",
+  volume       = "abs/2003.01355",
+  URL          = "https://arxiv.org/abs/2003.01355",
+  pdf          = "https://arxiv.org/pdf/2003.01355.pdf",
+  cc-author-affiliation = "CLUE Organization",
+  cc-class     = "nlp/corpus-construction",
+  cc-dataset-used = "July to December 2019 (WARC)",
+  cc-snippet   = "we introduce the Chinese corpusfrom CLUE organization, CLUECorpus2020, a large-scale corpus that can
+                 be used directly for self-supervised learning such as pre-training of a language model, or language
+                 gen-eration. It has 100G raw corpus with 35 billion Chinese characters, which is retrieved from Common
+                 Crawl¹. [...] We download the corpus from July to December 2019 from Common Crawl. After the
+                 aforementioned filtering method, we extract the corpus of 100GB.",
+}
+
+@InCollection{cc:ZellersHoltzmanRashkinBiskEtAl:2019:defending-against-neural-fake-news,
+  title        = "Defending against neural fake news",
+  author       = "Zellers, Rowan and Holtzman, Ari and Rashkin, Hannah and Bisk, Yonatan and Farhadi, Ali and Roesner,
+                 Franziska and Choi, Yejin",
+  booktitle    = "Advances in Neural Information Processing Systems 32",
+  editor       = "H. Wallach and H. Larochelle and A. Beygelzimer and F. d'Alché-Buc and E. Fox and R. Garnett",
+  pages        = "9054--9065",
+  year         = "2019",
+  publisher    = "Curran Associates, Inc.",
+  URL          = "http://papers.nips.cc/paper/9106-defending-against-neural-fake-news.pdf",
+  cc-author-affiliation = "University of Washington, USA; Allen Institute for Artificial Intelligence, USA",
+  cc-class     = "nlp/language-model, nlp/fake-news-detection",
+  cc-snippet   = "Dataset. We present RealNews, a large corpus of news articles from Common Crawl. Training Grover
+                 requires a large corpus of news articles with metadata, but none currently exists. Thus, we construct
+                 one by scraping dumps from Common Crawl, limiting ourselves to the 5000 news domains indexed by Google
+                 News. We used the Newspaper Python library to extract the body and meta-data from each article. News
+                 from Common Crawl dumps from December 2016 through March 2019 were used as training data; articles
+                 published in April 2019 from the April 2019 dump were used for evaluation. After deduplication,
+                 RealNews is 120 gigabytes without compression. [...] Obtaining the data required through Common Crawl
+                 cost \$10k in AWS credits and can be massively parallelized over many CPUs. [...]",
+}
+
+@Article{cc:GiannakoulopoulosPergantisKonstantinouLamprogeorgosEtAl:2020:english-language-dominance,
+  title        = "Exploring the Dominance of the English Language on the Websites of {EU} Countries",
+  volume       = "12",
+  ISSN         = "1999-5903",
+  URL          = "http://dx.doi.org/10.3390/fi12040076",
+  doi          = "10.3390/fi12040076",
+  number       = "4",
+  journal      = "Future Internet",
+  publisher    = "MDPI AG",
+  author       = "Giannakoulopoulos, Andreas and Pergantis, Minas and Konstantinou, Nikos and Lamprogeorgos, Aristeidis
+                 and Limniati, Laida and Varlamis, Iraklis",
+  year         = "2020",
+  month        = apr,
+  pages        = "76",
+  cc-author-affiliation = "Ionian University, Corfu, Greece; Harokopio University of Athens, Athens, Greece",
+  cc-class     = "nlp/corpus-construction, web-science, socio-linguistics",
+  abstract     = "The English language is the most dominant language in the Western world and its influence can be
+                 noticed in every aspect of human communication. It’s increasing diffusion, especially since the turn
+                 of the century, is hard to measure with conventional means. The present research studies the use of
+                 language in websites of European Union (EU) member states, in order to collect data about the
+                 prevalence of the English language in the different countries and regions of the European Union.To
+                 achieve a realistic representation of today’s landscape of the European Web, this study uses avast
+                 population of websites and a representative sampling size and methodology. By analyzing and processing
+                 the findings from over 100,000 websites from every country in the EU, a solid foundation is set that is
+                 used to explore the dominance of the English language in the European World Wide Web in general. This
+                 is the first study that examines the presence of English content in the websites of all EU member
+                 countries and provides statistical evidence regarding the ratio of English content availability for
+                 each country. Conclusively, the results of the research demonstrate that the English language is
+                 available on more than one quarter of all websites of non-English speaking EU member states.Moreover,
+                 it is available in the vast majority of multilingual and bilingual websites, while at the same time
+                 being the only language that is available in a number of monolingual websites. In addition, it is shown
+                 preference over the national language in a significant number of cases. A moderate negative correlation
+                 is found between a member state’s population and the availability of English in these countries’
+                 websites and the same holds true for a member state’s Gross Domestic Product (GDP).Both these
+                 correlations indicate that smaller countries tend to provide more content in English in order to
+                 establish a stronger presence in the international environment. Taking into account the role of
+                 language in the expression of national identity, this study provides data and insights which may
+                 contribute to the discussion about the changes underway in the national identity of EU member states.",
+  cc-snippete  = "The nature of the present research required as many websites as possible, so that both our total
+                 population and our sampling pool were as close a representation of reality as possible. For this
+                 purpose,we used information obtained from Common Crawl, a “repository of web crawl data that is
+                 universally accessible and analyzable” [34]. Among the data Common Crawl offers is an index of every
+                 available webpage for all member states of the EU amongst other countries. A process was developed in
+                 PHP:Hypertext Preprocessor (PHP) that used the CompounD indeX (CDX) server Application Program
+                 Interface (API) [35] to access Common Crawl’s Uniform Resource Locator (URL) index [36] and created a
+                 MariaDB database with information about websites from every member state of the EU. Although Common
+                 Crawl’s index provides all available crawled pages, our process of data collecting only focused on
+                 recording the landing page of one website per domain.",
+}
+
+@Article{cc:SrinathWilsonGiles:2020:PrivaSeer-corpus,
+  title        = "Privacy at scale: Introducing the PrivaSeer corpus of web privacy policies",
+  author       = "Srinath, Mukund and Wilson, Shomir and Giles, C Lee",
+  journal      = "arXiv preprint arXiv:2004.11131",
+  year         = "2020",
+  URL          = "https://arxiv.org/abs/2004.11131",
+  pdf          = "https://arxiv.org/pdf/2004.11131.pdf",
+  cc-author-affiliation = "Pennsylvania State University, PA, USA",
+  cc-class     = "nlp/corpus-construction, web-science, internet-security/privacy-policies",
+  cc-snippet   = "We used Common Crawl² to gather seed URLs to crawl for privacy policies from the web, as we describe
+                 in detail below. We filtered the Common Crawl URLs to get a set of possible links to web site privacy
+                 policies. We then crawled the filtered set to obtain candidate privacy policy documents. The complete
+                 pipeline from the Common Crawl URL dump to the gold standard privacy policy corpus is shown in Figure
+                 1. [...] The Common Crawl Foundation is a non-profit which has been releasing large monthly internet
+                 web crawls since 2008. Monthly crawl archives provide a “snapshot of the web” by including
+                 re-crawls of popular domains (re-crawls from previous archives) and crawls of new domains. Common Crawl
+                 has also been releasing a domain-level webgraph from which the harmonic centrality of the crawled
+                 domains are calculated. This webgraph his used to sample popular domains that need to be re-crawled and
+                 to obtain new uncrawled domains. We downloaded the URL dump of the May, 2019 archive. Common Crawl
+                 reports that the archive contains 2.65 billion web pages or 220 TB of uncompressed content which were
+                 crawled between 19th and 27th of May, 2019. They also report that this archive contains 825 million
+                 URLs which were not contained in any previously released crawl archives. We applied a selection
+                 criteria on the downloaded URL dump to filter the URLs of likely privacy policy pages.",
+}
+
+@Article{cc:DongTriche:2020:analysis-of-job-skill,
+  title        = "A longitudinal analysis of job skills for entry-level data analysts",
+  author       = "Dong, Tianxi and Triche, Jason",
+  journal      = "Journal of Information Systems Education",
+  volume       = "31",
+  number       = "4",
+  pages        = "312",
+  year         = "2020",
+  URL          = "https://jise.org/Volume31/n4/JISEv31n4p312.pdf",
+  cc-snippet   = "Our first challenge was how to collect job postings over past years because job websites do not keep
+                 historical data for more than one year. Therefore, we used the Common Crawl dataset to address this
+                 problem ( http://commoncrawl.org/). Common Crawl is a non-profit organization that builds and maintains
+                 an open repository of web crawl data that is, in essence, a copy of the Internet. Common Crawl data
+                 contains over 25 billion web pages (Batikas, Claussen, and Peukert, 2018) and is widely used in
+                 hundreds of research projects (Batikas, Claussen, and Peukert, 2018; Cafarella et al., 2018). Since we
+                 were only interested in the content from Indeed.com, we only examined a very small fraction of the
+                 Common Crawl corpus.",
+  cc-author-affiliation = "Trinity University, San Antonio, TX, USA; University of Montana, MT, USA",
+  cc-class     = "business-intelligence, nlp/corpus-construction",
+}
+
+@Misc{cc:CarliniTramerWallaceJagielskiEtAl:2020:extracting-training-data-from-language-models,
+  title        = "Extracting training data from large language models",
+  author       = "Nicholas Carlini and Florian Tramer and Eric Wallace and Matthew Jagielski and Ariel Herbert-Voss and
+                 Katherine Lee and Adam Roberts and Tom Brown and Dawn Song and Ulfar Erlingsson and Alina Oprea and
+                 Colin Raffel",
+  year         = "2020",
+  URL          = "https://arxiv.org/abs/2012.07805",
+  cc-author-affiliation = "Google; Stanford University; UC Berkeley; Northeastern University; OpenAI; Harvard
+                 University; Apple",
+  cc-class     = "ai/ethical-concerns, nlp/language-models",
+  cc-snippet   = "We follow a different data collection process as used in GPT-2 (which follows Reddit links) in order
+                 to reduce the likelihood that our dataset has any intersection with the model’s training data. In
+                 particular, we select samples from a subset of Common Crawl⁶ [⁶http://commoncrawl.org/] to feed as
+                 context to the model.⁷ [⁷It is possible there is some intersection between these two datasets,
+                 effectively allowing this strategy to “cheat”. We believe this does not considerably affect
+                 results. First, any overlap between the two datasets is rare on average. Second, because we only use
+                 the first 5 or 10 tokens of each sample, any possible overlap will be small in absolute terms.]",
 }
