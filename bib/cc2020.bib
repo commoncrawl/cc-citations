@@ -195,7 +195,7 @@
                  classification, and more. To facilitate future work on transfer learning for NLP, we release our data
                  set, pre-trained models, and code.",
   cc-author-affiliation = "Google, Mountain View, CA, USA",
-  cc-derived-dataset-about = "tensorflow-c4",
+  cc-derived-dataset-about = "Tensorflow-C4",
   cc-dataset-used = "CC-MAIN-2019-18 (WET)",
   cc-snippet   = "We also introduce our approach for treating every problem as a text-to-text task and describe our
                  “Colossal Clean Crawled Corpus” (C4), the Common Crawl-based data set we created as a source of
@@ -207,7 +207,7 @@
                  content that is unlikely to be helpful for any of the tasks we consider (offensive language,
                  placeholder text, source code, etc.). To address these issues, we used the following heuristics for
                  cleaning up Common Crawl’s web extracted text: [...] To assemble our base data set, we downloaded the
-                 web extracted text from April 2019and applied the aforementioned filtering. This produces a collection
+                 web extracted text from April 2019 and applied the aforementioned filtering. This produces a collection
                  of text that is not only orders of magnitude larger than most data sets used for pre-training (about
                  750 GB) but also comprises reasonably clean and natural English text. We dub this data set the
                  “Colossal Clean Crawled Corpus” (or C4 for short) and release it as part of TensorFlow Datasets.⁸
@@ -254,7 +254,7 @@
                  well as their connection to underlying populations.",
   cc-author-affiliation = "University of Canterbury, Christchurch, New Zealand",
   cc-derived-dataset-about = "earthlings.io/CGLU",
-  cc-dataset-used = "64 monthly crawls: March 2014 (CC-MAIN-2014-10) -- June 2019 (CC-MAIN-2019-29)",
+  cc-dataset-used = "64 monthly crawls: March 2014 (CC-MAIN-2014-10) -- June 2019 (CC-MAIN-2019-29) (WET)",
   cc-class     = "nlp/corpus-construction, nlp/language-identification",
   cc-snippet   = "The raw portions of the Common Crawl dataset used to build the corpus are shown in Table 2. The corpus
                  uses every portion of the crawl from March 2014 to June 2019, totaling 147 billion web pages in total.
@@ -341,7 +341,7 @@
                  establish a stronger presence in the international environment. Taking into account the role of
                  language in the expression of national identity, this study provides data and insights which may
                  contribute to the discussion about the changes underway in the national identity of EU member states.",
-  cc-snippete  = "The nature of the present research required as many websites as possible, so that both our total
+  cc-snippet   = "The nature of the present research required as many websites as possible, so that both our total
                  population and our sampling pool were as close a representation of reality as possible. For this
                  purpose,we used information obtained from Common Crawl, a “repository of web crawl data that is
                  universally accessible and analyzable” [34]. Among the data Common Crawl offers is an index of every
@@ -416,4 +416,34 @@
                  effectively allowing this strategy to “cheat”. We believe this does not considerably affect
                  results. First, any overlap between the two datasets is rare on average. Second, because we only use
                  the first 5 or 10 tokens of each sample, any possible overlap will be small in absolute terms.]",
+}
+
+@Article{cc:SammarKhalilia:2020:archived-palestinian-web,
+  author       = "Thaer Sammar and Hadi Khalilia",
+  title        = "Going Back in Time to Find What Existed on the Web and How much has been Preserved: How much of
+                 Palestinian Web has been Archived?",
+  journal      = "مؤتمرات الآداب والعلوم الانسانية والطبيعية",
+  year         = "2020",
+  abstract     = "The web is an important resource for publishing and sharing content. The main characteristic of the
+                 web is its volatility. Content is added, updated, and deleted all the time. Therefore, many national
+                 and international institutes started crawling and archiving the content of the web. The main focus of
+                 national institutes is to archive the web related to their country heritage, for example, the National
+                 Library of the Netherlands is focusing on archiving website that are of value to the Dutch heritage.
+                 However, there are still countries that haven’t taken the action to archive their web, which will
+                 result in loosing and having a gap in the knowledge. In this research, we focus on shedding the light
+                 on the Palestinian web. Precisely, how much of the Palestinian web has been archived. First, we create
+                 a list of Palestinian hosts that were on the web. For that we queried Google index exploiting the time
+                 range filter in order to get hosts overtime. We collected in 98 hosts in average in 5-years granularity
+                 from the year 1990 to 2019. We also obtained Palestinian hosts from the DMOZ directory. We collected
+                 188 hosts. Second, we investigate the coverage of collected hosts in the Internet Archive and the
+                 Common-Crawl. We found that coverage of Google hosts in the Internet Archive ranges from 0\% to 89\%
+                 from oldest to newest time-granularity. The coverage of DMOZ hosts was 96\%. The coverage of Google
+                 hosts in the Common-Crawl 57.1\% to 74.3, while the coverage of DMOZ hosts in the Common-Crawl was in
+                 average 25\% in all crawls. We found that even the host is covered in Internet Archive and
+                 Common-Crawl, the lifespan and the number of archived versions are low.",
+  URL          = "http://proceedings.sriweb.org/akn/index.php/art/article/view/410",
+  pdf          = "http://proceedings.sriweb.org/akn/index.php/art/article/viewFile/410/466",
+  cc-author-affiliation = "Palestine Technical University, Tulkarm, West Bank",
+  cc-class     = "web-archiving/regional-coverage",
+  cc-dataset-used = "CDX index",
 }

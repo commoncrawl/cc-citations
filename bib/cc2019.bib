@@ -26,11 +26,11 @@
                  that deduplicates documents and identifies their language. We augment this pipeline with a filtering
                  step to select documents that are close to high quality corpora like Wikipedia.",
   cc-snippet   = "[about https://github.com/facebookresearch/cc_net] In this paper, we present a data collection
-                 pipeline that allows to gather massive monolingual corpora of high qual- ity in a variety of languages,
+                 pipeline that allows to gather massive monolingual corpora of high quality in a variety of languages,
                  including many low-resource ones. The principles of our pipeline are general and we show the results of
-                 its application to data collected by the Common Crawl project.1 Common Crawl is a massive non-curated
+                 its application to data collected by the Common Crawl project.¹ Common Crawl is a massive non-curated
                  dataset of webpages in many languages, mixed together in temporal snapshots of the web.",
-  cc-class     = "nlp/corpus-construction, web-as-corpus",
+  cc-class     = "nlp/corpus-construction, nlp/web-as-corpus, nlp/low-resource-language",
 }
 
 @InProceedings{cc:RadfordWuChildLuanEtAl:2019:language-models,
@@ -101,3 +101,29 @@
   cc-class     = "web-archiving, SQL, Parquet",
 }
 
+@Misc{cc:LiuOttGoyalDuEtAl:2019:RoBERTa-Robustly-Optimized-BERT,
+  title        = "Ro{BERT}a: {A} Robustly Optimized {BERT} Pretraining Approach",
+  author       = "Yinhan Liu and Myle Ott and Naman Goyal and Jingfei Du and Mandar Joshi and Danqi Chen and Omer Levy
+                 and Mike Lewis and Luke Zettlemoyer and Veselin Stoyanov",
+  year         = "2019",
+  eprint       = "1907.11692",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/1907.11692",
+  pdf          = "https://arxiv.org/pdf/1907.11692.pdf",
+  cc-author-affiliation = "Paul G. Allen School of Computer Science & Engineering, University of Washington, Seattle,
+                 WA, USA; Facebook AI",
+  cc-class     = "nlp/corpus-creation, nlp/language-model",
+  cc-dataset-used = "CC-NEWS",
+  cc-snippet   = "We find that BERT was significantly undertrained and propose an improved recipe for training BERT
+                 models, which we call RoBERTa, that can match or exceed the performance of all of the post-BERT
+                 methods. Our modifications are simple, they include: (1) training the model longer, with bigger
+                 batches, over more data; (2) removing the next sentence prediction objective; (3) training on longer
+                 sequences; and (4) dynamically changing the masking pattern applied to the training data. We also
+                 collect a large new dataset (CC-NEWS) of comparable size to other privately used datasets, to better
+                 control for training set size effects. [...] CC-NEWS, which we collected from the English portion of
+                 the CommonCrawl News dataset (Nagel, 2016). The data contains 63 million English news articles crawled
+                 between September 2016 and February 2019. (76GB after filtering).⁴ [⁴ We use news-please (Hamborg
+                 et al.,2017) to collect and extract CC-NEWS. CC-NEWS is similar to the REALNEWS dataset described in
+                 Zellers et al. (2019).]",
+}
