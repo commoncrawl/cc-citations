@@ -194,3 +194,40 @@
                  provides ISO6 language code of top three languages present in webpages after parsing HTML of the
                  webpage from CLD2.",
 }
+
+@Misc{cc:LuccioniViviano:2021:undesirable-content-in-CC-corpus,
+  title        = "What's in the Box? An Analysis of Undesirable Content in the Common Crawl Corpus",
+  author       = "Alexandra Sasha Luccioni and Joseph D. Viviano",
+  year         = "2021",
+  eprint       = "2105.02732",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = https://arxiv.org/abs/2105.02732,
+  pdf          = https://arxiv.org/pdf/2105.02732.pdf,
+  cc-snippet   = "Given its size, both downloading and analyzing the Common Crawl are time-consuming and costly
+                 endeavors. The most recent version of the Common Crawl
+                 [https://commoncrawl.org/2020/12/nov-dec-2020-crawl-archive-now-available/], dating from
+                 November/December 2020, has 2.6 billion web pages in raw text format, saved in ‘shards’ each
+                 containing of tens of thousands of pages. Given our hardware constraints, we chose to focus on a subset
+                 of the corpus, randomly sampling 1% of the files it contains, roughly amounting toroughly 81 GB of
+                 textual content or 5,835,339 webpages in total, which we analyzed in terms of hate speech, adult
+                 content, and efficacy of perplexity-based filtering. All code used in these analysis are publicly
+                 available¹ [¹https://github.com/josephdviviano/whatsinthebox]. [...] We found that the three
+                 approaches compared suggest similar proportions of websites containing hate speech: 5.24% of websites
+                 from our sample were flagged by DELIMIT, 4.02% by HateSonar,and 6.38% by the n-gram approach². [²We
+                 are conscious of the high false positive rate of n-gram approaches and therefore only consider sites to
+                 be flagged if they contain 3 or more n-grams from the list.] Qualitative analysis of a sample of sites
+                 flagged by each approach showed that while n-grams picked up on racial slurs, HateSonar picked up on
+                 debates about racial supremacy and conspiracy theories. Many of the sites that DELIMIT flagged were
+                 adult content with mentions of violent acts towards specific ethnic groups, illustrating the fine line
+                 between sexual violence and hate speech. [...] While it can be argued that the Common Crawl corpus is
+                 an accurate portrayal of the discourse of modern society – which includes sexual content, hate
+                 speech, racial biases, and gender biases – we believe that it is up for debate whether this discourse
+                 is the one that we, as a community, want to use to train the models that translate our texts, influence
+                 our search results and answer our questions. Notably, the Common Crawl overrepresents those populations
+                 that are avid users of the internet: younger, English-speaking individuals from developed countries,
+                 [...]",
+  cc-author-affiliation = "Université de Montréal, Canada; Mila Québec AI Institute, Canada",
+  cc-class     = "ai/ethics-of-machine-learning, nlp/corpus-construction, nlp/text-corpora",
+}
+
