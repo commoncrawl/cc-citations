@@ -231,3 +231,66 @@
   cc-class     = "ai/ethics-of-machine-learning, nlp/corpus-construction, nlp/text-corpora",
 }
 
+@InProceedings{cc:FröbeBevendorffGienappVölskeEtAl:2021:CopyCat,
+  author       = "Maik Fröbe and Janek Bevendorff and Lukas Gienapp and Michael Völske and Benno Stein and Martin
+                 Potthast and Matthias Hagen",
+  booktitle    = "44th International ACM Conference on Research and Development in Information Retrieval (SIGIR 2021)",
+  doi          = "10.1145/3404835.3463246",
+  publisher    = "ACM",
+  site         = "Virtual Event, Canada",
+  title        = "{CopyCat: Near-Duplicates within and between the ClueWeb and the Common Crawl}",
+  URL          = "https://dl.acm.org/doi/10.1145/3404835.3463246",
+  pdf          = "https://webis.de/downloads/publications/papers/froebe_2021.pdf",
+  year         = "2021",
+  cc-author-affiliation = "Martin-Luther-Universität Halle-Wittenberg, Germany; Bauhaus-Universität Weimar, Germany;
+                 Leipzig University, Germany",
+  cc-class     = "ir/duplicate-detection",
+  cc-dataset-used = "CC-MAIN-2015-11, CC-MAIN-2017-04",
+}
+
+@Article{cc:GaoBidermanBlackGoldingEtAl:2021:The-Pile,
+  author       = "Leo Gao and Stella Biderman and Sid Black and Laurence Golding and Travis Hoppe and Charles Foster and
+                 Jason Phang and Horace He and Anish Thite and Noa Nabeshima and Shawn Presser and Connor Leahy",
+  title        = "The Pile: An 800{GB} Dataset of Diverse Text for Language Modeling",
+  journal      = "CoRR",
+  volume       = "abs/2101.00027",
+  year         = "2021",
+  URL          = "https://arxiv.org/abs/2101.00027",
+  archiveprefix = "arXiv",
+  eprint       = "2101.00027",
+  pdf          = "https://arxiv.org/pdf/2101.00027.pdf",
+  cc-author-affiliation = "EleutherAI",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora, nlp/language-model, nlp/text-corpora/legal-aspects",
+  abstract     = "Recent work has demonstrated that increased training dataset diversity improves general cross-domain
+                 knowledge and downstream generalization capability for large-scale language models. With this in mind,
+                 we present the Pile: an 825 GiB English text corpus targeted at training large-scale language models.
+                 The Pile is constructed from 22 diverse high-quality subsets—both existing and newly
+                 constructed—many of which derive from academic or professional sources. Our evaluation of the untuned
+                 performance of GPT-2 and GPT-3 on the Pile shows that these models struggle on many of its components,
+                 such as academic writing. Conversely, models trained on the Pile improve significantly over both Raw CC
+                 and CC-100 on all components of the Pile, while improving performance on downstream evaluations.
+                 Through an in-depth exploratory analysis, we document potentially concerning aspects of the data for
+                 prospective users. We make publicly available the code used in its construction.¹
+                 [¹https://pile.eleuther.ai/]",
+  cc-snippet   = "The growing need for data in language modeling has caused most existing large-scale language models to
+                 turn to the Common Crawl for most or all of their data (Brown et al., 2020; Raffel et al., 2019). While
+                 training on the Common Crawl has been effective, recent work has shown that dataset diversity leads to
+                 better downstream generalizationcapability (Rosset, 2019). [...] we also introduce a new filtered
+                 subset of Common Crawl,Pile-CC, with improved extraction quality. [...] 2.1 Pile-CC Common Crawl is a
+                 collection of website crawls from 2008 onwards, including raw web pages, metadata and text extractions.
+                 Due to the raw nature of the dataset, Common Crawl has the advantage of including text from diverse
+                 domains, but at the cost of varying quality data. Due to this, use of Common Crawl typically
+                 necessitates well-designed extraction and filtering. Our Common Crawl-based dataset, Pile-CC, uses
+                 jusText (Endrédy and Novák, 2013) on Web Archive files (raw HTTP responses including page HTML) for
+                 extraction, which yields higher quality output than directly using the WET files (extracted
+                 plain-text). [...] Surprisingly, raw Common Crawl performs better on the Pile BPB than CC-100, despite
+                 losing by a significant margin on LAMBADA and WikiText. We hypothesize that this is due to the
+                 perplexity based filtering used in CC-100, where a language model is trained on Wikipedia and all data
+                 with a perplexity too high or too low is discarded. This effectively discards any data too similar to
+                 or too different from Wikipedia, which severely limits the diversity of the collected data. This result
+                 suggests that future work using Common Crawl should take caution with filtering to preserve its
+                 diversity.",
+  cc-dataset-used = "69 monthly crawls (WARC): CC-MAIN-2013-20 - CC-MAIN-2020-24, cf.
+                 https://github.com/leogao2/commoncrawl_downloader/blob/3a7a4a7c33aaee2a45f320f7bc57d0dcd3f3a220/indexes_20200607105929",
+  cc-derived-dataset-about = "The-Pile-English",
+}
