@@ -144,25 +144,6 @@
                  dataset covering 101 languages.",
 }
 
-@Misc{cc:ConneauKhandelwalGoyalChaudharyEtAl:2020:unsupervised-cross-lingual-representation-learning,
-  title        = "Unsupervised Cross-lingual Representation Learning at Scale",
-  author       = "Alexis Conneau and Kartikay Khandelwal and Naman Goyal and Vishrav Chaudhary and Guillaume Wenzek and
-                 Francisco Guzmán and Edouard Grave and Myle Ott and Luke Zettlemoyer and Veselin Stoyanov",
-  year         = "2020",
-  eprint       = "1911.02116",
-  archiveprefix = "arXiv",
-  primaryclass = "cs.CL",
-  URL          = "https://arxiv.org/abs/1911.02116",
-  pdf          = "https://arxiv.org/pdf/1911.02116.pdf",
-  cc-author-affiliation = "Facebook AI",
-  cc-class     = "nlp/corpus-creation, nlp/web-as-corpus, nlp/language-model",
-  cc-snippet   = "We train a Transformer-based masked language model on one hundred languages, using more than two
-                 terabytes of filtered CommonCrawl data. Our model, dubbed XLM-R, [...] We train on cleaned CommonCrawls
-                 (Wenzek et al., 2019 [=CCNet]), which increase the amount of data for low-resource languages by two
-                 orders of magnitude on average.",
-  cc-derived-dataset-used = "CCNet",
-}
-
 @Article{cc:TahirMehmood:2021:corpulyzer,
   title        = "Corpulyzer: {A} Novel Framework for Building Low Resource Language Corpora",
   author       = "Tahir, Bilal and Mehmood, Muhammad Amir",
@@ -202,8 +183,8 @@
   eprint       = "2105.02732",
   archiveprefix = "arXiv",
   primaryclass = "cs.CL",
-  URL          = https://arxiv.org/abs/2105.02732,
-  pdf          = https://arxiv.org/pdf/2105.02732.pdf,
+  URL          = "https://arxiv.org/abs/2105.02732",
+  pdf          = "https://arxiv.org/pdf/2105.02732.pdf",
   cc-snippet   = "Given its size, both downloading and analyzing the Common Crawl are time-consuming and costly
                  endeavors. The most recent version of the Common Crawl
                  [https://commoncrawl.org/2020/12/nov-dec-2020-crawl-archive-now-available/], dating from
@@ -304,13 +285,13 @@
   year         = "2021",
   booktitle    = "Proceedings of the 23rd Nordic Conference on Computational Linguistics",
   publisher    = "NEALT",
-  pdf          = http://www.derczynski.com/papers/dagw.pdf,
+  pdf          = "http://www.derczynski.com/papers/dagw.pdf",
   URL          = "https://gigaword.dk/",
   cc-author-affiliation = "ITU Copenhagen, Denmark; Aarhus University, Denmark; Danish Language Council, Denmark; TV2
                  Regionerne, Denmark; Karnov Group, Denmark; USC Information Sciences Institute, USA; Alexandra
                  Institute, Denmark; University of Copenhagen, Denmark; Technical University of Denmark; Novo Nordisk,
                  Denmark",
-  cc-class     = "",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora",
   cc-snippet   = "[...] the Danish section of Common Crawlis plagued by significant amounts of non-Danish content, in
                  part due to the pervasive confusion between Danish and Norwegian Bokmål by highly multilingual
                  language ID classifiers (Haas and Derczynski, 2021). Datasets derived exclusively from Common Crawl
@@ -318,4 +299,133 @@
                  sub-ptimally prepared to process older Danish. Common Crawl’s undirected collection of content often
                  overrepresents some dialects at the expense of other dialects.",
   cc-description = "101 million words of Danish texts from Common Crawl used",
+}
+
+@Article{cc:DinklageEllertFischerKurpiczEtAl:2021:wavelet-tree-construction,
+  author       = "Dinklage, Patrick and Ellert, Jonas and Fischer, Johannes and Kurpicz, Florian and Löbel, Marvin",
+  title        = "Practical Wavelet Tree Construction",
+  year         = "2021",
+  issue_date   = "July 2021",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  volume       = "26",
+  ISSN         = "1084-6654",
+  URL          = "https://doi.org/10.1145/3457197",
+  doi          = "10.1145/3457197",
+  abstract     = "We present new sequential and parallel algorithms for wavelet tree construction based on a new
+                 bottom-up technique. This technique makes use of the structure of the wavelet trees—refining the
+                 characters represented in a node of the tree with increasing depth—in an opposite way, by first
+                 computing the leaves (most refined), and then propagating this information upwards to the root of the
+                 tree. We first describe new sequential algorithms, both in RAM and external memory. Based on these
+                 results, we adapt these algorithms to parallel computers, where we address both shared memory and
+                 distributed memory settings.In practice, all our algorithms outperform previous ones in both time and
+                 memory efficiency, because we can compute all auxiliary information solely based on the information we
+                 obtained from computing the leaves. Most of our algorithms are also adapted to the wavelet matrix, a
+                 variant that is particularly suited for large alphabets.",
+  journal      = "ACM J. Exp. Algorithmics",
+  articleno    = "1.8",
+  numpages     = "67",
+  keywords     = "text indexing, shared memory, external memory, distributed memory, data structures",
+  cc-author-affiliation = "TU Dortmund University, Germany",
+  cc-class     = "data-structures, text-indexing",
+  cc-dataset-used = "CC-MAIN-2019-09 (600 WET files)",
+  cc-snippet   = "Common Crawl. The Common Crawl corpus contains websites that are crawled by the Common Crawl Project.
+                 We use the WET files, which contain only the textual data of the crawled websites, i. e., no HTML tags.
+                 We also removed the meta information added by the Commoncrawl corpus. To be more precise, we used the
+                 following WET files:
+                 crawl-data/CC-MAIN-2019-09/segments/1550247479101.30/wet/CC-MAIN-20190215183319-20190215205319-#ID.warc.wet,
+                 where #ID is in the range from 00000 to 00600. As we only care for the text, we removed the WARC meta
+                 information, i. e., each line consisting of WARC/1.0 and the following eight lines. CommonCrawl is the
+                 concatenation of all files sorted in ascending order by their ID.",
+}
+
+@Article{cc:OlsonNahasChmoulevitchCropperEtAl:2021:naming-unrelated-words-predicts-creativity,
+  author       = "Olson, Jay A. and Nahas, Johnny and Chmoulevitch, Denis and Cropper, Simon J. and Webb, Margaret E.",
+  title        = "Naming unrelated words predicts creativity",
+  volume       = "118",
+  number       = "25",
+  elocation-id = "e2022340118",
+  year         = "2021",
+  doi          = "10.1073/pnas.2022340118",
+  publisher    = "National Academy of Sciences",
+  abstract     = "Many traditional measures of creativity require time-intensive and subjective scoring procedures.
+                 Their scores are relative to the specific sample, which makes multicultural or international
+                 assessments difficult. Our results show that a shorter and simpler task with automatic and objective
+                 scoring may be at least as reliable at measuring verbal creativity. This finding enables assessments
+                 across larger and more diverse samples with less bias.Several theories posit that creative people are
+                 able to generate more divergent ideas. If this is correct, simply naming unrelated words and then
+                 measuring the semantic distance between them could serve as an objective measure of divergent thinking.
+                 To test this hypothesis, we asked 8,914 participants to name 10 words that are as different from each
+                 other as possible. A computational algorithm then estimated the average semantic distance between the
+                 words; related words (e.g., cat and dog) have shorter distances than unrelated ones (e.g., cat and
+                 thimble). We predicted that people producing greater semantic distances would also score higher on
+                 traditional creativity measures. In Study 1, we found moderate to strong correlations between semantic
+                 distance and two widely used creativity measures (the Alternative Uses Task and the
+                 Bridge-the-Associative-Gap Task). In Study 2, with participants from 98 countries, semantic distances
+                 varied only slightly by basic demographic variables. There was also a positive correlation between
+                 semantic distance and performance on a range of problems known to predict creativity. Overall, semantic
+                 distance correlated at least as strongly with established creativity measures as those measures did
+                 with each other. Naming unrelated words in what we call the Divergent Association Task can thus serve
+                 as a brief, reliable, and objective measure of divergent thinking.The data and algorithm code have been
+                 deposited in the Open Science Framework (https://osf.io/vjazn/).",
+  ISSN         = "0027-8424",
+  URL          = "https://www.pnas.org/content/118/25/e2022340118",
+  pdf          = "https://www.pnas.org/content/118/25/e2022340118.full.pdf",
+  journal      = "Proceedings of the National Academy of Sciences",
+  cc-author-affiliation = "Department of Psychology, Harvard University, Cambridge, MA, USA; Department of Psychology,
+                 McGill University, Montreal, QC, Canada; Melbourne School of Psychological Sciences, University of
+                 Melbourne, Australia",
+  cc-class     = "psychology/creativity, psychology/computational-scoring, nlp/word-embeddings",
+  cc-derived-dataset-used = "GloVe-word-embeddings",
+  cc-snippet   = "We chose the GloVe algorithm and the Common Crawl corpus [...]",
+}
+
+@Article{cc:AghajanyanOkhonkoLewisJoshiEtAl:2021:HTLM,
+  title        = "{HTLM}: Hyper-Text Pre-Training and Prompting of Language Models",
+  author       = "Aghajanyan, Armen and Okhonko, Dmytro and Lewis, Mike and Joshi, Mandar and Xu, Hu and Ghosh, Gargi
+                 and Zettlemoyer, Luke",
+  year         = "2021",
+  URL          = "https://arxiv.org/abs/2107.06955",
+  pdf          = "https://arxiv.org/pdf/2107.06955.pdf",
+  abstract     = "We introduce HTLM, a hyper-text language model trained on a large-scale web crawl. Modeling hyper-text
+                 has a number of advan- tages: (1) it is easily gathered at scale, (2) it provides rich document-level
+                 and end-task- adjacent supervision (e.g. class and id at- tributes often encode document category
+                 information), and (3) it allows for new structured prompting that follows the established seman- tics
+                 of HTML (e.g. to do zero-shot summarization by infilling <title> tags for a webpage that contains the
+                 input text). We show that pretraining with a BART-style denoising loss directly on simplified HTML
+                 provides highly effective transfer for a wide range of end tasks and supervision levels. HTLM matches
+                 or exceeds the performance of comparably sized text-only LMs for zero-shot prompting and fine-tuning
+                 for classification benchmarks, while also setting new state-of-the-art performance levels for zero-shot
+                 summarization. We also find that hyper-text prompts provide more value to HTLM, in terms of data
+                 efficiency, than plain text prompts do for existing LMs, and that HTLM is highly effective at auto-
+                 prompting itself, by simply generating the most likely hypertext formatting for any available training
+                 data. We will release all code and models to support future HTLM research.",
+  cc-author-affiliation = "Facebook AI; University of Washington, USA",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora, nlp/transformer-language-model",
+  cc-snippet   = "Our HyperTextLanguageModel (HTLM) is trained on 23TB of simplified HTML which we automatically extract
+                 from common crawl dumps [...]",
+}
+
+@InProceedings{cc:AbadjiOrtiz-SuárezRomarySagot:2021:Ungoliant,
+  title        = "Ungoliant: An optimized pipeline for the generation of a very large-scale multilingual web corpus",
+  author       = "Abadji, Julien and Ortiz Suárez, Pedro Javier and Romary, Laurent and Sagot, Benoît",
+  booktitle    = "Proceedings of the Workshop on Challenges in the Management of Large Corpora (CMLC-9) 2021. Limerick,
+                 12 July 2021 (Online-Event)",
+  pages        = "1--9",
+  year         = "2021",
+  organization = "Leibniz-Institut für Deutsche Sprache",
+  abstract     = "Since the introduction of large language models in Natural Language Processing, large raw corpora have
+                 played a crucial role in Computational Linguistics. However, most of these large raw corpora are either
+                 available only for English or not available to the general public due to copyright issues.
+                 Nevertheless, there are some examples of freely available multilingual corpora for training Deep
+                 Learning NLP models, such as the OSCAR and Paracrawl corpora. However, they have quality issues,
+                 especially for low-resource languages. Moreover, recreating or updating these corpora is very complex.
+                 In this work, we try to reproduce and improve the goclassy pipeline used to create the OSCAR corpus. We
+                 propose a new pipeline that is faster, modular, parameterizable, and well documented. We use it to
+                 create a corpus similar to OSCAR but larger and based on recent data. Also, unlike OSCAR, the metadata
+                 information is at the document level. We release our pipeline under an open source license and publish
+                 the corpus under a research-only license.",
+  URL          = "https://ids-pub.bsz-bw.de/frontdoor/deliver/index/docId/10468/file/Abadji_Suarez_Romary_Ungoliant_2021.pdf",
+  cc-author-affiliation = "Inria, Paris, France; Sorbonne Université, Paris, France",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora",
 }

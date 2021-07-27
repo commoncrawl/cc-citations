@@ -281,28 +281,6 @@
                  aforementioned filtering method, we extract the corpus of 100GB.",
 }
 
-@InCollection{cc:ZellersHoltzmanRashkinBiskEtAl:2019:defending-against-neural-fake-news,
-  title        = "Defending against neural fake news",
-  author       = "Zellers, Rowan and Holtzman, Ari and Rashkin, Hannah and Bisk, Yonatan and Farhadi, Ali and Roesner,
-                 Franziska and Choi, Yejin",
-  booktitle    = "Advances in Neural Information Processing Systems 32",
-  editor       = "H. Wallach and H. Larochelle and A. Beygelzimer and F. d'Alché-Buc and E. Fox and R. Garnett",
-  pages        = "9054--9065",
-  year         = "2019",
-  publisher    = "Curran Associates, Inc.",
-  URL          = "http://papers.nips.cc/paper/9106-defending-against-neural-fake-news.pdf",
-  cc-author-affiliation = "University of Washington, USA; Allen Institute for Artificial Intelligence, USA",
-  cc-class     = "nlp/language-model, nlp/fake-news-detection",
-  cc-snippet   = "Dataset. We present RealNews, a large corpus of news articles from Common Crawl. Training Grover
-                 requires a large corpus of news articles with metadata, but none currently exists. Thus, we construct
-                 one by scraping dumps from Common Crawl, limiting ourselves to the 5000 news domains indexed by Google
-                 News. We used the Newspaper Python library to extract the body and meta-data from each article. News
-                 from Common Crawl dumps from December 2016 through March 2019 were used as training data; articles
-                 published in April 2019 from the April 2019 dump were used for evaluation. After deduplication,
-                 RealNews is 120 gigabytes without compression. [...] Obtaining the data required through Common Crawl
-                 cost \$10k in AWS credits and can be massively parallelized over many CPUs. [...]",
-}
-
 @Article{cc:GiannakoulopoulosPergantisKonstantinouLamprogeorgosEtAl:2020:english-language-dominance,
   title        = "Exploring the Dominance of the English Language on the Websites of {EU} Countries",
   volume       = "12",
@@ -455,10 +433,73 @@
   eprint       = "2009.11462",
   archiveprefix = "arXiv",
   primaryclass = "cs.CL",
-  pdf          = https://arxiv.org/pdf/2009.11462.pdf,
-  URL          = https://arxiv.org/abs/2009.11462,
+  pdf          = "https://arxiv.org/pdf/2009.11462.pdf",
+  URL          = "https://arxiv.org/abs/2009.11462",
   cc-author-affiliation = "Paul G. Allen School of Computer Science & Engineering, University of Washington, USA; Allen
                  Institute for Artificial Intelligence, Seattle, USA",
   cc-class     = "no-citation-misclassified, ai/ethics-of-machine-learning, ai/machine-learning, nlp/language-model",
   cc-comment   = "based on OpenWebText",
 }
+
+@Misc{cc:ConneauKhandelwalGoyalChaudharyEtAl:2020:unsupervised-cross-lingual-representation-learning,
+  title        = "Unsupervised Cross-lingual Representation Learning at Scale",
+  author       = "Alexis Conneau and Kartikay Khandelwal and Naman Goyal and Vishrav Chaudhary and Guillaume Wenzek and
+                 Francisco Guzmán and Edouard Grave and Myle Ott and Luke Zettlemoyer and Veselin Stoyanov",
+  year         = "2020",
+  eprint       = "1911.02116",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/1911.02116",
+  pdf          = "https://arxiv.org/pdf/1911.02116.pdf",
+  cc-author-affiliation = "Facebook AI",
+  cc-class     = "nlp/corpus-creation, nlp/web-as-corpus, nlp/language-model",
+  cc-snippet   = "We train a Transformer-based masked language model on one hundred languages, using more than two
+                 terabytes of filtered CommonCrawl data. Our model, dubbed XLM-R, [...] We train on cleaned CommonCrawls
+                 (Wenzek et al., 2019 [=CCNet]), which increase the amount of data for low-resource languages by two
+                 orders of magnitude on average.",
+  cc-derived-dataset-used = "CCNet",
+}
+
+@InProceedings{cc:WangXie:2020:alternative-web-archival-formats,
+  author       = "Wang, Xinyue and Xie, Zhiwu",
+  title        = "The Case For Alternative Web Archival Formats To Expedite The Data-To-Insight Cycle",
+  year         = "2020",
+  ISBN         = "978-1-4503-7585-6",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  URL          = "https://doi.org/10.1145/3383583.3398542",
+  doi          = "10.1145/3383583.3398542",
+  abstract     = "The WARC file format is widely used by web archives to preserve collected web content for future use.
+                 With the rapid growth of web archives and the increasing interest to reuse these archives as big data
+                 sources for statistical and analytical research, the speed to turn these data into insights becomes
+                 critical. In this paper we show that the WARC format carries significant performance penalties for
+                 batch processing workload. We trace the root cause of these penalties to its data structure, encoding,
+                 and addressing method. We then run controlled experiments to illustrate how severe these problems can
+                 be. Indeed, performance gain of one to two orders of magnitude can be achieved simply by reformatting
+                 WARC files into Parquet or Avro formats. While these results do not necessarily constitute an
+                 endorsement for Avro or Parquet, the time has come for the web archiving community to consider
+                 replacing WARC with more efficient web archival formats.",
+  booktitle    = "Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020",
+  pages        = "177–186",
+  numpages     = "10",
+  keywords     = "storage management, big data analysis, web archiving, file format",
+  location     = "Virtual Event, China",
+  series       = "JCDL '20",
+  pdf          = "https://vtechworks.lib.vt.edu/bitstream/handle/10919/98565/fp210.pdf",
+  cc-author-affiliation = "Virginia Polytechnic Institute and State University, Blacksburg, VA, USA",
+  cc-class     = "web archiving, data formats, big data, data processing, WARC, Parquet",
+  cc-abstract  = "We chose to use Common Crawl’s web archiving data crawled from May 20 to 23, 2018. The data set
+                 consists of 1219 gzip compressed WARC files totaling 0.98 TB, and contains 53324440 records. The WARC
+                 files are organized by crawling time, each containing records crawled from a mutually exclusive time
+                 span. We then reformat the WARC files to yield the following five datasets for comparison: 1) the
+                 original WARC files; 2) case 1 plus CDX index files built against all the original WARC files; 3)
+                 Parquet files containing the same information as case 1, with most columns in String type; 4) the same
+                 as case 3 but the Timestamp column is in INT64 Timestamp type; 5) Avro, with the same column data types
+                 as in case 4 but the Timestamp column is in INT96. We use a modified ArchiveUnleashedToolkit for
+                 reformating WARC to Parquet and Avro. Settings for Parquet/Avro file writing are included in the
+                 example code repository on Github² [²https://github.com/xw0078/WebArchiveWithParquetAvro]. The
+                 reformatted Parquet and Avro data are gzip compressed, the same as WARC files. [...] More recently,
+                 Common Crawl even directly used Parquet to store metadata extracted from WARC [44]. The weakness of
+                 this approach, however, is its dependency on an inefficient storage format.",
+}
+

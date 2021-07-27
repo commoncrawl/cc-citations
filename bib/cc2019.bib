@@ -127,3 +127,52 @@
                  et al.,2017) to collect and extract CC-NEWS. CC-NEWS is similar to the REALNEWS dataset described in
                  Zellers et al. (2019).]",
 }
+
+@InCollection{cc:ZellersHoltzmanRashkinBiskEtAl:2019:defending-against-neural-fake-news,
+  title        = "Defending against neural fake news",
+  author       = "Zellers, Rowan and Holtzman, Ari and Rashkin, Hannah and Bisk, Yonatan and Farhadi, Ali and Roesner,
+                 Franziska and Choi, Yejin",
+  booktitle    = "Advances in Neural Information Processing Systems 32",
+  editor       = "H. Wallach and H. Larochelle and A. Beygelzimer and F. d'Alché-Buc and E. Fox and R. Garnett",
+  pages        = "9054--9065",
+  year         = "2019",
+  publisher    = "Curran Associates, Inc.",
+  URL          = "http://papers.nips.cc/paper/9106-defending-against-neural-fake-news.pdf",
+  cc-author-affiliation = "University of Washington, USA; Allen Institute for Artificial Intelligence, USA",
+  cc-class     = "nlp/language-model, nlp/fake-news-detection",
+  cc-snippet   = "Dataset. We present RealNews, a large corpus of news articles from Common Crawl. Training Grover
+                 requires a large corpus of news articles with metadata, but none currently exists. Thus, we construct
+                 one by scraping dumps from Common Crawl, limiting ourselves to the 5000 news domains indexed by Google
+                 News. We used the Newspaper Python library to extract the body and meta-data from each article. News
+                 from Common Crawl dumps from December 2016 through March 2019 were used as training data; articles
+                 published in April 2019 from the April 2019 dump were used for evaluation. After deduplication,
+                 RealNews is 120 gigabytes without compression. [...] Obtaining the data required through Common Crawl
+                 cost \$10k in AWS credits and can be massively parallelized over many CPUs. [...]",
+}
+
+@Article{cc:PibiriPetriMoffat:2019:dictionary-based-inverted-index-compression,
+  title        = "Fast Dictionary-Based Compression for Inverted Indexes",
+  author       = "Pibiri, Giulio Ermanno and Petri, Matthias and Moffat, Alistair",
+  year         = "2019",
+  URL          = "https://dl.acm.org/citation.cfm?id=3290962",
+  pdf          = "http://pages.di.unipi.it/pibiri/papers/WSDM19.pdf",
+  doi          = "https://doi.org/10.1145/3289600.3290962",
+  abstract     = "Dictionary-based compression schemes provide fast decoding operation, typically at the expense of
+                 reduced compression effectiveness compared to statistical or probability-based approaches. In this
+                 work, we apply dictionary-based techniques to the compression of inverted lists, showing that the high
+                 degree of regularity that these integer sequences exhibit is a good match for certain types of
+                 dictionary methods, and that an important new trade-off balance between compression effectiveness and
+                 compression efficiency can be achieved. Our observations are supported by experiments using the
+                 document-level inverted index data for two large text collections, and a wide range of other index
+                 compression implementations as reference points. Those experiments demonstrate that the gap between
+                 efficiency and effectiveness can be substantially narrowed.",
+  cc-snippet   = "We use the standard Gov2 collection containing 426 GiB of text; and CCNEWS, an English subset ofthe
+                 freely available NEWS subset of the CommonCrawl¹
+                 [¹http://commoncrawl.org/2016/10/news-dataset-available/], consisting of news articles in the period
+                 09/01/16 to 30/03/18, following the methodology of Petri and Moffat [28].",
+  cc-dataset-used = "CC-NEWS",
+  cc-dataset-used-subset = "2016/09/01 - 2018/03/30",
+  cc-class     = "information-retrieval/search-engine, information-retrieval/inverted-index",
+  cc-author-affiliation = "University of Melbourne, Australia; University of Pisa, Italy; ISTI-CNR, Pisa, Italy",
+}
+
