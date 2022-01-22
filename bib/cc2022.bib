@@ -1,0 +1,47 @@
+@Misc{cc:SnæbjarnarsonSímonarsonRagnarssonIngólfsdóttirEtAl:2022:warm-start-and-clean-crawled-corpus,
+  title        = "A Warm Start and a Clean Crawled Corpus -- {A} Recipe for Good Language Models",
+  author       = "Vésteinn Snæbjarnarson and Haukur Barri Símonarson and Pétur Orri Ragnarsson and Svanhvít Lilja
+                 Ingólfsdóttir and Haukur Páll Jónsson and Vilhjálmur Þorsteinsson and Hafsteinn Einarsson",
+  year         = "2022",
+  pdf          = "https://arxiv.org/pdf/2201.05601.pdf",
+  URL          = "https://arxiv.org/abs/2201.05601",
+  abstract     = "We train several language models for Icelandic, including IceBERT, that achieve state-of-the-art
+                 performance in a variety of downstream tasks, including part-of-speech tagging, named entity
+                 recognition, grammatical error detection and constituency parsing. To train the models we introduce a
+                 new corpus of Icelandic text, the Icelandic Common Crawl Corpus (IC3), a collection of high quality
+                 texts found online by targeting the Icelandic top-level-domain (TLD). Several other public data sources
+                 are also collected for a total of 16GB of Icelandic text. To enhance the evaluation of model
+                 performance and to raise the bar in baselines for Icelandic, we translate and adapt the WinoGrande
+                 dataset for co-reference resolution. Through these efforts we demonstrate that a properly cleaned
+                 crawled corpus is sufficient to achieve state-of-the-art results in NLP applications for low to medium
+                 resource languages, by comparison with models trained on a curated corpus. We further show that
+                 initializing models using existing multilingual models can lead to state-of-the-art results for some
+                 downstream tasks.",
+  cc-author-affiliation = "Miðeind ehf., Iceland; University of Iceland, Iceland",
+  cc-class     = "nlp/corpus-construction, nlp/language-model",
+  cc-dataset-used = "CDX, WARC, ARC 2008 – March 2020",
+  cc-snippet   = "3.1. The Icelandic Common Crawl Corpus¶ The Common Crawl Foundation is a non-profit organization that
+                 scrapes large semi-random subsets of the internet regularly and hosts timestamped and compressed dumps
+                 of the web online¹⁰ [¹⁰https://commoncrawl.org/the-data/get-started/]. Each dump contains
+                 billions of web pages occupying hundreds of terabytes. Parsing these files directly requires storage
+                 and computing power not directly available to most and can come at a significant financial cost. The
+                 foundation also hosts indices of URIs and their locations within the large zipped dump files. While
+                 these indices are also large, their processing is feasible with a few terabytes of storage.¶ 3.1.1.
+                 Extracting Icelandic Common Crawl data¶ The Common Crawl indices, which contain URI and byte offsets
+                 within the compressed dumps, are used to reduce the search space when looking for Icelandic texts. The
+                 Common Crawl Index Server has a public API¹¹ [¹¹https://index.commoncrawl.org/] where URIs can be
+                 queried based on attributes such as date, MIME-type and substring. Using the API eliminates the need to
+                 fetch the massive index files. To extract Icelandic, the .is pattern is targeted to match the Icelandic
+                 top level domain (TLD), resulting in 63.5 million retrieved pages with URIs and byte locations within
+                 the compressed Common Crawl dumps. The computational efficiency of our method can be attributed to
+                 these steps. Given the predominant use of the .is TLD for Icelandic web content, we assume that other
+                 TLDs have a much lower proportion of Icelandic content. That said, a nontrivial amount of text in
+                 Icelandic is still likely to be found outside the .is domain and could be extracted by, e.g., parsing
+                 the whole Common Crawl, albeit at a much higher computational cost.¶ By targeting only the
+                 byte-offsets corresponding to the Icelandic TLD we extract candidate websites that have a high
+                 proportion of Icelandic content. In total, the compressed content is 687GiB on disk. All dumps since
+                 the start of the Common Crawl in 2008 until March 2020 were included.¶ Plain text was extracted from
+                 the collected WARC (Web Archive format) files using jusText (Pomikálek, 2011)12 to remove boilerplate
+                 content and HTML tags.",
+}
+

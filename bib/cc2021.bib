@@ -30,7 +30,7 @@
 }
 
 @Misc{cc:DodgeSapMarasovicAgnewEtAl:2021:documenting-english-colossal-clean-crawled-corpus,
-  title        = "Documenting the English Colossal Clean Crawled Corpus",
+  title        = "Documenting large webtext corpora: a case study on the Colossal Clean Crawled Corpus",
   author       = "Jesse Dodge and Maarten Sap and Ana Marasovic and William Agnew and Gabriel Ilharco and Dirk
                  Groeneveld and Matt Gardner",
   year         = "2021",
@@ -39,18 +39,18 @@
   primaryclass = "cs.CL",
   URL          = "https://arxiv.org/abs/2104.08758",
   pdf          = "https://arxiv.org/pdf/2104.08758.pdf",
-  abstract     = "As language models are trained on ever more text, researchers are turning to some of the largest
-                 corpora available. Unlike most other types of datasets in NLP, large unlabeled text corpora are often
-                 presented with minimal documentation, and best practices for documenting them have not been
-                 established. In this work we provide the first documentation for the Colossal Clean Crawled Corpus (C4;
-                 Raffel et al., 2020), a dataset created by applying a set of filters to a single snapshot of Common
-                 Crawl. We begin with a high-level summary of the data, including distributions of where the text came
-                 from and when it was written. We then give more detailed analysis on salient parts of this data,
-                 including the most frequent sources of text (e.g., this http URL, which contains a significant
-                 percentage of machine translated and/or OCR'd text), the effect that the filters had on the data (they
-                 disproportionately remove text in AAE), and evidence that some other benchmark NLP dataset examples are
-                 contained in the text. We release a web interface to an interactive, indexed copy of this dataset,
-                 encouraging the community to continuously explore and report additional findings.",
+  abstract     = "Large language models have led to remarkable progress on many NLP tasks, and researchers are turning
+                 to ever-larger text corpora to train them. Some of the largest corpora available are made by scraping
+                 significant portions of the internet, and are frequently introduced with only minimal documentation. In
+                 this work we provide some of the first documentation for the Colossal Clean Crawled Corpus (C4; Raffel
+                 et al., 2020), a dataset created by applying a set of filters to a single snapshot of Common Crawl. We
+                 begin by investigating where the data came from, and find a significant amount of text from unexpected
+                 sources like patents and US military websites. Then we explore the content of the text itself, and find
+                 machine-generated text (e.g., from machine translation systems) and evaluation examples from other
+                 benchmark NLP datasets. To understand the impact of the filters applied to create this dataset, we
+                 evaluate the text that was removed, and show that blocklist filtering disproportionately removes text
+                 from and about minority individuals. Finally, we conclude with some recommendations for how to created
+                 and document web-scale datasets from a scrape of the internet.",
   cc-author-affiliation = "Paul G. Allen School of Computer Science & Engineering, University of Washington, USA; Allen
                  Institute for Artificial Intelligence, USA",
   cc-class     = "nlp/corpus-construction, nlp/language-model",
@@ -99,7 +99,7 @@
   cc-author-affiliation = "Google Research; Masakhane NLP; Turkic Interlingua; Haverford College; RobotsMali; Intel
                  Labs; University of Zambia; Google; AIMS-AMMI; Inria; University of Zurich; Stanford University; Kwame
                  Nkrumah University of Science and Technology; Sorbonne Université; Niger-Volta LTI; University of
-                 WaterlooqUniversity of Electronic Science and Technology of China; University of Notre Dame; Bayero
+                 Waterloo; University of Electronic Science and Technology of China; University of Notre Dame; Bayero
                  University Kano; University of South Florida; Hugging Face; Jacobs University Bremen; University of
                  Moratuwa; EleutherAI; Obafemi Awolowo University; University of Ibadan; Instadeep; University of
                  Maryland; Defence Space Administration Abuja",
@@ -256,7 +256,7 @@
   cc-snippet   = "The growing need for data in language modeling has caused most existing large-scale language models to
                  turn to the Common Crawl for most or all of their data (Brown et al., 2020; Raffel et al., 2019). While
                  training on the Common Crawl has been effective, recent work has shown that dataset diversity leads to
-                 better downstream generalizationcapability (Rosset, 2019). [...] we also introduce a new filtered
+                 better downstream generalization capability (Rosset, 2019). [...] we also introduce a new filtered
                  subset of Common Crawl,Pile-CC, with improved extraction quality. [...] 2.1 Pile-CC Common Crawl is a
                  collection of website crawls from 2008 onwards, including raw web pages, metadata and text extractions.
                  Due to the raw nature of the dataset, Common Crawl has the advantage of including text from diverse
@@ -428,4 +428,125 @@
   URL          = "https://ids-pub.bsz-bw.de/frontdoor/deliver/index/docId/10468/file/Abadji_Suarez_Romary_Ungoliant_2021.pdf",
   cc-author-affiliation = "Inria, Paris, France; Sorbonne Université, Paris, France",
   cc-class     = "nlp/corpus-construction, nlp/text-corpora",
+}
+
+@Misc{cc:GrossmanZonszein:2021:voted-in-standing-out,
+  title        = "Voted In, Standing Out: Public Response to Immigrants' Political Accession",
+  URL          = "https://osf.io/xd4wk/",
+  doi          = "10.31219/osf.io/xd4wk",
+  publisher    = "OSF Preprints",
+  author       = "Grossman, Guy and Zonszein, Stephanie",
+  year         = "2021",
+  abstract     = "In a context of nativism and poor representation of immigrant-origin ethnic minori- ties, what is the
+                 reaction of the host society when immigrants succeed at integration in political institutions? Building
+                 on threat theory—which links minorities’ political power to hostility against minoritized
+                 groups—we argue that when they win political office, immigrants pose a threat to natives’ dominant
+                 position. This in turn triggers a hostile reaction from a violent-prone fringe, the mass public and the
+                 elites. We test these dynamics across the last four UK general elections, using hate crime police
+                 records, public opinion data, and text data from over 500,000 news articles from 350 na- tional and
+                 local newspapers. We identify the public’s hostile reactions with a regression discontinuity design
+                 that leverages close election results between minority-immigrant and dominant group candidates. Our
+                 findings suggest a public backlash against ethnic minority immigrants’ integration into majority
+                 settings.",
+  cc-author-affiliation = "University of Pennsylvania, USA",
+  cc-class     = "political science; sociology; ethnic minorities",
+  cc-dataset-used = "CC-MAIN-2020-16",
+  cc-class     = "political science, sociology, political integration of immigrants",
+  cc-snippet   = "News articles were extracted from Common Crawl, ethnic background of candidates is constructed by the
+                 authors, and constituency characteristics from 2001 and 2011 UK Decennial Census. [...] Then, to obtain
+                 the articles published by each of these newspapers, we looked up the URLs in Common Crawl (an open
+                 repository of web crawl data containing a snapshot of every web page at the moment of the crawl).
+                 Particularly in the Index for 2020-16 crawl, the most recent crawl at that moment. We retrieved the
+                 WARC (Web ARChive format) records for each crawled page from the newspaper, and extracted the pages’
+                 HTML. From the HTML, we extracted the text, title, and byline using the Python package readabiliPy; the
+                 publication date using the Python library htmldate; the location by tokenizing the article with
+                 CoreNLP, and looking for tokens which match place names in the Index of Place Names in Great Britain,
+                 and mapping to the corresponding constituency. Figure D.1 presents the geographical coverage of all
+                 extracted articles across constituencies.¶ [...] 4.3 Media tone toward migrant groups¶ Data We use
+                 data from over 500,000 articles from 350 national, regional and local UK newspapers, covering the
+                 general elections from 2010–2019.⁸ This data is from Common Crawl, which is an open repository of
+                 web crawl data. We assume that an article refers to a candidate’s ethnic group when three conditions
+                 are met: 1) the publication date is on election day and up to 10 months after each general election⁹,
+                 2) the article contains mentions of terms referring to the candidate’s country or nationality of
+                 origin, which are extracted with the named entity annotator of CoreNLP and 3) such mentions co-occur in
+                 the article with a mention referring to the candidate’s constituency. The constituency is extracted
+                 by tokenizing the article with CoreNLP and looking for tokens which match place names in the Index of
+                 Place Names in Great Britain, and mapping to the corresponding constituency. Overall, this data
+                 includes almost 150,000 mentions from 156 newspapers that meet these three conditions about the
+                 candidates’ group. [...] D Newspaper data, computation of media tone measures and validation of key
+                 elements Newspaper data We construct the dataset of newspaper articles using the following steps. To
+                 determine a comprehensive list of UK newspapers, we first identified a list of seed categories on
+                 Wikipedia (WP) (e.g. ’Category:Newspapers_published_in_England’), we took the recursive items of
+                 those categories (e.g. ’Category:Newspapers_published_in_England’ >
+                 ’Category:Newspapers_published_in_London’), we used WP article properties to filter out articles
+                 about non-newspapers (e.g. people, books), and we extracted the newspaper URLs from the WP Infobox
+                 using the Python package wptools. With this process we identified a list of UK newspapers URLs
+                 containing 337 newspapers in total. Then, to obtain the articles published by each of these newspapers,
+                 we looked up the URLs in Common Crawl (an open repository of web crawl data containing a snapshot of
+                 every web page at the moment of the crawl). Particularly in the Index for 2020-16 crawl, the most
+                 recent crawl at that moment. We retrieved the WARC (Web ARChive format) records for each crawled page
+                 from the newspaper, and extracted the pages’ HTML. From the HTML, we extracted the text, title, and
+                 byline using the Python package readabiliPy; the publication date using the Python library htmldate;
+                 the location by tokenizing the article with CoreNLP, and looking for tokens which match place names in
+                 the Index of Place Names in Great Britain, and mapping to the corresponding constituency. Figure D.1
+                 presents the geographical coverage of all extracted articles across constituencies.",
+}
+
+@Misc{cc:NgoAraújoHuiFrosst:2021:no-news-is-good-news,
+  title        = "No News is Good News: {A} Critique of the One Billion Word Benchmark",
+  author       = "Helen Ngo and João G. M. Araújo and Jeffrey Hui and Nicholas Frosst",
+  year         = "2021",
+  pdf          = "https://arxiv.org/pdf/2110.12609.pdf",
+  URL          = "https://arxiv.org/abs/2110.12609",
+  abstract     = "The One Billion Word Benchmark is a dataset derived from the WMT 2011 News Crawl, commonly used to
+                 measure language modeling ability in natural language processing. We train models solely on Common
+                 Crawl web scrapes partitioned by year, and demonstrate that they perform worse on this task over time
+                 due to distributional shift. Analysis of this corpus reveals that it contains several examples of
+                 harmful text, as well as outdated references to current events. We suggest that the temporal nature of
+                 news and its distribution shift over time makes it poorly suited for measuring language modeling
+                 ability, and discuss potential impact and considerations for researchers building language models and
+                 evaluation datasets.",
+  cc-author-affiliation = "Cohere, Toronto, Canada",
+  cc-class     = "nlp/language-model, nlp/language-model/perplexity",
+  cc-snippet   = "Common Crawl is a repository of web scrapes of the internet updated annually and is often used as a
+                 key data source for language models built on the open web [8, 2, 1]. We train benchmark models on three
+                 distinct datasets created by selecting data sampled from different years of Common Crawl: 2013 (the
+                 year which lm1b was released), 2016, and 2020. [...] Models which are trained on datasets temporally
+                 further removed from the lm1b corpus source (i.e. WMT 2011 News Crawl dataset) exhibit higher
+                 perplexity than those trained on datasets which are temporally closer.",
+}
+
+@Misc{cc:Gao:2021:quality-filtering-of-text-data,
+  title        = "An Empirical Exploration in Quality Filtering of Text Data",
+  author       = "Leo Gao",
+  year         = "2021",
+  pdf          = "https://arxiv.org/pdf/2109.00698.pdf",
+  URL          = "https://arxiv.org/abs/2109.00698",
+  abstract     = "While conventional wisdom suggests that more aggressively filtering data from low-quality sources like
+                 Common Crawl always monotonically improves the quality of training data, we find that aggressive
+                 filtering can in fact lead to a decrease in model quality on a wide array of downstream tasks for a
+                 GPT-like language model. We speculate that this is because optimizing sufficiently strongly for a proxy
+                 metric harms performance on the true objective, suggesting a need for more robust filtering objectives
+                 when attempting to filter more aggressively. We hope this work leads to detailed analysis of the
+                 effects of dataset filtering design choices on downstream model performance in future work.",
+  cc-author-affiliation = "EleutherAI",
+  cc-class     = "nlp/language-model, nlp/corpus-construction",
+  cc-snippet   = "The recent proliferation of ever larger language models has led to increasing demands on training data
+                 (Radford et al., 2018, 2019; Gokaslan and Cohen, 2019; Rosset, 2019; Shoeybi et al., 2019; Devlin et
+                 al., 2019; Liu et al., 2019; Raffel et al., 2020; Brown et al., 2020; Zeng et al., 2021). This data is
+                 increasingly derived from internet corpora like Common Crawl (Radford et al., 2019; Ortiz Suárez et
+                 al., 2019; Wenzek et al., 2020; Conneau et al., 2020; Brown et al., 2020; Gao et al., 2020; Raffel et
+                 al., 2020). However, the quality of raw Common Crawl data is often insufficient to be directly used. To
+                 combat this, many existing works use some kind of proxy for quality, like a classifier between known
+                 high quality data and low quality data (Brown et al., 2020; Gao et al., 2020; Zeng et al., 2021),
+                 handcrafted heuristics (Yang et al., 2020; Raffel et al., 2020), or keeping only documents with
+                 perplexity scores that fall in some middle quantile of an existing language model (Wenzek et al.,
+                 2020). Brown et al. (2020) in particular filter extremely aggres- sively using their classifier,
+                 discarding about 98.7% of their data. Previous work has shown that models trained on heuristic-filtered
+                 datasets perform better on downstream tasks (Raffel et al., 2020). However, Gao et al. (2020) show that
+                 a perplexity-filtered CC- derived dataset actually performs worse than unfiltered CC on certain tasks.
+                 [...] We hypothesize that this decline in performance is because of misalignment between the classifier
+                 objective, intended to be a proxy for quality, and actual document quality. For instance, a classifier
+                 to distinguish WebText2 from Common Crawl, as in GPT-3, would also exclude domains of text data not
+                 found as often in WebText2.",
 }
