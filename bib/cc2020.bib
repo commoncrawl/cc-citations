@@ -137,7 +137,7 @@
                  information with a simple sentiment-based portfolio trading strategy. Our findings provides support for
                  that information in publicly available news on the World Wide Web has a statistically and economically
                  significant impact on events in financial markets.",
-  cc-class     = "statistical-finance; ai/machine-learning; nlp/sentiment-analysis",
+  cc-class     = "statistical-finance, ai/machine-learning, nlp/sentiment-analysis",
   cc-snippet   = "In this article, we use news articles from the Common Crawl News, a subset of the Common Crawl’s
                  petabytes of publicly available World Wide Web archives, to measure the impact of the arrival of new
                  information about the constituent stocks in the S&P 500 index at the time of publishing. To the best of
@@ -503,3 +503,40 @@
                  this approach, however, is its dependency on an inefficient storage format.",
 }
 
+@Article{cc:MaticIordanouSmaragdakisLaoutaris:2020:identifying-sensitive-URLs,
+  title        = "Identifying Sensitive {URL}s at Web-Scale",
+  author       = "Srdjan Matic and Costas Iordanou and Georgios Smaragdakis and Nikolaos Laoutaris",
+  journal      = "Proceedings of the ACM Internet Measurement Conference",
+  year         = "2020",
+  pages        = "619–633",
+  URL          = "https://do.tu-berlin.de/handle/11303/13215",
+  pdf          = "https://depositonce.tu-berlin.de/bitstream/11303/13215/4/matic_etal_2020.pdf",
+  abstract     = "Several data protection laws include special provisions for protecting personal data relating to
+                 religion, health, sexual orientation, and other sensitive categories. Having a well-defined list of
+                 sensitive categories is sufficient for filing complaints manually, conducting investigations, and
+                 prosecuting cases in courts of law. Data protection laws, however, do not define explicitly what type
+                 of content falls under each sensitive category. Therefore, it is unclear how to implement proactive
+                 measures such as informing users, blocking trackers, and filing complaints automatically when users
+                 visit sensitive domains. To empower such use cases we turn to the Curlie.org crowdsourced taxonomy
+                 project for drawing training data to build a text classifier for sensitive URLs. We demonstrate that
+                 our classifier can identify sensitive URLs with accuracy above 88%, and even recognize specific
+                 sensitive categories with accuracy above 90%. We then use our classifier to search for sensitive URLs
+                 in a corpus of 1 Billion URLs collected by the Common Crawl project. We identify more than 155 millions
+                 sensitive URLs in more than 4 million domains. Despite their sensitive nature, more than 30% of these
+                 URLs belong to domains that fail to use HTTPS. Also, in sensitive web pages with third-party cookies,
+                 87% of the third-parties set at least one persistent cookie.",
+  cc-author-affiliation = "TU Berlin, Germany; Cyprus University of Technology, Cyprus; IMDEA Networks Institute",
+  cc-class     = "computer-security/internet-security, privacy, GDPR, general data protection regulation",
+  cc-snippet   = "When it comes to detecting specific sensitive categories, such as those defined by GDPR: Health,
+                 Politics, Religion, Sexual Orientation, Ethnicity, our classifier achieves a high classification
+                 accuracy as well. For specific categories, such as Health (98%), Politics (92%), Religion (97%), our
+                 classifier achieves an accuracy that exceeds the basic classification accuracy between sensitive and
+                 non-sensitive URLs (88%).¶ • Applying our classifier on a Common Crawl snapshot of the English
+                 speaking Web (around 1 Billion URLs), we identify 155 million sensitive URLs in more than 4 million
+                 domains. Health, Religion, and Political Beliefs are the most popular categories with around 70
+                 millions, 35 millions, and 32 millions URLs respectively.¶ • Looking among the identified sensitive
+                 URLs we reach the conclusion that sensitive URLs are handled as any other URL, without any special
+                 provision for the privacy of users. For example, we show that 30% of sensitive URLs are hosted in
+                 domains that fail to use HTTPS. Also, in sensitive web pages with third-party cookies, 87% of the
+                 third-parties sets at least one persistent cookie.",
+}

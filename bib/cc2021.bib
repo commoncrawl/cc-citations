@@ -257,7 +257,7 @@
                  turn to the Common Crawl for most or all of their data (Brown et al., 2020; Raffel et al., 2019). While
                  training on the Common Crawl has been effective, recent work has shown that dataset diversity leads to
                  better downstream generalization capability (Rosset, 2019). [...] we also introduce a new filtered
-                 subset of Common Crawl,Pile-CC, with improved extraction quality. [...] 2.1 Pile-CC Common Crawl is a
+                 subset of Common Crawl, Pile-CC, with improved extraction quality. [...] 2.1 Pile-CC Common Crawl is a
                  collection of website crawls from 2008 onwards, including raw web pages, metadata and text extractions.
                  Due to the raw nature of the dataset, Common Crawl has the advantage of including text from diverse
                  domains, but at the cost of varying quality data. Due to this, use of Common Crawl typically
@@ -549,4 +549,83 @@
                  objective, intended to be a proxy for quality, and actual document quality. For instance, a classifier
                  to distinguish WebText2 from Common Crawl, as in GPT-3, would also exclude domains of text data not
                  found as often in WebText2.",
+}
+
+@Misc{cc:BirhanePrabhuKahembwe:2021:multimodal-datasets,
+  title        = "Multimodal datasets: misogyny, pornography, and malignant stereotypes",
+  author       = "Abeba Birhane and Vinay Uday Prabhu and Emmanuel Kahembwe",
+  year         = "2021",
+  eprint       = "2110.01963",
+  URL          = "https://arxiv.org/abs/2110.01963",
+  journal      = "CoRR",
+  volume       = "abs/2110.01963",
+  eprinttype   = "arXiv",
+  pdf          = "https://arxiv.org/pdf/2110.01963.pdf",
+  abstract     = "We have now entered the era of trillion parameter machine learning models trained on billion-sized
+                 datasets scraped from the internet. The rise of these gargantuan datasets has given rise to formidable
+                 bodies of critical work that has called for caution while generating these large datasets. These
+                 address concerns surrounding the dubious curation practices used to generate these datasets, the sordid
+                 quality of alt-text data available on the world wide web, the problematic content of the CommonCrawl
+                 dataset often used as a source for training large language models, and the entrenched biases in
+                 large-scale visio-linguistic models (such as OpenAI's CLIP model) trained on opaque datasets
+                 (WebImageText). In the backdrop of these specific calls of caution, we examine the recently released
+                 LAION-400M dataset, which is a CLIP-filtered dataset of Image-Alt-text pairs parsed from the
+                 Common-Crawl dataset. We found that the dataset contains, troublesome and explicit images and text
+                 pairs of rape, pornography, malign stereotypes, racist and ethnic slurs, and other extremely
+                 problematic content. We outline numerous implications, concerns and downstream harms regarding the
+                 current state of large scale datasets while raising open questions for various stakeholders including
+                 the AI community, regulators, policy makers and data subjects.",
+  cc-author-affiliation = "University College Dublin, Ireland; Lero, Dublin, Ireland; University of Edinburgh, UK",
+  cc-class     = "ai/ethics-of-machine-learning, nlp/corpus-construction, nlp/text-corpora",
+  cc-comment   = "about LAION-400M, Common Crawl and derived datasets, OpenWebText",
+  cc-snippet   = "1.3 The Common-Crawl Common Crawl is a San Francisco based nonprofit 501(c)(3) organization that has
+                 been regularly crawling the entire WWW and generating archival snapshot data-dumps, often termed the
+                 Common- Crawl (CC) datasets in machine learning lexicon, since 2011. The current version of this
+                 archive (dated April 2021) is roughly 320 TB in size and spans 3.1 billion pages. The sheer scale of
+                 this dataset has an enduring allure in the AI community and has been used as a seeding dataset in
+                 training pipelines of high-profile projects⁵ [⁵https://commoncrawl.org/the-data/examples/] such as
+                 GPT-3 [34], CLUECorpus2020 [35], and XLM-R [36]. Inevitably this gargantuan dataset mined from the WWW
+                 suffers from serious issues. For instance, Matic et al. [37] used the Curlie.org crowdsourced taxonomy
+                 project to train a GDPR-Article(9)-Sensitive-URL classifier which revealed that, of the 1 Billion URLs
+                 they audited in the Common Crawl project, 155 million URLs fell into the sensitive category. The
+                 Realtoxicityprompts work [38] revealed that CommonCrawl contained over 300,000 documents from
+                 unreliable news sites and banned subReddit pages containing hate speech and racism. More recently,
+                 Luccioni and Viviano’s initial study [39] placed the ‘Hate speech’ content level to be around
+                 4.02%-5.24% (the 1+ hate n-grams level was estimated higher at 17.78%). With regards to CCAligned, a
+                 119- language parallel dataset built off 68 snapshots of Common Crawl, Caswell et al. [40] revealed
+                 that there were notable amounts of pornographic content (> 10%) found for 11 languages with prevalence
+                 rates being as high as 24% for language pairs such as en-om_KE. The LAION-400M dataset emerges from
+                 this landscape containing hundreds of millions of Image- Alt-text pairs parsed from the Common-Crawl
+                 dataset and filtered using a previously Common-Crawl trained AI model (CLIP [2]). With this background,
+                 we present our findings following our initial audit of the LAION-400M dataset below.",
+}
+
+@Misc{cc:SchuhmannVencuBeaumontKaczmarczykEtAl:2021:LAION-400M-open-dataset-of-image-text-pairs,
+  title        = "{LAION}-400{M}: Open Dataset of {CLIP}-Filtered 400 Million Image-Text Pairs",
+  author       = "Christoph Schuhmann and Richard Vencu and Romain Beaumont and Robert Kaczmarczyk and Clayton Mullis
+                 and Aarush Katta and Theo Coombes and Jenia Jitsev and Aran Komatsuzaki",
+  year         = "2021",
+  eprint       = "2111.02114",
+  URL          = "https://arxiv.org/abs/2111.02114",
+  pdf          = "https://arxiv.org/pdf/2111.02114.pdf",
+  abstract     = "Multi-modal language-vision models trained on hundreds of millions of image-text pairs (e.g. CLIP,
+                 DALL-E) gained a recent surge, showing remarkable capability to perform zero- or few-shot learning and
+                 transfer even in absence of per-sample labels on target image data. Despite this trend, to date there
+                 has been no publicly available datasets of sufficient scale for training such models from scratch. To
+                 address this issue, in a community effort we build and release for public LAION-400M, a dataset with
+                 CLIP-filtered 400 million image-text pairs, their CLIP embeddings and kNN indices that allow efficient
+                 similarity search.",
+  cc-author-affiliation = "LAION.ai; Gentec Data, Romania; Technical University of Munich, Germany; Juelich
+                 Supercomputing Center, Germany; Georgia Institute of Technology; USA; EleutherAI",
+  cc-class     = "",
+  cc-snippet   = "2.1 Distributed processing of Common Crawl¶ To create image-text pairs, we parse through WAT files
+                 from Common Crawl and parse out all HTML IMG tags containing an alt-text attribute. We download the raw
+                 images from the parsed URLs with asynchronous requests using Trio and Asks libraries.¶ 2.1.1 Filtering
+                 out unsuitable image-text pairs¶ After downloading the WAT files from Common Crawl, we apply the
+                 following filtering conditions: • All samples with less than 5 character alt-text length or less than
+                 5 KB image size are dropped.¶ • Duplicate removal is performed with bloom filter based on URL and
+                 alt-text.¶ • We use CLIP to compute embeddings of the image and alt-text. Then we compute the cosine
+                 similarity of both embeddings and drop all samples with cosine similarity below 0.3. This threshold was
+                 selected based on human inspections.¶ • We use the CLIP embeddings of images and texts to filter out
+                 illegal contents.",
 }

@@ -45,3 +45,86 @@
                  content and HTML tags.",
 }
 
+@Misc{cc:ArtetxeAldabeAgerriPerez-de-ViñaspreEtAl:2022:corpus-quality-low-resource-languages,
+  doi          = "10.48550/ARXIV.2203.08111",
+  URL          = "https://arxiv.org/abs/2203.08111",
+  author       = "Artetxe, Mikel and Aldabe, Itziar and Agerri, Rodrigo and Perez-de-Viñaspre, Olatz and Soroa, Aitor",
+  keywords     = "Computation and Language (cs.CL), Artificial Intelligence (cs.AI), Machine Learning (cs.LG), FOS:
+                 Computer and information sciences, FOS: Computer and information sciences",
+  title        = "Does Corpus Quality Really Matter for Low-Resource Languages?",
+  publisher    = "arXiv",
+  year         = "2022",
+  abstract     = "The vast majority of non-English corpora are derived from automatically filtered versions of
+                 CommonCrawl. While prior work has identified major issues on the quality of these datasets (Kreutzer et
+                 al., 2021), it is not clear how this impacts downstream performance. Taking Basque as a case study, we
+                 explore tailored crawling (manually identifying and scraping websites with high-quality content) as an
+                 alternative to filtering CommonCrawl. Our new corpus, called EusCrawl, is similar in size to the Basque
+                 portion of popular multilingual corpora like CC100 and mC4, yet it has a much higher quality according
+                 to native annotators. For instance, 66% of documents are rated as high-quality for EusCrawl, in
+                 contrast with <33% for both mC4 and CC100. Nevertheless, we obtain similar results on downstream tasks
+                 regardless of the corpus used for pre-training. Our work suggests that NLU performance in low-resource
+                 languages is primarily constrained by the quantity rather than the quality of the data, prompting for
+                 methods to exploit more diverse data sources.",
+  cc-snippet   = "In this paper, we explore tailored crawling (i.e., manually identifying and scraping websites with
+                 high-quality content) as an alternative to filtering CommonCrawl. Taking Basque as a case study, we
+                 collect 12.5M documents from 33 websites with Creative Commons content. The resulting corpus, called
+                 EusCrawl, is similar in size to the Basque portion of CC100 and mC4, but it has substantially less
+                 issues and a higher perceived quality according to our blind audit with native annotators. However, we
+                 find that this improvement does not carry over to downstream tasks, as masked language models
+                 pre-trained on either corpora obtain similar results on 5 NLU benchmarks. Our results suggests that
+                 data quantity and domain play a more important role, prompting for methods to exploit more diverse
+                 sources of data in low-resource languages.",
+  cc-author-affiliation = "Meta AI; HiTZ Center - Ixa, University of the Basque Country UPV/EHU",
+  cc-class     = "nlp/corpus-construction, nlp/corpus-representativeness, nlp/corpus-quality, nlp/language-models,
+                 nlp/low-resource-languages",
+}
+
+@Misc{cc:BidermanBichenoGao:2022:datasheet-for-Pile,
+  title        = "Datasheet for the Pile",
+  author       = "Stella Biderman and Kieran Bicheno and Leo Gao",
+  year         = "2022",
+  pdf          = "https://arxiv.org/pdf/2201.07311.pdf",
+  URL          = "https://arxiv.org/abs/2201.07311",
+  abstract     = "This datasheet describes the Pile, a 825 GiB dataset of human-authored text compiled by EleutherAI for
+                 use in large-scale language modeling. The Pile is comprised of 22 different text sources, ranging from
+                 original scrapes done for this project, to text data made available by the data owners, to third-party
+                 scrapes available online.",
+  cc-author-affiliation = "EleutherAI",
+  cc-class     = "nlp/corpus-construction, nlp/corpus-datasheet, nlp/corpus-representativeness",
+  cc-derived-dataset-about = "The-Pile-English",
+  cc-snippet   = "Pile-CC: The Pile-CC dataset is a sample from the Common Crawl WARCs that has been converted to text
+                 using jusText [Endrédy and Novák, 2013].¶ [...] Pile-CC: The Pile-CC dataset was created to be
+                 included in the Pile. The underlying data comes from the Common Crawl, which was created to give people
+                 access to the wealth of information contained in the internet. Its creators were concerned that only
+                 data mining companies would be able to collect this data, and has the explicit aim of democratizing
+                 technology.¶ [...] Pile-CC: The data is sourced from Common Crawl, a non-profit 501(c)(3) organization
+                 founded by Gil Elbaz. The data from Common Crawl was processed by EleutherAI into Pile-CC.¶ [...]
+                 Pile-CC: Instances are webpages.¶ [...] Pile-CC: 54, 953, 117 documents, totaling 227.12 GiB.¶ [...]
+                 Pile-CC: A tiny fraction of the entire Common Crawl was included, chosen arbitrarily and heavily
+                 filtered as detailed in Gao et al. [2020].¶ [...] Pile-CC: Data in the Pile-CC dataset were scraped
+                 from websites by the Common Craw and then downloaded directly from the Common Craw by EleutherAI.¶
+                 [...] Pile-CC: The earliest date of contents in Pile-CC is unknown.¶",
+}
+
+@TechReport{cc:Andersson-Schwarz:2022:quantification-online-linguistic-data,
+  title        = "The hitchhiker's guide Method handbook for quantification of online linguistic data in a
+                 country-specific context. Official research report, Linguistic Explorations of Societies (Work Package
+                 1)",
+  author       = "Andersson Schwarz, Jonas",
+  year         = "2022",
+  pdf          = "https://gupea.ub.gu.se/bitstream/handle/2077/70890/2022_1_Andersson%20Schwarz.pdf",
+  cc-snippet   = "Central actors (in no particular order)¶ CommonCrawl. California-based non-profit organization that
+                 makes monthly crawls of the openly available Web and provides datasets and metadata to the public
+                 freely. The CommonCrawl corpus contains petabytes of data including raw web page data, metadata data
+                 and text data collected since 2011. Since 2012, CommonCrawl’s archive is hosted by Amazon Web
+                 Services as part of its Public Data Sets program. Every crawl contains around 300 terabytes of data and
+                 roughly 3 billion pages. In 2020, a filtered version of this CommonCrawl archive was used to train
+                 OpenAI’s GPT-3 language model.¶ [...] Similarly, CommonCrawl (2021) provides an aggregate listing
+                 the percentages of their database covered by each language – measured as the primary language of each
+                 html document, as identified by the Compact Language Detector 2 (CLD2) algorithm. This was included as
+                 a good benchmark to compare with.¶ [...] In comparison, when plotting the cur- rently stated language
+                 distribution of CommonCrawl (2021) in relation to the same population numbers of L1 and L2 speakers,
+                 the CommonCrawl distribution displays a similarly low kurtosis and skewness.",
+  cc-author-affiliation = "Göteborgs Universitet, Sweden",
+  cc-class     = "nlp/corpus-construction, nlp/corpus-representativeness",
+}

@@ -176,3 +176,37 @@
   cc-author-affiliation = "University of Melbourne, Australia; University of Pisa, Italy; ISTI-CNR, Pisa, Italy",
 }
 
+@Misc{cc:SchwenkWenzekEdunovGraveEtAl:2019:CCMatrix-high-quality-parallel-sentences,
+  doi          = "10.48550/ARXIV.1911.04944",
+  URL          = "https://arxiv.org/abs/1911.04944",
+  author       = "Schwenk, Holger and Wenzek, Guillaume and Edunov, Sergey and Grave, Edouard and Joulin, Armand",
+  keywords     = "Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and
+                 information sciences",
+  title        = "{CCM}atrix: Mining Billions of High-Quality Parallel Sentences on the {WEB}",
+  publisher    = "arXiv",
+  year         = "2019",
+  abstract     = "We show that margin-based bitext mining in a multilingual sentence space can be applied to monolingual
+                 corpora of billions of sentences. We are using ten snapshots of a curated common crawl corpus (Wenzek
+                 et al., 2019), totalling 32.7 billion unique sentences. Using one unified approach for 38 languages, we
+                 were able to mine 4.5 billions parallel sentences, out of which 661 million are aligned with English.
+                 20 language pairs have more then 30 million parallel sentences, 112 more then 10 million, and most more
+                 than one million, including direct alignments between many European or Asian languages.",
+  cc-snippet   = "The curated Common Crawl corpus¶ In this work, we propose to mine parallel sentences from the Web, by
+                 using the data released by the Common Crawl project.[⁵https://commoncrawl.org/] Each month, a
+                 snapshot of the Web containing terabytes of web pages in various languages is obtained by randomly
+                 exploring URLs. We start by applying some preprocessing steps to the raw text data, following the
+                 pipeline introduced by Wenzek et al. (2019) and leading to the CCNet dataset. The first step is to
+                 deduplicate the data at the paragraph level, as the original crawls contain up to 70% of duplicated
+                 data. This preprocessing removes low quality content, such as boilerplate, navigation menus or cookie
+                 warnings. The second step of the pipeline is to identify the language of each document, using fastText6
+                 (Grave et al., 2018). This language identifier uses a linear classifier with character n-gram features,
+                 and can recognize up to 176 languages. Finally, the last step of the preprocessing is to filter low
+                 quality content by training a language model on Wikipedia, and only keeping documents with a low
+                 perplexity score. We refer the reader to Wenzek et al. (2019) for more details about this pre-
+                 processing pipeline. In Figure 1, we report the number of unique sentences obtained after preprocessing
+                 ten snapshots from Common Crawl. We currently process 38 languages. The English Web content is abundant
+                 and we used only one snapshot.",
+  cc-author-affiliation = "Facebook AI",
+  cc-class     = "nlp/corpus-construction, nlp/parallel-corpus, nlp/machine-translation",
+  cc-derived-dataset-about = "CCMatrix",
+}
