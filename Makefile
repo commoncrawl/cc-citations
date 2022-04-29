@@ -41,3 +41,11 @@ count:
 
 clean:
 	rm bib/*.formatted.bib
+
+
+# Google Scholar Alerts
+gscholar_alerts/extracted_citations.jsonl: gscholar_alerts/eml/
+	python3 gscholar_alerts/parse_scholar_alert_eml.py $< | LC_ALL=C sort >$@
+
+gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
+	jq -c 'select(.title != null and .authors != null) | del(.idx, .date, .data, .ref, .link)' $< >$@

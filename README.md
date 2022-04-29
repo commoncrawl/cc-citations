@@ -27,6 +27,12 @@ The following non-standard fields are used to add information how the publicatio
 <dd>a derived dataset is cited but not used</dd>
 </dl>
 
+
 ## Formatting and Export of Citations
 
 The [Makefile](./Makefile) contains targets to apply a consistent formatting to the citations. It also allows to export the citations. The following BibTeX tools are required: [bibtex2html](https://www.lri.fr/~filliatr/bibtex2html/), [bibclean](https://ctan.org/tex-archive/biblio/bibtex/utils/bibclean), [bibtool](http://www.gerd-neugebauer.de/software/TeX/BibTool/en/).
+
+
+## Citations from Google Scholar Alerts
+
+As an initial step and to get a higher coverage, citations are extracted from Google Scholar Alert e-mails received April 2016 to date. See [gscholar_alerts](./gscholar_alerts/).
