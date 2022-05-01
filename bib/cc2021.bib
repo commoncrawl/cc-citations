@@ -449,9 +449,8 @@
                  findings suggest a public backlash against ethnic minority immigrants’ integration into majority
                  settings.",
   cc-author-affiliation = "University of Pennsylvania, USA",
-  cc-class     = "political science; sociology; ethnic minorities",
+  cc-class     = "political science, sociology, political integration of immigrants, ethnic minorities",
   cc-dataset-used = "CC-MAIN-2020-16",
-  cc-class     = "political science, sociology, political integration of immigrants",
   cc-snippet   = "News articles were extracted from Common Crawl, ethnic background of candidates is constructed by the
                  authors, and constituency characteristics from 2001 and 2011 UK Decennial Census. [...] Then, to obtain
                  the articles published by each of these newspapers, we looked up the URLs in Common Crawl (an open
@@ -628,4 +627,34 @@
                  similarity of both embeddings and drop all samples with cosine similarity below 0.3. This threshold was
                  selected based on human inspections.¶ • We use the CLIP embeddings of images and texts to filter out
                  illegal contents.",
+}
+
+@InProceedings{cc:BugertGurevych:2021:event-coreference-data,
+  title        = "{E}vent Coreference Data (Almost) for Free: {M}ining Hyperlinks from Online News",
+  author       = "Bugert, Michael and Gurevych, Iryna",
+  booktitle    = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+  month        = nov,
+  year         = "2021",
+  address      = "Online and Punta Cana, Dominican Republic",
+  publisher    = "Association for Computational Linguistics",
+  URL          = "https://aclanthology.org/2021.emnlp-main.38",
+  doi          = "10.18653/v1/2021.emnlp-main.38",
+  pages        = "471--491",
+  abstract     = "Cross-document event coreference resolution (CDCR) is the task of identifying which event mentions
+                 refer to the same events throughout a collection of documents. Annotating CDCR data is an arduous and
+                 expensive process, explaining why existing corpora are small and lack domain coverage. To overcome this
+                 bottleneck, we automatically extract event coreference data from hyperlinks in online news: When
+                 referring to a significant real-world event, writers often add a hyperlink to another article covering
+                 this event. We demonstrate that collecting hyperlinks which point to the same article(s) produces
+                 extensive and high-quality CDCR data and create a corpus of 2M documents and 2.7M silver-standard event
+                 mentions called HyperCoref. We evaluate a state-of-the-art system on three CDCR corpora and find that
+                 models trained on small subsets of HyperCoref are highly competitive, with performance similar to
+                 models trained on gold-standard data. With our work, we free CDCR research from depending on costly
+                 human-annotated training data and open up possibilities for research beyond English CDCR, as our data
+                 extraction approach can be easily adapted to other languages.",
+  cc-author-affiliation = "Ubiquitous Knowledge Processing Lab (UKP), Technical University of Darmstadt, Germany",
+  cc-class     = "nlp/coreference resolution, event detection",
+  cc-snippet   = "To this end, we devise a data extraction pipeline which mines such datasets automatically from Common
+                 Crawl² [²https://commoncrawl.org/] and apply it to create the HYPERCOREF corpus, consisting of 40
+                 news outlets with over 2M mentions in total, far exceeding the size of existing CDCR corpora.",
 }

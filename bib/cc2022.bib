@@ -128,3 +128,64 @@
   cc-author-affiliation = "Göteborgs Universitet, Sweden",
   cc-class     = "nlp/corpus-construction, nlp/corpus-representativeness",
 }
+
+@Misc{cc:MorishitaChousaSuzukiNagata:2022:JParaCrawl,
+  doi          = "10.48550/ARXIV.2202.12607",
+  URL          = "https://arxiv.org/abs/2202.12607",
+  pdf          = "https://arxiv.org/pdf/2202.12607.pdf",
+  author       = "Morishita, Makoto and Chousa, Katsuki and Suzuki, Jun and Nagata, Masaaki",
+  title        = "{JP}araCrawl v3.0: {A} Large-scale English-Japanese Parallel Corpus",
+  year         = "2022",
+  abstract     = "Most current machine translation models are mainly trained with parallel corpora, and their
+                 translation accuracy largely depends on the quality and quantity of the corpora. Although there are
+                 billions of parallel sentences for a few language pairs, effectively dealing with most language pairs
+                 is difficult due to a lack of publicly available parallel corpora. This paper creates a large parallel
+                 corpus for English-Japanese, a language pair for which only limited resources are available, compared
+                 to such resource-rich languages as English-German. It introduces a new web-based English-Japanese
+                 parallel corpus named JParaCrawl v3.0. Our new corpus contains more than 21 million unique parallel
+                 sentence pairs, which is more than twice as many as the previous JParaCrawl v2.0 corpus. Through
+                 experiments, we empirically show how our new corpus boosts the accuracy of machine translation models
+                 on various domains. The JParaCrawl v3.0 corpus will eventually be publicly available online for
+                 research purposes.",
+  cc-snippet   = "Our method extracts parallel sentences from the web. Thus, the first step is finding a website that
+                 has parallel sentences. This method is based on the hypothesis that websites containing the same
+                 English and Japanese sentences might have parallel texts. To list such parallel websites, we analyzed
+                 all the Common Crawl text archive data released from March 2019 to August 2021³. [³During this
+                 period, the Common Crawl project released 25 archives, and their text size was about 212 TB.] We
+                 identified the language in the archive by CLD2⁴ [⁴ https://github.com/CLD2Owners/cld2] and listed
+                 100,000 large websites that roughly have the same size of English and Japanese texts. For this step, we
+                 used extractor⁵ [⁵ 5https://github.com/paracrawl/extractor] that was provided by the ParaCrawl
+                 project.",
+  cc-author-affiliation = "NTT Communication Science Laboratories, NTT Corporation, Japan",
+  cc-class     = "nlp/machine-translation, nlp/parallel-corpus, nlp/corpus-construction",
+}
+
+@InProceedings{cc:LAKIMAlmazroueiAlhaolDebbahEtAl:2022:carbon-footprint,
+  title        = "A Holistic Assessment of the Carbon Footprint of Noor, a Very Large Arabic Language Model",
+  author       = "Imad LAKIM and Ebtesam Almazrouei and Ibrahim Abu Alhaol and Merouane Debbah and Julien Launay",
+  booktitle    = "Challenges {\&} Perspectives in Creating Large Language Models",
+  year         = "2022",
+  URL          = "https://openreview.net/forum?id=B-lS3zH8Zq",
+  abstract     = "As ever larger language models grow more ubiquitous, it is crucial to consider their environmental
+                 impact. Characterised by extreme size and resource use, recent generations of models have been
+                 criticised for their voracious appetite for compute, and thus significant carbon footprint. Although
+                 reporting of carbon impact has grown more common in machine learning papers, this reporting is usually
+                 limited to compute resources used strictly for training. In this work, we propose a holistic assessment
+                 of the footprint of an extreme-scale language model, Noor. Noor is an ongoing project aiming to develop
+                 the largest multi-task Arabic language models--with up to 13B parameters--leveraging zero-shot
+                 generalisation to enable a wide range of downstream tasks via natural language instructions. We assess
+                 the total carbon bill of the entire project: starting with data collection and storage costs, including
+                 research and development budgets, pretraining costs, future serving estimates, and other exogenous
+                 costs necessary for this international cooperation. Notably, we find that inference costs and exogenous
+                 factors can have a significant impact on total budget. Finally, we discuss pathways to reduce the
+                 carbon footprint of extreme-scale models.",
+  cc-author-affiliation = "TII, Abu Dhabi, Arabic Emirates; LightOn, Paris, France",
+  cc-class     = "nlp/language-model, nlp/transformer-language-model, carbon-footprint",
+  cc-snippet   = "We use Common Crawl (CC) for acquiring large amounts of web data. Each CC dump is on average around
+                 10TB, and we discard it immediately after processing it. On average, it takes 24 hours to fully process
+                 a dump: we used 21 dumps from CC, meaning we stored 210TB of data for 24hours, equivalent to 57 kWh of
+                 energy consumption. After processing the dumps, we got on average 1.2TB of data per dump, thus 25TB in
+                 total. Considering that this data will be stored for 6 months, we end up with 1.3 MWh of energy
+                 consumption for the bulk data. Note that we keep the processed data in all languages (not just Modern
+                 Standard Arabic).",
+}
