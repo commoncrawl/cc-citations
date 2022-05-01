@@ -22,6 +22,7 @@ class Citation:
         'showing top results above and other results below.',
         'skip to content …',
         'saved to',
+        '.',
         'your library',
         'this google scholar alert is brought to you by google.',
         'this alert is sent by google scholar. google scholar is a service by google.',
@@ -79,7 +80,7 @@ class Citation:
             snippet = []
             for line in lines:
                 line = re.sub(r'\s+', ' ', line)
-                line_normalized = line.lower()
+                line_normalized = line.lower().strip()
                 if not line:
                     continue
                 if line_normalized in Citation.boilerplate_lines:
@@ -194,7 +195,7 @@ class CitationsHTMLParser(HTMLParser):
         elif self.in_script:
             pass
         elif data_normalized.startswith("this message was sent by google scholar because you're following new results for"):
-            self.end_of_citations = True            
+            self.end_of_citations = True
         else:
             self.citations[-1].add_data(data)
 
