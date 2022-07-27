@@ -2529,8 +2529,22 @@
   year         = "2018",
   URL          = "https://arxiv.org/abs/1806.02847",
   cc-author-affiliation = "Google Brain",
-  cc-snippet   = "We train an array of large RNN language models that operate at word or character level on
-                 LM-1-Billion, CommonCrawl, SQuAD, Gutenberg Books, [...]",
+  abstract     = "Commonsense reasoning is a long-standing challenge for deep learning. For example, it is difficult to
+                 use neural networks to tackle the Winograd Schema dataset [ 1]. In this paper, we present a simple
+                 method for commonsense reasoning with neural networks, using unsupervised learning. Key to our method
+                 is the use of language models, trained on a massive amount of unlabled data, to score multiple choice
+                 questions posed by commonsense reasoning tests. On both Pronoun Disambiguation and Winograd Schema
+                 challenges, our models outperform previous state-of-the-art methods by a large margin, without using
+                 expensive annotated knowledge bases or hand-engineered features. We train an array of large RNN
+                 language models that operate at word or character level on LM-1-Billion, CommonCrawl, SQuAD, Gutenberg
+                 Books, and a customized corpus for this task and show that diversity of training data plays an
+                 important role in test performance. Further analysis also shows that our system successfully discovers
+                 important features of the context that decide the correct answer, indicating a good grasp of
+                 commonsense knowledge.",
+  cc-snippet   = "In particular, we aggregate documents from the CommonCrawl dataset that has the most overlapping
+                 n-grams with the questions. [...] We name this dataset STORIES since most of the constituent documents
+                 take the form of a story with long chain of coherent events.",
+  cc-derived-dataset-about = "CC-Stories",
   cc-class     = "ai/deep-learning, nlp/language-model",
 }
 

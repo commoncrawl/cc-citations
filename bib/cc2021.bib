@@ -658,3 +658,63 @@
                  Crawl² [²https://commoncrawl.org/] and apply it to create the HYPERCOREF corpus, consisting of 40
                  news outlets with over 2M mentions in total, far exceeding the size of existing CDCR corpora.",
 }
+
+@Misc{cc:PiktusPetroniKarpukhinOkhonkoEtAl:2021:web-is-your-oyster,
+  doi          = "10.48550/ARXIV.2112.09924",
+  URL          = "https://arxiv.org/abs/2112.09924",
+  pdf          = "https://arxiv.org/pdf/2112.09924.pdf",
+  author       = "Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Okhonko, Dmytro and Broscheit,
+                 Samuel and Izacard, Gautier and Lewis, Patrick and Oğuz, Barlas and Grave, Edouard and Yih, Wen-tau
+                 and Riedel, Sebastian",
+  keywords     = "Computation and Language (cs.CL), Artificial Intelligence (cs.AI), Information Retrieval (cs.IR),
+                 Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information
+                 sciences",
+  title        = "The Web Is Your Oyster - Knowledge-Intensive {NLP} against a Very Large Web Corpus",
+  publisher    = "arXiv",
+  year         = "2021",
+  abstract     = "In order to address increasing demands of real-world applications, the research for
+                 knowledge-intensive NLP (KI-NLP) should advance by capturing the challenges of a truly open-domain
+                 environment: web-scale knowledge, lack of structure, inconsistent quality and noise. To this end, we
+                 propose a new setup for evaluating existing knowledge intensive tasks in which we generalize the
+                 background corpus to a universal web snapshot. We investigate a slate of NLP tasks which rely on
+                 knowledge - either factual or common sense, and ask systems to use a subset of CCNet - the Sphere
+                 corpus - as a knowledge source. In contrast to Wikipedia, otherwise a common background corpus in
+                 KI-NLP, Sphere is orders of magnitude larger and better reflects the full diversity of knowledge on the
+                 web. Despite potential gaps in coverage, challenges of scale, lack of structure and lower quality, we
+                 find that retrieval from Sphere enables a state of the art system to match and even outperform
+                 Wikipedia-based models on several tasks. We also observe that while a dense index can outperform a
+                 sparse BM25 baseline on Wikipedia, on Sphere this is not yet possible. To facilitate further research
+                 and minimise the community's reliance on proprietary, black-box search engines, we share our indices,
+                 evaluation metrics and infrastructure.",
+  cc-snippet   = "[…] CCNet processes Common Crawl by performing deduplication, language identification and quality
+                 filtering (articles are split into three quality tiers: head, […] We pick the CCNet snapshot
+                 corresponding to the August 2019 Common Crawl […]",
+  cc-derived-dataset-used = "CCNet",
+  cc-author-affiliation = "Facebook AI Research; University College London, United Kingdom; University of Mannheim,
+                 Germany; ENS, PSL University, France; Inria, France; University of Washington, United States",
+  cc-class     = "nlp/question-answering, nlp/knowledge-intensive-tasks, ai/knowledge-base",
+}
+
+@Article{cc:JazbecPàsztorFaltingsAntulov-FantulinEtAl:2021:impact-of-news-to-financial-markets,
+  author       = "Jazbec, Metod and Barna Pàsztor and Felix Faltings and Nino Antulov-Fantulin and Petter N. Kolm",
+  year         = "2021",
+  doi          = "doi:10.1098/rsos.202321",
+  URL          = "https://royalsocietypublishing.org/doi/10.1098/rsos.202321",
+  pdf          = "https://royalsocietypublishing.org/doi/epdf/10.1098/rsos.202321",
+  title        = "On the Impact of Publicly Available News and Information Transfer to Financial Markets",
+  journal      = "Royal Society Open Science",
+  volume       = "8, no. 7",
+  abstract     = "We quantify the propagation and absorption of large-scale publicly available news articles from the
+                 World Wide Web to financial markets. To extract publicly available information, we use the news
+                 archives from the Common Crawl, a non-profit organization that crawls a large part of the web. We
+                 develop a processing pipeline to identify news articles associated with the constituent companies in
+                 the S&P 500 index, an equity market index that measures the stockperformance of US companies. Using
+                 machine learning techniques, we extract sentiment scores from the Common Crawl News data and employ
+                 tools from information theory to quantify the information transfer from public news articles to the US
+                 stock market. Furthermore, we analyse and quantify the economic significance of the news-based
+                 information with a simple sentiment-based portfolio trading strategy. Our findings provide support for
+                 that information in publicly available news on the World Wide Web has a statistically and economically
+                 significant impact on events infinancial markets.",
+  cc-author-affiliation = "ETH Zurich, Switzerland; New York University, New York, USA",
+  cc-class     = "statistical-finance, ai/machine-learning, nlp/sentiment-analysis, financial-markets",
+}

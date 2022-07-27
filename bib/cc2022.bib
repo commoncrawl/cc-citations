@@ -189,3 +189,234 @@
                  consumption for the bulk data. Note that we keep the processed data in all languages (not just Modern
                  Standard Arabic).",
 }
+
+@Article{cc:Gutiérrez-FandiñoPérez-FernándezArmengol-EstapéGriolEtAl:2022:esCorpius,
+  author       = "Gutiérrez-Fandiño, Asier and Pérez-Fernández, David and Armengol-Estapé, Jordi and Griol, David
+                 and Callejas, Zoraida",
+  title        = "{esCorpius: A Massive Spanish Crawling Corpus}",
+  journal      = "arXiv e-prints",
+  keywords     = "Computer Science - Computation and Language, Computer Science - Artificial Intelligence",
+  year         = "2022",
+  eid          = "arXiv:2206.15147",
+  URL          = "https://ui.adsabs.harvard.edu/abs/2022arXiv220615147G",
+  pdf          = "https://arxiv.org/pdf/2206.15147.pdf",
+  adsnote      = "Provided by the SAO/NASA Astrophysics Data System",
+  cc-snippet   = "[…] In this paper, we introduce esCorpius, a Spanish crawling corpus obtained from near 1 Pb of
+                 Common Crawl data. It is the most extensive corpus in Spanish with this level of quality in the
+                 extraction, purification and deduplication of web textual content […] A total of 39,502 compressed
+                 WARC (Web Archive) from Common Crawl files were processed (see section 3.3 for more details). The
+                 compressed information occupied about 180 TB and the size of the processed decompressed information is
+                 estimated to be more than 0.8 PB. Prior to content deduplication, the downloaded corpus was composed of
+                 106.768.594.753 words, 3.129.248.875 lines and 163.518.405 web pages. The deduplicated and cleaned
+                 corpus size is 346.262.072.705 bytes (322.5 GB), with 104.073.706 total number of lines, 50.040.055.322
+                 tokens, 1.125.798.968 paragraphs and 2.421.598.201 sentences.",
+  cc-author-affiliation = "LHF Labs; Universidad Autónoma de Madrid, Spain; University of Edinburgh, United Kingdom;
+                 Universidad de Granada, Spain",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora",
+}
+
+@InProceedings{cc:OverwijkXiongCallan:2022:ClueWeb22,
+  author       = "Overwijk, Arnold and Xiong, Chenyan and Callan, Jamie",
+  title        = "ClueWeb22: 10 Billion Web Documents with Rich Information",
+  year         = "2022",
+  ISBN         = "978-1-4503-8732-3",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  URL          = "https://doi.org/10.1145/3477495.3536321",
+  pdf          = "https://dl.acm.org/doi/pdf/10.1145/3477495.3536321",
+  doi          = "10.1145/3477495.3536321",
+  abstract     = "ClueWeb22, the newest iteration of the ClueWeb line of datasets, is the result of more than a year of
+                 collaboration between industry and academia. Its design is influenced by the research needs of the
+                 academic community and the real-world needs of large-scale industry systems. Compared with earlier
+                 ClueWeb datasets, the ClueWeb22 corpus is larger, more varied, and has higher-quality documents. Its
+                 core is raw HTML, but it includes clean text versions of documents to lower the barrier to entry.
+                 Several aspects of ClueWeb22 are available to the research community for the first time at this scale,
+                 for example, visual representations of rendered web pages, parsed structured information from the HTML
+                 document, and the alignment of document distributions (domains, languages, and topics) to commercial
+                 web search.This talk shares the design and construction of ClueWeb22, and discusses its new features.
+                 We believe this newer, larger, and richer ClueWeb corpus will enable and support a broad range of
+                 research in IR, NLP, and deep learning.",
+  booktitle    = "Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information
+                 Retrieval",
+  pages        = "3360–3362",
+  numpages     = "3",
+  keywords     = "clueweb, web corpus, dataset",
+  location     = "Madrid, Spain",
+  series       = "SIGIR '22",
+  cc-snippet   = "One approach is to sift CommonCrawl data, eg, the C4 dataset used to pretrain T5 [10], which provides
+                 sufficient quantity, but the quality quickly becomes a concern. For example, the cleaned CommonCrawl
+                 reflects a quite weird distribution of the web [5]. Language models pretrained on C4 often perform
+                 worse than models pretrained on higher quality corpora at the same scale. With ClueWeb22, we aim to
+                 provide the web corpus for research in the near future. The design of ClueWeb22 emphasizes on these
+                 goals: 1) to reflect the distribution of the web in real scenarios; 2) to provide web pages at large
+                 quantity and also with high quality; 3) to enable new research directions by including information
+                 important in industry but previously not publicly available.",
+  cc-author-affiliation = "Microsoft; Carnegie Mellon University",
+  cc-class     = "cc-cited-not-used, nlp/corpus-construction, nlp/text-corpora, information-retrieval",
+}
+
+@Misc{cc:ZhangRollerGoyalArtetxeEtAl:2022:OPT-open-pretrained-transformer,
+  doi          = "10.48550/ARXIV.2205.01068",
+  URL          = "https://arxiv.org/abs/2205.01068",
+  pdf          = "https://arxiv.org/pdf/2205.01068.pdf",
+  snippet      = "All corpora were previously collected or filtered to contain predominantly English text, but a small
+                 amount of non-English data is still present within the corpus via CommonCrawl. We removed duplicated
+                 documents across all datasets by filtering …",
+  cc-author-affiliation = "Meta AI",
+  author       = "Zhang, Susan and Roller, Stephen and Goyal, Naman and Artetxe, Mikel and Chen, Moya and Chen, Shuohui
+                 and Dewan, Christopher and Diab, Mona and Li, Xian and Lin, Xi Victoria and Mihaylov, Todor and Ott,
+                 Myle and Shleifer, Sam and Shuster, Kurt and Simig, Daniel and Koura, Punit Singh and Sridhar, Anjali
+                 and Wang, Tianlu and Zettlemoyer, Luke",
+  title        = "{OPT}: Open Pre-trained Transformer Language Models",
+  publisher    = "arXiv",
+  year         = "2022",
+  cc-derived-dataset-used = "CC-Stories, Pile-CC, CC-NEWS-RoBERTa-v2",
+  cc-class     = "nlp/language-model, nlp/transformer-language-model, nlp/corpus-construction",
+}
+
+@InProceedings{cc:LugeonPiccardiWest:2022:Homepage2Vec,
+  title        = "Homepage2Vec: Language-Agnostic Website Embedding and Classification",
+  author       = "Lugeon, Sylvain and Piccardi, Tiziano and West, Robert",
+  booktitle    = "Proceedings of the International AAAI Conference on Web and Social Media",
+  volume       = "16",
+  pages        = "1285--1291",
+  year         = "2022",
+  URL          = "https://ojs.aaai.org/index.php/ICWSM/article/download/19380/19152",
+  abstract     = "Top-level domain. Some top-level domains (TLD) such as .edu or .biz can offer a good hint about the
+                 website's content. For example, a typical use case for .edu is university websites, whereas .biz is
+                 commonly associated with business activities. Following this intuition, we collected from Common
+                 Crawl,5 a large-scale sample of the Web, the 19 most frequent TLDs: .com, .org, .net, .info, .xyz,
+                 .club, .biz, .top, .edu, .online, .pro, .site, .vip, .icu, .buzz, .app, .asia, .gov, .space, excluding
+                 the country code TLD (ccTLD) because they indicate geographic origin, not website content. We represent
+                 this feature with a one-hot encoding vector of 19 dimensions.",
+  cc-author-affiliation = "EPFL, Switzerland",
+  cc-class     = "nlp/text-classification, web-site-classification",
+}
+
+@InProceedings{cc:ZirngiblDeuschSattlerAulbachEtAl:2022:domain-parking,
+  title        = "Domain Parking: Largely Present, Rarely Considered!",
+  author       = "Zirngibl, Johannes and Deusch, Steffen and Sattler, Patrick and Aulbach, Juliane and Carle, Georg and
+                 Jonker, Mattijs",
+  booktitle    = "Proc. Network Traffic Measurement and Analysis Conference (TMA) 2022",
+  year         = "2022",
+  abstract     = "Domain parking typically involves leveraging advertisements to generate revenue on otherwise inactive
+                 domain names. Their content is rarely of real value to users and tends to be highly similar across
+                 parked domains. They have commonalities beyond content alone: parked domains can share hosting and DNS
+                 infrastructure. Parking rarely receives special treatment in existing studies (e.g., content analyses
+                 or infrastructure concentration studies). While the presence and possible bias introduced by parked
+                 pages is sometimes acknowledged in studies, the studies still treat parked domains as any other, either
+                 because differentiation is infeasible, or because doing so is considered out-of-scope. We argue that
+                 the impact of parked domains on analyses regarding the current state and future development of the
+                 Internet should not be overlooked. In this paper, we motivate this argument through quantification, and
+                 take steps towards helping other researchers identify parked domains. We systematically collect a list
+                 of 82 parking services and develop DNS-based indicators to help identify parked domains. We next
+                 quantify the presence of parked domains, using large-scale DNS data containing hundreds of millions of
+                 registered domain names, representative for a significant part of the global DNS namespace. Overall, we
+                 pinpoint 60 M parked domains, which is a significant percentage of all names under consideration (23 %)
+                 and identify up to 4 % of domains from top lists to be parked. These findings demonstrate that the
+                 effect of parked pages is potentially pronounced. We also break down into the various parking services
+                 and DNS zones. This helps us demonstrate and further discuss the effect that domain parking can have on
+                 research and Internet consolidation.",
+  cc-snippet   = "Common Crawl While visual identification allowed us to validate the inferences to a reasonable extent,
+                 we wanted to upscale validation. Therefore, we consider Common Crawl (CC) data [21] [C. Crawl. (2022)
+                 The Common Crawl Corpus. [Online]. Available: https://commoncrawl.org/] and calculate the similarity of
+                 pages. Common Crawl is an open repository of web crawl data, collected at monthly intervals, accounting
+                 for hundreds of millions of unique domain names, and many more URLs. We consider CC data for Jan 2022
+                 and the ∼60 M parked domains that we identify on Jan 28th, 2022. We extract the HTML content of
+                 parked pages from CC data, only considering URLs that contain exactly the registered domain.
+                 Furthermore, we require the crawl target to have been the landing page (i.e., the path of the URL is /)
+                 and also to have resulted in a useful response (i.e., HTTP status code of 200). Given these filters,
+                 ∼1.29 M HTML rich responses can be obtained. We extract visible text and tokenize it into words,
+                 remove stop words, apply lemmatization, and create a vector for the most-frequently used words for each
+                 page.",
+  URL          = "https://mediatum.ub.tum.de/1661842",
+  pdf          = "https://www.net.in.tum.de/fileadmin/bibtex/publications/papers/zirngibl2022prevalenceofparking.pdf",
+  cc-author-affiliation = "Technical University of Munich, Germany; University of Twente, The Netherlands",
+  cc-class     = "web-science, internet/DNS, internet/domain-parking",
+}
+
+@InProceedings{cc:LuccioniCorrySridharanAnannyEtAl:2022:deprecating-datasets,
+  author       = "Luccioni, Alexandra Sasha and Corry, Frances and Sridharan, Hamsini and Ananny, Mike and Schultz,
+                 Jason and Crawford, Kate",
+  title        = "A Framework for Deprecating Datasets: Standardizing Documentation, Identification, and Communication",
+  year         = "2022",
+  ISBN         = "978-1-4503-9352-2",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  URL          = "https://doi.org/10.1145/3531146.3533086",
+  pdf          = "https://facctconference.org/static/pdfs_2022/facct22-17.pdf",
+  doi          = "10.1145/3531146.3533086",
+  abstract     = "Datasets are central to training machine learning (ML) models. The ML community has recently made
+                 significant improvements to data stewardship and documentation practices across the model development
+                 life cycle. However, the act of deprecating, or deleting, datasets has been largely overlooked, and
+                 there are currently no standardized approaches for structuring this stage of the dataset life cycle. In
+                 this paper, we study the practice of dataset deprecation in ML, identify several cases of datasets that
+                 continued to circulate despite having been deprecated, and describe the different technical, legal,
+                 ethical, and organizational issues raised by such continuations. We then propose a Dataset Deprecation
+                 Framework that includes considerations of risk, mitigation of impact, appeal mechanisms, timeline,
+                 post-deprecation protocols, and publication checks that can be adapted and implemented by the ML
+                 community. Finally, we propose creating a centralized, sustainable repository system for archiving
+                 datasets, tracking dataset modifications or deprecations, and facilitating practices of care and
+                 stewardship that can be integrated into research and publication processes.",
+  booktitle    = "2022 ACM Conference on Fairness, Accountability, and Transparency",
+  pages        = "199–212",
+  numpages     = "14",
+  keywords     = "datasets, data stewardship data management dataset deprecation",
+  location     = "Seoul, Republic of Korea",
+  series       = "FAccT '22",
+  cc-snippet   = "When it comes to filtering large text datasets scraped from the Web, given their sheer size (C4
+                 represents 2.3 TB of data, whereas the Common Crawl has 139TB), filtering them is complex and
+                 time-consuming, although approaches have been proposed for reducing duplicates and train-test overlap
+                 [53]. [...] In practice, documenting and deprecating these datasets is akin to a game of whack-a-mole,
+                 since new versions of the Common Crawl come out every few months. Analyzing what they contain and their
+                 degrees of contamination through common evaluation tasks would take significant effort.",
+  cc-author-affiliation = "Hugging Face; University of Southern California, USA; New York University, USA; Microsoft
+                 Research, USA",
+  cc-class     = "ai/ethics-of-machine-learning, nlp/text-corpora, nlp/corpus-construction, cc-cited-not-used",
+}
+
+@Article{cc:KreutzerCaswellWangWahabEtAl:2022:audit-web-multilingual-datasets,
+  author       = "Kreutzer, Julia and Caswell, Isaac and Wang, Lisa and Wahab, Ahsan and van Esch, Daan and
+                 Ulzii-Orshikh, Nasanbayar and Tapo, Allahsera and Subramani, Nishant and Sokolov, Artem and Sikasote,
+                 Claytone and Setyawan, Monang and Sarin, Supheakmungkol and Samb, Sokhar and Sagot, Benoît and Rivera,
+                 Clara and Rios, Annette and Papadimitriou, Isabel and Osei, Salomey and Suarez, Pedro Ortiz and Orife,
+                 Iroro and Ogueji, Kelechi and Rubungo, Andre Niyongabo and Nguyen, Toan Q. and Müller, Mathias and
+                 Müller, André and Muhammad, Shamsuddeen Hassan and Muhammad, Nanda and Mnyakeni, Ayanda and
+                 Mirzakhalov, Jamshidbek and Matangira, Tapiwanashe and Leong, Colin and Lawson, Nze and Kudugunta,
+                 Sneha and Jernite, Yacine and Jenny, Mathias and Firat, Orhan and Dossou, Bonaventure F. P. and
+                 Dlamini, Sakhile and de Silva, Nisansa and Çabuk Ballı, Sakine and Biderman, Stella and Battisti,
+                 Alessia and Baruwa, Ahmed and Bapna, Ankur and Baljekar, Pallavi and Azime, Israel Abebe and Awokoya,
+                 Ayodele and Ataman, Duygu and Ahia, Orevaoghene and Ahia, Oghenefego and Agrawal, Sweta and Adeyemi,
+                 Mofetoluwa",
+  title        = "{Quality at a Glance: An Audit of Web-Crawled Multilingual Datasets}",
+  journal      = "Transactions of the Association for Computational Linguistics",
+  volume       = "10",
+  pages        = "50--72",
+  year         = "2022",
+  month        = "01",
+  abstract     = "{With the success of large-scale pre-training and multilingual modeling in Natural Language Processing
+                 (NLP), recent years have seen a proliferation of large, Web-mined text datasets covering hundreds of
+                 languages. We manually audit the quality of 205 language-specific corpora released with five major
+                 public datasets (CCAligned, ParaCrawl, WikiMatrix, OSCAR, mC4). Lower-resource corpora have systematic
+                 issues: At least 15 corpora have no usable text, and a significant fraction contains less than 50\\%
+                 sentences of acceptable quality. In addition, many are mislabeled or use nonstandard/ambiguous language
+                 codes. We demonstrate that these issues are easy to detect even for non-proficient speakers, and
+                 supplement the human audit with automatic analyses. Finally, we recommend techniques to evaluate and
+                 improve multilingual corpora and discuss potential risks that come with low-quality data releases.}",
+  ISSN         = "2307-387X",
+  doi          = "10.1162/tacl_a_00447",
+  URL          = "https://doi.org/10.1162/tacl\_a\_00447",
+  eprint       = "https://direct.mit.edu/tacl/article-pdf/doi/10.1162/tacl\_a\_00447/1986585/tacl\_a\_00447.pdf",
+  cc-class     = "nlp/corpus-construction, nlp/web-as-corpus, nlp/parallel-corpus, nlp/low-resource-language",
+  cc-derived-dataset-about = "CCAligned-2020, Tensorflow-C4-Multilingual, OSCAR",
+  cc-snippet   = "We selected the corpora for their multilinguality and the inclusion of understudied languages in NLP.
+                 With the exception of WikiMatrix and Paracrawl, all corpora are derived from CommonCrawl, and
+                 distinguish themselves by the choice of filtering methods, LangID and automatic alignment technology.",
+  cc-author-affiliation = "Google Research; Masakhane NLP; Turkic Interlingua; Haverford College; RobotsMali; Intel
+                 Labs; University of Zambia; Google; AIMS-AMMI; Inria; University of Zurich; Stanford University; Kwame
+                 Nkrumah University of Science and Technology; Sorbonne Université; Niger-Volta LTI; University of
+                 Waterloo; University of Electronic Science and Technology of China; University of Notre Dame; Bayero
+                 University Kano; University of South Florida; Hugging Face; Jacobs University Bremen; University of
+                 Moratuwa; EleutherAI; Obafemi Awolowo University; University of Ibadan; Instadeep; University of
+                 Maryland; Defence Space Administration Abuja",
+}
