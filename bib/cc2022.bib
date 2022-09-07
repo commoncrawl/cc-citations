@@ -420,3 +420,81 @@
                  Moratuwa; EleutherAI; Obafemi Awolowo University; University of Ibadan; Instadeep; University of
                  Maryland; Defence Space Administration Abuja",
 }
+
+@Misc{cc:AbadjiSuarezRomarySagot:2022:cleaner-document-oriented-multilingual-crawled-corpus,
+  doi          = "10.48550/ARXIV.2201.06642",
+  URL          = "https://arxiv.org/abs/2201.06642",
+  pdf          = "https://arxiv.org/pdf/2201.06642.pdf",
+  author       = "Abadji, Julien and Suarez, Pedro Ortiz and Romary, Laurent and Sagot, Benoît",
+  title        = "Towards a Cleaner Document-Oriented Multilingual Crawled Corpus",
+  publisher    = "arXiv",
+  year         = "2022",
+  abstract     = "The need for raw large raw corpora has dramatically increased in recent years with the introduction of
+                 transfer learning and semi-supervised learning methods to Natural Language Processing. And while there
+                 have been some recent attempts to manually curate the amount of data necessary to train large language
+                 models, the main way to obtain this data is still through automatic web crawling. In this paper we take
+                 the existing multilingual web corpus OSCAR and its pipeline Ungoliant that extracts and classifies data
+                 from Common Crawl at the line level, and propose a set of improvements and automatic annotations in
+                 order to produce a new document-oriented version of OSCAR that could prove more suitable to pre-train
+                 large generative language models as well as hopefully other applications in Natural Language Processing
+                 and Digital Humanities.",
+  cc-derived-dataset-about = "OSCAR",
+  cc-author-affiliation = "Inria, France; Sorbonne Université, France",
+  cc-class     = "nlp/corpus-construction, nlp/web-as-corpus",
+}
+
+@Misc{cc:TongjingYinBaoMeijers:2022:intercity-relationships,
+  title        = "Dataset of intercity relationships between 293 Chinese cities extracted and classified on the basis of
+                 toponym co-occurrences on Common Crawl",
+  year         = "2022",
+  author       = "Tongjing, Wang and Yin, Zhao and Bao, Ziyu and Meijers, Evert",
+  URL          = "https://www.researchgate.net/profile/Evert-Meijers/publication/362952059_Dataset_of_intercity_relationships_between_293_Chinese_cities_extracted_and_classified_on_the_basis_of_toponym_co-occurrences_on_Common_Crawl/links/6308bfc25eed5e4bd11f7938/Dataset-of-intercity-relationships-between-293-Chinese-cities-extracted-and-classified-on-the-basis-of-toponym-co-occurrences-on-Common-Crawl.pdf",
+  pdf          = "https://www.researchgate.net/profile/Evert-Meijers/publication/362952059_Dataset_of_intercity_relationships_between_293_Chinese_cities_extracted_and_classified_on_the_basis_of_toponym_co-occurrences_on_Common_Crawl/links/6308bfc25eed5e4bd11f7938/Dataset-of-intercity-relationships-between-293-Chinese-cities-extracted-and-classified-on-the-basis-of-toponym-co-occurrences-on-Common-Crawl.pdf",
+  abstract     = "Although the importance of intercity relationships is theoretically acknowledged for cities’
+                 socioeconomic development, the availability of such relational data often limits relevant urban
+                 studies. One of the new approaches of collecting city relational data is to extract the co-appearance
+                 of their place names from web texts. However, dealing with a gigantic web corpus is difficult for
+                 domain researchers given the complexities of processing terabytes of raw data. This paper develops an
+                 efficient and easy-to-follow method to extract a dataset of intercity relationships between 293 large
+                 Chinese cities applying the toponym co-occurrence method to a web archive. Our method successfully
+                 filters a 6.98 TB CC data set into a 202 GB single language text corpus. A highly-scalable Hadoop-
+                 based framework processes the full CC corpus utilizing a 1080 CPU cluster on the Amazon Elastic
+                 Map/Reduce infrastructure. To reveal more details of the intercity relationships, the intercity
+                 relationships are further classified into six categories: industry, information technology (IT),
+                 finance, research, culture, and government.",
+  keywords     = "city networks, toponym co-occurrence, city relationship, geographical information retrieval",
+  cc-author-affiliation = "Utrecht University, The Netherlands; Delft University of Technology, The Netherlands",
+  cc-class     = "information retrieval, toponymy, dataset-creation",
+  cc-snippet   = "The data was retrieved from a Common Crawl raw corpus through a series of data processing. The web
+                 pages in this corpus that do not contain Chinese characteristics or Chinese placenames were filtered
+                 out based on keyword selection. The filtered Chinese corpus was 202 GB and the filtered Chinese corpus
+                 with placenames was about 139.5GB. Then we count the number of web pages where two city names
+                 co-appear. These intercity relationships were further classified into six categories using a
+                 lexicon-based classification method.",
+  cc-dataset-used = "CC-MAIN-2019-18 (WET)",
+}
+
+@InProceedings{cc:KummervoldWetjenRosa:2022:Norwegian-Colossal-Corpus,
+  title        = "The Norwegian Colossal Corpus: {A} Text Corpus for Training Large Norwegian Language Models",
+  year         = "2022",
+  author       = "Kummervold, Per E and Wetjen, Freddy and de la Rosa, Javier",
+  booktitle    = "The 13th International Conference on Language Resources and Evaluation (LREC 2022)",
+  pdf          = "http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.410.pdf",
+  cc-snippet   = "Common Crawl (2022) is a non-profit organization that has been collecting data from the web and
+                 providing these archives to the public since 2011. Common Crawl-based datasets are popular for training
+                 transformer models and are the basis for the enormous 800GB Pile dataset (Gao, 2020), among others.
+                 There are extracted Norwegian datasets that are also based on Common Crawl. The Open Super-large
+                 Crawled Aggregated coRpus (OSCAR) (Suárez et al., 2019) contains 4.7GB (800M words) of Norwegian
+                 Bokmål and 54MB (9M words) of Norwegian Nynorsk. Using a cleaned version of Common Crawl, Google
+                 compiled a multilingual version of their English colossal corpus, called MC4 (2022), for training their
+                 mT5 model (Xue et al., 2020). The Norwegian part of that dataset is roughly 94GB (14B words). Both
+                 OSCAR and the MC4 datasets have been made available on Hugging Face (2022). Unfortunately, their
+                 respective licenses do not allow for redistribution within the NCC. To overcome this limitation, we are
+                 releasing scripts for the preparation, cleaning, deduplication, and formatting of these datasets, so
+                 they can be interleaved 3855with the NCC. By combining NCC with OSCAR and MC4, it should be possible to
+                 create a deduplicated Norwegian corpus with over 100GB of text (15B words).",
+  cc-derived-dataset-used = "OSCAR",
+  URL          = "http://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.410.pdf",
+  cc-author-affiliation = "National Library of Norway (NLN), Norway",
+  cc-class     = "nlp/corpus-construction",
+}
