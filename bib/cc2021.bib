@@ -718,3 +718,57 @@
   cc-author-affiliation = "ETH Zurich, Switzerland; New York University, New York, USA",
   cc-class     = "statistical-finance, ai/machine-learning, nlp/sentiment-analysis, financial-markets",
 }
+
+@InProceedings{cc:VarabSchluter:2021:MassiveSumm-very-large-scale-very,
+  title        = "{M}assive{S}umm: a very large-scale, very multilingual, news summarisation dataset",
+  author       = "Varab, Daniel and Schluter, Natalie",
+  booktitle    = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+  month        = nov,
+  year         = "2021",
+  publisher    = "Association for Computational Linguistics",
+  URL          = "https://aclanthology.org/2021.emnlp-main.797",
+  pdf          = "https://aclanthology.org/2021.emnlp-main.797.pdf",
+  doi          = "10.18653/v1/2021.emnlp-main.797",
+  pages        = "10150--10161",
+  abstract     = "Current research in automatic summarisation is unapologetically anglo-centered{--}a persistent
+                 state-of-affairs, which also predates neural net approaches. High-quality automatic summarisation
+                 datasets are notoriously expensive to create, posing a challenge for any language. However, with
+                 digitalisation, archiving, and social media advertising of newswire articles, recent work has shown
+                 how, with careful methodology application, large-scale datasets can now be simply gathered instead of
+                 written. In this paper, we present a large-scale multilingual summarisation dataset containing articles
+                 in 92 languages, spread across 28.8 million articles, in more than 35 writing scripts. This is both the
+                 largest, most inclusive, existing automatic summarisation dataset, as well as one of the largest, most
+                 inclusive, ever published datasets for any NLP task. We present the first investigation on the efficacy
+                 of resource building from news platforms in the low-resource language setting. Finally, we provide some
+                 first insight on how low-resource language settings impact state-of-the-art automatic summarisation
+                 system performance.",
+  code-repository = "https://github.com/danielvarab/massive-summ",
+  cc-author-affiliation = "IT University of Copenhagen, Denmark",
+  cc-class     = "nlp/text-summarization, nlp/corpus-construction",
+  cc-snippet   = "Comparing with web-scrape multilingual datasets. We compared the intersection of our dataset with two
+                 large-scale web datasets widely used by the NLP community: Wikipedia⁴
+                 [⁴https://en.wikipedia.org/wiki/List_of_Wikipedias#Edition_details as of May 10 2021] and Common
+                 Crawl⁵ [⁵April 2021 crawl CC-MAIN-2021-04
+                 https://commoncrawl.github.io/cc-crawl-statistics/plots/languages.csv]. An overview of this comparison
+                 can be found in Table 4. The manual care that we took in curating the list of platforms from which we
+                 wanted to collect data resulted in more data from an improved diversity of languages. For 52 of our
+                 languages, MS-All either matches or surpasses the number of Wikipedia pages for the language in
+                 question, showing the importance of the full dataset simply as raw data. In fact, the majority of
+                 MassiveSumm languages from South Saharan Africa (14/18) have more documents in MS-All than in
+                 Wikipedia. And well over half of the MassiveSumm languages for Eurasia (38/63) have more documents in
+                 MS-All than in Wikipedia. Turning to Common Crawl, almost half of the languages from South Saharan
+                 Africa (8/18) have more pages in MS-All than in Common Crawl. Six out of 63 Eurasian languages have
+                 more articles in MS-All than in Common Crawl. When we consider even just the heavily filtered automatic
+                 summarisation portion of the data, MS, we find that 10 of the South Saharan African lan- guages contain
+                 more pages than Wikipedia, and 5 out of 18 of these languages contain more data than Common Crawl. For
+                 Eurasia, 19 of the 63 languages contain more pages than Wikipedia. Table 5 gives the proportions of the
+                 articles in MS-All that are also contained in Common Crawl, for those languages where more than 49\%
+                 can be obtained. This is 18 languages–around a fifth of the languages represented by MassiveSumm.
+                 Hence observe that large portions of easily indexible and crawlable, publicly available, diverse
+                 linguistic data are not being scraped into one of the most important datasets for NLP, both in size,
+                 but in determining to a large extent which languages get mainstream NLP research: Common Crawl. 5
+                 Reflections on Low-Resource Language Automatic Summarisation The central datasets for automatic
+                 summarisation have consistently been for English. In this section we consider how this focus on English
+                 has resulted in limited dataset curation methodology development (Section 5.1) and limited automatic
+                 summarisation system design (Section 5.2).",
+}

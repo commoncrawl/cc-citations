@@ -139,7 +139,7 @@
   publisher    = "Curran Associates, Inc.",
   URL          = "http://papers.nips.cc/paper/9106-defending-against-neural-fake-news.pdf",
   cc-author-affiliation = "University of Washington, USA; Allen Institute for Artificial Intelligence, USA",
-  cc-class     = "nlp/language-model, nlp/fake-news-detection",
+  cc-class     = "nlp/language-model, nlp/fake-news-detection, nlp/text-classification",
   cc-snippet   = "Dataset. We present RealNews, a large corpus of news articles from Common Crawl. Training Grover
                  requires a large corpus of news articles with metadata, but none currently exists. Thus, we construct
                  one by scraping dumps from Common Crawl, limiting ourselves to the 5000 news domains indexed by Google
@@ -148,6 +148,7 @@
                  published in April 2019 from the April 2019 dump were used for evaluation. After deduplication,
                  RealNews is 120 gigabytes without compression. [...] Obtaining the data required through Common Crawl
                  cost \$10k in AWS credits and can be massively parallelized over many CPUs. [...]",
+  cc-derived-dataset-about = "RealNews",
 }
 
 @Article{cc:PibiriPetriMoffat:2019:dictionary-based-inverted-index-compression,
@@ -166,7 +167,7 @@
                  document-level inverted index data for two large text collections, and a wide range of other index
                  compression implementations as reference points. Those experiments demonstrate that the gap between
                  efficiency and effectiveness can be substantially narrowed.",
-  cc-snippet   = "We use the standard Gov2 collection containing 426 GiB of text; and CCNEWS, an English subset ofthe
+  cc-snippet   = "We use the standard Gov2 collection containing 426 GiB of text; and CCNEWS, an English subset of the
                  freely available NEWS subset of the CommonCrawl¹
                  [¹http://commoncrawl.org/2016/10/news-dataset-available/], consisting of news articles in the period
                  09/01/16 to 30/03/18, following the methodology of Petri and Moffat [28].",
@@ -209,4 +210,22 @@
   cc-author-affiliation = "Facebook AI",
   cc-class     = "nlp/corpus-construction, nlp/parallel-corpus, nlp/machine-translation",
   cc-derived-dataset-about = "CCMatrix",
+}
+
+@Misc{cc:BakhtinGrossOttDengEtAl:2019:real-or-fake,
+  doi          = "10.48550/ARXIV.1906.03351",
+  URL          = "https://arxiv.org/abs/1906.03351",
+  author       = "Bakhtin, Anton and Gross, Sam and Ott, Myle and Deng, Yuntian and Ranzato, Marc'Aurelio and Szlam,
+                 Arthur",
+  title        = "Real or Fake? Learning to Discriminate Machine from Human Generated Text",
+  publisher    = "arXiv",
+  year         = "2019",
+  cc-snippet   = "CCNews: We collect a de-duplicated subset of the English portion of the CommonCrawl news dataset
+                 (Nagel, 2016) [Sebastian Nagel. Cc-news. http://web.archive.org/save/http://commoncrawl.
+                 org/2016/10/news-dataset-available/, 2016.], which totals around 16 Billion words.",
+  cc-dataset-used = "CC-NEWS",
+  cc-dataset-used-subset = "2016 - 2018",
+  cc-derived-dataset-about = "CCNews (Bakhtin, et al. 2019)",
+  cc-author-affiliation = "Facebook AI Research; Harvard University, USA",
+  cc-class     = "nlp/text-classification",
 }

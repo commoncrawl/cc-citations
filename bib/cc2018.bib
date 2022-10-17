@@ -1592,8 +1592,12 @@
                  step forward. We describe experiments using the 426 GiB gov2 collection and a new large collection of
                  publicly-available news articles to demonstrate that claim, and provide query evaluation throughput
                  rates compared to other block-based mechanisms.",
-  cc-snippet   = "[...] a new large collection of publicly-available news articles [...]",
+  cc-snippet   = "The second pair of test files are derived from publicly available web-sourced news articles²
+                 [²http://commoncrawl.org/2016/10/news-dataset-available/], taking English language news sources (as
+                 identified by Apache Tika) from 01/09/2016 up until and including 28/02/2017, that is, a six month
+                 crawl period that contains 7,508,082 documents.",
   cc-dataset-used = "CC-NEWS",
+  cc-dataset-used-subset = "2016/09/01 - 2017/02/28",
   cc-class     = "information-retrieval/search-engine, information-retrieval/inverted-index",
   cc-author-affiliation = "University of Melbourne, Australia",
 }
@@ -1775,9 +1779,27 @@
                  This surprising outcome means that high-performance index compression can be achieved without requiring
                  the use of specialized implementations.",
   cc-snippet   = "We also develop (and make freely available) a new IR test collection based on the News sub-collection
-                 of the Common Crawl. The News sub-collection provides daily crawls of news websites in many languages.
-                 We refer to this collection as CC-NEWS-URL …",
+                 of the Common Crawl∗∗. The News sub-collection provides daily crawls of news websites in many
+                 languages. We refer to this collection as CC-NEWS-URL. We provide all scripts to download the freely
+                 available source WARC files from Amazon AWS and process them using Apache Tika and Apache Lucene in a
+                 consistent manner. The resulting consistency enables researchers to perform experiments on exactly the
+                 collection in their experiments, and improves comparability of results between different rounds of
+                 experimentation. For example, the number of terms reported for the GOV2-URL collection ranges from 18
+                 million up to 48 million, preventing fair and direct comparison between results reported in different
+                 papers. The number of WARC files in CC-NEWS-URL increases each day, and hence we specify the collection
+                 using: (1) a date range; and (2) a language filter. For example, in this work, we utilize the
+                 CC-NEWS-20160901-2017028-EN collection which uses all English language news sources (as identified by
+                 Apache Tika) from 01/09/2016 up until and including 28/02/2017, that is, a six month crawl period that
+                 contains 7,508,082 documents, 26,240,031 unique terms and 4,457,492,131 postings. Currently the
+                 CC-NEWS-URL collection grows by roughly 50,000 English documents per day. This exact parsing can be
+                 reproduced by the scripts provided at https://github.com/mpetri/rlz-invidx and
+                 https://github.com/mpetri/TikaLuceneWarc, with raw postings lists stored in the popular “ds2i”
+                 format††. Document identifiers are again reassigned in URL order. We also explored a date-ordered
+                 collection based on the same source data, and obtained – method-for-method – uniformly weaker
+                 compression outcomes than for URL-sorted, in part because many of the URLs contain dates encoded in
+                 them anyway.",
   cc-dataset-used = "CC-NEWS",
+  cc-dataset-used-subset = "2016/09/01 - 2017/02/28",
   cc-class     = "information-retrieval/search-engine, information-retrieval/inverted-index",
   cc-author-affiliation = "University of Melbourne, Australia",
 }
