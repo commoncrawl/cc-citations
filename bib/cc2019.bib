@@ -17,6 +17,7 @@
   URL          = "https://arxiv.org/abs/1911.00359",
   eprint       = "1911.00359",
   cc-author-affiliation = "Facebook AI",
+  cc-derived-dataset-about = "CCNet",
   abstract     = "Pre-training text representations have led to significant improvements in many areas of natural
                  language processing. The quality of these models benefits greatly from the size of the pretraining
                  corpora as long as its quality is preserved. In this paper, we describe an automatic pipeline to
@@ -243,4 +244,36 @@
                  110GB text respectively.",
   cc-author-affiliation = "Carnegie Mellon University, Google AI Brain Team",
   cc-class     = "nlp/transformer-language-model",
+}
+
+@Misc{cc:ConneauKhandelwalGoyalChaudharyEtAl:2019:XML-R,
+  doi          = "10.48550/ARXIV.1911.02116",
+  URL          = "https://arxiv.org/abs/1911.02116",
+  author       = "Conneau, Alexis and Khandelwal, Kartikay and Goyal, Naman and Chaudhary, Vishrav and Wenzek, Guillaume
+                 and Guzmán, Francisco and Grave, Edouard and Ott, Myle and Zettlemoyer, Luke and Stoyanov, Veselin",
+  keywords     = "Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and
+                 information sciences",
+  title        = "Unsupervised Cross-lingual Representation Learning at Scale",
+  publisher    = "arXiv",
+  year         = "2019",
+  pdf          = "https://arxiv.org/pdf/1911.02116.pdf",
+  abstract     = "This paper shows that pretraining multilingual language models at scale leads to significant
+                 performance gains for a wide range of cross- lingual transfer tasks. We train a Transformer- based
+                 masked language model on one hundred languages, using more than two terabytes of fil- tered CommonCrawl
+                 data. Our model, dubbed XLM-R, significantly outperforms multilingual BERT (mBERT) on a variety of
+                 cross-lingual benchmarks, including +14.6\% average accu- racy on XNLI, +13\% average F1 score on MLQA,
+                 and +2.4\% F1 score on NER. XLM-R performs particularly well on low-resource lan- guages, improving
+                 15.7\% in XNLI accuracy for Swahili and 11.4\% for Urdu over previ- ous XLM models. We also present a
+                 detailed empirical analysis of the key factors that are required to achieve these gains, including the
+                 trade-offs between (1) positive transfer and ca- pacity dilution and (2) the performance of high and
+                 low resource languages at scale. Finally, we show, for the first time, the possibility of multilingual
+                 modeling without sacrificing per- language performance; XLM-R is very compet- itive with strong
+                 monolingual models on the GLUE and XNLI benchmarks. We will make our code, data and models publicly
+                 available.",
+  cc-author-affiliation = "Facebook AI",
+  cc-class     = "nlp/language-model",
+  cc-derived-dataset-about = "CC-100",
+  cc-snippet   = "Following Wenzek et al. (2019) 2, we build a clean Com- monCrawl Corpus in 100 languages. [...] In
+                 this work, we introduced XLM-R, our new state of the art multilingual masked language model trained on
+                 2.5 TB of newly created clean CommonCrawl data in 100 languages.",
 }

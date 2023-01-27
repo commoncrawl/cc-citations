@@ -625,7 +625,7 @@
 @Misc{cc:L-Ranaldi:2022:C-OSINT-COVID-19-Open-Source,
   year         = "2022",
   title        = "{C}-{OSINT}: {COVID}-19 Open Source artificial {INT}elligence framework",
-  author       = "L Ranaldi, A Nourbakhsh, F Fallucchid, FM Zanzotto - 2022",
+  author       = "L. Ranaldi and A. Nourbakhsh and F. Fallucchid and FM. Zanzotto",
   abstract     = "With the emergence of COVID-19 disease worldwide, a market of the products related to this disease
                  formed across the Internet. By the time these goods were in short supply, many uncontrolled Dark Web
                  Marketplaces (DWM) were active in selling these products. At the same time, Dark Web Forums (DWF)
@@ -709,4 +709,121 @@
                  datasets used in the training of what have typically been called large language models. [...]",
   cc-author-affiliation = "Yale Law School, USA; Distributed AI Research Institute",
   cc-class     = "nlp/corpus-construction, dataset-creation, data-governance, privacy, legal/copyright",
+}
+
+@Misc{cc:SchuhmannBeaumontVencuGordonEtAl:2022:LAION-5B,
+  doi          = "10.48550/ARXIV.2210.08402",
+  URL          = "https://arxiv.org/abs/2210.08402",
+  author       = "Schuhmann, Christoph and Beaumont, Romain and Vencu, Richard and Gordon, Cade and Wightman, Ross and
+                 Cherti, Mehdi and Coombes, Theo and Katta, Aarush and Mullis, Clayton and Wortsman, Mitchell and
+                 Schramowski, Patrick and Kundurthy, Srivatsa and Crowson, Katherine and Schmidt, Ludwig and
+                 Kaczmarczyk, Robert and Jitsev, Jenia",
+  title        = "{LAION}-5{B}: An open large-scale dataset for training next generation image-text models",
+  publisher    = "arXiv",
+  year         = "2022",
+  cc-derived-dataset-about = "LAION-5B",
+  cc-author-affiliation = "LAION; UC Berkeley, USA; Gentec Data; TU Darmstadt, Germany; Hessian.AI; University of
+                 Washington, Seattle, USA; Technical University of Munich, Germany; Stability AI; EleutherAI; Juelich
+                 Supercomputing Center (JSC), Germany; Research Center Juelich (FZJ), Germany",
+  cc-class     = "nlp/corpus-construction, nlp/multimodal-corpora",
+  cc-snippet   = "By starting from Common Crawl [1] and filtering this data source with an existing CLIP model, we
+                 derive a dataset consisting of three parts: 2.32 billion English image-text examples, 2.26 billion
+                 multilingual examples, and 1.27 billion examples that are not specific to a particular language (e.g.,
+                 places, products, etc.). [...] To extract image-text pairs from Common Crawl, we parse the HTML IMG
+                 (image) tags from Common Crawl’s WAT metadata files.⁴ [⁴See
+                 https://commoncrawl.org/the-data/get-started/ for details of the metadata format.] Specifically, we
+                 focus on images with an alt-text so we can create image-text pair.",
+}
+
+@Misc{cc:NLLB-TeamCosta-jussàCrossEtAl:2022:No-Language-Left-Behind,
+  doi          = "10.48550/ARXIV.2207.04672",
+  URL          = "https://arxiv.org/abs/2207.04672",
+  author       = "{NLLB Team} and Costa-jussà, Marta R. and Cross, James and Çelebi, Onur and Elbayad, Maha and
+                 Heafield, Kenneth and Heffernan, Kevin and Kalbassi, Elahe and Lam, Janice and Licht, Daniel and
+                 Maillard, Jean and Sun, Anna and Wang, Skyler and Wenzek, Guillaume and Youngblood, Al and Akula, Bapi
+                 and Barrault, Loic and Gonzalez, Gabriel Mejia and Hansanti, Prangthip and Hoffman, John and Jarrett,
+                 Semarley and Sadagopan, Kaushik Ram and Rowe, Dirk and Spruit, Shannon and Tran, Chau and Andrews,
+                 Pierre and Ayan, Necip Fazil and Bhosale, Shruti and Edunov, Sergey and Fan, Angela and Gao, Cynthia
+                 and Goswami, Vedanuj and Guzmán, Francisco and Koehn, Philipp and Mourachko, Alexandre and Ropers,
+                 Christophe and Saleem, Safiyyah and Schwenk, Holger and Wang, Jeff",
+  title        = "No Language Left Behind: Scaling Human-Centered Machine Translation",
+  publisher    = "arXiv",
+  year         = "2022",
+  abstract     = "Driven by the goal of eradicating language barriers on a global scale, machine translation has
+                 solidified itself as a key focus of artificial intelligence research today. However, such efforts have
+                 coalesced around a small subset of languages, leaving behind the vast majority of mostly low-resource
+                 languages. What does it take to break the 200 language barrier while ensuring safe, high quality
+                 results, all while keeping ethical considerations in mind? In No Language Left Behind, we took on this
+                 challenge by first contextualizing the need for low-resource language translation support through
+                 exploratory interviews with native speakers. Then, we created datasets and models aimed at narrowing
+                 the performance gap between low and high-resource languages. More specifically, we developed a
+                 conditional compute model based on Sparsely Gated Mixture of Experts that is trained on data obtained
+                 with novel and effective data mining techniques tailored for low-resource languages. We propose
+                 multiple architectural and training improvements to counteract overfitting while training on thousands
+                 of tasks. Critically, we evaluated the performance of over 40,000 different translation directions
+                 using a human-translated benchmark, Flores-200, and combined human evaluation with a novel toxicity
+                 benchmark covering all languages in Flores-200 to assess translation safety. Our model achieves an
+                 improvement of 44% BLEU relative to the previous state-of-the-art, laying important groundwork towards
+                 realizing a universal translation system. Finally, we open source all contributions described in this
+                 work, accessible at https://github.com/facebookresearch/fairseq/tree/nllb.",
+  cc-derived-dataset-about = "NLLB",
+  cc-author-affiliation = "Meta AI; UC Berkeley, USA; Johns Hopkins University, USA",
+  cc-class     = "nlp/corpus-construction, nlp/parallel-corpus, nlp/low-resource-language, nlp/language-identification",
+  cc-snippet   = "We begin with web data as our starting point, provided by CommonCrawl (CC)18 and ParaCrawl (Bañón et
+                 al., 2020).",
+}
+
+@Misc{cc:SmithPatwaryNorickLeGresleyEtAl:2022:Megatron-Turing-NLG-530B,
+  doi          = "10.48550/ARXIV.2201.11990",
+  URL          = "https://arxiv.org/abs/2201.11990",
+  author       = "Smith, Shaden and Patwary, Mostofa and Norick, Brandon and LeGresley, Patrick and Rajbhandari, Samyam
+                 and Casper, Jared and Liu, Zhun and Prabhumoye, Shrimai and Zerveas, George and Korthikanti, Vijay and
+                 Zhang, Elton and Child, Rewon and Aminabadi, Reza Yazdani and Bernauer, Julie and Song, Xia and
+                 Shoeybi, Mohammad and He, Yuxiong and Houston, Michael and Tiwary, Saurabh and Catanzaro, Bryan",
+  keywords     = "Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and
+                 information sciences",
+  title        = "Using DeepSpeed and Megatron to Train Megatron-Turing {NLG} 530{B}, {A} Large-Scale Generative
+                 Language Model",
+  publisher    = "arXiv",
+  year         = "2022",
+  cc-author-affiliation = "Microsoft; NVIDIA",
+  cc-class     = "nlp/language-model",
+  cc-snippet   = "Resources such as Common Crawl (CC) provide snapshots of the web which can be utilized as a source of
+                 language data. While these data sources contain an enormous amount of language data, they also require
+                 carefully designed preprocessing steps in order to select data which is of reasonable quality. As prior
+                 work has found (e.g., [9]), the quality of unfiltered Common Crawl data is lower than that of curated
+                 datasets and steps should be taken to increase the average quality of data selected from Common Crawl
+                 for LM pretraining. [...] Common Crawl: As mentioned previously, Common Crawl comprises an immense
+                 amount of data. We chose to process two snapshots, 2020-50 and 2021-04, with the aim of acquiring
+                 around 150B tokens of training data. The first step of this process is language detection [11] and text
+                 extraction from the raw HTML included in the Common Crawl WARC files¹. Following the rationale
+                 presented in [11], we used the pycld2² and jusText³ libraries for these tasks. [...] In addition to
+                 Common Crawl data, we leveraged a number of other previously gener- ated datasets. From The Pile, we
+                 selected Books3, OpenWebText2, Stack Exchange, PubMed Abstracts, Wikipedia, Gutenberg (PG-19),
+                 BookCorpus2, NIH ExPorter, and Pile-CC datasets. We also included the CC-Stories and RealNews datasets
+                 used to train Megatron [63].",
+}
+
+@InProceedings{cc:AlbyJäschke:2022:top-websites,
+  author       = "Alby, Tom and Jäschke, Robert",
+  editor       = "Silvello, Gianmaria and Corcho, Oscar and Manghi, Paolo and Di Nunzio, Giorgio Maria and Golub,
+                 Koraljka and Ferro, Nicola and Poggi, Antonella",
+  title        = "Analyzing the Web: Are Top Websites Lists a Good Choice for Research?",
+  booktitle    = "Linking Theory and Practice of Digital Libraries",
+  year         = "2022",
+  publisher    = "Springer International Publishing",
+  address      = "Cham",
+  pages        = "11--25",
+  abstract     = "The web has been a subject of research since its beginning, but it is difficult if not impossible to
+                 analyze the whole web, even if a database of all URLs would be freely accessible. Hundreds of studies
+                 have used commercial top websites lists as a shortcut, in particular the Alexa One Million Top Sites
+                 list. However, apart from the fact that Amazon decided to terminate Alexa, we question the usefulness
+                 of such lists for research as they have several shortcomings. Our analysis shows that top sites lists
+                 miss frequently visited websites and offer only little value for language-specific research. We present
+                 a heuristic-driven alternative based on the Common Crawl host-level web graph while also taking
+                 language-specific requirements into account.",
+  ISBN         = "978-3-031-16802-4",
+  URL          = "https://link.springer.com/chapter/10.1007/978-3-031-16802-4_2",
+  cc-author-affiliation = "Humboldt-Universität zu Berlin, Berlin, Germany",
+  cc-class     = "web-science, domain-ranking",
 }

@@ -575,7 +575,7 @@
                  current state of large scale datasets while raising open questions for various stakeholders including
                  the AI community, regulators, policy makers and data subjects.",
   cc-author-affiliation = "University College Dublin, Ireland; Lero, Dublin, Ireland; University of Edinburgh, UK",
-  cc-class     = "ai/ethics-of-machine-learning, nlp/corpus-construction, nlp/text-corpora",
+  cc-class     = "ai/ethics-of-machine-learning, nlp/corpus-construction, nlp/text-corpora, nlp/multimodal-corpora",
   cc-comment   = "about LAION-400M, Common Crawl and derived datasets, OpenWebText",
   cc-snippet   = "1.3 The Common-Crawl Common Crawl is a San Francisco based nonprofit 501(c)(3) organization that has
                  been regularly crawling the entire WWW and generating archival snapshot data-dumps, often termed the
@@ -616,7 +616,8 @@
                  similarity search.",
   cc-author-affiliation = "LAION.ai; Gentec Data, Romania; Technical University of Munich, Germany; Juelich
                  Supercomputing Center, Germany; Georgia Institute of Technology; USA; EleutherAI",
-  cc-class     = "",
+  cc-class     = "nlp/corpus-construction, nlp/multimodal-corpora",
+  cc-derived-dataset-about = "LAION-400M",
   cc-snippet   = "2.1 Distributed processing of Common Crawl¶ To create image-text pairs, we parse through WAT files
                  from Common Crawl and parse out all HTML IMG tags containing an alt-text attribute. We download the raw
                  images from the parsed URLs with asynchronous requests using Trio and Asks libraries.¶ 2.1.1 Filtering
@@ -784,4 +785,21 @@
   slides       = "https://indico.cern.ch/event/1006978/contributions/4539477/attachments/2325769/3962907/ossym2021-sn-web-graphs-crawling.pdf",
   cc-author-affiliation = "Common Crawl",
   cc-class     = "web crawling, web-science/hyperlinkgraph",
+}
+
+@Misc{cc:KhanujaBansalMehtaniKhoslaEtAl:2021:MuRIL,
+  title        = "Mu{RIL}: Multilingual Representations for Indian Languages",
+  author       = "Simran Khanuja and Diksha Bansal and Sarvesh Mehtani and Savya Khosla and Atreyee Dey and Balaji
+                 Gopalan and Dilip Kumar Margam and Pooja Aggarwal and Rajiv Teja Nagipogu and Shachi Dave and Shruti
+                 Gupta and Subhash Chandra Bose Gali and Vish Subramanian and Partha Talukdar",
+  year         = "2021",
+  eprint       = "2103.10730",
+  pdf          = "https://arxiv.org/pdf/2103.10730",
+  URL          = "https://arxiv.org/abs/2103.10730",
+  cc-author-affiliation = "Google; Indian Institute of Technology, Patna, India; Indian Institute of Technology, Bombay,
+                 India; Delhi Technological University, India",
+  cc-class     = "nlp/language-model, nlp/corpus-construction",
+  cc-derived-dataset-used = "OSCAR",
+  cc-snippet   = "Monolingual Data: We collect monolingual data for the 17 languages mentioned above from the Common
+                 Crawl OSCAR corpus¹ and Wikipedia².",
 }
