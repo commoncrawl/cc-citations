@@ -54,7 +54,7 @@
                  or use other tools to extract data from websites.]",
 }
 
-@PhdThesis{cc:Wang:2023:Large-Web-Archive-Collection,
+@PhdThesis{cc:Wang:2023:large-web-archive-collection,
   title        = "Large Web Archive Collection Infrastructure and Services",
   author       = "Wang, Xinyue",
   year         = "2023",
@@ -91,7 +91,7 @@
                  the Timestamp column in INT64 Timestamp type; 5) Avro, [...]",
 }
 
-@Article{cc:Terzis:2023:Building-Programmable-Commons,
+@Article{cc:Terzis:2023:programmable-commons,
   title        = "Building Programmable Commons",
   author       = "Terzis, Petros",
   year         = "2023",
@@ -106,4 +106,86 @@
                  commons-, this paper explores the material form and impact of infocomputational technologies and
                  presents a blend of bottom-up and top-down initiatives for their commons-based organisation and
                  governance.",
+}
+
+@Misc{cc:HanleyKumarDurumeric:2023:conspiracy-theories,
+  doi          = "10.48550/ARXIV.2301.10880",
+  URL          = "https://arxiv.org/abs/2301.10880",
+  author       = "Hanley, Hans W. A. and Kumar, Deepak and Durumeric, Zakir",
+  title        = "A Golden Age: Conspiracy Theories' Relationship with Misinformation Outlets, News Media, and the Wider
+                 Internet",
+  publisher    = "arXiv",
+  year         = "2023",
+  abstract     = "Do we live in a {"}Golden Age of Conspiracy Theories?{"} In the last few decades, conspiracy theories
+                 have proliferated on the Internet with some having dangerous real-world consequences. A large
+                 contingent of those who participated in the January 6th attack on the US Capitol believed fervently in
+                 the QAnon conspiracy theory. In this work, we study the relationships amongst five prominent conspiracy
+                 theories (QAnon, COVID, UFO/Aliens, 9-11, and Flat-Earth) and each of their respective relationships to
+                 the news media, both mainstream and fringe. Identifying and publishing a set of 755 different
+                 conspiracy theory websites dedicated to our five conspiracy theories, we find that each set often
+                 hyperlinks to the same external domains, with COVID and QAnon conspiracy theory websites largest amount
+                 of shared connections. Examining the role of news media, we further find that not only do outlets known
+                 for spreading misinformation hyperlink to our set of conspiracy theory websites more often than
+                 mainstream websites but this hyperlinking has increased dramatically between 2018 and 2021, with the
+                 advent of QAnon and the start of COVID-19 pandemic. Using partial Granger-causality, we uncover several
+                 positive correlative relationships between the hyperlinks from misinformation websites and the
+                 popularity of conspiracy theory websites, suggesting the prominent role that misinformation news
+                 outlets play in popularizing many conspiracy theories.",
+  cc-snippet   = "Using our own web scrapes and pages historically scraped by Common Crawl,¹
+                 [¹https://commoncrawl.org/] we then document the state and the changing behaviors of the conspiracy
+                 theory ecosystem and their relationship to a separate set of 530 known misinformation outlets, 565
+                 authentic news websites, and 528 non-news websites. [...] Utilizing the Common Crawl harmonic and
+                 PageRank centrality measures that measure a website’s centrality across all of the crawled Internet,
+                 we then find many of the websites in our dataset have relatively high network centrality, suggesting
+                 that many of them are not peripheral on the Internet but actually near the Internet’s core/are
+                 mainstream. Indeed examining, the hyperlink connections between news media and these conspiracy
+                 theories, we find that many of them rely heavily on mainstream as well as misinformation outlets
+                 (compared to non-news websites) for their information, with many popular misinformation outlets also
+                 hyperlinking back to many of these conspiracy theory websites. [...] 4.1 Common Crawl Page Retrieval
+                 and Website Crawling To gather the set of hyperlinks between our websites, we utilize Common Crawl data
+                 [92]—widely considered the most complete publicly available source of web crawl data—and our own
+                 website crawls. For each website in our dataset, we collect all the domain’s HTML pages that were
+                 indexed by Common Crawl before August 2021. In addition to Common Crawl data, we further utilize our
+                 own website scrapes. We utilize our own crawls, in addition to Common Crawl, due to noisiness, missing
+                 pages, and missing domains within the Common Crawl dataset [85]. For example, 309 particularly small
+                 conspiracy theory domains were not contained within the Common Crawl dataset (i.e. these websites often
+                 only contained a few dozen pages). Thus for each website in our dataset, we further gather all the HTML
+                 pages 10 hops from each website’s homepage (i.e., we collect all URLs linked from the homepage (1st
+                 hop), then all URLs linked from the pages that were linked by the homepage (2nd hop), and so forth).
+                 For each HTML page from our scrapes and Common Crawl, we parse the HTML, detect the date that page was
+                 published, and collect hyperlinks to other pages (i.e., HTML <a> tags). Altogether we gather the
+                 available Common Crawl pages and scrape the HTML for our 755 conspiracy theory, 530 misinformation, 565
+                 authentic news, and 528 non-news websites. [...] Utilizing Common Crawl network data [ 61] over the
+                 indexed Internet (87.7 million websites), we thus determine the network centrality of our set of
+                 conspiracy-focused websites to understand if each conspiracy theory website category is “core”
+                 (regularly utilized on the Internet) or “peripheral”. We utilize centralities across Common
+                 Crawl’s dataset rather than our partial one in order to get a sense of each conspiracy theory’s
+                 centrality on the entire Internet. While only 446 of our conspiracy theory websites are within the
+                 Common Crawl dataset, this analysis allows us to fully understand the relative roles that each
+                 conspiracy theory website group in our dataset plays on the wider Internet.",
+  cc-author-affiliation = "Stanford University, USA",
+  cc-class     = "nlp/fake-news-detection, misinformation, disinformation, conspiracy theories, hyperlink-graph",
+}
+
+@Misc{cc:PeetersDerBizer:2023:WDC-products,
+  doi          = "10.48550/ARXIV.2301.09521",
+  URL          = "https://arxiv.org/abs/2301.09521",
+  author       = "Peeters, Ralph and Der, Reng Chiz and Bizer, Christian",
+  title        = "{WDC} Products: {A} Multi-Dimensional Entity Matching Benchmark",
+  publisher    = "arXiv",
+  year         = "2023",
+  cc-snippet   = "The first step of the pipeline is the extraction of large amounts of product offers from the Common
+                 Crawl⁴ [⁴https://commoncrawl.org/] using schema.org annotations. Some product offers contain
+                 product identifiers like MPNs and GTINs which allow us to group offers into [...] The Web Data Commons6
+                 project regularly extracts schema.org annotations from the Common Crawl, the largest web corpus
+                 available to the public, in order to monitor the adoption of semantic annotations on the Web and to
+                 provide the extracted data for public download. The WDC Products benchmark uses product offers from the
+                 WDC Product Data Corpus V2020 (PDC2020)7. The corpus was created by extracting schema.org product data
+                 from the September 2020 version of the Common Crawl. The extracted data goes through a pipeline of
+                 cleansing steps such as removing offers from listing pages as well as advertisements that are contained
+                 in a page in addition to the main offer [31]. The resulting PDC2020 corpus consists of ∼98 million
+                 product offers originating from 603,000 websites.",
+  cc-dataset-used = "CC-MAIN-2020-40",
+  cc-author-affiliation = "University of Mannheim, Germany",
+  cc-class     = "semantic-web, semantic-web/microformats, e-commerce, linked data, schema.org annotations",
 }
