@@ -189,3 +189,93 @@
   cc-author-affiliation = "University of Mannheim, Germany",
   cc-class     = "semantic-web, semantic-web/microformats, e-commerce, linked data, schema.org annotations",
 }
+
+@Misc{cc:Amatriain:2023:transformer-models-catalog,
+  doi          = "10.48550/ARXIV.2302.07730",
+  URL          = "https://arxiv.org/abs/2302.07730",
+  pdf          = "https://arxiv.org/pdf/2302.07730.pdf",
+  author       = "Amatriain, Xavier",
+  title        = "Transformer models: an introduction and catalog",
+  publisher    = "arXiv",
+  year         = "2023",
+  cc-author-affiliation = "amatriain.net",
+  cc-class     = "nlp/language-model, nlp/transformer-language-model, nlp/multi-modal-language-model",
+}
+
+@Misc{cc:CarliniJagielskiChoquette-ChooPalekaEtAl:2023:poisoning-web-scale-training-datasets,
+  doi          = "10.48550/ARXIV.2302.10149",
+  URL          = "https://arxiv.org/abs/2302.10149",
+  pdf          = "https://arxiv.org/pdf/2302.10149.pdf",
+  author       = "Carlini, Nicholas and Jagielski, Matthew and Choquette-Choo, Christopher A. and Paleka, Daniel and
+                 Pearce, Will and Anderson, Hyrum and Terzis, Andreas and Thomas, Kurt and Tramèr, Florian",
+  keywords     = "Cryptography and Security (cs.CR), Machine Learning (cs.LG), FOS: Computer and information sciences,
+                 FOS: Computer and information sciences",
+  title        = "Poisoning Web-Scale Training Datasets is Practical",
+  publisher    = "arXiv",
+  year         = "2023",
+  cc-author-affiliation = "Google; ETH Zurich, Switzerland; NVIDIA; Robust Intelligence",
+  cc-class     = "nlp/corpus-creation, computer-security, nlp/language-model, nlp/transformer-language-model,
+                 nlp/multi-modal-language-model",
+  abstract     = "Deep learning models are often trained on distributed, webscale datasets crawled from the internet. In
+                 this paper, we introduce two new dataset poisoning attacks that intentionally introduce malicious
+                 examples to a model's performance. Our attacks are immediately practical and could, today, poison 10
+                 popular datasets. Our first attack, split-view poisoning, exploits the mutable nature of internet
+                 content to ensure a dataset annotator's initial view of the dataset differs from the view downloaded by
+                 subsequent clients. By exploiting specific invalid trust assumptions, we show how we could have
+                 poisoned 0.01% of the LAION-400M or COYO-700M datasets for just $60 USD. Our second attack,
+                 frontrunning poisoning, targets web-scale datasets that periodically snapshot crowd-sourced content --
+                 such as Wikipedia -- where an attacker only needs a time-limited window to inject malicious examples.
+                 In light of both attacks, we notify the maintainers of each affected dataset and recommended several
+                 low-overhead defenses.",
+  cc-snippet   = "B.3 Common Crawl Common Crawl is a petabyte-scale corpus of web crawl data that is repeatedly captured
+                 on a roughly monthly basis. Each archive is a complete re-crawl of the internet that records the full
+                 activity, including all requests of the crawler and the host responses—with both HTTP headers and
+                 content. As such, each archive contains a static snapshot of all crawled pages at the time of visit.
+                 This may include new page content not seen during a previous crawl, and may exclude content that has
+                 become stale since the previous crawl. For example, data crawled during September 24 through October 8,
+                 2022 contains 3.15 billion web pages with 380 TiB of uncompressed content from 34 million registered
+                 domains—1.3 billion URLs were not visited in any of the prior crawls.14 The Common Crawl dataset is
+                 vulnerable to an attack which is similar to both our frontrunning and split-view poisoning attacks. The
+                 adversary can purchase an expired domain which was previously contained in the Common Crawl, and it
+                 will be re-crawled with the adversary’s choice of content, which will then appear in subsequent
+                 Common Crawl snap- shots. Notice that, differently from the snapshot-poisoning attack on Wikipedia,
+                 there is no content moderation here and so the adversary simply needs to continue to control the domain
+                 to poison all future Common Crawl snapshots. Buying recently-expired domains that existed in previous
+                 Common Crawl snapshots allows a stronger form of attack where the attack can inject entirely new links
+                 into the crawl. This can be accomplished by adding links or subdomains to poisoned domains, and
+                 allowing the crawler to discover the new poisoned domains. Thus, an adversary may inject arbitrarily
+                 many pages into the Common Crawl dataset, not only from the originally expired subset. We do not
+                 implement this attack following our ethics statements outlined earlier. Since Common Crawl WARC files
+                 have been hosted by Amazon on a AWS Athena (serverless service)15, domain reconnaissance work to
+                 analyze URLs is inexpensive. Scan- ning through 10 years of Common Crawl data to analyze domains from
+                 popular TLDs and high number of Common Crawl entries cost us USD$ 0.84. While additional analysis might
+                 somewhat increase this cost, it remains an inexpensive way to search for vulnerable domains. Buying
+                 recently expired domains, or domains that have a dangling DNS record with an active IP address is
+                 preferred, as domains that failed to return a 200-OK status in consecutive crawls seem to be moved to a
+                 lower priority. For example, among expired domains we purchased, just one domain accounts for more than
+                 90% of all status codes among the purchased domains, while other domains we purchased as early as
+                 12/20/2020 have seen relatively less scraping traffic across a 3 year period.16 Because Common Crawl is
+                 enormous and uncurated (to accurately reflect the content of the internet) poisoning all of Common
+                 Crawl is impractical due to size. Additionally, it is not always apparent how consumers of this data
+                 are process- ing it for downstream machine learning tasks. However, there exist many derivative
+                 datasets which are constructed by curating a relevant subset of the Common Crawl. This includes the
+                 LAION-5B image dataset [57], the text dataset known as the Pile [23], the multilingual text dataset
+                 CC-100 [78], and the CCMatrix dataset [61], a translation dataset of pairs of translated sentences.
+                 Such curation actually amplifies the power of an attack: an attack which adds 1MB of text to the Common
+                 Crawl would be poisoning a 2.5 · 10−9 fraction of the Common Crawl, but if this text bypasses the
+                 curation done for the CC-100 dataset, it could instead poison a 1.2 · 10−5 fraction of the English
+                 corpus, or even a full 9.1% of the Oromo corpus.",
+}
+
+@Misc{cc:HuangDongWangHaoEtAl:2023:language-is-not-all-you-need,
+  doi          = "10.48550/ARXIV.2302.14045",
+  URL          = "https://arxiv.org/abs/2302.14045",
+  author       = "Huang, Shaohan and Dong, Li and Wang, Wenhui and Hao, Yaru and Singhal, Saksham and Ma, Shuming and
+                 Lv, Tengchao and Cui, Lei and Mohammed, Owais Khan and Liu, Qiang and Aggarwal, Kriti and Chi, Zewen
+                 and Bjorck, Johan and Chaudhary, Vishrav and Som, Subhojit and Song, Xia and Wei, Furu",
+  title        = "Language Is Not All You Need: Aligning Perception with Language Models",
+  publisher    = "arXiv",
+  year         = "2023",
+  cc-author-affiliation = "Microsoft",
+  cc-class     = "nlp/language-model, nlp/transformer-language-model, nlp/multi-modal-language-model",
+}
