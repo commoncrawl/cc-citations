@@ -194,7 +194,7 @@
   doi          = "10.48550/ARXIV.2302.07730",
   URL          = "https://arxiv.org/abs/2302.07730",
   pdf          = "https://arxiv.org/pdf/2302.07730.pdf",
-  author       = "Amatriain, Xavier",
+  author       = "Xavier Amatriain",
   title        = "Transformer models: an introduction and catalog",
   publisher    = "arXiv",
   year         = "2023",
@@ -278,4 +278,132 @@
   year         = "2023",
   cc-author-affiliation = "Microsoft",
   cc-class     = "nlp/language-model, nlp/transformer-language-model, nlp/multi-modal-language-model",
+  cc-dataset-used = "CC-MAIN-2020-50, CC-MAIN-2021-04",
+  cc-derived-dataset-used = "The-Pile-English, CC-Stories, RealNews, LAION-400M, LAION-2B, COYO-700M",
+  cc-snippet   = "Text Corpora We train our model with The Pile [GBB+20] and Common Crawl (CC). The Pile is a massive
+                 English text dataset built for training large-scale language models, which is produced from a variety
+                 of data sources. We exclude data splits from GitHub, arXiv, Stack Exchange, and PubMed Central. We also
+                 include the Common Crawl snapshots (2020-50 and 2021-04) datasets, CC-Stories, and RealNews datasets
+                 [SPP+19 , SPN+22]. The entire datasets have been purged of duplicate and near-duplicate documents, as
+                 well as filtered to exclude downstream task data. Refer to Appendix B.1.1 for detailed descriptions of
+                 training text corpora.¶ Image-Caption Pairs The image-caption pairs are constructed from several
+                 datasets, including English LAION-2B [ SBV+22 ], LAION-400M [ SVB+21], COYO-700M [BPK+22 ], and
+                 Conceptual Captions [ SDGS18, CSDS21]. English LAION-2B, LAION-400M, and COYO-700M are collected from
+                 web pages of the Common Crawl web data by extracting image sources and the corresponding alt-text.
+                 Conceptual Captions are also from internet web pages. More details can be found in Appendix B.1.2. ¶
+                 Interleaved Image-Text Data We collect interleaved multimodal data from the Common Crawl snapshot,
+                 which is a publicly available archive of web pages. We use a filtering process to select about 71M web
+                 pages from the original 2B web pages in the snapshot. We then extract the text and images from the HTML
+                 of each selected web page. For each document, we limit the number of images to five to reduce noise and
+                 redundancy. We also randomly discard half of the documents that only have one image to increase the
+                 diversity. We provide more details about the data collection process in Appendix B.1.3. By using this
+                 corpus, we enable KOSMOS-1 to handle interleaved text and image and improve its few-shot ability.",
+}
+
+@Misc{cc:TouvronLavrilIzacardMartinetEtAl:2023:LLaMA,
+  doi          = "10.48550/ARXIV.2302.13971",
+  URL          = "https://arxiv.org/abs/2302.13971",
+  pdf          = "https://arxiv.org/pdf/2302.13971.pdf",
+  author       = "Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne
+                 and Lacroix, Timothée and Rozière, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and
+                 Rodriguez, Aurelien and Joulin, Armand and Grave, Edouard and Lample, Guillaume",
+  keywords     = "Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and
+                 information sciences",
+  title        = "{LL}a{MA}: Open and Efficient Foundation Language Models",
+  publisher    = "arXiv",
+  year         = "2023",
+  abstract     = "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We
+                 train our models on trillions of tokens, and show that it is possible to train state-of-the-art models
+                 using publicly available datasets exclusively, without resorting to proprietary and inaccessible
+                 datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is
+                 competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the
+                 research community.",
+  cc-author-affiliation = "Meta AI",
+  cc-class     = "nlp/language-model, nlp/transformer-language-model, nlp/multi-modal-language-model",
+  cc-dataset-used = "five CommonCrawl dumps, ranging from 2017 to 2020",
+  cc-derived-dataset-about = "Tensorflow-C4",
+  cc-snippet   = "English CommonCrawl [67%]. We preprocess five CommonCrawl dumps, ranging from 2017 to 2020, with the
+                 CCNet pipeline (Wenzek et al., 2020). This process deduplicates the data at the line level, performs
+                 language identification with a fastText linear classifier to remove non-English pages and filters low
+                 quality content with an n- gram language model. In addition, we trained a linear model to classify
+                 pages used as references in Wikipedia v.s. randomly sampled pages, and discarded pages not classified
+                 as references.",
+}
+
+@Misc{cc:Ammar:2023:dynamic-graph-processing,
+  year         = "2023",
+  title        = "Systems and Algorithms for Dynamic Graph Processing",
+  author       = "Khaled Ammar",
+  pdfurl       = "https://uwspace.uwaterloo.ca/bitstream/handle/10012/19195/Ammar_Khaled.pdf",
+  cc-derived-dataset-used = "WDC-hyperlinkgraph, WDC-hyperlinkgraph (2014)",
+  cc-snippet   = "Common Crawl experiments. Sixteen machines load 64 billion edges, index them, and track motifs in 20
+                 batches of 10K random edge changes.",
+  cc-author-affiliation = "University of Waterloo, Ontario, Canada",
+  cc-class     = "graph-processing, web-science/hyperlinkgraph",
+}
+
+@Misc{cc:HuangSiddarth:2023:generative-AI-and-digital-commons,
+  title        = "Generative {AI} and the Digital Commons",
+  author       = "Saffron Huang and Divya Siddarth",
+  year         = "2023",
+  eprint       = "2303.11074",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CY",
+  pdf          = "https://arxiv.org/pdf/2303.11074.pdf",
+  cc-author-affiliation = "Collective Intelligence Project (cip.org)",
+  cc-class     = "digital-commons, public-commons, nlp/corpus-construction, nlp/language-models,
+                 nlp/generative-language-models, cc-cited-not-used"c
+?? Expected comma after last field ``cc-class''.
+c-snippet	= "GFMs are trained on the digital commons. Generative
+		  foundation models leverage large databases of scraped
+		  information (text, code, images) from the internet to train
+		  highly capable models. This depends on the availability of
+		  public, scrapable data and leverages the “collective
+		  intelligence” of humanity, including the painstakingly
+		  edited Wikipedia, millennia’s worth of books, billions of
+		  Reddit comments, hundreds of terabytes’ worth of images,
+		  and more³ [³LAION-5B, which Stable Diffusion is trained
+		  on, has 5 billion text-image pairs (Schuhmann et al.,
+		  2022).The Pile has 100+GB of books (Gao et al., 2020)].
+		  They also rely on non- profits like Common Crawl (which
+		  build and maintain open repositories of web crawl data),
+		  Creative Commons (for open licenses for the data used),
+		  open source libraries, and other digital infrastructure.
+		  They also take advantage of aggregated user preferences;
+		  e.g. the WebText dataset underlying the GPT family of
+		  models uses Reddit “karma scores” to select content for
+		  inclusion. All of this is common digital information and
+		  infrastructure that many people contribute to."
+}
+
+@Misc{cc:ChanBradleyRajkumar:2023:reclaiming-digital-commons,
+  title        = "Reclaiming the Digital Commons: {A} Public Data Trust for Training Data",
+  author       = "Alan Chan and Herbie Bradley and Nitarshan Rajkumar",
+  year         = "2023",
+  eprint       = "2303.09001",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CY",
+  pdf          = "https://arxiv.org/pdf/2303.09001.pdf",
+  cc-snippet   = "The data trust could also start from existing efforts, such as the Common Crawl.",
+  abstract     = "Democratization of AI means not only that people can freely use AI, but also that people can
+                 collectively decide how AI is to be used. In particular, collective decision-making power is required
+                 to redress the negative externalities from the development of increasingly advanced AI systems,
+                 including degradation of the digital commons and unemployment from automation. The rapid pace of AI
+                 development and deployment currently leaves little room for this power. Monopolized in the hands of
+                 private corporations, the development of the most capable foundation models has proceeded largely
+                 without public input. There is currently no implemented mechanism for ensuring that the economic value
+                 generated by such models is redistributed to account for their negative externalities. The citizens
+                 that have generated the data necessary to train models do not have input on how their data are to be
+                 used. In this work, we propose that a public data trust assert control over training data for
+                 foundation models. In particular, this trust should scrape the internet as a digital commons, to
+                 license to commercial model developers for a percentage cut of revenues from deployment. First, we
+                 argue in detail for the existence of such a trust. We also discuss feasibility and potential risks.
+                 Second, we detail a number of ways for a data trust to incentivize model developers to use training
+                 data only from the trust. We propose a mix of verification mechanisms, potential regulatory action, and
+                 positive incentives. We conclude by highlighting other potential benefits of our proposed data trust
+                 and connecting our work to ongoing efforts in data and compute governance.",
+  URL          = "https://arxiv.org/abs/2303.09001",
+  cc-author-affiliation = "University of Cambridge, United Kingdom; Mila, Université de Montréal, Canada; EleutherAI",
+  cc-class     = "digital-commons, public-commons, nlp/corpus-construction, nlp/language-models,
+                 nlp/generative-language-models, cc-cited-not-used",
 }

@@ -40,6 +40,8 @@ cc-derived-datasets:
 	perl -lne 'if (s/^\s*cc-derived-dataset-(?:used|cited|about)\s*=\s*["{]// .. s/["}],?$$//) { $$datasets .= $$_ } elsif (defined $$datasets) {  $$h{$$_}++ for split /,\s*/, $$datasets; $$datasets = undef; } END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 count:
 	grep -c '^@' bib/*.bib | perl -aF':' -lne 'print join("\t", $$F[1], $$F[0], @F[2..$$#F])' | sort -k2,2
+bibtex-fields:
+	perl -lne '$$h{$$1}++ if /^\s*([A-Za-z_0-9-]+)\s*=\s*["{]/; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 
 clean:
 	rm bib/*.formatted.bib
