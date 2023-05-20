@@ -164,7 +164,8 @@
                  Common Crawl dataset, this analysis allows us to fully understand the relative roles that each
                  conspiracy theory website group in our dataset plays on the wider Internet.",
   cc-author-affiliation = "Stanford University, USA",
-  cc-class     = "nlp/fake-news-detection, misinformation, disinformation, conspiracy theories, hyperlink-graph",
+  cc-class     = "nlp/fake-news-detection, misinformation, disinformation, conspiracy theories,
+                 webscience/hyperlinkgraph",
 }
 
 @Misc{cc:PeetersDerBizer:2023:WDC-products,
@@ -214,7 +215,7 @@
   publisher    = "arXiv",
   year         = "2023",
   cc-author-affiliation = "Google; ETH Zurich, Switzerland; NVIDIA; Robust Intelligence",
-  cc-class     = "nlp/corpus-creation, computer-security, nlp/language-model, nlp/transformer-language-model,
+  cc-class     = "nlp/corpus-construction, computer-security, nlp/language-model, nlp/transformer-language-model,
                  nlp/multi-modal-language-model",
   abstract     = "Deep learning models are often trained on distributed, webscale datasets crawled from the internet. In
                  this paper, we introduce two new dataset poisoning attacks that intentionally introduce malicious
@@ -234,9 +235,9 @@
                  This may include new page content not seen during a previous crawl, and may exclude content that has
                  become stale since the previous crawl. For example, data crawled during September 24 through October 8,
                  2022 contains 3.15 billion web pages with 380 TiB of uncompressed content from 34 million registered
-                 domains—1.3 billion URLs were not visited in any of the prior crawls.14 The Common Crawl dataset is
-                 vulnerable to an attack which is similar to both our frontrunning and split-view poisoning attacks. The
-                 adversary can purchase an expired domain which was previously contained in the Common Crawl, and it
+                 domains—1.3 billion URLs were not visited in any of the prior crawls.¹⁴ The Common Crawl dataset
+                 is vulnerable to an attack which is similar to both our frontrunning and split-view poisoning attacks.
+                 The adversary can purchase an expired domain which was previously contained in the Common Crawl, and it
                  will be re-crawled with the adversary’s choice of content, which will then appear in subsequent
                  Common Crawl snap- shots. Notice that, differently from the snapshot-poisoning attack on Wikipedia,
                  there is no content moderation here and so the adversary simply needs to continue to control the domain
@@ -246,8 +247,8 @@
                  allowing the crawler to discover the new poisoned domains. Thus, an adversary may inject arbitrarily
                  many pages into the Common Crawl dataset, not only from the originally expired subset. We do not
                  implement this attack following our ethics statements outlined earlier. Since Common Crawl WARC files
-                 have been hosted by Amazon on a AWS Athena (serverless service)15, domain reconnaissance work to
-                 analyze URLs is inexpensive. Scan- ning through 10 years of Common Crawl data to analyze domains from
+                 have been hosted by Amazon on a AWS Athena (serverless service)¹⁵, domain reconnaissance work to
+                 analyze URLs is inexpensive. Scanning through 10 years of Common Crawl data to analyze domains from
                  popular TLDs and high number of Common Crawl entries cost us USD$ 0.84. While additional analysis might
                  somewhat increase this cost, it remains an inexpensive way to search for vulnerable domains. Buying
                  recently expired domains, or domains that have a dangling DNS record with an active IP address is
@@ -325,16 +326,16 @@
   cc-snippet   = "English CommonCrawl [67%]. We preprocess five CommonCrawl dumps, ranging from 2017 to 2020, with the
                  CCNet pipeline (Wenzek et al., 2020). This process deduplicates the data at the line level, performs
                  language identification with a fastText linear classifier to remove non-English pages and filters low
-                 quality content with an n- gram language model. In addition, we trained a linear model to classify
-                 pages used as references in Wikipedia v.s. randomly sampled pages, and discarded pages not classified
-                 as references.",
+                 quality content with an n-gram language model. In addition, we trained a linear model to classify pages
+                 used as references in Wikipedia v.s. randomly sampled pages, and discarded pages not classified as
+                 references.",
 }
 
 @Misc{cc:Ammar:2023:dynamic-graph-processing,
   year         = "2023",
   title        = "Systems and Algorithms for Dynamic Graph Processing",
   author       = "Khaled Ammar",
-  pdfurl       = "https://uwspace.uwaterloo.ca/bitstream/handle/10012/19195/Ammar_Khaled.pdf",
+  URL          = "https://uwspace.uwaterloo.ca/bitstream/handle/10012/19195/Ammar_Khaled.pdf",
   cc-derived-dataset-used = "WDC-hyperlinkgraph, WDC-hyperlinkgraph (2014)",
   cc-snippet   = "Common Crawl experiments. Sixteen machines load 64 billion edges, index them, and track motifs in 20
                  batches of 10K random edge changes.",
@@ -397,4 +398,399 @@
   cc-author-affiliation = "University of Cambridge, United Kingdom; Mila, Université de Montréal, Canada; EleutherAI",
   cc-class     = "digital-commons, public-commons, nlp/corpus-construction, nlp/language-models,
                  nlp/generative-language-models, cc-cited-not-used",
+}
+
+@Misc{cc:TurskiStanisławekKaczmarekDydaEtAl:2023:CCpdf,
+  title        = "{CC}pdf: Building a High Quality Corpus for Visually Rich Documents from Web Crawl Data",
+  author       = "Michał Turski and Tomasz Stanisławek and Karol Kaczmarek and Paweł Dyda and Filip Graliński",
+  year         = "2023",
+  eprint       = "2304.14953",
+  URL          = "https://arxiv.org/pdf/2304.14953.pdf",
+  cc-author-affiliation = "Snowflake; Adam Mickiewicz University, Poznań, Poland",
+  cc-class     = "nlp/language-models, nlp/corpus-construction, document understanding, PDF",
+  abstract     = "In recent years, the field of document understanding has progressed a lot. A significant part of this
+                 progress has been possible thanks to the use of language models pretrained on large amounts of
+                 documents. However, pretraining corpora used in the domain of document understanding are single domain,
+                 monolingual, or nonpublic. Our goal in this paper is to propose an efficient pipeline for creating a
+                 big-scale, diverse, multilingual corpus of PDF files from all over the Internet using Common Crawl, as
+                 PDF files are the most canonical types of documents as considered in document understanding. We
+                 analysed extensively all of the steps of the pipeline and proposed a solution which is a trade-off
+                 between data quality and processing time. We also share a CCpdf corpus in a form or an index of PDF
+                 files along with a script for downloading them, which produces a collection useful for language model
+                 pretraining. The dataset and tools published with this paper offer researchers the opportunity to
+                 develop even better multilingual language models.",
+  cc-snippet   = "As our input we used web indexes created by Common Crawl. [...] They crawl webpages and save them into
+                 crawls dumps. A crawl dump contains billions of webpages (hundreds of terabytes of uncompressed data)
+                 and a new dump has been published nearly every month since March 2014. Some earlier, more irregular
+                 dumps starting from 2008 are also available.¹¹ Each dump also contains an index of the crawled pages.
+                 We decided to simply use the latest (and the largest) dump available at the time of writing this paper
+                 — the May 2022 dump.¹² [¹²https://commoncrawl.org/2022/06/may-2022-crawl-archive-now-available/]
+                 It contains 3.45 billion web pages, which amounts to 462 TB of uncompressed content. It would obviously
+                 be possible to apply the extraction procedure described in this paper to all crawls to obtain an even
+                 larger collection of PDFs, which would also allow for a diachronic analysis, but we wanted to focus on
+                 the most recent documents. Note that dumps contain only files considered as text files by the Common
+                 Crawl web robot. Mostly these are web pages in the HTML format, but, fortunately, PDFs are also treated
+                 as text files, being derivative of the PostScript page description language. This is not the case with,
+                 for instance, images, Excel files, DOCX files. Consequently, such files cannot be amassed using the
+                 methods described in the aforementioned papers.¶ 3.2 PDF links extraction¶ We experimented with two
+                 methods for extracting links to PDF files (step 1 in Figure 1):¶ 1. using CDX files, i.e., index
+                 server files provided by Common Crawl;¶ 2. looking for links to PDF files in WARC, i.e., raw crawl
+                 data files.¶ The first method is simpler, as CDX files are easy to download and take up only 225 GB in
+                 total. The second method might yield more links to PDF files, but:¶ – it is impossible for us to
+                 download all WARCs. Only a limited number of them can be processed, though still a significant number
+                 of PDF links can be added even if a small percentage of all WARC files are processed,¶ – there is
+                 lower probability that the file linked is available at all, be it in the crawl dump or simply at the
+                 original address.¶ In CDX files, the MIME type of a captured file is specified, and we limited
+                 ourselves to the application/pdf type.¶ Hence, in this paper, we focus on the first method, which
+                 allows to speed up the whole processing pipeline.",
+  cc-dataset-used = "CC-MAIN-2022-21 (CDX)",
+}
+
+@InProceedings{cc:NourinTranJiangBockEtAl:2023:Measuring-turkmenistans-internet-censorship,
+  author       = "Nourin, Sadia and Tran, Van and Jiang, Xi and Bock, Kevin and Feamster, Nick and Hoang, Nguyen Phong
+                 and Levin, Dave",
+  title        = "Measuring and Evading Turkmenistan’s Internet Censorship: {A} Case Study in Large-Scale Measurements
+                 of a Low-Penetration Country",
+  year         = "2023",
+  ISBN         = "978-1-4503-9416-1",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  URL          = "https://doi.org/10.1145/3543507.3583189",
+  pdf          = "https://dl.acm.org/doi/pdf/10.1145/3543507.3583189",
+  doi          = "10.1145/3543507.3583189",
+  abstract     = "Since 2006, Turkmenistan has been listed as one of the few Internet enemies by Reporters without
+                 Borders due to its extensively censored Internet and strictly regulated information control policies.
+                 Existing reports of filtering in Turkmenistan rely on a handful of vantage points or test a small
+                 number of websites. Yet, the country’s poor Internet adoption rates and small population can make
+                 more comprehensive measurement challenging. With a population of only six million people and an
+                 Internet penetration rate of only 38%, it is challenging to either recruit in-country volunteers or
+                 obtain vantage points to conduct remote network measurements at scale. We present the largest
+                 measurement study to date of Turkmenistan’s Web censorship. To do so, we developed TMC, which tests
+                 the blocking status of millions of domains across the three foundational protocols of the Web (DNS,
+                 HTTP, and HTTPS). Importantly, TMC does not require access to vantage points in the country. We apply
+                 TMC to 15.5M domains, our results reveal that Turkmenistan censors more than 122K domains, using
+                 different blocklists for each protocol. We also reverse-engineer these censored domains, identifying 6K
+                 over-blocking rules causing incidental filtering of more than 5.4M domains. Finally, we use , an
+                 open-source censorship evasion tool, to discover five new censorship evasion strategies that can defeat
+                 Turkmenistan’s censorship at both transport and application layers. We will publicly release both the
+                 data collected by TMC and the code for censorship evasion.",
+  booktitle    = "Proceedings of the ACM Web Conference 2023",
+  pages        = "1969--1979",
+  numpages     = "11",
+  keywords     = "Censorship Measurement, Web Filtering, Turkmenistan",
+  location     = "Austin, TX, USA",
+  series       = "WWW '23",
+  cc-snippet   = "[...] the payload of our probes contains domains curated from the Citizen Lab lists [5], the full
+                 Tranco list [42], and Common Crawl Project [8]. Due to limited resources of our VPS, we opt to probe
+                 the frst 10M FQDNs ranked by the Common Crawl Project instead of the full list of almost 400M FQDNs.
+                 [...] We scanned all regular expressions that TMC discovered against all FQDNs that we could obtain
+                 from DNS zone fles provided via ICANN’s Centralized Zone Data Service [ 6] and the full host list
+                 from the Common Crawl Project [8], totaling 718M FQDNs.",
+  cc-author-affiliation = "University of Maryland, USA; University of Chicago, USA",
+  cc-dataset-used = "hyperlinkgraph",
+  cc-class     = "web-filtering, internet-censorship",
+}
+
+@Misc{cc:ZhuHesselAwadallaGadreEtAl:2023:Multimodal-C4,
+  title        = "Multimodal {C4}: An Open, Billion-scale Corpus of Images Interleaved With Text",
+  author       = "Wanrong Zhu and Jack Hessel and Anas Awadalla and Samir Yitzhak Gadre and Jesse Dodge and Alex Fang
+                 and Youngjae Yu and Ludwig Schmidt and William Yang Wang and Yejin Choi",
+  year         = "2023",
+  eprint       = "2304.06939",
+  URL          = "https://arxiv.org/abs/2304.06939",
+  cc-author-affiliation = "Allen Institute for Artificial Intelligence, USA; University of California, Santa Barbara,
+                 USA; Paul G. Allen School of Computer Science, University of Washington, USA; Columbia University, USA;
+                 Yonsei University, South Korea; LAION",
+  cc-dataset-used = "CC-MAIN-2019-18 (WET)",
+  cc-derived-dataset-about = "Allenai-multimodal-c4 (mmc4)",
+  cc-class     = "nlp/corpus-construction, nlp/multimodal-corpora, ai/image-text-alignment",
+  cc-snippet   = "Multimodal C4 is an expansion of the text-only c4 dataset [21], which was created by taking the April
+                 2019 snapshot from Common Crawl4 and applying several filters with the intention of retaining
+                 high-quality, natural English text. Each document in c4 consists of the text scraped from one URL.
+                 [...] e built the mmc4 dataset on top of c4 because: 1) c4 is a web-scale dataset widely adopted as a
+                 pre-training corpus [21 , 25, 9 , 29, 27 ]; 2) c4 is constructed from web pages, which frequently
+                 contain multimedia content like images: a multimodal sequence version is a natural extension; and 3)
+                 c4-en,5 the specific underlying subset from which we construct mmc4 has already been processed with
+                 several data-cleaning steps (including English- language identification by langdetect6 with at least
+                 0.99 confidence; text deduplication removing duplicate three-sentence spans + placeholder text like
+                 “lorem ipsum{"}; and removal of any document containing any word on the “List of Dirty, Naughty,
+                 Obscene or Otherwise Bad Words”).7 See [ 21] for more information about the text-only c4.
+                 Importantly, by building on the popular text-only c4, prior text-only documentation efforts [ 11] can
+                 provide insight about potential biases and risks that could arise when training on our multimodal
+                 extension. We use the NLTK [4] sentence tokenizer to chunk each c4 document into a list of sentences.¶
+                 Gathering images. We first retrieve the original webpages for each document in the c4-en dataset from
+                 the Common Crawl version 2019-18, which is the default version for c4. Next, we extract the URLs for
+                 downloadable images from the raw WAT files. We restrict the image extension to either png/jpeg/jpg, and
+                 exclude image URLs that contain the following tokens: tlogo, button, icon, plugin, widgetu. We attempt
+                 to download from these URLs, and resize images to a maximum dimension of 800px. We eliminate any c4
+                 documents that do not contain valid, downloadable images at the time of collection (mid-to-late 2022).
+                 The starting point after this step is 115M documents and 1.37B images.",
+}
+
+@MastersThesis{cc:Jørgensen:2023:BacklinkDB,
+  title        = "Backlink{DB}: {A} Purpose-Built Backlink Database Management System",
+  author       = "Jørgensen, Marius Løvold",
+  year         = "2023",
+  school       = "UiT Norges arktiske universitet",
+  URL          = "https://munin.uit.no/handle/10037/28861",
+  pdf          = "https://munin.uit.no/bitstream/handle/10037/28861/thesis.pdf",
+  abstract     = "In order to compile a list of all the backlinks for a given webpage, we need knowledge about all the
+                 outgoing links on the web. Traversing the web and storing all the backlink data in a database allows us
+                 to efficiently retrieve the list of backlinks for a web page on demand. However, the web consists of
+                 billions of backlinks which translates to terabytes of data. As the web is continuously evolving, the
+                 database needs to be rebuilt periodically in order for it to closely resemble the current state of the
+                 web. This thesis presents BacklinkDB, a purpose-built database management system designed for managing
+                 a backlink database. Using a series of in-memory hash indices allows for high insert throughput when
+                 building the database. The backlink data for a given domain is stored together in sections throughout
+                 the database file. This allows for the requested backlink data to be easily located. With a simple
+                 sql-inspired query language, the users can both insert and retrieve backlink data. The evaluation shows
+                 that building a purpose-built database management sys- tem allows us to make the trade-offs between
+                 which performance metrics that is important. In this thesis, we will focus on creating a scalable
+                 backlink database management system with high insert performance",
+  cc-snippet   = "5.1.3 Data¶ The link data used in the experiments is downloaded from the Common Crawls website1.
+                 Common Crawl is a non-profit organization that periodically crawls the web and publicizes data. For the
+                 experiments described in this chapter, data from the August 2022 crawl²
+                 [²https://commoncrawl.org/2022/08/august-2022-crawl-archive-now-available/] is used.¶ Data
+                 prepossessing¶ Common Crawl provides data on all the indexable webpages. This data is provided in a
+                 series of warc files found in their public repository. Common Crawl also provide WAT files which are
+                 produced by processing the warc files and extracting the metadata for each webpage. The WAT files
+                 contain a list of all the outgoing links for each of the webpages.¶ All external links from the WAT
+                 file are extracted to their own link file so that they can be directly inserted into a database. Each
+                 link is stored on a separate line in the file using spaces to separate the source domain, source path,
+                 destination domain, and destination path. All the backlinks containing urls longer than 2048 characters
+                 are discarded. A link file is created for each of the WAT files. These link files contain all the
+                 information needed to build a backlink database.",
+  cc-dataset-used = "CC-MAIN-2022-33 (WAT)",
+  cc-author-affiliation = "UiT, The Arctic University of Norway, Norway",
+  cc-class     = "web-science/hyperlinkgraph, ir/backlinkdb",
+}
+
+@Article{cc:CalzavaraHantkeWilhelmRabittiEtAl:2023:web-archives-for-web-security-measurements,
+  title        = "You Call This Archaeology? Evaluating Web Archives for Reproducible Web Security Measurements",
+  author       = "Calzavara, Stefano and Hantke, Florian and Wilhelm, Moritz and Rabitti, Alvise and Stock, Ben",
+  year         = "2023",
+  URL          = "https://swag.cispa.saarland/papers/calzavara2023archaeology.pdf",
+  abstract     = "Given the dynamic nature of the Web, security measurements on it suffer from reproducibility issues.
+                 In this paper we take a systematic look into the potential of using web archives for web security
+                 measurements. We first evaluate an extensive set of web archives as potential sources of archival data,
+                 showing the superiority of the Internet Archive with respect to its competitors. We then assess the
+                 appropriateness of the Internet Archive for historical web security measurements, detecting subtleties
+                 and possible pitfalls in its adoption. Finally, we investigate the feasibility of using the Internet
+                 Archive to simulate live security measurements, using recent archival data in place of live data. Our
+                 analysis shows that archive-based security measurements are a promising alternative to traditional live
+                 security measurements, which is reproducible by design; nevertheless, it also shows potential pitfalls
+                 and shortcomings of archive-based measurements. As an important contribution, we use the collected
+                 knowledge to identify insights and best practices for future archive-based security measurements."c
+?? Expected comma after last field ``abstract''.
+c-snippet	= {Besides Memento-based archives, we also consider Common
+		  Crawl as a possible alternative source of archival data.
+		  Common Crawl archives parts of the Web once a month and
+		  stores the content as one snapshot. The reason why we use
+		  Common Crawl is that it contains a massive amount of data:
+		  its October 2022 snapshot includes more than 2.55 billion
+		  pages, with its index alone being larger than 2TB;
+		  moreover, Common Crawl was already used in a previous web
+		  security measurement [ 15, 36]. The content archived on
+		  Common Crawl is stored in form of large compressed files
+		  consisting of lists of WARC files. These WARC files hold
+		  meta information such as the requested datetime, content
+		  type, or content size, followed by the archived content.},
+  cc-author-affiliation={CISPA Helmholtz Center for Information Security, Germany; Università Ca’ Foscari, Venezia, Italy},
+  cc-class	= {computer-security/internet-security, web-science}
+}
+
+@Misc{cc:HendersonLiJurafskyHashimotoEtAl:2023:Foundation-Models-and-Fair,
+  title        = "Foundation Models and Fair Use",
+  author       = "Peter Henderson and Xuechen Li and Dan Jurafsky and Tatsunori Hashimoto and Mark A. Lemley and Percy
+                 Liang",
+  year         = "2023",
+  eprint       = "2303.15715",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CY",
+  URL          = "https://arxiv.org/abs/2303.15715",
+  abstract     = "Existing foundation models are trained on copyrighted material. Deploying these models can pose both
+                 legal and ethical risks when data creators fail to receive appropriate attribution or compensation. In
+                 the United States and several other countries, copyrighted content may be used to build foundation
+                 models without incurring liability due to the fair use doctrine. However, there is a caveat: If the
+                 model produces output that is similar to copyrighted data, particularly in scenarios that affect the
+                 market of that data, fair use may no longer apply to the output of the model. In this work, we
+                 emphasize that fair use is not guaranteed, and additional work may be necessary to keep model
+                 development and deployment squarely in the realm of fair use. First, we survey the potential risks of
+                 developing and deploying foundation models based on copyrighted content. We review relevant U.S. case
+                 law, drawing parallels to existing and potential applications for generating text, source code, and
+                 visual art. Experiments confirm that popular foundation models can generate content considerably
+                 similar to copyrighted material. Second, we discuss technical mitigations that can help foundation
+                 models stay in line with fair use. We argue that more research is needed to align mitigation strategies
+                 with the current state of the law. Lastly, we suggest that the law and technical mitigations should
+                 co-evolve. For example, coupled with other policy mechanisms, the law could more explicitly consider
+                 safe harbors when strong technical tools are used to mitigate infringement harms. This co-evolution may
+                 help strike a balance between intellectual property and innovation, which speaks to the original goal
+                 of fair use. But we emphasize that the strategies we describe here are not a panacea and more work is
+                 needed to develop policies that address the potential harms of foundation models.",
+  cc-snippet   = "Implied Licenses and Common Crawl. On the other hand, many creators voluntarily post their works on
+                 the internet with permissions for web crawling. It is well-established that merely posting something on
+                 the internet does not waive the intellectual property interest in the work, but many data creators use
+                 an industry-standard “robots.txt{"} file to affirmatively to include their website and data in caches
+                 and search indexes. In Field v. Google, Inc. (D. Nev. 2006) a district court held that Google could
+                 cache web content that did not disallow scraping via robots.txt, suggesting that there was an implied
+                 license and thus the use was not infringement. This license only extended to caching in that case,
+                 which does not necessarily reflect the uses of foundation models we discuss throughout this work, so it
+                 is unlikely to cover all the use cases we describe here. And the bounds of the uses covered by the
+                 robots.txt file are untested in court.21 While the issue of whether the implied license extends to
+                 foundation model training has not been resolved in litigation, it is possible that an outcome like
+                 Field v. Google, Inc. (D. Nev. 2006) would extend to some foundation model uses—in particular, for
+                 building a cached dataset and training a model.¶ It is worth noting that the use of a robots.txt
+                 header or other opt-out mechanism has implications for fair use also. Datasets and models like C4
+                 (Raffel et al., 2019) and LAION-400M (Schuhmann, 2021), rely on CommonCrawl data which is crawled only
+                 if users explicitly allow it through their robots.txt file. CommonCrawl is able to host a snapshot of
+                 the internet largely because of fair use arguments. As the organization’s director argues, there is a
+                 transformation into a different—not easily human-readable—format, the organization does not take a
+                 snapshot of entire webpages, and the use itself is transformative (from actively presenting content to
+                 caching content) and for the public benefit (Leetaru, 2017). In Field v. Google, Inc. (D. Nev. 2006),
+                 respect for the robots.txt file also was considered in the fair use assessment with the court noting
+                 that Google in good faith followed industry standards that would prevent caching (respecting
+                 disallowing crawling via a robots.txt). It is possible, then, that providing an opt-out mechanism for
+                 data creators and respecting the robots.txt opt-out mechanism will be taken into account in assessing a
+                 fair use argument, as it was in Field v. Google, Inc. (D. Nev. 2006).²²¶ [...] Furthermore, if
+                 web-crawled data is used, restricting it to data that respects robots.txt opt-outs can make a fair use
+                 argument more tractable, though not guaranteed. As we noted before, in Field v. Google, Inc. (D. Nev.
+                 2006), respect for the robots.txt file was considered in the fair use assessment with the court because
+                 it gave the plaintiff opportunity to opt out. This is likely why many webcrawl-based models rely on the
+                 CommonCrawl dataset as a source. Its webcrawl automatically respects robots.txt opt-outs and does not
+                 crawl every webpage in full. It is possible then that future fair use assessments could consider
+                 respecting the robots.txt opt-out—or implementing other opt-out mechanisms—favorably, as was the
+                 case in Field v. Google, Inc. (D. Nev. 2006). Conversely, ignoring a robots.txt opt-out could
+                 negatively impact a fair use assessment. However, Kapoor & Narayanan (2023) have argued that there are
+                 structural critiques of opt-out mechanisms beyond the current state of the law.¶
+                 cc-author-affiliation={Stanford University, USA}, cc-class = {legal/copyright, legal/fair-use,
+                 nlp/language-model, ai/foundation-model, web-crawling, robots.txt}"@
+?? Expected comma after last field ``cc-snippet''.
+Misc{		  cc:ZhaoZhouLiTangEtAl:2023:survey-of-LLMs,
+  title		= {A Survey of Large Language Models},
+  author	= {Wayne Xin Zhao and Kun Zhou and Junyi Li and Tianyi Tang
+		  and Xiaolei Wang and Yupeng Hou and Yingqian Min and
+		  Beichen Zhang and Junjie Zhang and Zican Dong and Yifan Du
+		  and Chen Yang and Yushuo Chen and Zhipeng Chen and Jinhao
+		  Jiang and Ruiyang Ren and Yifan Li and Xinyu Tang and
+		  Zikang Liu and Peiyu Liu and Jian-Yun Nie and Ji-Rong Wen},
+  year		= {2023},
+  eprint	= {2303.18223},
+  archiveprefix	= {arXiv},
+  primaryclass	= {cs.CL},
+  url		= {https://arxiv.org/abs/2303.18223},
+  abstract = {Language is essentially a complex, intricate system of human expressions governed by grammatical rules. It poses a significant challenge to develop capable AI algorithms for comprehending and grasping a language. As a major approach, language modeling has been widely studied for language understanding and generation in the past two decades, evolving from statistical language models to neural language models. Recently, pre-trained language models (PLMs) have been proposed by pre-training Transformer models over large-scale corpora, showing strong capabilities in solving various NLP tasks. Since researchers have found that model scaling can lead to performance improvement, they further study the scaling effect by increasing the model size to an even larger size. Interestingly, when the parameter scale exceeds a certain level, these enlarged language models not only achieve a significant performance improvement but also show some special abilities that are not present in small-scale language models. To discriminate the difference in parameter scale, the research community has coined the term large language models (LLM) for the PLMs of significant size. Recently, the research on LLMs has been largely advanced by both academia and industry, and a remarkable progress is the launch of ChatGPT, which has attracted widespread attention from society. The technical evolution of LLMs has been making an important impact on the entire AI community, which would revolutionize the way how we develop and use AI algorithms. In this survey, we review the recent advances of LLMs by introducing the background, key findings, and mainstream techniques. In particular, we focus on four major aspects of LLMs, namely pre-training, adaptation tuning, utilization, and capacity evaluation. Besides, we also summarize the available resources for developing LLMs and discuss the remaining issues for future directions.},
+  cc-snippet = {CommonCrawl. CommonCrawl [132] is one of the largest
+open-source web crawling databases, containing a petabyte-
+scale data volume, which has been widely used as training
+data for existing LLMs. As the whole dataset is very large,
+existing studies mainly extract subsets of web pages from
+it within a specific period. However, due to the widespread
+existence of noisy and low-quality information in web data,
+it is necessary to perform data preprocessing before usage.
+Based on CommonCrawl, there are four filtered datasets
+that are commonly used in existing work: C4 [73], CC-
+Stories [124], CC-News [27], and RealNews [125]. The Colos-
+sal Clean Crawled Corpus (C4) includes five variants¹⁸, [¹⁸https://www.tensorflow.org/datasets/catalog/c4] namely en (806G), en.noclean (6T), realnewslike (36G), web-
+textlike (17G), and multilingual (38T). The en version has
+been utilized for pre-training T5 [73], LaMDA [63], Go-
+pher [59], and UL2 [80]. The multilingual C4, also called
+mC4, has been used in mT5 [74]. CC-Stories (31G) is com-
+posed of a subset of CommonCrawl data, in which the
+contents are made in a story-like way. While, the original
+source of CC-Stories is not available now, so a reproduction
+version, CC-Stories-R [133], has been included in Table 2.
+Moreover, two news corpora extracted from Common-
+Crawl, i.e., REALNEWS (120G) and CC-News (76G), are also
+commonly used as the pre-training data.},
+  cc-author-affiliation={Gaoling School of Artificial Intelligence and
+School of Information, Renmin University of China, Beijing, China; DIRO, Université de Montr ́eal, Canada},
+  cc-class	= {nlp/language-models, nlp/large-language-models, nlp/text-corpora}
+}
+
+@Misc{cc:WuIrsoyLuDabravolskiEtAl:2023:BloombergGPT,
+  title        = "Bloomberg{GPT}: {A} Large Language Model for Finance",
+  author       = "Shijie Wu and Ozan Irsoy and Steven Lu and Vadim Dabravolski and Mark Dredze and Sebastian Gehrmann
+                 and Prabhanjan Kambadur and David Rosenberg and Gideon Mann",
+  year         = "2023",
+  eprint       = "2303.17564",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.LG",
+  URL          = "https://arxiv.org/abs/2303.17564",
+  abstract     = "The use of NLP in the realm of financial technology is broad and complex, with applications ranging
+                 from sentiment analysis and named entity recognition to question answering. Large Language Models
+                 (LLMs) have been shown to be effective on a variety of tasks; however, no LLM specialized for the
+                 financial domain has been reported in literature. In this work, we present BloombergGPT, a 50 billion
+                 parameter language model that is trained on a wide range of financial data. We construct a 363 billion
+                 token dataset based on Bloomberg's extensive data sources, perhaps the largest domain-specific dataset
+                 yet, augmented with 345 billion tokens from general purpose datasets. We validate BloombergGPT on
+                 standard LLM benchmarks, open financial benchmarks, and a suite of internal benchmarks that most
+                 accurately reflect our intended usage. Our mixed dataset training leads to a model that outperforms
+                 existing models on financial tasks by significant margins without sacrificing performance on general
+                 LLM benchmarks. Additionally, we explain our modeling choices, training process, and evaluation
+                 methodology. We release Training Chronicles (Appendix C) detailing our experience in training
+                 BloombergGPT.",
+  cc-class     = "nlp/language-models, nlp/large-language-models, nlp/dataset-creation, financial markets,
+                 cc-cited-not-used",
+  cc-author-affiliation = "Bloomberg, New York, NY, USA; Bloomberg, Toronto, ON, Canada; Computer Science, Johns Hopkins
+                 University, Baltimore, MD, USA",
+}
+
+@Misc{cc:ÖhmanVerlindenEkgrenGyllenstenEtAl:2023:Nordic-Pile,
+  title        = "The Nordic Pile: {A} 1.2{TB} Nordic Dataset for Language Modeling",
+  author       = "Joey Öhman and Severine Verlinden and Ariel Ekgren and Amaru Cuba Gyllensten and Tim Isbister and
+                 Evangelia Gogoulou and Fredrik Carlsson and Magnus Sahlgren",
+  year         = "2023",
+  eprint       = "2303.17183",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2303.17183",
+  abstract     = "Pre-training Large Language Models (LLMs) require massive amounts of text data, and the performance of
+                 the LLMs typically correlates with the scale and quality of the datasets. This means that it may be
+                 challenging to build LLMs for smaller languages such as Nordic ones, where the availability of text
+                 corpora is limited. In order to facilitate the development of the LLMS in the Nordic languages, we
+                 curate a high-quality dataset consisting of 1.2TB of text, in all of the major North Germanic languages
+                 (Danish, Icelandic, Norwegian, and Swedish), as well as some high-quality English data. This paper
+                 details our considerations and processes for collecting, cleaning, and filtering the dataset.",
+  cc-snippet   = "Therefore, The Nordic Pile is composed mostly of existing sources, with a large por- tion of these
+                 originating from derivatives of Common Crawl data, such as OSCAR (Suárez et al., 2019; Ortiz Suárez
+                 et al., 2020) and Multilingual C4 (mC4) (Xue et al., 2021), which is a language- filtered version of C4
+                 (Raffel et al., 2020).¶ [...] Web CC: Web data derived from Common Crawl¶ Similarly, Web CC is the
+                 most prominent of our categories."c
+?? Expected comma after last field ``cc-snippet''.
+c-author-affiliation={AI Sweden, Sweden; RISE, Sweden},
+  cc-class	= {nlp/corpus-construction, nlp/text-corpora, nlp/language-model}
+}
+
+@Misc{cc:Zhang:2023:ChatGPT-and-Bard-share-revenue,
+  title        = "Should Chat{GPT} and Bard Share Revenue with Their Data Providers? {A} New Business Model for the {AI}
+                 Era",
+  author       = "Dong Zhang",
+  year         = "2023",
+  eprint       = "2305.02555",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.LG",
+  URL          = "https://arxiv.org/abs/2305.02555",
+  abstract     = "With various AI tools such as ChatGPT becoming increasingly popular, we are entering a true AI era. We
+                 can foresee that exceptional AI tools will soon reap considerable profits. A crucial question arise:
+                 should AI tools share revenue with their training data providers in additional to traditional
+                 stakeholders and shareholders? The answer is Yes. Large AI tools, such as large language models, always
+                 require more and better quality data to continuously improve, but current copyright laws limit their
+                 access to various types of data. Sharing revenue between AI tools and their data providers could
+                 transform the current hostile zero-sum game relationship between AI tools and a majority of copyrighted
+                 data owners into a collaborative and mutually beneficial one, which is necessary to facilitate the
+                 development of a virtuous cycle among AI tools, their users and data providers that drives forward AI
+                 technology and builds a healthy AI ecosystem. However, current revenue-sharing business models do not
+                 work for AI tools in the forthcoming AI era, since the most widely used metrics for website-based
+                 traffic and action, such as clicks, will be replaced by new metrics such as prompts and cost per prompt
+                 for generative AI tools. A completely new revenue-sharing business model, which must be almost
+                 independent of AI tools and be easily explained to data providers, needs to establish a prompt-based
+                 scoring system to measure data engagement of each data provider. This paper systematically discusses
+                 how to build such a scoring system for all data providers for AI tools based on classification and
+                 content similarity models, and outlines the requirements for AI tools or third parties to build it.
+                 Sharing revenue with data providers using such a scoring system would encourage more data owners to
+                 participate in the revenue-sharing program. This will be a utilitarian AI era where all parties
+                 benefit.",
+  cc-author-affiliation = "",
+  cc-class     = "legal/copyright, legal/fair-use, nlp/language-model, ai/foundation-model, economic aspects of large
+                 language models, monetization of training data",
 }
