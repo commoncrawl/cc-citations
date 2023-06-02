@@ -580,23 +580,18 @@
                  analysis shows that archive-based security measurements are a promising alternative to traditional live
                  security measurements, which is reproducible by design; nevertheless, it also shows potential pitfalls
                  and shortcomings of archive-based measurements. As an important contribution, we use the collected
-                 knowledge to identify insights and best practices for future archive-based security measurements."c
-?? Expected comma after last field ``abstract''.
-c-snippet	= {Besides Memento-based archives, we also consider Common
-		  Crawl as a possible alternative source of archival data.
-		  Common Crawl archives parts of the Web once a month and
-		  stores the content as one snapshot. The reason why we use
-		  Common Crawl is that it contains a massive amount of data:
-		  its October 2022 snapshot includes more than 2.55 billion
-		  pages, with its index alone being larger than 2TB;
-		  moreover, Common Crawl was already used in a previous web
-		  security measurement [ 15, 36]. The content archived on
-		  Common Crawl is stored in form of large compressed files
-		  consisting of lists of WARC files. These WARC files hold
-		  meta information such as the requested datetime, content
-		  type, or content size, followed by the archived content.},
-  cc-author-affiliation={CISPA Helmholtz Center for Information Security, Germany; Università Ca’ Foscari, Venezia, Italy},
-  cc-class	= {computer-security/internet-security, web-science}
+                 knowledge to identify insights and best practices for future archive-based security measurements.",
+  cc-snippet   = "Besides Memento-based archives, we also consider Common Crawl as a possible alternative source of
+                 archival data. Common Crawl archives parts of the Web once a month and stores the content as one
+                 snapshot. The reason why we use Common Crawl is that it contains a massive amount of data: its October
+                 2022 snapshot includes more than 2.55 billion pages, with its index alone being larger than 2TB;
+                 moreover, Common Crawl was already used in a previous web security measurement [ 15, 36]. The content
+                 archived on Common Crawl is stored in form of large compressed files consisting of lists of WARC files.
+                 These WARC files hold meta information such as the requested datetime, content type, or content size,
+                 followed by the archived content.",
+  cc-author-affiliation = "CISPA Helmholtz Center for Information Security, Germany; Università Ca’ Foscari, Venezia,
+                 Italy",
+  cc-class     = "computer-security/internet-security, web-science",
 }
 
 @Misc{cc:HendersonLiJurafskyHashimotoEtAl:2023:Foundation-Models-and-Fair,
@@ -661,10 +656,11 @@ c-snippet	= {Besides Memento-based archives, we also consider Common
                  respecting the robots.txt opt-out—or implementing other opt-out mechanisms—favorably, as was the
                  case in Field v. Google, Inc. (D. Nev. 2006). Conversely, ignoring a robots.txt opt-out could
                  negatively impact a fair use assessment. However, Kapoor & Narayanan (2023) have argued that there are
-                 structural critiques of opt-out mechanisms beyond the current state of the law.¶
-                 cc-author-affiliation={Stanford University, USA}, cc-class = {legal/copyright, legal/fair-use,
-                 nlp/language-model, ai/foundation-model, web-crawling, robots.txt}"@
-?? Expected comma after last field ``cc-snippet''.
+                 structural critiques of opt-out mechanisms beyond the current state of the law.¶",
+  cc-author-affiliation = "Stanford University, USA",
+  cc-class     = "legal/copyright, legal/fair-use, nlp/language-model, ai/foundation-model, web-crawling, robots.txt",
+}
+
 Misc{		  cc:ZhaoZhouLiTangEtAl:2023:survey-of-LLMs,
   title		= {A Survey of Large Language Models},
   author	= {Wayne Xin Zhao and Kun Zhou and Junyi Li and Tianyi Tang
@@ -755,10 +751,9 @@ School of Information, Renmin University of China, Beijing, China; DIRO, Univers
                  originating from derivatives of Common Crawl data, such as OSCAR (Suárez et al., 2019; Ortiz Suárez
                  et al., 2020) and Multilingual C4 (mC4) (Xue et al., 2021), which is a language- filtered version of C4
                  (Raffel et al., 2020).¶ [...] Web CC: Web data derived from Common Crawl¶ Similarly, Web CC is the
-                 most prominent of our categories."c
-?? Expected comma after last field ``cc-snippet''.
-c-author-affiliation={AI Sweden, Sweden; RISE, Sweden},
-  cc-class	= {nlp/corpus-construction, nlp/text-corpora, nlp/language-model}
+                 most prominent of our categories.",
+  cc-author-affiliation = "AI Sweden, Sweden; RISE, Sweden",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora, nlp/language-model",
 }
 
 @Misc{cc:Zhang:2023:ChatGPT-and-Bard-share-revenue,
@@ -793,4 +788,242 @@ c-author-affiliation={AI Sweden, Sweden; RISE, Sweden},
   cc-author-affiliation = "",
   cc-class     = "legal/copyright, legal/fair-use, nlp/language-model, ai/foundation-model, economic aspects of large
                  language models, monetization of training data",
+}
+
+@Misc{cc:HuangGuptaZhongLiEtAl:2023:privacy-implications-of-retrieval-based-language-models,
+  title        = "Privacy Implications of Retrieval-Based Language Models",
+  author       = "Yangsibo Huang and Samyak Gupta and Zexuan Zhong and Kai Li and Danqi Chen",
+  year         = "2023",
+  eprint       = "2305.14888",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  abstract     = "Retrieval-based language models (LMs) have demonstrated improved interpretability, factuality, and
+                 adaptability compared to their parametric counterparts, by incorporating retrieved text from external
+                 datastores. While it is well known that parametric models are prone to leaking private data, it remains
+                 unclear how the addition of a retrieval datastore impacts model privacy. In this work, we present the
+                 first study of privacy risks in retrieval-based LMs, particularly kNN-LMs. Our goal is to explore the
+                 optimal design and training procedure in domains where privacy is of concern, aiming to strike a
+                 balance between utility and privacy. Crucially, we find that kNN-LMs are more susceptible to leaking
+                 private information from their private datastore than parametric models. We further explore mitigations
+                 of privacy risks. When privacy information is targeted and readily detected in the text, we find that a
+                 simple sanitization step would completely eliminate the risks, while decoupling query and key encoders
+                 achieves an even better utility-privacy trade-off. Otherwise, we consider strategies of mixing public
+                 and private data in both datastore and encoder training. While these methods offer modest improvements,
+                 they leave considerable room for future work. Together, our findings provide insights for practitioners
+                 to better understand and mitigate privacy risks in retrieval-based LMs. Our code is available at:
+                 [https://github.com/Princeton-SysML/kNNLM_privacy].",
+  URL          = "https://arxiv.org/abs/2305.14888",
+  cc-author-affiliation = "",
+  cc-class     = "",
+}
+
+@Misc{cc:LongpreYauneyReifLeeEtAl:2023:pretrainers-guide-to-training-data,
+  title        = "A Pretrainer's Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, &
+                 Toxicity",
+  author       = "Shayne Longpre and Gregory Yauney and Emily Reif and Katherine Lee and Adam Roberts and Barret Zoph
+                 and Denny Zhou and Jason Wei and Kevin Robinson and David Mimno and Daphne Ippolito",
+  year         = "2023",
+  eprint       = "2305.13169",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2305.13169",
+  abstract     = "Pretraining is the preliminary and fundamental step in developing capable language models (LM).
+                 Despite this, pretraining data design is critically under-documented and often guided by empirically
+                 unsupported intuitions. To address this, we pretrain 28 1.5B parameter decoder-only models, training on
+                 data curated (1) at different times, (2) with varying toxicity and quality filters, and (3) with
+                 different domain compositions. First, we quantify the effect of pretraining data age. A temporal shift
+                 between evaluation data and pretraining data leads to performance degradation, which is not overcome by
+                 finetuning. Second, we explore the effect of quality and toxicity filters, showing a trade-off between
+                 performance on standard benchmarks and risk of toxic generations. Our findings indicate there does not
+                 exist a one-size-fits-all solution to filtering training data. We also find that the effects of
+                 different types of filtering are not predictable from text domain characteristics. Lastly, we
+                 empirically validate that the inclusion of heterogeneous data sources, like books and web, is broadly
+                 beneficial and warrants greater prioritization. These findings constitute the largest set of
+                 experiments to validate, quantify, and expose many undocumented intuitions about text pretraining,
+                 which we hope will help support more informed data-centric decisions in LM development.",
+  cc-author-affiliation = "",
+  cc-class     = "",
+}
+
+@Misc{cc:PratapTjandraShiTomaselloEtAl:2023:scaling-speech-technology-to-1000-languages,
+  title        = "Scaling Speech Technology to 1,000+ Languages",
+  author       = "Vineel Pratap and Andros Tjandra and Bowen Shi and Paden Tomasello and Arun Babu and Sayani Kundu and
+                 Ali Elkahky and Zhaoheng Ni and Apoorv Vyas and Maryam Fazel-Zarandi and Alexei Baevski and Yossi Adi
+                 and Xiaohui Zhang and Wei-Ning Hsu and Alexis Conneau and Michael Auli",
+  year         = "2023",
+  eprint       = "2305.13516",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2305.13516",
+  abstract     = "Expanding the language coverage of speech technology has the potential to improve access to
+                 information for many more people. However, current speech technology is restricted to about one hundred
+                 languages which is a small fraction of the over 7,000 languages spoken around the world. The Massively
+                 Multilingual Speech (MMS) project increases the number of supported languages by 10-40x, depending on
+                 the task. The main ingredients are a new dataset based on readings of publicly available religious
+                 texts and effectively leveraging self-supervised learning. We built pre-trained wav2vec 2.0 models
+                 covering 1,406 languages, a single multilingual automatic speech recognition model for 1,107 languages,
+                 speech synthesis models for the same number of languages, as well as a language identification model
+                 for 4,017 languages. Experiments show that our multilingual speech recognition model more than halves
+                 the word error rate of Whisper on 54 languages of the FLEURS benchmark while being trained on a small
+                 fraction of the labeled data.",
+  cc-author-affiliation = "Meta AI; Hebrew University of Jerusalem, Israel",
+  cc-class     = "nlp/speech-recognition, nlp/language-model",
+  cc-snippet   = "We evaluate this single model on FLEURS, CommonVoice, VoxPopuli and MLS. [...] During inference, we
+                 use n-gram models trained on CommonCrawl data. [...] ¶ Identifying Biased Words. We were not able to
+                 find speakers for most of the considered languages of this study and therefore use the following
+                 automatic procedure to determine religious words: for each word that occurs in the training data of
+                 MMS-lab, we compare the relative token frequency, that is, the rate at which the word type occurs in
+                 the MMS-lab data, to the relative token frequency in a general domain corpus; we use Common Crawl
+                 [Conneau et al., 2020b] as a general domain corpus. If the relative word frequency is at least twice as
+                 high in MMS-lab compared to Common Crawl, then we add it to the subset of words we include in our
+                 study. This enables us to evaluate on 51 languages of the FLEURS corpus since not all languages are
+                 covered by MMS-lab and we also need to find data in Common Crawl for each language. The automatic
+                 procedure has the added benefit of avoiding any potential biases introduced by human annotators.
+                 [...]¶ B n-gram Language Models¶ We train 5-gram language models on Common Crawl data using KenLM
+                 [Heafield, 2011] for each language in FLEURS. For languages that do not use spaces to separate words,
+                 we train 20-gram character-level language models. These languages are Mandarin Chinese (cmn), Cantonese
+                 Chinese (yue), Japanese (jpn), Thai (tha), Lao (lao), Burmese (mya) and Khmer (khm). The text is pre-
+                 processed following § 3.1.2 and we also remove emojis.³³",
+}
+
+@Article{cc:SakaiTaoChenLiEtAl:2023:On-Ordering-of-Pooled,
+  author       = "Sakai, Tetsuya and Tao, Sijie and Chen, Nuo and Li, Yujing and Maistro, Maria and Chu, Zhumin and
+                 Ferro, Nicola",
+  title        = "On the Ordering of Pooled Web Pages, Gold Assessments, and Bronze Assessments",
+  year         = "2023",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  ISSN         = "1046-8188",
+  URL          = "https://doi.org/10.1145/3600227",
+  doi          = "10.1145/3600227",
+  abstract     = "The present study leverages a recent opportunity we had to create a new English web search test
+                 collection for the NTCIR-16 We Want Web (WWW-4) task, which concluded in June 2022. More specifically,
+                 through the test collection construction effort, we examined two factors that may affect the relevance
+                 assessments of depth-k pools, which in turn may affect the relative evaluation of different IR systems.
+                 The first factor is the document ordering strategy for the assessors, namely, prioritisation (PRI) and
+                 randomisation (RND). PRI is a method that has been used in NTCIR tasks for over a decade; it ranks the
+                 pooled documents by a kind of pseudorelevance for the assessors. The second factor is assessor type,
+                 i.e., Gold or Bronze. Gold assessors are the topic creators and therefore they “know” which
+                 documents are (highly) relevant and which are not; Bronze assessors are not the topic creators and may
+                 lack sufficient knowledge about the topics. We believe that our study is unique in that the authors of
+                 this paper served as the Gold assessors when creating the WWW-4 test collection, which enabled us to
+                 closely examine why Bronze assessments differ from the Gold ones. Our research questions examine
+                 assessor efficiency (RQ1), inter-assessor agreement (RQ2), system ranking similarity with different
+                 qrels files (RQ3), system ranking robustness to the choice of test topics (RQ4), and the reasons why
+                 Bronze assessors tend to be more liberal than Gold assessors (RQ5). The most remarkable of our results
+                 are as follows. Firstly, in the comparisons for RQ1 through RQ4, it turned out that what may matter
+                 more than the document ordering strategy (PRI vs. RND) and the assessor type (Gold vs. Bronze) is how
+                 well-motivated and/or well-trained the Bronze assessors are. Secondly, regarding RQ5, of the documents
+                 originally judged nonrelevant by the Gold assessors contrary to the Bronze assessors in our
+                 experiments, almost one half were truly relevant according to the Gold assessors’ own
+                 reconsiderations. This result suggests that even Gold assessors are far from perfect; budget
+                 permitting, it may be beneficial to hire highly-motivated Bronze assessors in addition to Gold
+                 assessors so that they can complement each other.",
+  note         = "Just Accepted",
+  journal      = "ACM Trans. Inf. Syst.",
+  month        = may,
+  keywords     = "web search, relevance assessments, pooling, test collections, information retrieval",
+  cc-snippet   = "The WWW-4 task introduced a new English web corpus called Chuweb21, which was constructed based on the
+                 April 2021 block of Common Crawl dataset.⁹ [⁹
+                 https://commoncrawl.org/2021/04/april-2021-crawl-archive-now-available/] Details of the corpus
+                 construction process can be found in the WWW-4 overview paper [38]. Chuweb21 contains 82,451,337 HTMLs
+                 or 1.69 TiB of compressed content; it is publicly available.¹⁰",
+  cc-derived-dataset-about = "Chuweb21",
+  cc-author-affiliation = "Waseda University, Japan; University of Copenhagen, Denmark; Tsinghua University, P. R. C.;
+                 University of Padua, Italy",
+  cc-class     = "ir/test-collection, ir/web-search, ir/search-engine-evaluation, nlp/corpus-construction",
+}
+
+@Article{cc:LiVincentChancellorHecht:2023:dimensions-of-data-labor,
+  title        = "The Dimensions of Data Labor: {A} Road Map for Researchers, Activists, and Policymakers to Empower
+                 Data Producers",
+  author       = "Li, Hanlin and Vincent, Nicholas and Chancellor, Stevie and Hecht, Brent",
+  journal      = "arXiv preprint arXiv:2305.13238",
+  year         = "2023",
+  URL          = "https://arxiv.org/pdf/2305.13238.pdf",
+  abstract     = "Many recent technological advances (e.g. ChatGPT and search engines) are possible only because of
+                 massive amounts of user-generated data produced through user interactions with computing systems or
+                 scraped from the web (e.g. behavior logs, user-generated content, and artwork). However, data producers
+                 have little say in what data is captured, how it is used, or who it benefits. Organizations with the
+                 ability to access and process this data, e.g. OpenAI and Google, possess immense power in shaping the
+                 technology landscape. By synthesizing related literature that reconceptualizes the production of data
+                 for computing as ``data labor'', we outline opportunities for researchers, policymakers, and activists
+                 to empower data producers in their relationship with tech companies, e.g advocating for transparency
+                 about data reuse, creating feedback channels between data producers and companies, and potentially
+                 developing mechanisms to share data's revenue more broadly. In doing so, we characterize data labor
+                 with six important dimensions - legibility, end-use awareness, collaboration requirement, openness,
+                 replaceability, and livelihood overlap - based on the parallels between data labor and various other
+                 types of labor in the computing literature.",
+  cc-snippet   = "For example, publicly available texts and artwork enabled the creation of generative AI models like
+                 ChatGPT and Dall- E because model developers were able to scrape and process data from billions of web
+                 pages¹. [¹https://commoncrawl.org/2022/10/sep-oct-2022-crawl-archive-now-available/]",
+  cc-author-affiliation = "University of California, Berkeley, USA; University of California, Davis, USA; University of
+                 Minnesota, Minneapolis, USA; Northwestern University, Evanston, USA",
+  cc-class     = "legal/copyright, cc-citet-not-used, user-generated data, empowerment, data leverage",
+}
+
+@Article{cc:KanfoudBouramoul:2023:Tackling-multilingual-and-heterogeneous,
+  author       = "Mohamed Raouf Kanfoud and Abdelkrim Bouramoul",
+  title        = "Tackling the multilingual and heterogeneous documents with the pre-trained language identifiers",
+  journal      = "International Journal of Computers and Applications",
+  volume       = "0",
+  number       = "0",
+  pages        = "1--12",
+  year         = "2023",
+  publisher    = "Taylor & Francis",
+  doi          = "10.1080/1206212X.2023.2218236",
+  URL          = "https://doi.org/10.1080/1206212X.2023.2218236",
+  abstract     = "The Web has become one of the most important data sources, and the content shared is most often
+                 multilingual, as users belong to different cultures and speak different languages. Multilingual content
+                 (document) is not suitable for many people who only need content in one language. Furthermore, dividing
+                 a multilingual document into monolingual documents helps researchers extract only the text of the
+                 desired language to use in different tasks such as training or model testing. Therefore, it is
+                 challenging to clean and divide the raw content manually. This paper presents an automatic approach to
+                 dividing a multilingual document and reassembling it into monolingual documents by examining three
+                 existing state-of-the-art tools for Language Identification (LI). We prepared different corpora with
+                 different heterogeneity characteristics for the evaluation and evaluated their code-switching pattern
+                 using three different code-switching metrics. The proposed approach reached 99% as the best accuracy
+                 result for the long segment (long text) and 90% for the mixed segment. In addition, a good correlation
+                 was found between the I-Index and accuracy with Pearson’s r = −0.998.",
+  cc-snippet   = "The authors collected data from a non-profit foundation, Common Crawl, which explores the Web and
+                 provides data freely to the public. The collected datasets are heterogeneous and multilingual.",
+  cc-author-affiliation = "University of Constantine 2 – Abdelhamid Mehri, El Khroub, Algeria",
+  cc-class     = "nlp/language-identification, nlp/corpus-construction, multi-lingual documents",
+}
+
+@Article{cc:PenedoMalarticHesslowCojocaruEtAl:2023:RefinedWeb-dataset-for-Falcon-LLM,
+  title        = "The RefinedWeb Dataset for Falcon {LLM}: Outperforming Curated Corpora with Web Data, and Web Data
+                 Only",
+  author       = "Penedo, Guilherme and Malartic, Quentin and Hesslow, Daniel and Cojocaru, Ruxandra and Cappelli,
+                 Alessandro and Pannier, Baptiste and Almazrouei, Ebtesam and Launay, Julien",
+  year         = "2023",
+  URL          = "https://falconllm.tii.ae/Falcon_LLM_RefinedWeb.pdf",
+  abstract     = "Large language models are commonly trained on a mixture of filtered web data and curated
+                 “high-quality” corpora, such as social media conversations, books, or technical papers. This
+                 curation process is believed to be necessary to produce performant models with broad zero-shot
+                 generalization abilities. However, as larger models requiring pretraining on trillions of tokens are
+                 considered, it is unclear how scalable is curation and whether we will run out of unique high-quality
+                 data soon. At variance with previous beliefs, we show that properly filtered and deduplicated web data
+                 alone can lead to powerful models; even significantly outperforming models from the state-of-the-art
+                 trained on The Pile. Despite extensive filtering, the high-quality data we extract from the web is
+                 still plentiful, and we are able to obtain five trillion tokens from CommonCrawl. We publicly release
+                 an extract of 600 billion tokens from our REFINEDWEB dataset, and 1.3/7.5B parameters language models
+                 trained on it*.",
+  cc-author-affiliation = "LightOn; Technology Innovation Institute, Abu Dhabi, United Arab Emirates; LPENS, École
+                 normale supérieure, Paris, France",
+  cc-class     = "nlp/language-models, nlp/large-language-models, nlp/text-corpora",
+  cc-dataset-used = "“using all CommonCrawl dumps until the 2023-06 one” (WARC files)",
+  cc-snippet   = "Pipelines for web data. Massive web datasets are typically built upon CommonCrawl, a publicly
+                 available scrape of the internet, which has now been running for 12 years and has collected petabytes
+                 of data. [...] We introduce MDR (MacroData Refinement), a pipeline for filtering and deduplicating web
+                 data from CommonCrawl at very large scale. [...] CommonCrawl is available in either WARC (raw HTML
+                 response), or WET files (preprocessed to only include plain text). Individual files correspond to a
+                 page at a given URL; these constitute single documents/samples. Working with WET files would spare us
+                 from running our own HTML extraction; however, in line with previous works (Gao et al., 2020; Rae et
+                 al., 2021), we found WET files to include undesirable navigation menus, ads, and other irrelevant
+                 texts. Accordingly, our pipeline starts from raw WARC files, read with the warcio library. [...]
+                 RefinedWeb is built using all CommonCrawl dumps until the 2023-06 one; it could be updated with
+                 additional dumps as they are released. The public release of RefinedWeb is a 600GT random extract of
+                 the 5,000GT of the full dataset. For all experiments, we randomly sampled from the public extract, or
+                 earlier development versions of it.",
 }
