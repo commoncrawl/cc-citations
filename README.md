@@ -32,6 +32,7 @@ The following non-standard fields are used to add information how the publicatio
 
 The [Makefile](./Makefile) contains targets to apply a consistent formatting to the citations. It also allows to export the citations. The following BibTeX tools are required: [bibtex2html](https://www.lri.fr/~filliatr/bibtex2html/), [bibclean](https://ctan.org/tex-archive/biblio/bibtex/utils/bibclean), [bibtool](http://www.gerd-neugebauer.de/software/TeX/BibTool/en/).
 
+(Do not be confused by the pypi package bibclean, it's entirely different. bibclean, bibtool, and bibtex2html are available as OS packages, at least in apt-based distros.)
 
 ## Citations from Google Scholar Alerts
 
