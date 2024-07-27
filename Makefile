@@ -21,6 +21,11 @@ html/commoncrawl.html: tmp/commoncrawl.bib
 tmp/commoncrawl_annotated.csv: tmp/commoncrawl.bib
 	python3 export-csv.py $< >$@
 
+# json annotated export for Hugging Face 🤗
+# depends on gscholar_alerts/citations.jsonl but most people do not have the /eml/ subdirectory
+tmp/commoncrawl_counts.csv:
+	mkdir -p tmp; cd tmp; python ../split-jsonl.py ../gscholar_alerts/citations.jsonl
+
 # format .bib file
 %.formatted.bib: %.bib
 	$(BIBCLEAN) $< >$@
