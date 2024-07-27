@@ -17,8 +17,8 @@ tmp/commoncrawl.bib: $(BIBSRC)
 html/commoncrawl.html: tmp/commoncrawl.bib
 	mkdir -p html; cd html; bibtex2html --charset utf-8 ../tmp/commoncrawl.bib
 
-# CSV export to import papers into wordpress
-tmp/commoncrawl_site_wp.csv: tmp/commoncrawl.bib
+# CSV export for Hugging Face 🤗
+tmp/commoncrawl_annotated.csv: tmp/commoncrawl.bib
 	python3 export-csv.py $< >$@
 
 # format .bib file
