@@ -1871,3 +1871,62 @@ School of Information, Renmin University of China, Beijing, China; DIRO, Univers
   cc-class     = "dataset creation, internet domain names, ccTLDs, country-code top-level domains",
 }
 
+@Misc{cc:CaswellWangPapadimitriou:2023:Separating-Wheat-from-Chaff,
+  title        = "Separating the Wheat from the Chaff with {BREAD}: An open-source benchmark and metrics to detect
+                 redundancy in text",
+  author       = "Isaac Caswell and Lisa Wang and Isabel Papadimitriou",
+  year         = "2023",
+  eprint       = "2311.06440",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2311.06440",
+  abstract     = "Data quality is a problem that perpetually resurfaces throughout the field of NLP, regardless of task,
+                 domain, or architecture, and remains especially severe for lower-resource languages. A typical and
+                 insidious issue, affecting both training data and model output, is data that is repetitive and
+                 dominated by linguistically uninteresting boilerplate, such as price catalogs or computer-generated log
+                 files. Though this problem permeates many web-scraped corpora, there has yet to be a benchmark to test
+                 against, or a systematic study to find simple metrics that generalize across languages and agree with
+                 human judgements of data quality. In the present work, we create and release BREAD, a human-labeled
+                 benchmark on repetitive boilerplate vs. plausible linguistic content, spanning 360 languages. We
+                 release several baseline CRED (Character REDundancy) scores along with it, and evaluate their
+                 effectiveness on BREAD. We hope that the community will use this resource to develop better filtering
+                 methods, and that our reference implementations of CRED scores can become standard corpus evaluation
+                 tools, driving the development of cleaner language modeling corpora, especially in low-resource
+                 languages.",
+  cc-author-affiliation = "Google Research; Google DeepMind; Computer Science Department, Stanford University",
+  cc-derived-dataset-used = "MADLAD-400",
+  cc-snippet   = "BREAD consists of randomly-chosen documents from the multilingual, common-crawl- based MADLAD-400
+                 dataset (Kudugunta et al., 2023), which are then annotated by expert NLP- practitioner annotators.",
+  cc-class     = "nlp/corpus-construction, data quality, nlp/boilerplate-removal, redundancy",
+}
+
+@InProceedings{cc:KuduguntaCaswellZhangGarciaEtAl:2023:MADLAD-400,
+  title        = "{MADLAD}-400: {A} Multilingual And Document-Level Large Audited Dataset",
+  author       = "Sneha Kudugunta and Isaac Rayburn Caswell and Biao Zhang and Xavier Garcia and Derrick Xin and Aditya
+                 Kusupati and Romi Stella and Ankur Bapna and Orhan Firat",
+  booktitle    = "Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track",
+  year         = "2023",
+  URL          = "https://openreview.net/forum?id=Y45ZCxslFx",
+  abstract     = "We introduce MADLAD-400, a manually audited, general domain 3T token monolingual dataset based on
+                 CommonCrawl, spanning 419 languages. We discuss the limitations revealed by self-auditing MADLAD-400,
+                 and the role data auditing had in the dataset creation process. We then train and release a
+                 10.7B-parameter multilingual machine translation model on 250 billion tokens covering over 450
+                 languages using publicly available data, and find that it is competitive with models that are
+                 significantly larger, and report the results on different domains. In addition, we train a 8B-parameter
+                 language model, and assess the results on few-shot translation. We make the baseline models available
+                 to the research community.",
+  cc-author-affiliation = "Google DeepMind; Google Research",
+  cc-class     = "nlp/corpus-construction, nlp/multi-lingual-corpus",
+  cc-derived-dataset-about = "MADLAD-400",
+  cc-snippet   = "A common approach to creating such datasets is to mine language specific data from general web crawls
+                 such as CommonCrawl [52, 38, 63] to create datasets. We simply take this approach and scale it. We
+                 train a document-level LangID model on 498 languages to obtain CommonCrawl annotations at a document
+                 level and obtain a 5-trillion token, document-level monolingual dataset.¶ [...] First, we collect as
+                 large a dataset of unlabeled web text as possible. More specifically, we use all available snapshots of
+                 CommonCrawl3 as of August 20, 2022. After some preliminary data cleaning, we use a highly multilingual
+                 LangID model to provide document-level annotations (Section 2.2). Finally, we conduct a self-audit
+                 (Section 2.4), or quality review, of this preliminary dataset partitioned by language, and design
+                 filters to remove noisy content. When appropriate, we correct language names and remove languages from
+                 the preliminary dataset. We note that building MADLAD-400 was an iterative process, and that while we
+                 describe one major quality review in depth, we conducted several stages of filtering.",
+}

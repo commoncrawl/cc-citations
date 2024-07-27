@@ -1,0 +1,118 @@
+@InProceedings{cc:GongMccarthyRizoiuBoldi:2024:Australian-domain-space,
+  author       = "Gong, Xian and Mccarthy, Paul X. and Rizoiu, Marian-Andrei and Boldi, Paolo",
+  title        = "Harmony in the Australian Domain Space",
+  year         = "2024",
+  ISBN         = "9798400703348",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  URL          = "https://doi.org/10.1145/3614419.3643998",
+  doi          = "10.1145/3614419.3643998",
+  abstract     = "In this paper we use for the first time a systematic approach in the study of harmonic centrality at a
+                 Web domain level, and gather a number of significant new findings about the Australian web. In
+                 particular, we explore the relationship between economic diversity at the firm level and the structure
+                 of the Web within the Australian domain space, using harmonic centrality as the main structural
+                 feature. The distribution of harmonic centrality values is analyzed over time, and we find that the
+                 distributions exhibit a consistent pattern across the different years. The observed distribution is
+                 well captured by a partition of the domain space into six clusters; the temporal movement of domain
+                 names across these six positions yields insights into the Australian Domain Space and exhibits
+                 correlations with other non-structural characteristics. From a more global perspective, we find a
+                 significant correlation between the median harmonic centrality of all domains in each OECD country and
+                 one measure of global trust, the WJP Rule of Law Index. Further investigation demonstrates that 35
+                 countries in OECD share similar harmonic centrality distributions. The observed homogeneity in
+                 distribution presents a compelling avenue for exploration, potentially unveiling critical corporate,
+                 regional, or national insights.",
+  booktitle    = "Proceedings of the 16th ACM Web Science Conference",
+  pages        = "92--102",
+  numpages     = "11",
+  location     = "Stuttgart, Germany",
+  series       = "WEBSCI '24",
+  cc-author-affiliation = "University of Technology, Australia; University of New South Wales, Australia; Università
+                 degli Studi di Milano, Italy",
+  cc-class     = "",
+  cc-snippet   = "There are many public collections of web crawls, but one that is known for being very reliable and
+                 quite wide in scope is the Common Crawl1. Common Crawl’s measurements are preferred for web and
+                 network analysis due to their extensive coverage, regular updates, and large-scale, publicly accessible
+                 datasets, which reduces the need for resource-intensive data collection and is applicable across
+                 various research in a reproducible way. [...]",
+}
+
+@Article{cc:CarragherWilliamsCarley:2024:Misinformation-resilient-search-rankings,
+  author       = "Carragher, Peter and Williams, Evan M. and Carley, Kathleen M.",
+  title        = "Misinformation Resilient Search Rankings with Webgraph-based Interventions",
+  year         = "2024",
+  publisher    = "Association for Computing Machinery",
+  address      = "New York, NY, USA",
+  ISSN         = "2157-6904",
+  URL          = "https://doi.org/10.1145/3670410",
+  doi          = "10.1145/3670410",
+  abstract     = "The proliferation of unreliable news domains on the internet has had wide-reaching negative impacts on
+                 society. We introduce and evaluate interventions aimed at reducing traffic to unreliable news domains
+                 from search engines while maintaining traffic to reliable domains. We build these interventions on the
+                 principles of fairness (penalize sites for what is in their control), generality (label/fact-check
+                 agnostic), targeted (increase the cost of adversarial behavior), and scalability (works at webscale).
+                 We refine our methods on small-scale webdata as a testbed and then generalize the interventions to a
+                 large-scale webgraph containing 93.9M domains and 1.6B edges. We demonstrate that our methods penalize
+                 unreliable domains far more than reliable domains in both settings and we explore multiple avenues to
+                 mitigate unintended effects on both the small-scale and large-scale webgraph experiments. These results
+                 indicate the potential of our approach to reduce the spread of misinformation and foster a more
+                 reliable online information ecosystem. This research contributes to the development of targeted
+                 strategies to enhance the trustworthiness and quality of search engine results, ultimately benefiting
+                 users and the broader digital community.",
+  note         = "Just Accepted",
+  journal      = "ACM Trans. Intell. Syst. Technol.",
+  month        = jun,
+  keywords     = "search engine optimization, misinformation, website reliability, pagerank",
+  cc-author-affiliation = "Carnegie Mellon University, USA",
+  cc-class     = "web-science/hyperlinkgraph, misinformation, disinformation, domain-ranking",
+}
+
+@InProceedings{cc:FontanaVignaZacchiroli:2024:WebGraph-in-Rust,
+  author       = "Tommaso Fontana and Sebastiano Vigna and Stefano Zacchiroli",
+  editor       = "Tat{-}Seng Chua and Chong{-}Wah Ngo and Roy Ka{-}Wei Lee and Ravi Kumar and Hady W. Lauw",
+  title        = "WebGraph: The Next Generation (Is in Rust)",
+  booktitle    = "Companion Proceedings of the {ACM} on Web Conference 2024, {WWW} 2024, Singapore, Singapore, May
+                 13-17, 2024",
+  pages        = "686--689",
+  publisher    = "{ACM}",
+  year         = "2024",
+  URL          = "https://doi.org/10.1145/3589335.3651581",
+  doi          = "10.1145/3589335.3651581",
+  pdf          = "https://hal.science/hal-04494627/document",
+  timestamp    = "Fri, 17 May 2024 21:42:50 +0200",
+  cc-author-affiliation = "Inria, DGDI, Paris, France; Università degli Studi di Milano, Dipartimento di Informatica,
+                 Milan, Italy; LTCI, Télécom Paris, Institut Polytechnique de Paris, Palaiseau, France",
+  cc-class     = "web-science/hyperlinkgraph; graph-processing; programming-languages/Java; programming-languages/Rust;
+                 cc-cited-not-used",
+  cc-snippet   = "Moreover, open data projects such as Common Crawl and Software Heritage (SWH) [5] have used WebGraph
+                 to compress and distribute their data.",
+}
+
+@InProceedings{cc:Thompson:2024:Longitudinal-web-analytics,
+  title        = "Improved methodology for longitudinal Web analytics using Common Crawl",
+  abstract     = "Common Crawl is a multi-petabyte longitudinal dataset containing over 100 billion web pages which is
+                 widely used as a source of language data for sequence model training and in web science research. Each
+                 of its constituent archives is on the order of 75TB in size. Using it for research, particularly
+                 longitudinal studies, which necessarily involve multiple archives, is therefore very expensive in terms
+                 of compute time and storage space and/or web bandwidth. Two new methods for mitigating this problem are
+                 presented here, based on exploiting and extending the much smaller (<200 gigabytes (GB) compressed)
+                 index which is available for each archive. By adding Last-Modified timestamps to the index we enable
+                 longitudinal exploration using only a single archive. By comparing the distribution of index features
+                 for each of the 100 segments into which archive is divided with their distribution over the whole
+                 archive, we have identified the least and most representative segments for a number of recent archives.
+                 Using this allows the segment(s) that are most representative of an archive to be used as proxies for
+                 the whole. We illustrate this approach in an analysis of changes in URI length over time, leading to an
+                 unanticipated insight into the how the creation of Web pages has changed over time.",
+  author       = "Thompson, {Henry S}",
+  year         = "2024",
+  month        = jan,
+  day          = "31",
+  language     = "English",
+  booktitle    = "WebSci '24: Proceedings of the 16th ACM Web Science Conference 2024",
+  publisher    = "ACM",
+  note         = "16th ACM Web Science Conference 2024, Websci 2024 ; Conference date: 21-05-2024 Through 24-05-2024",
+  url2         = "https://arxiv.org/abs/2404.09770",
+  URL          = "https://www.research.ed.ac.uk/en/publications/improved-methodology-for-longitudinal-web-analytics-using-common-",
+  pdf          = "https://arxiv.org/pdf/2404.09770.pdf",
+  cc-author-affiliation = "The University of Edinburgh, Edinburgh, United Kingdom",
+  cc-class     = "web-archiving, web-dataset",
+}
