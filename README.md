@@ -37,3 +37,10 @@ The [Makefile](./Makefile) contains targets to apply a consistent formatting to 
 ## Citations from Google Scholar Alerts
 
 As an initial step and to get a higher coverage, citations are extracted from Google Scholar Alert e-mails received April 2016 to date. See [gscholar_alerts](./gscholar_alerts/).
+
+## Plotting the Data
+
+A Python script for plotting citations over time is included in this repository.
+
+![citations-by-year](plots/citations-by-year.png)
+<sub>_Fig 1: Plot of Common Crawl citations in Google Scholar as of July 29th 2024_</sub>
