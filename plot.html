@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citations by Year</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <style>
+        .citations-chart {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chart-heading {
+            text-align: center;
+            color: #333;
+            font-style: italic;
+            font-size: 9pt;
+        }
+        .chart-container {
+            width: 80%;
+            max-width: 800px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="citations-chart">
+        <div class="chart-container">
+            <h2>Google Scholar Citations by Year</h2>
+            <p class="chart-heading">Plot of Common Crawl citations in Google Scholar as of July 29th 2024</p>
+            <canvas id="citationsChart"></canvas>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('citationsChart').getContext('2d');
+        const data = {
+            labels: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+            datasets: [{
+                data: [30, 80, 160, 190, 330, 440, 533, 710, 977, 1105, 1266, 1777],
+                fill: false,
+                borderColor: '#3287c5',
+                backgroundColor: 'rgba(50, 135, 197, 0.2)',
+                borderWidth: 2,
+                pointRadius: 5,
+                pointBackgroundColor: '#3287c5',
+                pointHoverRadius: 7,
+                pointHoverBackgroundColor: '#3287c5',
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: true,
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    datalabels: {
+                        display: true,
+                        align: 'top',
+                        color: 'black',
+                        font: {
+                            weight: 'bold'
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        grid: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            color: '#666',
+                            font: {
+                                size: 14,
+                                weight: 'bold',
+                            }
+                        }
+                    },
+                    y: {
+                        display: true,
+                        grid: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Count',
+                            color: '#666',
+                            font: {
+                                size: 14,
+                                weight: 'bold',
+                            }
+                        },
+                        beginAtZero: true,
+                    }
+                }
+            },
+        };
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>
