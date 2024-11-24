@@ -135,7 +135,7 @@ class Citation:
         if self.link:
             d['link'] = sorted(self.link)
         if self.ref:
-            d['ref'] = sorted(self.ref)
+            d['ref'] = sorted(filter(lambda x: x is not None, self.ref))
         if self.date:
             d['date'] = sorted(self.date)
         if self.data:
