@@ -17,12 +17,15 @@ import matplotlib.ticker as ticker
 from matplotlib.font_manager import FontProperties
 import pandas as pd
 
-# Non-interactive mode for matplotlib
-matplotlib.use('Agg')
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--transparent', action='store_true', help='Save plot with transparent background')
+parser.add_argument('--cumulative', action='store_true', help='Cumulative count of citations')
+parser.add_argument('--interactive', action='store_true', help='Present the plot in interactive mode')
 args = parser.parse_args()
+
+# Non-interactive mode for matplotlib
+if not args.interactive:
+    matplotlib.use('Agg')
 
 # These should be in the cwd, download from
 # https://fonts.google.com/specimen/Libre+Franklin
@@ -80,9 +83,19 @@ df_citations.to_csv(sys.stdout)
 # Now plot it
 plt.figure(figsize=(16, 9), facecolor='white')
 
+plot_count = 'count'
+plot_title = 'Plot of Common Crawl Citations'
+filename   = 'citations_' + str(cutoff) + '.png'
+
+if args.cumulative:
+    plot_title += ' (Cumulative)'
+    plot_count = 'cumulative_count'
+    filename = 'cumulative_citations_' + str(cutoff) + '.png'
+
+
 plt.plot(
     df_citations['year'],
-    df_citations['cumulative_count'],
+    df_citations[plot_count],
     marker='o',
     linestyle='-',
     linewidth=2.5,
@@ -92,7 +105,7 @@ plt.plot(
 
 plt.text(
     0.5, 1.05,
-    'Plot of Common Crawl citations (cumulative) in Google Scholar until January ' + str(cutoff),
+    plot_title + ' in Google Scholar until January ' + str(cutoff),
     fontsize=14,
     fontproperties=italic_prop,
     ha='center',
@@ -120,8 +133,8 @@ plt.xticks(
 )
 
 # Wiggle room
-buffer = df_citations['cumulative_count'].max() * 0.05
-plt.ylim(0, df_citations['cumulative_count'].max() + buffer)
+buffer = df_citations[plot_count].max() * 0.05
+plt.ylim(0, df_citations[plot_count].max() + buffer)
 
 x_min = df_citations['year'].min()
 x_max = df_citations['year'].max() + 0.1
@@ -131,7 +144,7 @@ ax = plt.gca()
 
 ax.yaxis.set_major_formatter(ticker.StrMethodFormatter('{x:,.0f}'))
 
-y_ticks = range(0, int(df_citations['cumulative_count'].max() + buffer) + 1, 1000)
+y_ticks = range(0, int(df_citations[plot_count].max() + buffer) + 1, 1000)
 plt.yticks(
     y_ticks,
     fontsize=14,
@@ -160,10 +173,12 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 plt.tight_layout(pad=5)
 
 plt.savefig(
-    'cumulative_citations_' + str(cutoff) + '.png',
+    filename,
     transparent=args.transparent,
     dpi=300
 )
 
-# Don't show because we're not in interactive mode
-# plt.show()
+if args.interactive:
+    plt.show()
+
+# You can ignore stderr messages about IMKClient and IMKInputSession
