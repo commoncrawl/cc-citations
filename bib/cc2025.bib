@@ -1,0 +1,66 @@
+@Article{cc:ChibaNakanoKoide:2025:DomainHarvester,
+  author       = "Chiba, Daiki and Nakano, Hiroki and Koide, Takashi",
+  journal      = "IEEE Access",
+  title        = "DomainHarvester: Uncovering Trustworthy Domains Beyond Popularity Rankings",
+  year         = "2025",
+  volume       = "13",
+  pages        = "28167--28188",
+  keywords     = "Virtual assistants;Accuracy;Feature extraction;Domain Name System;Accesslists;Uniform resource
+                 locators;Reliability;Postal services;Message authentication;Measurement;Web security;domain name;top
+                 list;allow list",
+  doi          = "10.1109/ACCESS.2025.3539882",
+  URL          = "https://ieeexplore.ieee.org/abstract/document/10877793",
+  abstract     = "Allow lists are crucial in cybersecurity for distinguishing safe websites from potential threats.
+                 Traditional approaches relying on website popularity often fail to capture trustworthy but less-visited
+                 domains, leading to increased false positives and overlooked niche websites. This paper presents
+                 DomainHarvester, an innovative bottom-up system that leverages the web’s hyperlink structure and a
+                 Transformer-based machine learning approach to systematically identify and include these
+                 underrepresented yet legitimate domains. Results demonstrate how DomainHarvester dynamically curates an
+                 expanded allow list (DHList), substantially reducing the risk of false positives while retaining high
+                 precision in excluding malicious sites. Comprehensive evaluations and a real-world case study with a
+                 managed security services provider illustrate the efficacy and practicality of this approach. By
+                 integrating DomainHarvester, organizations and researchers can benefit from a more inclusive and
+                 globally representative cybersecurity allow list, addressing limitations in existing top-list-based
+                 solutions.",
+  cc-author-affiliation = "NTT Security Holdings Corporation & NTT Corporation, Tokyo, Japan",
+  cc-class     = "web-science, domain-ranking, internet-security, cc-citet-not-used",
+  cc-snippet   = "Top lists serve a variety of purposes across many services. [...] They serve as data sources for web
+                 crawling in projects like Common Crawl [39] [³⁹Common Crawl, ‘‘Common Crawl - Open Repository of
+                 Web Crawl Data,’’ 2024. [Online]. Available: https://commoncrawl.org/], which provides data for AI
+                 training, including models like ChatGPT.",
+}
+
+@Misc{cc:HosseinbeigiTaherinezhadFailiBaghbaniEtAl:2025:Matina,
+  title        = "Matina: {A} Large-Scale 73{B} Token Persian Text Corpus",
+  author       = "Sara Bourbour Hosseinbeigi and Fatemeh Taherinezhad and Heshaam Faili and Hamed Baghbani and Fatemeh
+                 Nadi and Mostafa Amiri",
+  year         = "2025",
+  eprint       = "2502.09188",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2502.09188",
+  pdf          = "https://arxiv.org/pdf/2502.09188",
+  cc-author-affiliation = "Tarbiat Modares University, Iran; University of Tehran, Iran",
+  cc-class     = "nlp/corpus-construction, nlp/language-specific-corpus, nlp/language-model, nlp/large-language-models",
+  abstract     = "Text corpora are essential for training models used in tasks like summarization, translation, and
+                 large language models (LLMs). While various efforts have been made to collect monolingual and
+                 multilingual datasets in many languages, Persian has often been underrepresented due to limited
+                 resources for data collection and preprocessing. Existing Persian datasets are typically small and lack
+                 content diversity, consisting mainly of weblogs and news articles. This shortage of high-quality,
+                 varied data has slowed the development of NLP models and open-source LLMs for Persian. Since model
+                 performance depends heavily on the quality of training data, we address this gap by introducing the
+                 Matina corpus, a new Persian dataset of 72.9B tokens, carefully preprocessed and deduplicated to ensure
+                 high data quality. We further assess its effectiveness by training and evaluating transformer-based
+                 models on key NLP tasks. Both the dataset and preprocessing codes are publicly available, enabling
+                 researchers to build on and improve this resource for future Persian NLP advancements.",
+  cc-snippet   = "Matina’s web-based data is divided into two parts: data crawled by our team and data taken from two
+                 public databases using the Common Crawl (Crawl, 2008) dataset. This dual-source strategy uses both
+                 proprietary and publically available data to increase the corpus’s breadth and diversity. In any
+                 language, certain domains are recognized for their reliability and high-quality information. We
+                 identified such domains in Persian and crawled them to extract relevant textual content. This step
+                 helped minimize the inclusion of irrelevant ele- ments such as advertisements, tags, or comments. Text
+                 extracted from headings and paragraphs was merged to form unified documents, with additional
+                 informative fields (e.g., summaries or subheadings) incorporated as metadata, if available. Because
+                 these domains were manually selected, language detection and URL filtering were unnecessary. We also
+                 ensured that the selected URLs did not contain harmful, sensitive, or adult content.",
+}
