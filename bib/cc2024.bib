@@ -147,6 +147,19 @@
   archiveprefix = "arXiv",
   primaryclass = "cs.HC",
   URL          = "https://arxiv.org/abs/2411.15091",
+  abstract     = "The success of generative AI relies heavily on training on data scraped through extensive crawling of
+                 the Internet, a practice that has raised significant copyright, privacy, and ethical concerns. While
+                 few measures are designed to resist a resource-rich adversary determined to scrape a site, crawlers can
+                 be impacted by a range of existing tools such as robots.txt, NoAI meta tags, and active crawler
+                 blocking by reverse proxies. In this work, we seek to understand the ability and efficacy of today's
+                 networking tools to protect content creators against AI-related crawling. For targeted populations like
+                 human artists, do they have the technical knowledge and agency to utilize crawler-blocking tools such
+                 as robots.txt, and can such tools be effective? Using large scale measurements and a targeted user
+                 study of 182 professional artists, we find strong demand for tools like robots.txt, but significantly
+                 constrained by significant hurdles in technical awareness, agency in deploying them, and limited
+                 efficacy against unresponsive crawlers. We further test and evaluate network level crawler blockers by
+                 reverse-proxies, and find that despite very limited deployment today, their reliable and comprehensive
+                 blocking of AI-crawlers make them the strongest protection for artists moving forward.",
   cc-author-affiliation = "UC San Diego, USA; University of Chicago, USA",
   cc-class     = "robots.txt, web-crawling, legal/copyright, ai/ethics-of-machine-learning",
   cc-snippet   = "Historic Robots.txt Data from Common Crawl. We used the robots.txt files crawled by the Common Crawl
@@ -210,7 +223,7 @@
   cc-class     = "web-archiving, web-science",
 }
 
-@Misc{cc:LongpreMahariLeeLundEtAl:2024:Consent-in-crisis-decline-of-AI-data-commons,
+@Misc{cc:LongpreMahariLeeLundEtAl:2024:Consent-in-crisis,
   title        = "Consent in Crisis: The Rapid Decline of the {AI} Data Commons",
   author       = "Shayne Longpre and Robert Mahari and Ariel Lee and Campbell Lund and Hamidah Oderinwale and William
                  Brannon and Nayan Saxena and Naana Obeng-Marnu and Tobin South and Cole Hunter and Kevin Klyman and
@@ -231,7 +244,8 @@
                  derived from Common Crawl, the largest publicly available crawl of the web, which has collected and
                  stored hundreds of billions of web pages since 2008.",
   cc-author-affiliation = "Data Provenance",
-  cc-class     = "nlp/language-model, ai/foundation-model, web-crawling, robots.txt, terms-of-service",
+  cc-class     = "legal/copyright, ai/ethics-of-machine-learning, nlp/language-model, ai/foundation-model, web-crawling,
+                 robots.txt, terms-of-service",
 }
 
 @Article{cc:Fontana:2024:Web-scraping-jurisprudence,
@@ -292,4 +306,37 @@
                  websites.",
   cc-author-affiliation = "Pew Research Center, Washington DC, USA",
   cc-class     = "web-science, web-archiving",
+}
+
+@Misc{cc:Amarikwa:2024:Internet-Openness-at-Risk,
+  address      = "Rochester, NY",
+  type         = "{SSRN} {Scholarly} {Paper}",
+  title        = "Internet {Openness} at {Risk}: {Generative} {AI}'s {Impact} on {Data} {Scraping}",
+  shorttitle   = "Internet {Openness} at {Risk}",
+  URL          = "https://papers.ssrn.com/abstract=4723713",
+  doi          = "10.2139/ssrn.4723713",
+  abstract     = "Modern scraping practices—the automated extraction of data from online websites—by companies
+                 employing generative AI models threatens the foundational and essential openness of the internet. There
+                 are calls for regulating the use of scraping in generative AI models, but lawmakers, concerned about
+                 its impact on U.S. global AI leadership, have failed to act. This article presents two legal frameworks
+                 aimed at regulating generative AI scraping. The adverse possession framework addresses property rights
+                 and allows for the use of copyrighted works where the author abandons or fails to claim their works.
+                 The public records framework addresses privacy rights and treats personal information made publicly
+                 available by the subject as a public record with context-based privacy exemptions. These frameworks
+                 seek to strike a balance between private interests in development and the public’s interest in
+                 safeguarding its property and privacy rights.",
+  language     = "en",
+  urldate      = "2025-03-20",
+  author       = "Amarikwa, Melany",
+  month        = feb,
+  year         = "2024",
+  keywords     = "Internet Openness at Risk: Generative AI's Impact on Data Scraping, Melany Amarikwa, SSRN",
+  cc-author-affiliation = "University of Pennsylvania Law School, USA",
+  cc-class     = "legal/copyright, ai/ethics-of-machine-learning, nlp/language-model, ai/foundation-model, web-crawling,
+                 robots.txt, terms-of-service, cc-cited-not-used",
+  cc-snippet   = "CommonCrawl offers users “a copy of the Internet,”40 serving as one of the largest and most widely
+                 utilized repositories of scraped data.41 [⁴¹ See JAY M. PATEL, GETTING STRUCTURED DATA FROM THE
+                 INTERNET 278 (2020) (“When we take the common crawl data cumulatively, across monthly crawls since
+                 2008, it represents one of the largest publicly accessible web crawl data corpuses on a petabyte scale,
+                 and this is one major reason why it’s been used so widely in academia and the industry.”).]",
 }
