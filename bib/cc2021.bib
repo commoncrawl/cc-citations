@@ -191,12 +191,12 @@
                  [https://commoncrawl.org/2020/12/nov-dec-2020-crawl-archive-now-available/], dating from
                  November/December 2020, has 2.6 billion web pages in raw text format, saved in ‘shards’ each
                  containing of tens of thousands of pages. Given our hardware constraints, we chose to focus on a subset
-                 of the corpus, randomly sampling 1% of the files it contains, roughly amounting toroughly 81 GB of
+                 of the corpus, randomly sampling 1\% of the files it contains, roughly amounting toroughly 81 GB of
                  textual content or 5,835,339 webpages in total, which we analyzed in terms of hate speech, adult
                  content, and efficacy of perplexity-based filtering. All code used in these analysis are publicly
                  available¹ [¹https://github.com/josephdviviano/whatsinthebox]. [...] We found that the three
-                 approaches compared suggest similar proportions of websites containing hate speech: 5.24% of websites
-                 from our sample were flagged by DELIMIT, 4.02% by HateSonar,and 6.38% by the n-gram approach². [²We
+                 approaches compared suggest similar proportions of websites containing hate speech: 5.24\% of websites
+                 from our sample were flagged by DELIMIT, 4.02\% by HateSonar,and 6.38\% by the n-gram approach². [²We
                  are conscious of the high false positive rate of n-gram approaches and therefore only consider sites to
                  be flagged if they contain 3 or more n-grams from the list.] Qualitative analysis of a sample of sites
                  flagged by each approach showed that while n-grams picked up on racial slurs, HateSonar picked up on
@@ -542,13 +542,13 @@
                  handcrafted heuristics (Yang et al., 2020; Raffel et al., 2020), or keeping only documents with
                  perplexity scores that fall in some middle quantile of an existing language model (Wenzek et al.,
                  2020). Brown et al. (2020) in particular filter extremely aggres- sively using their classifier,
-                 discarding about 98.7% of their data. Previous work has shown that models trained on heuristic-filtered
-                 datasets perform better on downstream tasks (Raffel et al., 2020). However, Gao et al. (2020) show that
-                 a perplexity-filtered CC- derived dataset actually performs worse than unfiltered CC on certain tasks.
-                 [...] We hypothesize that this decline in performance is because of misalignment between the classifier
-                 objective, intended to be a proxy for quality, and actual document quality. For instance, a classifier
-                 to distinguish WebText2 from Common Crawl, as in GPT-3, would also exclude domains of text data not
-                 found as often in WebText2.",
+                 discarding about 98.7\% of their data. Previous work has shown that models trained on
+                 heuristic-filtered datasets perform better on downstream tasks (Raffel et al., 2020). However, Gao et
+                 al. (2020) show that a perplexity-filtered CC- derived dataset actually performs worse than unfiltered
+                 CC on certain tasks. [...] We hypothesize that this decline in performance is because of misalignment
+                 between the classifier objective, intended to be a proxy for quality, and actual document quality. For
+                 instance, a classifier to distinguish WebText2 from Common Crawl, as in GPT-3, would also exclude
+                 domains of text data not found as often in WebText2.",
 }
 
 @Misc{cc:BirhanePrabhuKahembwe:2021:multimodal-datasets,
@@ -591,10 +591,10 @@
                  Realtoxicityprompts work [38] revealed that CommonCrawl contained over 300,000 documents from
                  unreliable news sites and banned subReddit pages containing hate speech and racism. More recently,
                  Luccioni and Viviano’s initial study [39] placed the ‘Hate speech’ content level to be around
-                 4.02%-5.24% (the 1+ hate n-grams level was estimated higher at 17.78%). With regards to CCAligned, a
+                 4.02\%-5.24\% (the 1+ hate n-grams level was estimated higher at 17.78\%). With regards to CCAligned, a
                  119- language parallel dataset built off 68 snapshots of Common Crawl, Caswell et al. [40] revealed
-                 that there were notable amounts of pornographic content (> 10%) found for 11 languages with prevalence
-                 rates being as high as 24% for language pairs such as en-om_KE. The LAION-400M dataset emerges from
+                 that there were notable amounts of pornographic content (> 10\%) found for 11 languages with prevalence
+                 rates being as high as 24\% for language pairs such as en-om_KE. The LAION-400M dataset emerges from
                  this landscape containing hundreds of millions of Image- Alt-text pairs parsed from the Common-Crawl
                  dataset and filtered using a previously Common-Crawl trained AI model (CLIP [2]). With this background,
                  we present our findings following our initial audit of the LAION-400M dataset below.",
