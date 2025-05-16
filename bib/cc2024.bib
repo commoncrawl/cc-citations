@@ -340,3 +340,58 @@
                  2008, it represents one of the largest publicly accessible web crawl data corpuses on a petabyte scale,
                  and this is one major reason why it’s been used so widely in academia and the industry.”).]",
 }
+
+@Misc{Blagojevic:2024:CC-news-dataset,
+  author       = "Vladimir Blagojevic",
+  year         = "2024",
+  URL          = "https://huggingface.co/datasets/vblagoje/cc_news",
+  cc-derived-dataset-about = "vblagoje-cc-news",
+  cc-author-affiliation = "deepset AI, Germany",
+  cc-snippet   = "CC-News dataset has been proposed, created, and maintained by Sebastian Nagel. The data is publicly
+                 available on AWS S3 Common Crawl bucket at /crawl-data/CC-NEWS/. This version of the dataset has been
+                 prepared using news-please [https://github.com/fhamborg/news-please] - an integrated web crawler and
+                 information extractor for news. It contains 708241 English language news articles published between Jan
+                 2017 and December 2019. Although news-please tags each news article with an appropriate language tag,
+                 these tags are somewhat unreliable. To strictly isolate English language articles an additional check
+                 has been performed using Spacy langdetect pipeline. We selected articles with text fields scores of
+                 80\% probability or more of being English. There are no strict guarantees that each article has all the
+                 relevant fields. For example, 527595 articles have a valid description field. All articles have what
+                 appears to be a valid image URL, but they have not been verified.",
+  cc-class     = "nlp/corpus-construction, news",
+}
+
+@Article{cc:KrieschLosacker:2024:Bioeconomy-firms,
+  place        = "Vienna, Austria",
+  title        = "Bioeconomy firms and where to find them",
+  volume       = "11",
+  URL          = "https://openjournals.wu.ac.at/ojs/index.php/region/article/view/523",
+  doi          = "10.18335/region.v11i1.523",
+  abstractnote = "The bioeconomy represents a transformative approach to economic development and sustainability by
+                 harnessing biological resources and knowledge to produce goods, services, and energy while reducing
+                 dependence on non-renewable resources. In order to understand and support the bioeconomy, scholars and
+                 policymakers rely on an accurate measurement and monitoring of biobased economic activities. However,
+                 existing statistical frameworks and industry classifications often fall short in capturing the unique
+                 characteristics and complexities of the bioeconomy. This article addresses this challenge by developing
+                 a methodological approach for comprehensive measurement and mapping of biobased economic activities. We
+                 build a novel data set of bioeconomy firms in Germany using web-mining and machine learning techniques.
+                 This data set enables detailed analysis of biobased economic activities, providing valuable insights
+                 into the spatial organization of the bioeconomy. The paper demonstrates the applicability of the data
+                 set by testing several stylized facts about the bioeconomy. Our research contributes to a better
+                 understanding of the bioeconomy’s regional impacts and offers a valuable resource for policymakers
+                 and researchers interested in understanding the geography of biobased economic activities. We make an
+                 aggregated version of the data set freely available online.",
+  number       = "1",
+  journal      = "REGION",
+  author       = "Kriesch, Lukas and Losacker, Sebastian",
+  year         = "2024",
+  month        = apr,
+  pages        = "55–78",
+  cc-author-affiliation = "Justus-Liebig-University Giessen, Germany",
+  cc-class     = "economic geography, web-mining, regional science, regional economics",
+  cc-snippet   = "The dataset is based on a novel web-mining approach developed by Kriesch (2023). This dataset uses the
+                 open-source web repository CommonCrawl to identify German company websites and has proven to be a
+                 valuable database for spatial research. From this data, we identify bioeconomy firms using a
+                 combination of different natural language processing techniques, utilizing the semantic capabilities of
+                 modern transformer models (Reimers, Gurevych 2019, Vaswani et al. 2017).",
+  cc-dataset-used = "URL index",
+}
