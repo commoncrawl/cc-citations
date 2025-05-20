@@ -1,14 +1,14 @@
 @Article{cc:ChibaNakanoKoide:2025:DomainHarvester,
   author       = "Chiba, Daiki and Nakano, Hiroki and Koide, Takashi",
   journal      = "IEEE Access",
-  title        = "DomainHarvester: Uncovering Trustworthy Domains Beyond Popularity Rankings",
+  title        = "{DomainHarvester}: Uncovering Trustworthy Domains Beyond Popularity Rankings",
   year         = "2025",
   volume       = "13",
   pages        = "28167--28188",
   keywords     = "Virtual assistants;Accuracy;Feature extraction;Domain Name System;Accesslists;Uniform resource
                  locators;Reliability;Postal services;Message authentication;Measurement;Web security;domain name;top
                  list;allow list",
-  doi          = "10.1109/ACCESS.2025.3539882",
+  DOI          = "10.1109/ACCESS.2025.3539882",
   URL          = "https://ieeexplore.ieee.org/abstract/document/10877793",
   abstract     = "Allow lists are crucial in cybersecurity for distinguishing safe websites from potential threats.
                  Traditional approaches relying on website popularity often fail to capture trustworthy but less-visited
@@ -356,7 +356,7 @@
 @InProceedings{cc:Hanley:2025:International-propaganda-and-influence-networks,
   title        = "Tracking and Identifying International Propaganda and Influence Networks Online",
   author       = "Hanley, Hans WA",
-  booktitle    = "Proceedings of the AAAI Conference on Artificial Intelligence",
+  booktitle    = "Proceedings of the {AAAI} Conference on Artificial Intelligence",
   volume       = "39",
   number       = "28",
   pages        = "29263--29264",
@@ -392,7 +392,7 @@
   number       = "4",
   pages        = "e70119",
   keywords     = "deep learning, machine learning, phishing, url phishing, web phishing",
-  doi          = "https://doi.org/10.1002/ett.70119",
+  DOI          = "https://doi.org/10.1002/ett.70119",
   URL          = "https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.70119",
   eprint       = "https://onlinelibrary.wiley.com/doi/pdf/10.1002/ett.70119",
   abstract     = "Phishing is a tactical technique practiced by cyber-criminals, wherein the target systems are
@@ -445,7 +445,7 @@
 }
 
 @Misc{cc:KargaranYvonSchütze:2025:GlotCC,
-  title        = "Glot{CC}: An Open Broad-Coverage CommonCrawl Corpus and Pipeline for Minority Languages",
+  title        = "{GlotCC}: An Open Broad-Coverage {CommonCrawl} Corpus and Pipeline for Minority Languages",
   author       = "Amir Hossein Kargaran and François Yvon and Hinrich Schütze",
   year         = "2025",
   eprint       = "2410.23825",
@@ -470,7 +470,7 @@
   volume       = "15",
   ISSN         = "1792-8036",
   URL          = "https://etasr.com/index.php/ETASR/article/view/10678",
-  doi          = "10.48084/etasr.10678",
+  DOI          = "10.48084/etasr.10678",
   abstract     = "This study evaluates the performance of transformer-based models such as BERT, RoBERTa, and XLNet for
                  fake news detection. Using supervised and unsupervised deep learning techniques, we optimized
                  classification accuracy while reducing computational costs through text summarization. The results show
@@ -502,3 +502,88 @@
   cc-derived-dataset-used = "vblagoje-cc-news",
 }
 
+@MastersThesis{cc:Govender:2025:Graph-embeddings-for-website-classification,
+  author       = "Govender, Praven",
+  year         = "2025",
+  URL          = "http://www.theseus.fi/handle/10024/886636",
+  DOI          = "https://urn.fi/URN:NBN:fi:amk-2025051411598",
+  abstract     = "This thesis explores the practical utility of domain-level graph embeddings derived from hyperlink
+                 structures at web scale. Using a 21TB subset of Common Crawl (n.d.) data, we demonstrate how these
+                 embeddings can effectively capture relationships between websites without requiring content processing.
+                 The study achieves competitive results in political bias and factual reporting classification on news
+                 publishers compared to state-of-the-art approaches, while offering greater flexibility due to the use
+                 of embeddings. Beyond classification, we show how the same embeddings enable various analytical tasks
+                 including similarity analysis and clustering, demonstrating their flexibility as a practical tool for
+                 web-scale analysis. Key contributions include a methodology for creating and utilizing domain-level
+                 graph embeddings at scale, strong empirical evidence of their effectiveness in website classification,
+                 and insights into their broader applications for understanding website relationships through link
+                 structures alone.",
+  title        = "Links Are All You Need: Graph Embeddings for Website Analysis and Classification",
+  keywords     = "machine learning, data mining, hyperlinks, websites, classification, graphs (network theory), Big Data
+                 Analytics",
+  cc-author-affiliation = "Arcada University of Applied Sciences, Finland",
+  cc-class     = "web-science/hyperlinkgraph, web-site-classification",
+}
+
+@Misc{cc:BurnsParcalabescuWäldchenBarlowEtAl:2025:Aleph-Alpha-GermanWeb,
+  title        = "{Aleph-Alpha-GermanWeb}: Improving German-language {LLM} pre-training with model-based data curation
+                 and synthetic data generation",
+  author       = "Thomas F Burns and Letitia Parcalabescu and Stephan Wäldchen and Michael Barlow and Gregor Ziegltrum
+                 and Volker Stampa and Bastian Harren and Björn Deiseroth",
+  year         = "2025",
+  eprint       = "2505.00022",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2505.00022",
+  abstract     = "Scaling data quantity is essential for large language models (LLMs), yet recent findings show that
+                 data quality can significantly boost performance and training efficiency. We introduce a
+                 German-language dataset curation pipeline that combines heuristic and model-based filtering techniques
+                 with synthetic data generation. We use our pipeline to create Aleph-Alpha-GermanWeb, a large-scale
+                 German pre-training dataset which draws from: (1) Common Crawl web data, (2) FineWeb2, and (3)
+                 synthetically-generated data conditioned on actual, organic web data. We evaluate our dataset by
+                 pre-training both a 1B Llama-style model and an 8B tokenizer-free hierarchical autoregressive
+                 transformer (HAT). A comparison on German-language benchmarks, including MMMLU, shows significant
+                 performance gains of Aleph-Alpha-GermanWeb over FineWeb2 alone. This advantage holds at the 8B scale
+                 even when FineWeb2 is enriched by human-curated high-quality data sources such as Wikipedia. Our
+                 findings support the growing body of evidence that model-based data curation and synthetic data
+                 generation can significantly enhance LLM pre-training datasets.",
+  cc-snippet   = "In this paper we present a data curation pipeline specifically for German-language LLM pre-training.
+                 We use it to derive our own dataset, Aleph-Alpha-GermanWeb, from three sources: (1) Common Crawl [13]
+                 web data not included in FineWeb2; (2) FineWeb2; and (3) synthetic data conditioned on actual, organic
+                 web data. Our contributions are: 1. To curate the Common Crawl data, we applied a pipeline similar to
+                 (but which we show can perform better than) FineWeb2. We then augmented the dataset with
+                 synthetically-generated data and applied model-based quality classification methods; [...] We
+                 downloaded six Common Crawl [13] web data dumps, spanning from September 2024 to February 2025. Each
+                 dump captured raw web page data, e.g., HTML, metadata such as URLs, and text extracts.",
+  cc-author-affiliation = "Aleph Alpha Research, Germany",
+  cc-class     = "nlp/language-models, nlp/large-language-models, nlp/text-corpora",
+}
+
+@InProceedings{cc:AnsarSperottoHolz:2025:Web-crawl-refusals,
+  author       = "Ansar, Mostafa and Sperotto, Anna and Holz, Ralph",
+  editor       = "Testart, Cecilia and van Rijswijk-Deij, Roland and Stiller, Burkhard",
+  title        = "Web Crawl Refusals: Insights From Common Crawl",
+  booktitle    = "Passive and Active Measurement",
+  year         = "2025",
+  publisher    = "Springer Nature Switzerland",
+  address      = "Cham",
+  pages        = "197--214",
+  abstract     = "Web crawlers are an indispensable tool for collecting research data. However, they may be blocked by
+                 servers for various reasons. This can reduce their coverage. In this early-stage work, we investigate
+                 server-side blocks encountered by Common Crawl (CC). We analyze page contents to cover a broader range
+                 of refusals than previous work. We construct fine-grained regular expressions to identify refusal pages
+                 with precision, finding that at least 1.68{\%} of sites in a CC snapshot exhibit a form of explicit
+                 refusal. Significant contributors include large hosters. Our analysis categorizes the forms of refusal
+                 messages, from straight blocks to challenges and rate-limiting responses. We are able to extract the
+                 reasons for nearly half of the refusals we identify. We find an inconsistent and even incorrect use of
+                 HTTP status codes to indicate refusals. Examining the temporal dynamics of refusals, we find that most
+                 blocks resolve within one hour, but also that 80{\%} of refusing domains block every request by CC. Our
+                 results show that website blocks deserve more attention as they have a relevant impact on crawling
+                 projects. We also conclude that standardization to signal refusals would be beneficial for both site
+                 operators and web crawlers.",
+  ISBN         = "9783-03-18596-0-1",
+  DOI          = "https://doi.org/10.1007/978-3-031-85960-1_9",
+  URL          = "https://link.springer.com/chapter/10.1007/978-3-031-85960-1_9",
+  cc-author-affiliation = "University of Twente, Enschede, The Netherlands; University of Münster, Germany",
+  cc-class     = "web-crawling; web-crawling/server-side-blocking",
+}
