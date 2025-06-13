@@ -581,9 +581,107 @@
                  results show that website blocks deserve more attention as they have a relevant impact on crawling
                  projects. We also conclude that standardization to signal refusals would be beneficial for both site
                  operators and web crawlers.",
-  ISBN         = "9783-03-18596-0-1",
+  ISBN         = "978-30318-5-9-6-0-1",
   DOI          = "https://doi.org/10.1007/978-3-031-85960-1_9",
   URL          = "https://link.springer.com/chapter/10.1007/978-3-031-85960-1_9",
   cc-author-affiliation = "University of Twente, Enschede, The Netherlands; University of Münster, Germany",
   cc-class     = "web-crawling; web-crawling/server-side-blocking",
+}
+
+@Article{cc:MousaHassanRashidAl-Saady:2025:Safeguarding-patient-Data,
+  title        = "Safeguarding Patient Data: Machine Learning for Phishing {URL} Detection in Healthcare Systems",
+  volume       = "131",
+  URL          = "https://akademiabaru.com/submit/index.php/ard/article/view/6248",
+  DOI          = "10.37934/ard.131.1.4760",
+  abstractnote = "Since the healthcare industry depends more and more on digital infrastructure, it is a perfect target
+                 for cyberattacks especially phishing. Designed to pass for real healthcare websites, phishing URLs
+                 seriously compromise patient data security. Effective strikes may cause disruptions in patient care,
+                 financial losses, and Protected Health Information (PHI) breaches. This work investigates the use of
+                 machine learning (ML) approaches for robust and accurate phishing URL detection in healthcare systems
+                 in order to handle this important problem. We examine a Multilayer Perceptron (MLP) neural
+                 network-based detection model and evaluate its performance against known techniques, Decision Tree (DT)
+                 and Naive Bayes (NB). Comprehensive URL datasets—more especially, the ISCX-URL-2016 dataset for
+                 training and testing—as well as the CIC-InvesBanking-2017 dataset combined with live phishing feeds
+                 for validation help to train and rigorously validate the models. With a high accuracy of 87.45\% on
+                 test data and a precision of 84\% on unseen validation data, our experimental results show that the
+                 proposed MLP model much exceeds DT and NB. This emphasizes how ML—more especially, MLP—may improve
+                 cybersecurity defences in healthcare, hence securing private patient data and the integrity of
+                 healthcare processes.",
+  number       = "1",
+  journal      = "Journal of Advanced Research Design",
+  author       = "Mousa, Alaa Abdulshaheed and Hassan, Saif Al-Deen H. and Rashid, Mohammed Kareem and Al-Saady,
+                 Moumal",
+  year         = "2025",
+  month        = may,
+  pages        = "47–60",
+  keywords     = "Phishing URL detection; machine learning; healthcare cybersecurity; multilayer perceptron; decision
+                 tree; Naive Bayes; patient data security",
+  cc-snippet   = "For validation, we constructed a more extensive and realistic dataset by combining the
+                 CIC-InvesBanking-2017 dataset with live phishing URLs from active threat intelligence feeds. Benign
+                 URLs for validation were sourced from a 2023 snapshot of the Common Crawl dataset, representing a broad
+                 spectrum of contemporary web content.",
+  cc-author-affiliation = "University of Misan, Maysan, Iraq; Deakin University, Australia",
+  cc-class     = "computer-security/internet-security, web-security, healthcare cybersecurity",
+}
+
+@Misc{cc:EhrmanntrautWunderlePfisterJannidisEtAl:2025:ModernGBERT,
+  title        = "{ModernGBERT}: German-only {1B} Encoder Model Trained from Scratch",
+  author       = "Anton Ehrmanntraut and Julia Wunderle and Jan Pfister and Fotis Jannidis and Andreas Hotho",
+  year         = "2025",
+  eprint       = "2505.13136",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2505.13136",
+  abstract     = "Despite the prominence of decoder-only language models, encoders remain crucial for
+                 resource-constrained applications. We introduce ModernGBERT (134M, 1B), a fully transparent family of
+                 German encoder models trained from scratch, incorporating architectural innovations from ModernBERT. To
+                 evaluate the practical trade-offs of training encoders from scratch, we also present LLäMmlein2Vec
+                 (120M, 1B, 7B), a family of encoders derived from German decoder-only models via LLM2Vec. We benchmark
+                 all models on natural language understanding, text embedding, and long-context reasoning tasks,
+                 enabling a controlled comparison between dedicated encoders and converted decoders. Our results show
+                 that ModernGBERT 1B outperforms prior state-of-the-art German encoders as well as encoders adapted via
+                 LLM2Vec, with regard to performance and parameter-efficiency. All models, training data, checkpoints
+                 and code are publicly available, advancing the German NLP ecosystem with transparent, high-performance
+                 encoder models.",
+  cc-author-affiliation = "Julius-Maximilians-Universität Würzburg, Germany",
+  cc-class     = "nlp/language-model, German",
+  cc-snippet   = "We pre-trained ModernGBERT on the same data as LLäMmlein decoder models (Pfister et al., 2024), using
+                 the open-source RedPajamaV2 dataset (Weber et al., 2024).⁶ This dataset comprises German
+                 CommonCrawl snapshots from 2014–2023.",
+}
+
+@Misc{cc:VeselovskyPiccardiAndersonWestEtAl:2025:Web2Wiki,
+  title        = "{Web2Wiki}: Characterizing Wikipedia Linking Across the Web",
+  author       = "Veniamin Veselovsky and Tiziano Piccardi and Ashton Anderson and Robert West and Akhil Arora",
+  year         = "2025",
+  eprint       = "2505.15837",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.SI",
+  URL          = "https://arxiv.org/abs/2505.15837",
+  abstract     = "Wikipedia is one of the most visited websites globally, yet its role beyond its own platform remains
+                 largely unexplored. In this paper, we present the first large-scale analysis of how Wikipedia is
+                 referenced across the Web. Using a dataset from Common Crawl, we identify over 90 million Wikipedia
+                 links spanning 1.68\% of Web domains and examine their distribution, context, and function. Our
+                 analysis of English Wikipedia reveals three key findings: (1) Wikipedia is most frequently cited by
+                 news and science websites for informational purposes, while commercial websites reference it less
+                 often. (2) The majority of Wikipedia links appear within the main content rather than in boilerplate or
+                 user-generated sections, highlighting their role in structured knowledge presentation. (3) Most links
+                 (95\%) serve as explanatory references rather than as evidence or attribution, reinforcing Wikipedia's
+                 function as a background knowledge provider. While this study focuses on English Wikipedia, our
+                 publicly released Web2Wiki dataset includes links from multiple language editions, supporting future
+                 research on Wikipedia's global influence on the Web.",
+  cc-author-affiliation = "Princeton University, USA; Stanford University, USA; University of Toronto, Canada; EPFL,
+                 Switzerland; Aarhus University, Denmark",
+  cc-class     = "web-science, Wikipedia backlinks, Wikipedia reverse links, web-science/hyperlinkgraph,
+                 nlp/text-classification",
+  cc-snippet   = "The dataset used in this paper was extracted from the February 2021 Common Crawl dump²
+                 [²https://commoncrawl.org/2021/03/february-march-2021-crawl-archive-now-available/] — the largest
+                 public scrape of HTML pages on the Web created prior to February 2021—through a regex search of <a>
+                 tags, the HTML element for hyperlinking. Specifically, the WEB2WIKI dataset, released with this
+                 article, contains a large sample of the publicly accessible HTML pages that link to Wikimedia projects,
+                 as well as the bare webpage–article link pairs. Given the web-scraping policies of Common Crawl (cf.
+                 Appendix. A), the dataset contains links to Wikipedia articles available on the surface Web—the
+                 portion of the Web accessible to the general public and searchable with standard Web search
+                 engines³—, excluding websites such as Facebook, Reddit, Twitter, Quora, or YouTube that require
+                 registering an account to see their content.",
 }
