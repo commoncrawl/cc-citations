@@ -37,3 +37,24 @@ The [Makefile](./Makefile) contains targets to apply a consistent formatting to 
 ## Citations from Google Scholar Alerts
 
 As an initial step and to get a higher coverage, citations are extracted from Google Scholar Alert e-mails received April 2016 to date. See [gscholar_alerts](./gscholar_alerts/).
+
+## Updating the awesome graph that everyone loves
+
+## Uploading the raw data to Hugging Face
+
+### Google Scholar
+
+This data is split by year to make it easier to explore.
+
+- pull the updated repo
+- `make gscholar-bib`
+- look in tmp for 2024.jsonl etc.
+- upload at https://huggingface.co/datasets/commoncrawl/citations/tree/main
+
+### Annotated Citations
+
+This much smaller dataset has the extra fields mentioned above.
+
+- pull the updated repo
+- `make tmp/commoncrawl_annotated.csv`
+- TODO
