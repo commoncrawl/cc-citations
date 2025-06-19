@@ -1,0 +1,25 @@
+LOCAL_HF_REPO_DIR=./tmp
+UPLOAD_PATH_IN_REPO=./json
+LOCAL_FILES=test.jsonl
+
+
+COMMIT_MSG="Automated update through cc-citations github repo"
+
+
+${LOCAL_HF_REPO_DIR}:
+	git clone git@hf.co:datasets/handecelikkanat/hnd-test-repo ${LOCAL_HF_REPO_DIR}
+
+hf-update: ${LOCAL_HF_REPO_DIR} 
+	cd ${LOCAL_HF_REPO_DIR}; git pull origin main   # First make sure repo is updated
+							# cd is executed in subprocess, so group commands in the same line
+	cp ${LOCAL_FILES} ${LOCAL_HF_REPO_DIR}          # Now copy changed files
+	cd ${LOCAL_HF_REPO_DIR}; \
+		git diff; \
+		git add --all; \
+		git status; \
+		git remote show origin; \
+		git diff --cached; \
+		git commit -m ${COMMIT_MSG}  #; \
+		#git push origin main
+
+.PHONY: hf-update
