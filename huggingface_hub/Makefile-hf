@@ -1,14 +1,10 @@
 LOCAL_HF_REPO_DIR=./tmp
-UPLOAD_PATH_IN_REPO=./json
 LOCAL_FILES=test.jsonl
-
-
 COMMIT_MSG="Automated update through cc-citations github repo"
 
 
 ${LOCAL_HF_REPO_DIR}:
 	git clone git@hf.co:datasets/handecelikkanat/hnd-test-repo ${LOCAL_HF_REPO_DIR}
-
 
 hf-update: hf-update.done
 
