@@ -1,3 +1,4 @@
+.PHONY: gscholar-bib
 
 # consistent formatting
 BIBCLEAN = bibclean  -max-width 120  -align-equals  -no-fix-names
@@ -23,7 +24,7 @@ tmp/commoncrawl_annotated.csv: tmp/commoncrawl.bib
 
 # json annotated export for Hugging Face 🤗
 # depends on gscholar_alerts/citations.jsonl but most people do not have the /eml/ subdirectory
-tmp/commoncrawl_counts.csv:
+gscholar-bib:
 	mkdir -p tmp; cd tmp; python ../split-jsonl.py ../gscholar_alerts/citations.jsonl
 
 # format .bib file
