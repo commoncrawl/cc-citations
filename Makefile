@@ -75,7 +75,7 @@ gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
 # Since we dont know which years will exist in the jsonl,
 # better to use a sentinel file to track their timestamp as well.
 # TODO: Use gscholar_alerts/citations.jsonl, but I need gscholar_alerts/eml folder for that.
-extract-year-jsonls.done: tmp/citations.jsonl
+extract-citations.done: tmp/citations.jsonl
 	mkdir -p $(TRACKED_FILES_BASEDIR)/citations
 	BASEDIR=$(TRACKED_FILES_BASEDIR)/citations ; \
 	YEARS=$$(cat tmp/citations.jsonl | jq -r ."year" | sort | uniq) ; \
@@ -84,16 +84,21 @@ extract-year-jsonls.done: tmp/citations.jsonl
 		done
 	touch $@
 
+#TODO: Extract commoncrawl_annotations.csv here, replace w DUMMY.csv
+extract-citations-annotated.done:
+	mkdir -p $(TRACKED_FILES_BASEDIR)/citations-annotated
+	touch $(TRACKED_FILES_BASEDIR)/citations-annotated/DUMMY.csv
+	touch $@
+
 $(LOCAL_REPO_BASEDIR)/%:
 	git clone $(HF_REMOTE_BASE)/$* $@
 
-hf-update: extract-year-jsonls.done hf-citations-update.done hf-citations-annotated-update.done
-hf-%-update: hf-%-update.done
+hf-update: extract-citations.done hf-citations-update.done hf-citations-annotated-update.done
 
 # Trigger repo push if tracked files are updated. 
 # $(LOCAL_REPO_BASEDIR) can be an order-only dependency, will `git pull` anyway.
 # cd works in a subprocess, so put everything for that pwd in the same line
-hf-%-update.done: $(TRACKED_FILES_BASEDIR)/%/*.* | $(LOCAL_REPO_BASEDIR)/% 
+hf-%-update.done: extract-%.done | $(LOCAL_REPO_BASEDIR)/% 
 	cd $(LOCAL_REPO_BASEDIR)/$*; git pull origin main || true
 	cp $(TRACKED_FILES_BASEDIR)/$*/*.* $(LOCAL_REPO_BASEDIR)/$*
 	cd $(LOCAL_REPO_BASEDIR)/$*; \
@@ -106,7 +111,7 @@ hf-%-update.done: $(TRACKED_FILES_BASEDIR)/%/*.* | $(LOCAL_REPO_BASEDIR)/%
 	touch $@
 
 hf-clean:
-	rm -rf $(LOCAL_REPO_BASEDIR) $(TRACKED_FILES_BASEDIR) extract-year-jsonls.done hf-*.done
+	rm -rf $(LOCAL_REPO_BASEDIR) $(TRACKED_FILES_BASEDIR) extract-*.done hf-*.done
 
 
 
