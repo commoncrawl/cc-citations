@@ -8,6 +8,14 @@ BIBTOOLKEY = bibtool -f 'cc:%4p(author):%4d(year):%4T(title)'
 
 BIBSRC = $(sort $(wildcard bib/cc*.bib))
 
+# HF dataset repo settings
+HF_REMOTE_BASE = git@hf.co:datasets/handecelikkanat
+LOCAL_REPO_BASEDIR = tmp/repos
+TRACKED_FILES_BASEDIR = tmp/tracked_files
+FILES_CITATIONS_ANNOTATED = tmp/commoncraw_annotated.csv
+COMMIT_MSG="Automated update through cc-citations github repo"
+
+
 all: html/commoncrawl.html
 
 tmp/commoncrawl.bib: $(BIBSRC)
@@ -50,7 +58,7 @@ bibtex-fields:
 	perl -lne '$$h{$$1}++ if /^\s*([A-Za-z_0-9-]+)\s*=\s*["{]/; END {print $$v, "\t", $$k while (($$k,$$v)=each %h)}' bib/*.bib | sort -k1,1nr
 
 clean:
-	rm bib/*.formatted.bib
+	rm bib/*.formatted.bib 
 
 
 # Google Scholar Alerts
@@ -59,3 +67,48 @@ gscholar_alerts/extracted_citations.jsonl: gscholar_alerts/eml/
 
 gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
 	jq -c 'select(.title != null and .authors != null) | del(.idx, .date, .data, .ref, .link)' $< >$@
+
+
+
+# HF Dataset Repos Updating
+
+# Since we dont know which years will exist in the jsonl,
+# better to use a sentinel file to track their timestamp as well.
+# TODO: Use gscholar_alerts/citations.jsonl, but I need gscholar_alerts/eml folder for that.
+extract-year-jsonls.done: tmp/citations.jsonl
+	mkdir -p $(TRACKED_FILES_BASEDIR)/citations
+	BASEDIR=$(TRACKED_FILES_BASEDIR)/citations ; \
+	YEARS=$$(cat tmp/citations.jsonl | jq -r ."year" | sort | uniq) ; \
+		for YEAR in $$YEARS; do \
+			jq -c "select(."year" == \"$$YEAR\")" tmp/citations.jsonl > "$$BASEDIR/$$YEAR.jsonl"; \
+		done
+	touch $@
+
+$(LOCAL_REPO_BASEDIR)/%:
+	git clone $(HF_REMOTE_BASE)/$* $@
+
+hf-update: extract-year-jsonls.done hf-citations-update.done hf-citations-annotated-update.done
+hf-%-update: hf-%-update.done
+
+# Trigger repo push if tracked files are updated. 
+# $(LOCAL_REPO_BASEDIR) can be an order-only dependency, will `git pull` anyway.
+# cd works in a subprocess, so put everything for that pwd in the same line
+hf-%-update.done: $(TRACKED_FILES_BASEDIR)/%/*.* | $(LOCAL_REPO_BASEDIR)/% 
+	cd $(LOCAL_REPO_BASEDIR)/$*; git pull origin main || true
+	cp $(TRACKED_FILES_BASEDIR)/$*/*.* $(LOCAL_REPO_BASEDIR)/$*
+	cd $(LOCAL_REPO_BASEDIR)/$*; \
+		git diff; \
+		git add --all; \
+		git status; \
+		git remote show origin; \
+		git commit -m $(COMMIT_MSG); \
+		git push origin main || true
+	touch $@
+
+hf-clean:
+	rm -rf $(LOCAL_REPO_BASEDIR) $(TRACKED_FILES_BASEDIR) extract-year-jsonls.done hf-*.done
+
+
+
+.PHONY: hf-update
+.PRECIOUS: $(LOCAL_REPO_BASEDIR)/% 
