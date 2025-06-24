@@ -57,6 +57,15 @@ class Citation:
         if title and self.title:
             self.title += ' '
         self.title += title
+        # the title is used as ID
+        # - this is the most efficient way to group citations
+        # - other fields such as "authors" may vary, even for the same article
+        #   if it's published in various locations: in a journal, as preprint,
+        #   on the author's homepage, etc.
+        # - however, very few articles are grouped erroneously because of a generic
+        #   title or the title being a book or journal the articles are published in,
+        #   e.g., "Machine Learning with Applications"
+        #   or "Natural Language Processing Journal"
         self.idx = self.title.lower()
 
     def add_link(self, link):
