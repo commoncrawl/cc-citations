@@ -9,11 +9,11 @@ BIBTOOLKEY = bibtool -f 'cc:%4p(author):%4d(year):%4T(title)'
 BIBSRC = $(sort $(wildcard bib/cc*.bib))
 
 # HF dataset repo settings
-HF_REMOTE_BASE = git@hf.co:datasets/handecelikkanat
+HF_REMOTE_BASE = git@hf.co:datasets/commoncrawl
 LOCAL_REPO_BASEDIR = tmp/repos
 TRACKED_FILES_BASEDIR = tmp/tracked_files
 FILES_CITATIONS_ANNOTATED = tmp/commoncraw_annotated.csv
-COMMIT_MSG="Automated update through cc-citations github repo"
+COMMIT_MSG=Automated update through cc-citations github repo
 
 
 all: html/commoncrawl.html
@@ -74,41 +74,61 @@ gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
 
 # Since we dont know which years will exist in the jsonl,
 # better to use a sentinel file to track their timestamp as well.
-# TODO: Use gscholar_alerts/citations.jsonl, but I need gscholar_alerts/eml folder for that.
-extract-citations.done: tmp/citations.jsonl
+extract-citations.done: gscholar_alerts/citations.jsonl
 	mkdir -p $(TRACKED_FILES_BASEDIR)/citations
 	BASEDIR=$(TRACKED_FILES_BASEDIR)/citations ; \
 	YEARS=$$(cat tmp/citations.jsonl | jq -r ."year" | sort | uniq) ; \
-		for YEAR in $$YEARS; do \
-			jq -c "select(."year" == \"$$YEAR\")" tmp/citations.jsonl > "$$BASEDIR/$$YEAR.jsonl"; \
-		done
+	for YEAR in $$YEARS; do \
+		jq -c "select(."year" == \"$$YEAR\")" tmp/citations.jsonl > "$$BASEDIR/$$YEAR.jsonl"; \
+	done
 	touch $@
 
-#TODO: Extract commoncrawl_annotations.csv here, replace w DUMMY.csv
-extract-citations-annotated.done:
+# TODO: Slightly inefficient now, if one .bib file has newer timestamp, redoes every year's .csv file.
+#       However we know that git (HF) updates only files that really changed, so the inefficiency is only in this step.
+#       Change?
+# TODO: Do NOT push file 2024 for now, we get an error in export-csv.py for this, resulting in an empy file.
+#       Correct this after bibtex code is corrected.
+extract-citations-annotated.done: $(BIBSRC)
 	mkdir -p $(TRACKED_FILES_BASEDIR)/citations-annotated
-	touch $(TRACKED_FILES_BASEDIR)/citations-annotated/DUMMY.csv
+	BASEDIR=$(TRACKED_FILES_BASEDIR)/citations-annotated ; \
+	for BIBFILE in $(BIBSRC); do \
+		if [ `basename $$BIBFILE .bib` = "cc2024" ]; then \
+			echo "Skipping $$BIBFILE" ; \
+			continue ; \
+		fi ; \
+		OUTFILE=commoncrawl_citations_annotated_`basename $$BIBFILE .bib | sed 's/^cc//'`.csv; \
+		echo "python3 export-csv.py $$BIBFILE > $$BASEDIR/$$OUTFILE"; \
+		python3 export-csv.py $$BIBFILE > $$BASEDIR/$$OUTFILE; \
+	done
 	touch $@
 
 $(LOCAL_REPO_BASEDIR)/%:
 	git clone $(HF_REMOTE_BASE)/$* $@
 
-hf-update: extract-citations.done hf-citations-update.done hf-citations-annotated-update.done
+hf-update: extract-citations.done extract-citations-annotated.done hf-citations-update.done hf-citations-annotated-update.done
 
-# Trigger repo push if tracked files are updated. 
-# $(LOCAL_REPO_BASEDIR) can be an order-only dependency, will `git pull` anyway.
-# cd works in a subprocess, so put everything for that pwd in the same line
-hf-%-update.done: extract-%.done | $(LOCAL_REPO_BASEDIR)/% 
+hf-%-update.done: extract-%.done | $(LOCAL_REPO_BASEDIR)/%
 	cd $(LOCAL_REPO_BASEDIR)/$*; git pull origin main || true
 	cp $(TRACKED_FILES_BASEDIR)/$*/*.* $(LOCAL_REPO_BASEDIR)/$*
 	cd $(LOCAL_REPO_BASEDIR)/$*; \
-		git diff; \
-		git add --all; \
-		git status; \
-		git remote show origin; \
-		git commit -m $(COMMIT_MSG); \
-		git push origin main || true
-	touch $@
+	git remote show origin; \
+	git add --all; \
+	if git diff --cached --quiet; then \
+		echo "Nothing to commit. Skipping."; \
+	else \
+		git status --short; \
+		echo; \
+		read -p "Add and push these changes? [Y/n] " confirm; \
+		if [ -z "$$confirm" ] || [ "$$confirm" = "Y" ] || [ "$$confirm" = "y" ]; then \
+			git commit -m "$(COMMIT_MSG)"; \
+			git push origin main || true; \
+			touch $@; \
+		else \
+			git restore --staged .; \
+			echo "Aborting commit."; \
+		fi; \
+	fi
+
 
 hf-clean:
 	rm -rf $(LOCAL_REPO_BASEDIR) $(TRACKED_FILES_BASEDIR) extract-*.done hf-*.done
@@ -116,4 +136,4 @@ hf-clean:
 
 
 .PHONY: hf-update
-.PRECIOUS: $(LOCAL_REPO_BASEDIR)/% 
+.PRECIOUS: $(LOCAL_REPO_BASEDIR)/%
