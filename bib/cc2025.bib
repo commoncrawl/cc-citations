@@ -586,6 +586,23 @@
   URL          = "https://link.springer.com/chapter/10.1007/978-3-031-85960-1_9",
   cc-author-affiliation = "University of Twente, Enschede, The Netherlands; University of Münster, Germany",
   cc-class     = "web-crawling; web-crawling/server-side-blocking",
+  cc-snippet   = "CC is a non-proﬁt initiative. The crawler is designed [18] to be “polite” and comply with the
+                 Robots Exclusion Protocol, using e.g. ﬁve seconds wait between requests to the same host and
+                 employing an exponential back-oﬀ strategy on error. It identiﬁes itself with a User-Agent header
+                 that is speciﬁc to CC. It does not process content that is dynamically generated on client-side, e.g.
+                 using JavaScript. According to CC’s documentation, the fetching process happens over 14 days and is
+                 handled by 20 AWS EC2 spot nodes in N. Virginia. The documentation does not provide the public IP
+                 addresses. [...] Dataset. We use the CC-MAIN-2023-50 snapshot, which was compiled between 2023-11-28
+                 and 2023-12-12 [7]. We use two parts of this snapshot: the general index ﬁle Columnar URL index and
+                 the archive non-200 responses. The non-200 responses archive contains all fetching attempts that did
+                 not receive a status code 200 (“200 OK”) as a reply (see the end of this section for limitations of
+                 this approach). It consists of 3.43 TB of compressed data. We extract timestamps, server IPs, URIs,
+                 Fully Qualiﬁed Domain Name (FQDNs), registered domains, HTTP status codes and headers, and page
+                 textual contents. We use pyasn [5] to map IPs to AS numbers. We use the index to obtain records with
+                 status code 200 for FQDNs of interest.¶ Data Pruning. We obtain 561 × 106 records from the non-200
+                 responses, summarized in Table 1. We prune all responses with status codes for redirections (3xx ;
+                 these are rescheduled by CC for later crawls) as well as those where the content could not be found
+                 (404 ). This leaves us with 21.7 × 106 records.",
 }
 
 @Article{cc:MousaHassanRashidAl-Saady:2025:Safeguarding-patient-Data,
@@ -613,7 +630,7 @@
                  Moumal",
   year         = "2025",
   month        = may,
-  pages        = "47–60",
+  pages        = "47--60",
   keywords     = "Phishing URL detection; machine learning; healthcare cybersecurity; multilayer perceptron; decision
                  tree; Naive Bayes; patient data security",
   cc-snippet   = "For validation, we constructed a more extensive and realistic dataset by combining the
@@ -646,8 +663,8 @@
   cc-author-affiliation = "Julius-Maximilians-Universität Würzburg, Germany",
   cc-class     = "nlp/language-model, German",
   cc-snippet   = "We pre-trained ModernGBERT on the same data as LLäMmlein decoder models (Pfister et al., 2024), using
-                 the open-source RedPajamaV2 dataset (Weber et al., 2024).⁶ This dataset comprises German
-                 CommonCrawl snapshots from 2014–2023.",
+                 the open-source RedPajamaV2 dataset (Weber et al., 2024).⁶ This dataset comprises German CommonCrawl
+                 snapshots from 2014–2023.",
 }
 
 @Misc{cc:VeselovskyPiccardiAndersonWestEtAl:2025:Web2Wiki,
