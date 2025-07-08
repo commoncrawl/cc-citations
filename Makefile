@@ -12,7 +12,6 @@ BIBSRC = $(sort $(wildcard bib/cc*.bib))
 HF_REMOTE_BASE = git@hf.co:datasets/commoncrawl
 LOCAL_REPO_BASEDIR = tmp/repos
 TRACKED_FILES_BASEDIR = tmp/tracked_files
-FILES_CITATIONS_ANNOTATED = tmp/commoncraw_annotated.csv
 COMMIT_MSG=Automated update through cc-citations github repo
 
 
