@@ -1,1 +1,2 @@
-pybtex
+pybtex>=0.25.0
+
