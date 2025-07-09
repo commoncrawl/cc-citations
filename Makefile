@@ -10,8 +10,7 @@ BIBSRC = $(sort $(wildcard bib/cc*.bib))
 
 # HF dataset repo settings
 HF_REMOTE_BASE = git@hf.co:datasets/commoncrawl
-LOCAL_REPO_BASEDIR = tmp/repos
-TRACKED_FILES_BASEDIR = tmp/tracked_files
+LOCAL_REPO_BASEDIR = ../tmp-repos
 COMMIT_MSG=Automated update through cc-citations github repo
 
 
@@ -71,68 +70,46 @@ gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
 
 # HF Dataset Repos Updating
 
-# Since we dont know which years will exist in the jsonl,
-# better to use a sentinel file to track their timestamp as well.
-extract-citations.done: gscholar_alerts/citations.jsonl
-	mkdir -p $(TRACKED_FILES_BASEDIR)/citations
-	BASEDIR=$(TRACKED_FILES_BASEDIR)/citations ; \
+$(LOCAL_REPO_BASEDIR)/citations:
+	mkdir -p $@
+	git clone $(HF_REMOTE_BASE)/citations $@
+
+hf-prepare.done: gscholar_alerts/citations.jsonl $(wildcard $(LOCAL_REPO_BASEDIR)/citations/*) | $(LOCAL_REPO_BASEDIR)/citations
+	cd $(LOCAL_REPO_BASEDIR)/citations; git pull origin main || true
+	BASEDIR=$(LOCAL_REPO_BASEDIR)/citations ; \
 	YEARS=$$(cat tmp/citations.jsonl | jq -r ."year" | sort | uniq) ; \
 	for YEAR in $$YEARS; do \
 		jq -c "select(."year" == \"$$YEAR\")" tmp/citations.jsonl > "$$BASEDIR/$$YEAR.jsonl"; \
 	done
-	touch $@
-
-# TODO: Slightly inefficient now, if one .bib file has newer timestamp, redoes every year's .csv file.
-#       However we know that git (HF) updates only files that really changed, so the inefficiency is only in this step.
-#       Change?
-# TODO: Do NOT push file 2024 for now, we get an error in export-csv.py for this, resulting in an empy file.
-#       Correct this after bibtex code is corrected.
-extract-citations-annotated.done: $(BIBSRC)
-	mkdir -p $(TRACKED_FILES_BASEDIR)/citations-annotated
-	BASEDIR=$(TRACKED_FILES_BASEDIR)/citations-annotated ; \
-	for BIBFILE in $(BIBSRC); do \
-		if [ `basename $$BIBFILE .bib` = "cc2024" ]; then \
-			echo "Skipping $$BIBFILE" ; \
-			continue ; \
-		fi ; \
-		OUTFILE=commoncrawl_citations_annotated_`basename $$BIBFILE .bib | sed 's/^cc//'`.csv; \
-		echo "python3 export-csv.py $$BIBFILE > $$BASEDIR/$$OUTFILE"; \
-		python3 export-csv.py $$BIBFILE > $$BASEDIR/$$OUTFILE; \
-	done
-	touch $@
-
-$(LOCAL_REPO_BASEDIR)/%:
-	git clone $(HF_REMOTE_BASE)/$* $@
-
-hf-update: extract-citations.done extract-citations-annotated.done hf-citations-update.done hf-citations-annotated-update.done
-
-hf-%-update.done: extract-%.done | $(LOCAL_REPO_BASEDIR)/%
-	cd $(LOCAL_REPO_BASEDIR)/$*; git pull origin main || true
-	cp $(TRACKED_FILES_BASEDIR)/$*/*.* $(LOCAL_REPO_BASEDIR)/$*
-	cd $(LOCAL_REPO_BASEDIR)/$*; \
+	cd $(LOCAL_REPO_BASEDIR)/citations; \
 	git remote show origin; \
 	git add --all; \
-	if git diff --cached --quiet; then \
-		echo "Nothing to commit. Skipping."; \
-	else \
-		git status --short; \
-		echo; \
-		read -p "Add and push these changes? [Y/n] " confirm; \
-		if [ -z "$$confirm" ] || [ "$$confirm" = "Y" ] || [ "$$confirm" = "y" ]; then \
-			git commit -m "$(COMMIT_MSG)"; \
-			git push origin main || true; \
-			touch $@; \
-		else \
-			git restore --staged .; \
-			echo "Aborting commit."; \
-		fi; \
-	fi
+	git status; \
+	git restore --staged .
+	touch $(CURDIR)/$@
+	touch $(CURDIR)/hf-confirmed.done
+	@echo;
+	@echo "Do you like how this looks? If so, next run make hf-upload."
 
+hf-confirmed.done: gscholar_alerts/citations.jsonl $(wildcard $(LOCAL_REPO_BASEDIR)/citations/*)
+	$(error First run make hf-prepare to prepare and stage the files, then visually check staging status.)
+
+hf-upload.done: hf-confirmed.done
+	cd $(LOCAL_REPO_BASEDIR)/citations; \
+	git add --all; \
+	git commit -m "$(COMMIT_MSG)"; \
+	git push origin main || true; \
+	touch $(CURDIR)/$@; \
+
+# Prepares file to commit to HF hub
+hf-prepare: hf-prepare.done
+
+# Makes the upload to HF hub
+hf-upload: hf-upload.done
 
 hf-clean:
-	rm -rf $(LOCAL_REPO_BASEDIR) $(TRACKED_FILES_BASEDIR) extract-*.done hf-*.done
+	rm -rf $(LOCAL_REPO_BASEDIR) hf-prepare.done hf-confirmed.done hf-upload.done
 
 
-
-.PHONY: hf-update
+.PHONY: hf-upload hf-prepare hf-clean
 .PRECIOUS: $(LOCAL_REPO_BASEDIR)/%
