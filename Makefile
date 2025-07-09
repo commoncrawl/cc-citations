@@ -69,6 +69,11 @@ gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
 
 
 # HF Dataset Repos Updating
+#
+# Expected Flow:
+# $ make hf-prepare   # Has to be run separately first.
+# $ make hf-upload
+# $ make hf-clean     # Optional but a good idea since we are filling in a folder outside pwd: ../tmp-repos
 
 $(LOCAL_REPO_BASEDIR)/citations:
 	mkdir -p $@
