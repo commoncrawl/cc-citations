@@ -1,3 +1,2 @@
-pybtex
-setuptools
+pybtex>=0.25.0
 
