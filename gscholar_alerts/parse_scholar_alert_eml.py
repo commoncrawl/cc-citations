@@ -64,7 +64,7 @@ class Citation:
         #   on the author's homepage, etc.
         # - however, very few articles are grouped erroneously because of a generic
         #   title or the title being a book or journal the articles are published in,
-        #   e.g., "Machine Learning with Applications"
+        #   e.g., "Machine Learning with Applications", "Generative AI",
         #   or "Natural Language Processing Journal"
         self.idx = self.title.lower()
 
