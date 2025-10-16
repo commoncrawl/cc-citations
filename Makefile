@@ -11,6 +11,7 @@ BIBSRC = $(sort $(wildcard bib/cc*.bib))
 # HF dataset repo settings
 HF_REMOTE_BASE = git@hf.co:datasets/commoncrawl
 LOCAL_REPO_BASEDIR = ../tmp-repos
+HF_LOCAL_BASE=$(LOCAL_REPO_BASEDIR)/citations
 COMMIT_MSG=Automated update through cc-citations github repo
 
 
@@ -75,18 +76,17 @@ gscholar_alerts/citations.jsonl: gscholar_alerts/extracted_citations.jsonl
 # $ make hf-upload
 # $ make hf-clean     # Optional but a good idea since we are filling in a folder outside pwd: ../tmp-repos
 
-$(LOCAL_REPO_BASEDIR)/citations:
+$(HF_LOCAL_BASE):
 	mkdir -p $@
 	git clone $(HF_REMOTE_BASE)/citations $@
 
-hf-prepare.done: gscholar_alerts/citations.jsonl $(wildcard $(LOCAL_REPO_BASEDIR)/citations/*) | $(LOCAL_REPO_BASEDIR)/citations
-	cd $(LOCAL_REPO_BASEDIR)/citations; git pull origin main || true
-	BASEDIR=$(LOCAL_REPO_BASEDIR)/citations ; \
-	YEARS=$$(cat tmp/citations.jsonl | jq -r ."year" | sort | uniq) ; \
+hf-prepare.done: gscholar_alerts/citations.jsonl $(wildcard $(HF_LOCAL_BASE)/*) | $(HF_LOCAL_BASE)
+	cd $(HF_LOCAL_BASE); git pull origin main || true
+	YEARS=$$(cat $(CURDIR)/gscholar_alerts/citations.jsonl | jq -r ."year" | sort | uniq) ; \
 	for YEAR in $$YEARS; do \
-		jq -c "select(."year" == \"$$YEAR\")" tmp/citations.jsonl > "$$BASEDIR/$$YEAR.jsonl"; \
+		jq -c "select(."year" == \"$$YEAR\")" $(CURDIR)/gscholar_alerts/citations.jsonl > $(HF_LOCAL_BASE)"/$$YEAR.jsonl"; \
 	done
-	cd $(LOCAL_REPO_BASEDIR)/citations; \
+	cd $(HF_LOCAL_BASE); \
 	git remote show origin; \
 	git add --all; \
 	git status; \
@@ -96,11 +96,11 @@ hf-prepare.done: gscholar_alerts/citations.jsonl $(wildcard $(LOCAL_REPO_BASEDIR
 	@echo;
 	@echo "Do you like how this looks? If so, next run make hf-upload."
 
-hf-confirmed.done: gscholar_alerts/citations.jsonl $(wildcard $(LOCAL_REPO_BASEDIR)/citations/*)
+hf-confirmed.done: gscholar_alerts/citations.jsonl $(wildcard $(HF_LOCAL_BASE)/*)
 	$(error First run make hf-prepare to prepare and stage the files, then visually check staging status.)
 
 hf-upload.done: hf-confirmed.done
-	cd $(LOCAL_REPO_BASEDIR)/citations; \
+	cd $(HF_LOCAL_BASE); \
 	git add --all; \
 	git commit -m "$(COMMIT_MSG)"; \
 	git push origin main || true; \
