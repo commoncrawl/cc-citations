@@ -1,21 +1,27 @@
 ''' Exports annotated .bib files to one big csv.
 
-    Optional flag --explode creates multiple rows per paper,
+    Optional flag --explode outputs multiple rows per paper,
       so that every row has one value per key.
       This behavior is currently **hard-coded only over keywords and cc-class**
       fields, which hold multiple values.
 
-      It adds three new fields to the csv:
+      - It adds three new fields to the csv:
          - bib_id as unique identifier, to match papers over multiple lines
          - an aggregate field cc-topic that combines values from cc-class
            and keyword fields (both of which can include multiple values)
          - a field cc-og-key that holds which original field cc-topic value
            came from, options: keyword or cc-class
-      Accordingly, it removes fields keyword and cc-class, which are instead
-        aggregated into cc-topic field.
 
-    Usage: python export-csv.py bibfile [--explode]
+      - Accordingly, it removes fields keyword and cc-class, which are instead
+          aggregated into cc-topic field.
+
+      - Since it is aimed towards manual excel analysis, for readability:
+          - It uses YYYY format for post_date, rather than YYYY0101Z00:00:00 format
+          - It drops cc_project_category field, which has a set value "papers"
+
+    Usage: python export-csv.py --bib bibfile [--explode]
 '''
+import argparse
 import csv
 import re
 import sys
@@ -23,18 +29,20 @@ import sys
 from pybtex.database.input import bibtex
 
 csv_out = sys.stdout
-bibtex_in = sys.argv[1]
-explode = True if len(sys.argv) > 2 and '--explode' in sys.argv else False
+parser = argparse.ArgumentParser(description="Converts .bib file to csv")
+parser.add_argument("--bib", type=str, help="Path to the input bibfile")
+parser.add_argument("--explode", action="store_true", help="Output multiple lines per paper, one row per key-value.")
+args = parser.parse_args()
 
 parser = bibtex.Parser()
-bibdata = parser.parse_file(bibtex_in)
+bibdata = parser.parse_file(args.bib)
 
 clean_pattern = re.compile('(?<!\\\\)[{}]')
 unescape_pattern = re.compile('\\\\([{}%])')
 
 csvwriter = csv.writer(sys.stdout, quoting=csv.QUOTE_ALL)
 
-if explode==False:
+if args.explode==False:
     column_names = [
         # old website csv
         "cc_project_author",
@@ -63,13 +71,11 @@ else:
         "cc_project_author",
         "post_title",
         "cc_project_url",
-        "cc_project_category",  # always 'papers'
         "post_date",
         "cc-og-key",
         "cc-topic",
         "abstract",
         "cc_author_affiliation",  # removed from cc_project_author
-        "cc_class",
         "cc_snippet",
         "cc_dataset_used",
         "cc_derived_dataset_about",
@@ -138,7 +144,7 @@ for bib_id in bibdata.entries:
     title = re.sub(clean_pattern, '', title)
     title = re.sub(unescape_pattern, '\1', title)
 
-    if not explode: # one csv line per paper
+    if args.explode==False: # one csv line per paper
         row = [
             authorstr, title, url, 'papers', '{}0101Z00:00:00'.format(year),
             keywords,
@@ -153,10 +159,10 @@ for bib_id in bibdata.entries:
         ]
         csvwriter.writerow(row)
 
-    if explode:
+    else:
         row_template = [
             bib_id,
-            authorstr, title, url, 'papers', '{}0101Z00:00:00'.format(year),
+            authorstr, title, url, year,
             "{CC_OG_FIELD}", # placeholder
             "{CC_TOPIC}",    # placeholder
             abstract,
