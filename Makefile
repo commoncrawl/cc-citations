@@ -15,7 +15,7 @@ HF_LOCAL_BASE=$(LOCAL_REPO_BASEDIR)/citations
 COMMIT_MSG=Automated update through cc-citations github repo
 
 
-all: html/commoncrawl.html
+all: html/commoncrawl.html csv/commoncrawl.multiline.csv
 
 tmp/commoncrawl.bib: $(BIBSRC)
 	mkdir -p tmp
@@ -24,6 +24,10 @@ tmp/commoncrawl.bib: $(BIBSRC)
 # HTML export
 html/commoncrawl.html: tmp/commoncrawl.bib
 	mkdir -p html; cd html; bibtex2html --charset utf-8 ../tmp/commoncrawl.bib
+
+# CSV export for Excel analysis, multiple lines per paper-keyword/cc-class
+csv/commoncrawl.multiline.csv: tmp/commoncrawl.bib
+	mkdir -p csv; python3 export-csv.py --bib $< --explode >$@
 
 # CSV export for Hugging Face 🤗
 tmp/commoncrawl_annotated.csv: tmp/commoncrawl.bib
