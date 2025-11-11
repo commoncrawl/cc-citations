@@ -41,7 +41,9 @@ clean_pattern = re.compile('(?<!\\\\)[{}]')
 unescape_pattern = re.compile('\\\\([{}%])')
 
 csvwriter = csv.writer(sys.stdout, quoting=csv.QUOTE_ALL)
-
+#+++
+topicsfile = open('cc-topics.txt', 'w')
+#---
 if args.explode==False:
     column_names = [
         # old website csv
@@ -178,16 +180,17 @@ for bib_id in bibdata.entries:
         idx_cc_topic = row_template.index("{CC_TOPIC}")
 
         if keywords:
-            print(keywords)
             for keyword in keywords.split(','):
                 row = row_template.copy()
                 row[idx_cc_og_field], row[idx_cc_topic] = "keyword", keyword.strip()
                 csvwriter.writerow(row)
+                topicsfile.write(keyword + '\n')
         if cc_class:
             for cc_class_instance in cc_class.split(','):
                 row = row_template.copy()
                 row[idx_cc_og_field], row[idx_cc_topic] = "cc_class", cc_class_instance.strip()
                 csvwriter.writerow(row)
+                topicsfile.write(cc_class_instance + '\n')
         if not keywords and not cc_class: # dump single line with both fields empty
             row = row_template.copy()
             row[idx_cc_og_field], row[idx_cc_topic] = "", ""
