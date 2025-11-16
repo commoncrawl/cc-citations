@@ -766,3 +766,284 @@
   cc-class     = "web-science, web-site-classification, machine-generated content, nlp/large-language-models,
                  nlp/generative-language-models",
 }
+
+@Misc{cc:NagelVaughan:2025:Robots-txt-and-crawler,
+  type         = "Poster",
+  title        = "Robots.txt and crawler politeness in the age of generative {AI}",
+  copyright    = "Public",
+  URL          = "https://digital.library.unt.edu/ark:/67531/metadc2472442/",
+  abstract     = "Poster providing an overview of the robot.txt standard including results from a study of its current
+                 use and potential uses for generative artificial intelligence (AI). It was presented at the IIPC
+                 General Assembly and Web Archiving Conference held on April 8-10, 2025 in Oslo, Norway.",
+  language     = "English",
+  urldate      = "2025-08-12",
+  journal      = "2025 International Internet Preservation Consortium (IIPC) General Assembly and Web Archiving
+                 Conference, April 8-10, 2025. Oslo, Norway",
+  author       = "Nagel, Sebastian and Vaughan, Thom",
+  month        = apr,
+  year         = "2025",
+  cc-author-affiliation = "Common Crawl Foundation, USA",
+  cc-class     = "robots.txt, web-crawling, legal/copyright, ai/ethics-of-machine-learning",
+}
+
+@Misc{cc:FanSabolčecAnsaripourTarunEtAl:2025:Can-performant-LLMs-be-ethical,
+  title        = "Can Performant {LLMs} Be Ethical? Quantifying the Impact of Web Crawling Opt-Outs",
+  author       = "Dongyang Fan and Vinko Sabolčec and Matin Ansaripour and Ayush Kumar Tarun and Martin Jaggi and
+                 Antoine Bosselut and Imanol Schlag",
+  year         = "2025",
+  eprint       = "2504.06219",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2504.06219",
+  abstract     = "The increasing adoption of web crawling opt-outs by copyright holders of online content raises
+                 critical questions about the impact of data compliance on large language model (LLM) performance.
+                 However, little is known about how these restrictions (and the resultant filtering of pretraining
+                 datasets) affect the capabilities of models trained using these corpora. In this work, we conceptualize
+                 this effect as the data compliance gap (DCG), which quantifies the performance difference between
+                 models trained on datasets that comply with web crawling opt-outs, and those that do not. We measure
+                 the data compliance gap in two settings: pretraining models from scratch and continual pretraining from
+                 existing compliant models (simulating a setting where copyrighted data could be integrated later in
+                 pretraining). Our experiments with 1.5B models show that, as of January 2025, compliance with web data
+                 opt-outs does not degrade general knowledge acquisition (close to 0\% DCG). However, in specialized
+                 domains such as biomedical research, excluding major publishers leads to performance declines. These
+                 findings suggest that while general-purpose LLMs can be trained to perform equally well using fully
+                 open data, performance in specialized domains may benefit from access to high-quality copyrighted
+                 sources later in training. Our study provides empirical insights into the long-debated trade-off
+                 between data compliance and downstream model performance, informing future discussions on AI training
+                 practices and policy decisions. Our website is available at this https URL.",
+  cc-author-affiliation = "EPFL, Switzerland, ETH Zürich, Switzerland",
+  cc-class     = "robots.txt, web-crawling, legal/copyright, ai/ethics-of-machine-learning, ai/opt-out",
+}
+
+@Unpublished{cc:BouchaudRamaciotti:2025:Web-crawler-restrictions--AI-training-datasets--political-biases,
+  title        = "{Web Crawler Restrictions, AI Training Datasets \& Political Biases}",
+  author       = "Bouchaud, Paul and Ramaciotti, Pedro",
+  URL          = "https://hal.science/hal-05302425/",
+  note         = "working paper or preprint",
+  year         = "2025",
+  month        = oct,
+  keywords     = "web scraping ; dataset bias ; news media ; political bias ; CommonCrawl ; Web mining",
+  pdf          = "https://hal.science/hal-05302425v1/file/WebCrawlerAIDataset.pdf",
+  hal_id       = "hal-05302425",
+  hal_version  = "v1",
+  abstract     = "Large language models rely on web-scraped text for training; concurrently, content creators are
+                 increasingly blocking AI crawlers to retain control over their data. We analyze crawler restrictions
+                 across the top one million most-visited websites since 2023 and examine their potential downstream
+                 effects on training data composition. Our analysis reveals growing restrictions, with blocking patterns
+                 varying by website popularity and content type. A quarter of the top thousand websites restrict AI
+                 crawlers, decreasing to one-tenth across the broader top million. Content type matters significantly:
+                 34.2\% of news outlets disallow OpenAI's GPTBot, rising to 55\% for outlets with high factual
+                 reporting. Additionally, outlets with neutral political positions impose the strongest restrictions
+                 (58\%), whereas hyperpartisan websites and those with low factual reporting impose fewer restrictions
+                 -only 4.1\% of right-leaning outlets block access to OpenAI. Our findings suggest that heterogeneous
+                 blocking patterns may skew training datasets toward low-quality or polarized content, potentially
+                 affecting the capabilities of models served by prominent AI-as-a-Service providers. [...] Robots.txt
+                 Collection. Additionally, we focus on the directives set by webmasters to crawlers scanning the web,
+                 indicating to them which portions of the website, if any, they are permitted to access. In September
+                 2025, for each of the top one million websites we fetched the robots.txt file deployed, if any, at the
+                 root of their (sub)domains. Additionally, to go beyond a mere snapshot, we relied on CommonCrawl’s
+                 periodic releases [8] of very-large-scale crawls of billions of webpages. In particular, this corpus
+                 contains timestamped robots.txt files, offering unparalleled chronological insights. However, rather
+                 than being a “copy of the web”, only a fraction of it is crawled [1, 8]. Within the top one million
+                 websites, on average over releases, 409k valid robots.txt files were collected.",
+  cc-author-affiliation = "Complex Systems Institute of Paris Ile-de-France CNRS, Paris, France; médialab, Sciences Po,
+                 Paris, France; Learning Planet Institute, CY Cergy Paris University, Paris, France",
+  cc-class     = "robots.txt, web-crawling, ai/opt-out, political bias, dataset bias, news media",
+  cc-snippet   = "[...] we rely on Google Chrome’s analytics to identify popular websites and on Cloudflare Radar to
+                 categorize webpage content. Additionally, we combine a large-scale collection of robots.txt directives
+                 left by webmasters as of September 2025 and historical data since 2023 from CommonCrawl snapshots.",
+}
+
+@Misc{cc:Ortiz-SuarezVaughan:2025:Asynchronous-and-modular-pipelines,
+  type         = "Poster",
+  title        = "Asynchronous and Modular Pipelines for Fast {WARC} Annotation",
+  copyright    = "Public",
+  URL          = "https://digital.library.unt.edu/ark:/67531/metadc2472440/",
+  abstract     = "Poster showcasing a modular pipeline for WARC annotation that can be supported long term and can
+                 benefit Natural Language Process (NLP) and web archiving communities. It was presented at the IIPC
+                 General Assembly and Web Archiving Conference held on April 8-10, 2025 in Oslo, Norway.",
+  language     = "English",
+  urldate      = "2025-11-21",
+  journal      = "2025 International Internet Preservation Consortium (IIPC) General Assembly and Web Archiving
+                 Conference, April 8-10, 2025. Oslo, Norway",
+  author       = "Ortiz Suarez, Pedro and Vaughan, Thom",
+  month        = apr,
+  year         = "2025",
+  cc-author-affiliation = "Common Crawl Foundation, USA",
+  cc-class     = "web-archiving, web-archives/data-analysis, web-archives/data-annotation, nlp/corpus-construction",
+}
+
+@Misc{cc:Ortiz-SuarezVaughanLindahl:2025:Downloading-millions-of-WARC-files,
+  type         = "Poster",
+  title        = "Politely Downloading Millions of {WARC} Files Without Burning the Servers Dow",
+  copyright    = "Public",
+  URL          = "https://digital.library.unt.edu/ark:/67531/metadc2472441/",
+  abstract     = "Poster sharing the development and release of an open source, cross-platform, dependency-free and
+                 user-friendly tool that implements an HTTP client with an easy to configure retry-strategy with
+                 exponential backoff and jitter. The introduction of these more polite retry strategies allow users to
+                 avoid download errors, and to more quickly download data as the exponential backoff with jitter lets
+                 the server more easily handle concurrent requests. It was presented at the IIPC General Assembly and
+                 Web Archiving Conference held on April 8-10, 2025 in Oslo, Norway.",
+  language     = "English",
+  urldate      = "2025-11-21",
+  journal      = "2025 International Internet Preservation Consortium (IIPC) General Assembly and Web Archiving
+                 Conference, April 8-10, 2025. Oslo, Norway",
+  author       = "Ortiz Suarez, Pedro and Vaughan, Thom and Lindahl, Greg",
+  month        = apr,
+  year         = "2025",
+  cc-author-affiliation = "Common Crawl Foundation, USA",
+  cc-class     = "data download, HTTP client, web-archiving/storage, web-archiving/open-dataset",
+}
+
+@Misc{cc:Ortiz-SuarezNagelVaughan:2025:Modernizing-web-archives,
+  type         = "Presentation",
+  title        = "Modernizing Web Archives: The Bumpy Road Towards a General {ARC2WARC} Conversion Tool",
+  copyright    = "Public",
+  shorttitle   = "Modernizing Web Archives",
+  URL          = "https://digital.library.unt.edu/ark:/67531/metadc2472417/",
+  abstract     = "Presentation sharing the presenters' experience converting Common Crawl’s older ARC archives to
+                 WARC. It was presented at the IIPC General Assembly and Web Archiving Conference held on April 8-10,
+                 2025 in Oslo, Norway.",
+  language     = "English",
+  urldate      = "2025-11-21",
+  journal      = "2025 International Internet Preservation Consortium (IIPC) General Assembly and Web Archiving
+                 Conference, April 8-10, 2025. Oslo, Norway",
+  author       = "Ortiz Suarez, Pedro and Nagel, Sebastian and Vaughan, Thom",
+  month        = apr,
+  year         = "2025",
+  cc-author-affiliation = "Common Crawl Foundation, USA",
+  cc-class     = "web-archiving/ARC, web-archiving/WARC, web-archiving/conversion, web-archiving/legacy-archives,
+                 web-archiving/compatibility",
+}
+
+@Misc{cc:Nagel:2025:web-crawler-support-HTTP/2,
+  type         = "Poster",
+  title        = "Experiences Switching an Archiving Web Crawler to Support {HTTP/2}",
+  copyright    = "Public",
+  URL          = "https://netpreserve.org/resources/WAC25_POSTER18_NAGEL.pdf",
+  language     = "English",
+  urldate      = "2025-11-21",
+  journal      = "2025 International Internet Preservation Consortium (IIPC) General Assembly and Web Archiving
+                 Conference, April 8-10, 2025. Oslo, Norway",
+  author       = "Nagel, Sebastian",
+  month        = apr,
+  year         = "2025",
+  cc-author-affiliation = "Common Crawl Foundation, USA",
+  cc-class     = "web-crawling, HTTP/2",
+}
+
+@InProceedings{cc:El-OuadiKnowltonPimentelBeskow:2025:Operationalizing-Common-Crawl-News,
+  author       = "El Ouadi, Ameir and Knowlton, William and Pimentel, Adrian and Beskow, David",
+  booktitle    = "2025 {IEEE} International systems Conference {(SysCon)}",
+  title        = "Operationalizing Common Crawl News: {AI-Enabled} Data Pipeline for Large-Scale News Analysis",
+  year         = "2025",
+  volume       = "",
+  number       = "",
+  pages        = "1--3",
+  abstract     = "The exponential growth of online news data has created new opportunities and challenges for academic,
+                 commercial and government analysis and workflows. This paper proposes an intelligent data system that
+                 operationalizes the Common Crawl News dataset for diverse applications, focusing on parsing, filtering,
+                 machine learning enrichment, and data modeling. This paper outlines the development of a robust data
+                 pipeline that extracts relevant metadata, filters mislabeled news articles, and applies machine
+                 learning techniques, including Named Entity Recognition and language-agnostic sentence embeddings, to
+                 enhance the utility of the data. The work focuses on news classification, event detection, and ongoing
+                 efforts to develop dashboards and interactive applications for visualizing trends, named entity
+                 distributions, and geospatial patterns. This system enables efficient search and analysis of sizeable
+                 multilingual news data, empowering users to derive actionable insights from a vast and varied corpus.
+                 This research contributes to the growing body of work on leveraging open-source news data for
+                 real-world applications in decision-making and research.",
+  keywords     = "event detection, pipelines, government, focusing, machine learning, named entity recognition,
+                 metadata, market research, geospatial analysis, multilingual, open source data, news data, Named Entity
+                 Recognition (NER), Common Crawl",
+  DOI          = "10.1109/SysCon64521.2025.11014869",
+  URL          = "https://ieeexplore.ieee.org/abstract/document/11014869",
+  cc-author-affiliation = "United States Military Academy, West Point, NY, USA",
+  cc-class     = "event-detection, text-classification, nlp/named-entity-recognition, news-classification, news,
+                 news-dataset",
+}
+
+@Misc{cc:Bara:2025:Accessibility-barriers-in-multi-terabyte-public-datasets,
+  title        = "Accessibility Barriers in Multi-Terabyte Public Datasets: The Gap Between Promise and Practice",
+  author       = "Marc Bara",
+  year         = "2025",
+  eprint       = "2506.13256",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CY",
+  URL          = "https://arxiv.org/abs/2506.13256",
+  abstract     = "The promise of {"}free and open{"} multi-terabyte datasets often collides with harsh realities. While
+                 these datasets may be technically accessible, practical barriers -- from processing complexity to
+                 hidden costs -- create a system that primarily serves well-funded institutions. This study examines
+                 accessibility challenges across web crawls, satellite imagery, scientific data, and collaborative
+                 projects, revealing a consistent two-tier system where theoretical openness masks practical
+                 exclusivity. Our analysis demonstrates that datasets marketed as {"}publicly accessible{"} typically
+                 require minimum investments of $1,000+ for meaningful analysis, with complex processing pipelines
+                 demanding $10,000-100,000+ in infrastructure costs. The infrastructure requirements -- distributed
+                 computing knowledge, domain expertise, and substantial budgets -- effectively gatekeep these datasets
+                 despite their {"}open{"} status, limiting practical accessibility to those with institutional support
+                 or substantial resources.",
+  cc-snippet   = "3.1 Web Crawl Datasets Reveal Cost Traps¶ Common Crawl stands out as the most genuinely accessible
+                 massive dataset, offering 34-100+ TB per monthly crawl with petabytes accumulated since 2008 [1]. The
+                 data is freely available via AWS S3 in WARC, WAT, and WET formats, with anonymous access restored in
+                 2024. However, significant limitations emerge quickly.¶ The dataset respects robots.txt, creating
+                 major coverage gaps—only 46.7\% of university pages appear across multiple crawls [2]. Quality varies
+                 dramatically, with spam and SEO farms mixed with legitimate content. Most critically, egress costs
+                 create a financial trap: downloading a single 34TB crawl outside AWS costs $2,400-3,000 in bandwidth
+                 fees alone [3]. This explains why successful large-scale analyses require significant infrastructure
+                 investment within AWS us-east-1.¶ Internet Archive’s bulk data access proves even more restrictive.
+                 Despite claims of “80 terabytes available for research,” actual access requires individual approval
+                 via email, with unclear current status [4]. The Wayback Machine API limits users to individual page
+                 lookups with no bulk access. Most researchers end up using small derivative datasets under 1GB rather
+                 than the full web archive.¶ Cloud processing estimates reveal why large-scale analyses remain rare:¶
+                 • Common Crawl full analysis: $10,000-50,000 on Modal, up to $100,000+ on AWS EMR including egress¶
+                 • Wikipedia full processing: $200-500 for one-time processing, plus $20-50/month storage¶ •
+                 OpenStreetMap global analysis: $300-800 initial processing, requiring high-memory instances¶ •
+                 Sentinel-2 yearly data: $85,000-145,000 for complete processing pipeline¶",
+  cc-author-affiliation = "ESADE Business School, Spain",
+  cc-class     = "cloud-computing, public-dataset, computing costs",
+}
+
+@Article{cc:HuangWuLuGengEtAl:2025:Combating-health-misinformation,
+  author       = "Yidong Huang and Shengli Wu and Hu Lu and Xia Geng and Chris Nugent",
+  title        = "Combating health misinformation with fusion-based credible retrieval techniques",
+  journal      = "Health Informatics Journal",
+  volume       = "31",
+  number       = "4",
+  pages        = "14604582251388860",
+  year         = "2025",
+  DOI          = "10.1177/14604582251388860",
+  note         = "PMID: 41099407",
+  URL          = "https://doi.org/10.1177/14604582251388860",
+  abstract     = "This study aims to combat health misinformation by enhancing the retrieval of credible health
+                 information using effective fusion-based techniques. It focuses on clustering-based subset selection to
+                 improve data fusion performance. Five clustering methods — two K-means variants, Agglomerative
+                 Hierarchical (AH) clustering, BIRCH, and Chameleon — are evaluated for selecting optimal subsets of
+                 information retrieval systems. Experiments are conducted on two health-related datasets from the TREC
+                 challenge. The selected subsets are used in data fusion to boost retrieval quality and credibility. AH
+                 and BIRCH outperform other methods in identifying effective IR subsets. Using AH-based fusion of up to
+                 20 systems results in a 60\% gain in MAP and over a 30\% increase in NDCG\_UCC, a credibility-focused
+                 metric, compared to the best single system. Clustering-based fusion strategies significantly enhance
+                 the retrieval of trustworthy health content, helping to reduce misinformation. These findings support
+                 incorporating advanced data fusion into health information retrieval systems to improve access to
+                 reliable information. The source code of this research is publicly available at
+                 https://github.com/Gary752752/DataFusion.",
+  cc-author-affiliation = "Chengdu University of Technology, Leshan, China; University of Ulster, Belfast, UK; Jiangsu
+                 University, Zhenjiang, China",
+  cc-class     = "misinformation, nlp/fake-news-detection, health misinformation",
+}
+
+@InProceedings{cc:Ligeti-NagyHéjaBánfiFöldesiEtAl:2025:Expanding-Hungarian-Gigaword-Corpus,
+  title        = "Expanding the Hungarian Gigaword Corpus",
+  author       = "Ligeti-Nagy, Noémi and Héja, Eniko and Bánfi, Agnes and Földesi, Flóra and Lengyel, Mariann and
+                 Sárossy, Bence and Skrabák, Boglárka and Váradi, Tamás and Prószéky, Gábor",
+  booktitle    = "{CLARIN} Annual Conference Proceedings",
+  pages        = "179",
+  year         = "2025",
+  URL          = "https://research.brighton.ac.uk/files/60194662/CLARIN2025_ConferenceProceedings.pdf#page=188",
+  cc-snippet   = "The majority of news articles in the corpus were sourced from the Common Crawl (CC) archive. To ensure
+                 quality and relevance, we identified and retained the top 100 domains that yielded the largest number
+                 of articles, primarily focusing on high-traffic news websites. Altogether, this subcorpus already
+                 exceeds two billion tokens, and additional material continues to be collected.",
+  cc-dataset-used = "CC-NEWS",
+  cc-author-affiliation = "ELTE Research Centre for Linguistics, Budapest, Hungary",
+  cc-class     = "nlp/corpus-construction, nlp/text-corpora, language-specific corpus",
+}
