@@ -65,8 +65,13 @@ class Citation:
         # - however, very few articles are grouped erroneously because of a generic
         #   title or the title being a book or journal the articles are published in,
         #   e.g., "Machine Learning with Applications", "Generative AI",
-        #   or "Natural Language Processing Journal"
+        #   "Natural Language Processing Journal" or "A Survey of Large Language Models"
         self.idx = self.title.lower()
+        self.idx_type = 'title'
+        if len(self.idx) < 40:
+            # add the year to avoid that short titles are erroneously merged
+            self.idx += ' ' + self.get_year()
+            self.idx_type = 'title+year'
 
     def add_link(self, link):
         """Add a Google Scholar link"""
@@ -129,7 +134,10 @@ class Citation:
         if self.date:
             d['year'] = self.get_year()
         if self.idx:
-            d['idx'] = self.idx
+            if self.idx_type == 'title+year':
+                d['idx'] = self.idx[0:-5]
+            else:
+                d['idx'] = self.idx
         if self.title:
             d['title'] = self.title
         if self.authors:
@@ -152,7 +160,7 @@ class Citation:
         return d
 
     def json(self):
-        return json.dumps(self.to_dict())
+        return json.dumps(self.to_dict(), ensure_ascii=True)
 
 
 class CitationsHTMLParser(HTMLParser):
