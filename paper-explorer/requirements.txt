@@ -1,0 +1,5 @@
+sentence-transformers
+pandas
+umap-learn
+tqdm
+huggingface_hub

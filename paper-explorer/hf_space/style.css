@@ -1,0 +1,126 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 11px;
+}
+
+body {
+	color:#e5e5e5;
+	font-family:Arial;
+    text-align: center;
+}
+
+a {
+	color:#3287c5;
+}
+a:hover {
+	color:#3faaf7;
+}
+h1 {
+    color: #152a47;
+	margin: 0.5rem;
+	font-size: 1.4rem;
+	/* font-size: 46px; */
+}
+
+#map {
+	border:2px solid #696969;
+	margin: 4px auto;
+	/* float:left; */
+	/* height: 100%; */
+
+
+	position: absolute;
+
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	top: 150px;
+	height: calc(100% - 150px - 10px);
+
+	/* top: 150px;
+	height: calc(100% - 150px - 10px); */
+}
+
+#header {
+	height: 150px;
+	/* height: 180px; */
+	
+	padding: 0.5rem;
+	font-size: 1rem;
+	/* float:left; */
+	background:#ffffff;
+	/* border:1px solid #c6bb58; */
+	/* box-shadow: 2px 2px 6px #999; */
+	color:#666;
+
+	overflow: auto;
+}
+
+#legendContainer {
+    font-size: 0.9rem;
+	margin: 0 4px;
+	padding: 1rem;
+
+}
+
+.legend-item {
+    padding: 3px;
+    margin: 3px;
+	/* white-space: nowrap; */
+}
+
+.legend-icon {
+    margin: 0 2px;
+    width: 7px;
+    display: inline-block;
+    height: 7px;
+}
+
+.legend-more {
+    display: none;
+}
+
+.leaflet-container {
+    background: rgb(221, 229, 241);
+    outline: 0;
+}
+
+.leaflet-popup-content {
+	max-height: 240px;
+	overflow-y: auto;
+}
+
+@media only screen and (min-width: 500px) {
+	/* Medium screen  */
+	html {
+		font-size: 12px;
+	}
+
+	#map {
+		height: calc(100% - 160px - 10px);
+		top: 160px;
+	}
+	#header {
+		height: 160px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* Large screen  */
+	html {
+		font-size: 14px;
+	}
+	#map {
+		height: calc(100% - 130px - 10px);
+		top: 130px;
+	}
+	#header {
+		height: 130px;
+	}
+}
