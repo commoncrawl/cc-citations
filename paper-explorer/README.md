@@ -1,18 +1,19 @@
 # CC-Citations: Paper Explorer
 
-A visual tool for exploring research papers citing Common Crawl.
+A visual tool for exploring research papers citing Common Crawl based on embedding similarity. The tool is deployed as a [Huggingface space](https://huggingface.co/spaces/commoncrawl/cc-citations). This folder contains all code for generating paper embeddings, topic modeling, and the Web app.
 
 ## Setup
 
-- Python 3.12
+- Python 3.12 (recommended)
 
 ```bash
+# install dependencies via pip
 pip install -r requirements.txt
 ```
 
 ## Generate paper embeddings
 
-The paper explorer requires 2D representations of the paper. To obtain those, we use the title and abtract of each paper to generate embeddings and then apply dimensionality reduction.
+The paper explorer requires 2D representations of the paper embeddings. To obtain those, we use the title and abtract of each paper to generate embeddings and then apply dimensionality reduction.
 
 ```bash
 python embed_papers.py --input_path=<path to OpenAlex JSONL> \
@@ -43,7 +44,7 @@ python create_papers_js.py
 
 ## View Web page
 
-The resulting web app can be viewed a browser.
+The resulting Web app is a single HTML file with Javascript and can be viewed in a browser.
 
 ```bash
 cd hf_space
@@ -62,3 +63,9 @@ To deploy the web app to Hugginface, you can upload the relevant files as follow
 ```bash
 huggingface-cli upload commoncrawl/cc-citations ./hf_space --repo-type space --commit-message "Uploading paper explorer"
 ```
+
+## References
+
+- Embedding model: https://github.com/malteos/scincl
+- Dimensionality reduction method: https://github.com/lmcinnes/umap
+- Topic modeling: https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html

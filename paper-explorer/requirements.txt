@@ -1,5 +1,6 @@
-sentence-transformers
-pandas
-umap-learn
-tqdm
-huggingface_hub
+sentence-transformers==5.1.2
+pandas==2.3.3
+scikit-learn==1.7.2
+umap-learn==0.5.9.post2
+tqdm==4.67.1
+huggingface-hub==0.36.0
