@@ -75,6 +75,21 @@ h1 {
 	/* white-space: nowrap; */
 }
 
+.legend-item:hover {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+.legend-item.legend-active {
+    font-weight: bold;
+    background-color: #e8f4f8;
+    border-radius: 3px;
+}
+
+.legend-item.legend-inactive {
+    opacity: 0.4;
+}
+
 .legend-icon {
     margin: 0 2px;
     width: 7px;

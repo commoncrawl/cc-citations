@@ -54,14 +54,19 @@ def load_papers(input_path):
     return papers
 
 
-def preprocess_papers(papers):
+def preprocess_papers(papers, use_abstracts: bool = False):
     """Extract and combine title and abstract from papers."""
     documents = []
     for paper in papers:
-        title = paper.get('title', '')
-        abstract = paper.get('abstract', '')
-        # Combine title and abstract, handle missing values
-        text = f"{title} {abstract}".strip()
+        if use_abstracts:
+            title = paper.get('title', '')
+            abstract = paper.get('abstract', '')
+            # Combine title and abstract, handle missing values
+            text = f"{title} {abstract}".strip()
+
+        else:
+            text = paper.get('title', '')
+
         documents.append(text)
     return documents
 
@@ -186,6 +191,12 @@ def main():
         default=None,
         help='Limit number of papers to process (default: None, process all)'
     )
+    parser.add_argument(
+        '--use_abstracts',
+        action="store_true",
+        default=False,
+        help='Use paper titles and abstracts (otherwise only titles are used)'
+    )
 
     args = parser.parse_args()
 
@@ -198,8 +209,8 @@ def main():
     else:
         print(f"Loaded {len(papers)} papers")
 
-    print("Preprocessing papers...")
-    documents = preprocess_papers(papers)
+    print(f"Preprocessing papers... {args.use_abstracts=}")
+    documents = preprocess_papers(papers, use_abstracts=args.use_abstracts)
 
     print(f"Training LDA model with {args.n_topics} topics...")
     lda, vectorizer, doc_term_matrix = train_lda_model(
