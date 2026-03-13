@@ -2,10 +2,10 @@
 
 """Extract citations from Google Scholar alter e-mails (in EML format)"""
 
-import datetime
+import argparse
 import email
-import email.parser
 import json
+import logging
 import os
 import re
 import urllib
@@ -14,7 +14,14 @@ import sys
 from html.parser import HTMLParser
 
 
+LOGGING_FORMAT = '%(asctime)s %(levelname)s %(name)s: %(message)s'
+LOG_LEVEL = 'INFO'
+logging.basicConfig(level=LOG_LEVEL, format=LOGGING_FORMAT)
+
+
 class Citation:
+    """Represents one Google Scholar citation."""
+
     boilerplate_lines = {
         'cancel alert',
         'update alert to receive fewer, more relevant',
@@ -40,6 +47,7 @@ class Citation:
         self.url = set()
         self.link = set()
         self.idx = ''
+        self.idx_type = ''
         self.ref = set(refs)
         self.data = '' # temporary data
         self.end_of_input = False
@@ -164,6 +172,7 @@ class Citation:
 
 
 class CitationsHTMLParser(HTMLParser):
+    """Parser for one Google Scholar alert message."""
     def __init__ (self, date, author_ref, msg_ref):
         HTMLParser.__init__(self)
         self.in_title = False
@@ -171,6 +180,7 @@ class CitationsHTMLParser(HTMLParser):
         self.end_of_citations = False
         self.citations = []
         self.date = date
+        self.inline = False
         self.ref = [msg_ref, author_ref]
 
     def handle_starttag(self, tag, attrs):
@@ -187,7 +197,7 @@ class CitationsHTMLParser(HTMLParser):
             for attr in attrs:
                 if attr[0].lower() == 'href':
                     self.citations[-1].add_link(attr[1])
-        elif tag == 'br' or tag == '<p>':
+        elif tag in {'br', '<p>'}:
             if self.citations:
                 self.citations[-1].add_line_break()
         else:
@@ -211,7 +221,8 @@ class CitationsHTMLParser(HTMLParser):
             self.citations[-1].add_title(data)
         elif self.in_script:
             pass
-        elif data_normalized.startswith("this message was sent by google scholar because you're following new results for"):
+        elif data_normalized.startswith(
+            "this message was sent by google scholar because you're following new results for"):
             self.end_of_citations = True
         else:
             self.citations[-1].add_data(data)
@@ -228,8 +239,7 @@ def message_get_payload(msg):
         yield (msg.get_content_type(), payload)
     elif isinstance(payload, list):
         for sub in payload:
-            for pld in message_get_payload(sub):
-                yield pld
+            yield from message_get_payload(sub)
     elif isinstance(payload, bytes):
         yield (msg.get_content_type(), payload.decode('utf-8'))
     else:
@@ -243,30 +253,67 @@ def parse_eml(eml_file):
         for (mime, body) in list(message_get_payload(msg)):
             parser = CitationsHTMLParser(date, msg['subject'], eml_file)
             parser.feed(body)
-            for citation in parser.citations:
-                yield citation
+            yield from parser.citations
 
+def load_citations(citations_file):
+    """Load existing citations, extracted earlier by this script and cleaned up.
+    Only the following fields are used: title, year, authors, snippet, url."""
+    citations = {}
+    lines_read = 0
+    with open(citations_file, 'r', encoding='UTF-8') as f:
+        for line in f:
+            lines_read += 1
+            try:
+                d = json.loads(line)
+                # at least a title is required
+                if 'title' not in d:
+                    continue
+                # create citation object
+                c = Citation(d.get('year'), [])
+                c.add_title(d['title'])
+                c.authors = {a.lower(): a for a in d.get('authors', [])}
+                c.snippet = d.get('snippet', '')
+                c.url = set(d.get('url', []))
+                if c in citations:
+                    citations[c].update(c)
+                else:
+                    citations[c] = c
+            except json.JSONDecodeError:
+                logging.warning('Failed to parse line: %s', line.strip())
+    logging.info('Read %d lines of citations file %s', lines_read, citations_file)
+    logging.info('Loaded %d existing citations', len(citations))
+    return citations
 
 
 if __name__ == '__main__':
 
-    if len(sys.argv) <= 1:
-        sys.stderr.write(sys.argv[0] + ' <eml_folder>')
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description='Extract citations from Google Scholar alert e-mails (in EML format)')
+    parser.add_argument('eml_folder', type=str,
+                        help='Folder containing EML files')
+    parser.add_argument('citations_file', type=str, nargs='?',
+                        help='File with existing citations (JSON-lines format)')
+    args = parser.parse_args()
 
-    emls = os.listdir(sys.argv[1])
-    sys.stderr.write('Found %d messages\n' % len(emls))
+    emls = os.listdir(args.eml_folder)
+    logging.info('Found %d messages in eml folder', len(emls))
 
-    citations = dict()
+    citations = {}
+    if args.citations_file:
+        logging.info('Loading existing citations from %s', args.citations_file)
+        citations = load_citations(args.citations_file)
 
+    n_citations_in_messages = 0
     for eml in emls:
         for citation in parse_eml(os.path.join(sys.argv[1], eml)):
+            n_citations_in_messages += 1
             if citation in citations:
                 citations[citation].update(citation)
             else:
                 citations[citation] = citation
 
-    sys.stderr.write('Found %d citations\n' % len(citations))
+    logging.info('Found %d citations in messages', n_citations_in_messages)
+    logging.info('Number of citations after update: %d', len(citations))
 
     for citation in citations:
         print(citation.json())
