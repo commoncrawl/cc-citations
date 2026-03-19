@@ -1047,3 +1047,32 @@
   cc-author-affiliation = "ELTE Research Centre for Linguistics, Budapest, Hungary",
   cc-class     = "nlp/corpus-construction, nlp/text-corpora, language-specific corpus",
 }
+
+@Misc{cc:Mahara:2025:Cybersecurity-data-extraction,
+  title        = "Cybersecurity Data Extraction from Common Crawl",
+  author       = "Ashim Mahara",
+  year         = "2025",
+  eprint       = "2602.22218",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CR",
+  URL          = "https://arxiv.org/abs/2602.22218",
+  abstract     = "Alpha-Root is a cybersecurity-focused dataset collected in a single shot from the Common Crawl web
+                 graph using community detection. Unlike iterative content-scoring approaches like DeepSeekMath, we mine
+                 quality domains directly from the web graph, starting from just 20 trusted seed domains.",
+  cc-author-affiliation = "Rochester Institute of Technology, USA",
+  cc-class     = "computer-security/internet-security, web-science/hyperlinkgraph",
+  cc-dataset-used = "hyperlinkgraph",
+  cc-snippet   = "Thus, we introduce Alpha-Root as a new large text corpus from Common Crawl⁵ [⁵commoncrawl.org] —
+                 intended to be used as a pre-training dataset — by extracting cybersecurity-focused domains from the
+                 webgraph provided by Common Crawl. We utilize the Leiden [42] algorithm for community detection to mine
+                 the web graph for domains that represent the cybersecurity community in the webgraph. We then extract
+                 texts from webpages of the members of the community that are also present in the FineWeb-Edu [29]
+                 dataset. [...] CommonCrawl release web graphs for each of their crawls. The cc-graph is a graph of
+                 nodes (domains) and edges between the nodes when the nodes are hyperlinked through a webpage.
+                 Essentially, there exists an edge between two domains if there is at-least one hyperlink between
+                 webpages of the domains. The cc-graph includes more than 100 million nodes and more than 1.8 billion
+                 edges. The processing of such a large graph presents several challenges on its own since commoncrawl
+                 only provides the data in an edge-list format while a lot of existing software libraries require an
+                 adjacency list to work on the graph.",
+}
+
