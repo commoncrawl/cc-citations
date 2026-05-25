@@ -157,3 +157,328 @@
                  main crawl of 2024.]",
 }
 
+@Misc{cc:XuLiuChoiSmithEtAl:2026:Infini-gram-mini,
+  title        = "Infini-gram mini: Exact n-gram Search at the Internet Scale with {FM-Index}",
+  author       = "Hao Xu and Jiacheng Liu and Yejin Choi and Noah A. Smith and Hannaneh Hajishirzi",
+  year         = "2026",
+  eprint       = "2506.12229",
+  archiveprefix = "arXiv",
+  primaryclass = "cs.CL",
+  URL          = "https://arxiv.org/abs/2506.12229",
+  abstract     = "Language models are trained mainly on massive text data from the Internet, and it becomes increasingly
+                 important to understand this data source. Exact-match search engines enable searching in large text
+                 corpora - counting string appearances and retrieving the enclosing documents - yet the high storage
+                 overhead hinders their application on Internet-scale data. We present infini-gram mini, an efficient
+                 and scalable system that can make petabyte-level text corpora searchable. Based on the FM-index data
+                 structure (Ferragina and Manzini, 2000), which simultaneously indexes and compresses text, our system
+                 creates indexes with size only 44\% of the corpus. Infini-gram mini greatly improves upon the best
+                 existing implementation of FM-index in terms of indexing speed (18×) and memory use during both
+                 indexing (3.2× reduction) and querying (down to a negligible amount). We index 83TB of Internet text
+                 in 99 days with a single CPU node with 128 vCPUs (or 19 hours if using 137 such nodes). We show one
+                 important use case of infini-gram mini in a large-scale analysis of benchmark contamination. We find
+                 several core LM evaluation benchmarks to be heavily contaminated in Internet crawls (up to 74.2\% in
+                 GSM8K), which could lead to overestimating the capabilities of language models if trained on such data.
+                 We host a benchmark contamination bulletin to share the contamination rate of many core and
+                 community-contributed benchmarks. We also release a web interface and an API endpoint to serve general
+                 search queries on infini-gram mini indexes.",
+  cc-author-affiliation = "Paul G. Allen School of Computer Science & Engineering, USA; University of Washington, USA;
+                 Allen Institute for AI, USA; Stanford University, USA",
+  cc-class     = "information retrieval, n-grams",
+  cc-snippet   = "We use INFINI-GRAM MINI to construct FM-index for [...] and 7 recent Common Crawl dumps from January
+                 to July 2025. [...] We estimate that indexing the full Common Crawl would take 1,200 node-days, or 19
+                 hours if parallelized across 1,500 nodes. [...] We have built the index for the following corpora:
+                 [...], and the Common Crawl between January and July 2025 ( “CC-2025- 05” to “CC-2025-30” ; 7
+                 crawls and 65TB total; Common Crawl Foundation, 2025).³ [³ We extract text from the CC crawls with
+                 resiliparse, following Li et al. (2024).]",
+                 }
+
+@Misc{cc:Silva:2026:Online-Media-Outlets-Struggle,
+  year         = "2026",
+  title        = "Online Media Outlets Struggle to Represent Audiences in a Two-Dimensional Ideological Landscape",
+  author       = "da Silva, Lucas Paulo",
+  URL          = "https://osf.io/download/69bac05d4d3f54af3e3b6771/",
+  abstract     = "A well-established literature finds that media outlets align their ideological positions with those of
+                 their audiences. However, can outlets do this in a two-dimensional (economic/cultural) ideological
+                 landscape? This is among the most common and parsimonious models of ideology within political science.
+                 I predict that outlets under-represent cross-pressured voters (CPVs) — people with leftist economic
+                 positions and conservative cultural positions (“left-conservatives”) or the reverse
+                 (“right-progressives”). Despite large CPV populations, I argue that outlets are constrained from
+                 representing them by the structures of media actors and party systems. I construct a novel corpus of
+                 one million articles. These are quasi-randomly selected from the universe of Anglophone internet media
+                 articles. Using large language models and a new ideological classification technique, this study
+                 measures the separate economic and cultural positions of 324 prominent media outlets from 26 countries.
+                 This data provides interesting descriptive results about the two-dimensional positions of these outlets
+                 overall and across time. Moreover, the study then tests (1) the relationship between the economic and
+                 cultural dimensions, (2) how this structure changes over time, and (3) its association with audience
+                 ideological structure. The results indicate that many media outlets are unrepresentative and
+                 unresponsive to audiences in a two-dimensional ideological landscape. This has important implications
+                 for our understanding of media ideology in general and media effects among CPVs.",
+  cc-author-affiliation = "University of Zurich, Switzerland",
+  cc-class     = "news media, political science, text classification",
+  cc-dataset-used = "CC-NEWS",
+  cc-snippet   = "My first step is to obtain one million media articles from Common Crawl News, a repository of almost
+                 all news and opinion articles on the internet (Nagel 2016). With this underutilized resource, I can
+                 obtain articles from almost any online outlet except those that forbid web scraping. This is among the
+                 most representative sources of online media articles possible. I create a modified version of
+                 news-please — a Common Crawl News crawler — for my purposes (Hamborg et al. 2017). My version of
+                 news-please extracts one million English-language articles published during 100 randomly selected
+                 48-hour periods between October 2016 to March 2024 (the available date range during data collection).
+                 Using only English-language articles ensures that (1) there will be enough articles per outlet for
+                 analysis and (2) ideology is more comparable across articles. This quasi-random selection approach
+                 provides articles that are more representative across time and therefore useful for scientific
+                 research. See Appendix B for the distribution of articles across time, countries, and continents. The
+                 resulting dataset includes one million randomly selected articles from 8833 outlets.",
+}
+
+@Misc{cc:BrosBarbiniGerardGatica-Perez:2026:Politics-of-Questions,
+  year         = "2026",
+  title        = "Politics of Questions in News: A Mixed-Methods Study of Interrogative Stances as Markers of Voice and
+                 Power",
+  author       = "Bros, Victor and Barbini, Matilde and Gerard, Patrick and Gatica-Perez, Daniel",
+  snippet      = "Interrogatives in news discourse have been examined in linguistics and conversation analysis, but
+                 mostly in broadcast interviews and relatively small, often English-language corpora, while large-scale
+                 computational studies of news rarely …",
+  URL          = "https://publications.idiap.ch/attachments/papers/2026/Bros_ICWSM2026_2026.pdf",
+  snippet      = "Interrogatives in news discourse have been examined in linguistics and conversation analysis, but
+                 mostly in broadcast interviews and relatively small, often English-language corpora, while large-scale
+                 computational studies of news rarely distinguish interrogatives from declaratives or differentiate
+                 their functions. This paper brings these strands together through a mixed-methods study of the
+                 {"}Politics of Questions{"} in contemporary French-language digital news. Using over one million
+                 articles published between January 2023 and June 2024, we automatically detect interrogative stances,
+                 approximate their functional types, and locate textual answers when present, linking these quantitative
+                 measures to a qualitatively annotated subcorpus grounded in semantic and pragmatic theories of
+                 questions. Interrogatives are sparse but systematically patterned: they mainly introduce or organize
+                 issues, with most remaining cases being information-seeking or echo-like, while explicitly leading or
+                 tag questions are rare. Although their density and mix vary across outlets and topics, our heuristic
+                 suggests that questions are overwhelmingly taken up within the same article and usually linked to a
+                 subsequent answer-like span, most often in the journalist's narrative voice and less often through
+                 quoted speech. Interrogative contexts are densely populated with named individuals, organizations, and
+                 places, whereas publics and broad social groups are mentioned much less frequently, suggesting that
+                 interrogative discourse tends to foreground already prominent actors and places and thus exhibits
+                 strong personalization. We show how interrogative stance, textual uptake, and voice can be
+                 operationalized at corpus scale, and argue that combining computational methods with pragmatic and
+                 sociological perspectives can help account for how questioning practices structure contemporary news
+                 discourse.",
+  cc-author-affiliation = "Idiap Research Institute, Switzerland; EPFL, Switzerland; University of Southern California,
+                 USA",
+  cc-class     = "linguistics/pragmatics, text classification, news, political science",
+  cc-dataset-used = "CC-NEWS",
+  cc-snippet   = "We assemble a French-language news corpus from two complementary sources. The first component is
+                 derived from CCNews, a large-scale news collection built from Common Crawl (CommonCrawl 2024). Starting
+                 from the most active French-language CCNews domains in our period (top 40 by article volume), we
+                 manually retained outlets that (i) pub- lish in French, (ii) remain active in both 2023 and 2024, (iii)
+                 can be identified as established news organizations via their domains and websites, and (iv) yield
+                 sufficiently clean article extractions, excluding domains with substantial scraping noise. To avoid
+                 overconcentration in a single national market, we also prioritized coverage across distinct francophone
+                 regions. This yields just over 1.2 million articles span- ning global, national, and regional coverage
+                 from French-speaking Europe, America, and Africa.¶ Hyper-local actors and issues are underrepresented
+                 in this CCNews-derived subset. To better cover local journalism, we integrate a second open dataset of
+                 Swiss local news (Bros and Gatica-Perez 2025), which provides high-quality reporting from cantonal and
+                 hyper-local outlets in Romandy.",
+}
+
+@Article{KadkhodaMohammadmosaferiBertaniLoufGallotti:2026:Data-driven-fact-checking,
+  year         = "2026",
+  title        = "A data-driven approach to supporting fact-checking and mitigating misinformation and disinformation
+                 through domain quality evaluation",
+  authors      = "Kadkhoda Mohammadmosaferi, Kaveh and Bertani, Anna and Louf, Thomas and Gallotti, Riccardo",
+  journal      = "EPJ Data Science",
+  volume       = "15",
+  snippet      = "… In particular, the metrics from Open PageRank [15], an initiative that indexes billions of web
+                 pages via the Common Crawl corpus, … workflow can be applied using link data from other providers or
+                 comparable metrics computed from open web …",
+  URL          = "https://doi.org/10.1140/epjds/s13688-026-00628-3",
+  abstract     = "Misinformation and disinformation spread rapidly on social media, threatening public discourse,
+                 democratic processes, and social cohesion. One promising strategy to address these challenges is to
+                 evaluate the trustworthiness of entire domains (source websites) as a proxy for content credibility.
+                 This approach demands methods that are both scalable and data-driven. However, current solutions such
+                 as NewsGuard and Media Bias/Fact Check (MBFC) rely on expert assessments, cover only a limited number
+                 of domains, and some (e.g., NewsGuard) require paid subscriptions. These constraints limit their
+                 usefulness for large-scale research. This study introduces a machine-learning-based system designed to
+                 assess the quality and trustworthiness of websites. We propose a data-driven approach that leverages a
+                 large dataset of expert-rated domains to predict credibility scores for previously unseen domains using
+                 domain-level features. Our supervised regression model achieves moderate performance on test data and
+                 high performance on independent datasets, highlighting its ability to generalize to unseen domains.
+                 Using feature importance analysis, we found that PageRank-based features provided the greatest
+                 reduction in prediction error, suggesting that link-based indicators play a central role in domain
+                 trustworthiness. The solution’s scalable design accommodates the continuously evolving nature of
+                 online content, ensuring that evaluations remain timely and relevant. The framework enables continuous
+                 assessment of thousands of domains with minimal manual effort. This capability allows stakeholders
+                 (social media platforms, media monitoring organizations, content moderators, and researchers) to
+                 allocate resources more efficiently, prioritize verification efforts, and reduce exposure to
+                 questionable sources.",
+  DOI          = "10.1140/epjds/s13688-026-00628-3",
+  cc-author-affiliation = "Fondazione Bruno Kessler, Trento, Italy; University of Dundee, Dundee, UK; University of
+                 Trento, Trento, Italy",
+  cc-class     = "misinformation, text classification, domain-ranking, harmonic centrality, web-science/hyperlinkgraph",
+  cc-derived-dataset-used = "OpenPageRank",
+  cc-snippet   = "In particular, the metrics from Open PageRank [15], an initiative that indexes billions of web pages
+                 via the Common Crawl corpus, demonstrated strong predictive performance. [15. DomCop (2025) What is
+                 Open PageRank?
+                 https://web.archive.org/web/20250126101929/https://www.domcop.com/openpagerank/what-is-openpagerank.
+                 Accessed 26 Jan 2025]",
+}
+
+@Misc{WillaertPoliakoffMalchenkoYahi:2026:Propaganda-as-infrastructure,
+  year         = "2026",
+  title        = "Propaganda as infrastructure: An empirical analysis of the Pravda network (2023-2025)",
+  authors      = "Willaert, Tom and Poliakoff, Serge and Malchenko, Lera and Yahi, Stanislas",
+  URL          = "https://ssrn.com/abstract=6338581",
+  DOI          = "http://dx.doi.org/10.2139/ssrn.6338581",
+  abstract     = "This paper examines the emerging {"}infrastructuralization{"} of digital propaganda through an
+                 empirical analysis of the so-called {"}Pravda network{"} of Kremlin-aligned websites. This network
+                 consists of nearidentical sites under the news-pravda.com domain that systematically republish material
+                 from external sources. Drawing on a dataset of more than five million articles published across 147
+                 Pravda news websites between July 2023 and December 2025, we combine metadata analysis, network
+                 analysis, distant reading techniques, and qualitative close reading to reconstruct the network's
+                 structure, dynamics, and overall {"}modus operandi{"}. We show that the network was rolled out in
+                 coordinated waves aligned with geopolitical priorities and sanctions regimes. It is highly centralized
+                 around a core of Telegram channels pertaining to otherwise sanctioned sources, such as Russian media
+                 outlets. Its contents respond to current events and reiterate established propaganda narratives, with
+                 recurring machine-translation artifacts suggesting semi-automated workflows. Conceptually, we argue
+                 that the Pravda network exemplifies a shift from campaign-based propaganda and disinformation toward
+                 modular, automated propaganda infrastructures that exploit platform affordances and circumvent
+                 moderation and sanctions frameworks. Operating less as a conventional media outlet than as a scalable
+                 redistribution layer, it anticipates an information environment increasingly structured by indexing
+                 systems and large language models. We argue that understanding propaganda as infrastructure is crucial
+                 for analysing contemporary foreign information manipulation and reassessing the limits of current
+                 governance and accountability mechanisms.",
+  cc-author-affiliation = "Vrije Universiteit Brussel, Belgium; University of Amsterdam, The Netherlands",
+  cc-class     = "misinformation, cc-cited-not-used",
+  cc-snippet   = "In 2026, the BuiltWith service (https://builtwith.com/) identified Pravda as appearing among the top
+                 250,000 domains observed within the Common Crawl–indexed web space. While such rankings do not in
+                 themselves confirm downstream incorporation into any specific training dataset, the prominence of Com-
+                 mon Crawl in large-scale pretraining pipelines is well documented: Brown et al. (2020), for example,
+                 report that approximately 60 percent of GPT-3’s training corpus derived from Common Crawl.
+                 Incorporation into large-scale training datasets transforms this propagandistic content into a form of
+                 “statistical truth” (Danet, 2025).",
+}
+
+@Misc{cc:DeckTameez:2026:News-publishers-limit-Internet-Archive-access,
+  title        = "News publishers limit {Internet} {Archive} access due to {AI} scraping concerns",
+  URL          = "https://www.niemanlab.org/2026/01/news-publishers-limit-internet-archive-access-due-to-ai-scraping-concerns/",
+  abstract     = "Outlets like The Guardian and The New York Times are scrutinizing digital archives as potential
+                 backdoors for AI crawlers.¶ As part of its mission to preserve the web, the Internet Archive operates
+                 crawlers that capture webpage snapshots. Many of these snapshots are accessible through its
+                 public-facing tool, the Wayback Machine. But as AI bots scavenge the web for training data to feed
+                 their models, the Internet Archive’s commitment to free information access has turned its digital
+                 library into a potential liability for some news publishers.",
+  year         = "2026",
+  urldate      = "2026-05-27",
+  journal      = "Nieman Lab",
+  author       = "Deck, Andrew and Hanaa' Tameez",
+  cc-author-affiliation = "Nieman Journalism Lab, Cambridge, MA, USA",
+  cc-class     = "legal/copyright, robots.txt, web-archiving, web-crawling",
+  cc-snippet   = "“Common Crawl and Internet Archive are widely considered to be the ‘good guys’ and are used by
+                 ‘the bad guys’ like OpenAI,” said Michael Nelson, a computer scientist and professor at Old
+                 Dominion University. “In everyone’s aversion to not be controlled by LLMs, I think the good guys
+                 are collateral damage.”¶ The news sites in our sample aren’t only targeting the Internet Archive.
+                 Out of the 241 sites that disallow at least one of the four Internet Archive bots in our sample, 240
+                 sites disallow Common Crawl — another nonprofit internet preservation project that has been more
+                 closely linked to commercial LLM development. Of our sample, 231 sites all disallow bots operated by
+                 OpenAI, Google AI, and Common Crawl.",
+}
+
+@Article{cc:WaightYangYuanMessingEtAl:2026:State-media-control-influences-LLMs,
+  title        = "State media control influences large language models",
+  ISSN         = "1476-4687",
+  URL          = "https://www.nature.com/articles/s41586-026-10506-7",
+  DOI          = "10.1038/s41586-026-10506-7",
+  abstract     = "Millions of people around the world query large language models (LLMs) for information. Although
+                 several studies have compellingly documented the persuasive potential of these models1–10, there is
+                 limited evidence of who or what influences the models themselves, leading to a flurry of concerns about
+                 which companies and governments build and regulate the models. Here we show through six studies that
+                 government control of the media across the world already influences the output of LLMs via their
+                 training data. We use a cross-national audit to show that LLMs exhibit a stronger pro-government
+                 valence in the languages of countries with lower media freedom than in those with higher media
+                 freedom. This result is correlational, so to triangulate the specific mechanism of how state media
+                 control can influence LLMs, we develop a multi-part case study on China’s media. We demonstrate that
+                 media scripted and curated by the Chinese state appears in LLM training datasets. To evaluate the
+                 plausible effect of this inclusion, we use an open-weight model to show that additional pretraining on
+                 Chinese state-coordinated media generates more positive answers to prompts about Chinese political
+                 institutions and leaders. We link this phenomenon to commercial models through two audit studies
+                 demonstrating that prompting models in Chinese generates more positive responses about China’s
+                 institutions and leaders than do the same queries in English. The combination of influence and
+                 persuasive potential across languages suggests the troubling conclusion that states and powerful
+                 institutions have increased strategic incentives to leverage media control in the hopes of shaping LLM
+                 output.",
+  language     = "en",
+  urldate      = "2026-05-27",
+  journal      = "Nature",
+  author       = "Waight, Hannah and Yang, Eddie and Yuan, Yin and Messing, Solomon and Roberts, Margaret E. and
+                 Stewart, Brandon M. and Tucker, Joshua A.",
+  month        = may,
+  year         = "2026",
+  pages        = "1--9",
+  cc-author-affiliation = "University of Oregon, USA; Purdue University, USA; University of California San Diego, USA;
+                 New York University, USA; Princeton University, USA",
+  cc-class     = "political science, nlp/large-language-models, data-poisoning",
+  cc-derived-dataset-used = "CulturaX",
+  cc-snippet   = "Study 1 design¶ CulturaX data. We used the open-source training data, CulturaX, a cleaned and
+                 de-duplicated 6.3-trillion token multilingual dataset derived from the Common Crawl. The Common Crawl
+                 is a massive dataset of daily web crawls. As of February 2024, it contains text from over 250 billion
+                 web pages from 17 years. The creators of CulturaX combined and cleaned the latest versions of Common
+                 Crawl derivatives: multilingual C4 (3.1.0) and OSCAR (OSCAR 2019, OSCAR 21.09, OSCAR 22.01 and OSCAR
+                 23.01). C4, OSCAR and Common Crawl are common training data sources for language and other machine
+                 learning models90–95. In Fig. 2a, we compared the nearly 200 million CulturaX Chinese-language
+                 documents to our two sources of Chinese state-coordinated media. [...] CulturaX documents are web pages
+                 in the Common Crawl and thus include extraneous content (for example, advertisements) beyond the main
+                 content of the web page. As such, we do not require CulturaX documents to exactly copy the
+                 state-coordinated documents and instead considered two documents to be matched, that is, to be likely
+                 copying from each other or a third, shared source, if they have at least 0.2 five-word gram cosine
+                 similarity.¶ Study 6 design¶ Study design. In study 6, we provided evidence that media content from
+                 states beyond China with high levels of media control is affecting LLM training data and output. We
+                 looked at 37 countries where at least 70\% of the global speakers of the country’s official national
+                 language reside in the country. [...] Authoritarian governments may be particularly well positioned in
+                 the economic, political and technical contestation that shapes open web training corpora88. First,
+                 control over the media gives authoritarian governments a mouthpiece through which to coordinate their
+                 messages and crowd out dissenting voices52. This degree of coordination makes it more likely that such
+                 messages end up in the dragnet of the Common Crawl and other large-scale web-scraping enterprises.",
+}
+
+@TechReport{cc:GarbersGregory:2026:Diffusion-of-AI-accross-firms,
+  author       = "Garbers, Julio and Gregory, Terry",
+  title        = "The Diffusion of Artificial Intelligence Across Firms: Evidence from Europe",
+  year         = "2026",
+  month        = mar,
+  institution  = "Institute of Labor Economics (IZA)",
+  address      = "Bonn",
+  type         = "IZA Discussion Paper",
+  number       = "18434",
+  URL          = "https://www.iza.org/publications/dp18434",
+  pdf          = "https://docs.iza.org/dp18434.pdf",
+  abstract     = "We develop a novel firm-level indicator of Artificial Intelligence adoption in Europe (MAP-AI) by
+                 extracting information from more than three million firm websites in Belgium, France, Germany, and
+                 Luxembourg between 2016 and 2024 using a Large Language Model. The indicator captures realized AI use
+                 as publicly signaled by firms, rather than potential exposure, and distinguishes firms by their role in
+                 the AI ecosystem and the type of AI technologies employed. Validation against human-coded benchmarks
+                 and external data confirms high accuracy. We show that the share of AI-active firms increased from 1\%
+                 in 2016 to 12\% in 2024, with a marked acceleration after 2022. This growth reflects a structural shift
+                 toward widespread adoption and more integrated AI use, including generative AI. AI adoption is
+                 concentrated among larger, younger, knowledge-intensive firms in urban regions, with workforce skills
+                 emerging as a key driver. Foundational data skills are necessary for adoption, while specialized AI
+                 skills—such as machine learning and natural language processing—act as strong complements,
+                 highlighting the central role of human capital in AI diffusion.",
+  keywords     = "AI diffusion, human capital, Large Language Models, firm-level data, Artificial Intelligence, skills",
+  cc-author-affiliation = "Luxembourg Institute of Socio-Economic Research (LISER), Luxembourg",
+  cc-class     = "AI diffusion, AI usage, economics, nlp/large-language-models, social sciences",
+  cc-snippet   = "In a first step, to build our novel firm-level AI adoption measure (MAP-AI), we exploit a dataset of
+                 firm websites collected by ISTARI.ai. Firm websites offer a signal of realized technology use. In
+                 particular, firms rely on them to describe products, services, and production processes they actively
+                 deploy. Exploiting this insight, we assemble a unique linked panel of more than three million firm
+                 websites from Belgium, France, Germany, and Luxembourg between 2016 and 2024, using historical websites
+                 from Common Crawl. This large-scale digital footprint allows us to track the diffusion of AI over time
+                 and to observe dimensions of adoption that are largely missing in conventional firm-level data. [...]
+                 ISTARI.ai uses the Common Crawl infrastructure – an open, publicly available web archive that
+                 regularly crawls billions of web pages across the Internet – to collect firm website content over
+                 time. This results in a rich panel of web-based content for more than four million firm websites from
+                 2016 to 2024 – with 319,996 Belgian, 2,571,616 German, 1,176,519 French, and 20,671 Luxembourgish
+                 firms. The scraping process targets up to 35 pages per website per year. This gives us an average of
+                 6.1 pages per firm website per year, with each page containing roughly 513 words. Importantly, the
+                 firm’s homepage (i.e., the primary domain, such as “firm.com”) is available for 94.7\% of firms.
+                 Due to firm entry, exit, and changes in website availability, the dataset forms an unbalanced panel.
+                 [...] ¹The MAP-AI data underlying this study – including firm-level indicators of AI adoption, AI
+                 ecosystem roles, and AI technology types for European firms between 2016 and 2024 – are publicly
+                 available via GitHub: https://github.com/MAP-AI-data/data.",
+}
+
