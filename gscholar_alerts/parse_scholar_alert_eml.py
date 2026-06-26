@@ -247,7 +247,13 @@ def message_get_payload(msg):
 
 
 def parse_eml(eml_file):
-    date = os.path.basename(eml_file).split('-')[0]
+    eml_filename = os.path.basename(eml_file)
+    m = re.search(r'(20[123][0-9])-?(1[0-2]|0[1-9])-?([0123][0-9])',
+                  eml_filename)
+    if m:
+        date = m.group(1) + m.group(2) + m.group(3)
+    else:
+        raise 'No date in filename: ' + eml_filename
     with open(eml_file, 'rb') as eml:
         msg = email.message_from_binary_file(eml)
         for (mime, body) in list(message_get_payload(msg)):
