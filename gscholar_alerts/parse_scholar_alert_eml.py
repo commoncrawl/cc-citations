@@ -11,6 +11,7 @@ import re
 import urllib
 import sys
 
+import urllib.parse
 from html.parser import HTMLParser
 
 
