@@ -11,6 +11,7 @@ import re
 import urllib
 import sys
 
+import urllib.parse
 from html.parser import HTMLParser
 
 
@@ -311,7 +312,7 @@ if __name__ == '__main__':
 
     n_citations_in_messages = 0
     for eml in emls:
-        for citation in parse_eml(os.path.join(sys.argv[1], eml)):
+        for citation in parse_eml(os.path.join(args.eml_folder, eml)):
             n_citations_in_messages += 1
             if citation in citations:
                 citations[citation].update(citation)
